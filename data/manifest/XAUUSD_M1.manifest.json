@@ -1,0 +1,45 @@
+{
+  "file": "XAUUSD_M1.csv",
+  "source": "user upload: barre_xauusd_m1_2017.part1/2.rar (RAR5 multivolume)",
+  "sha256": "a0388a0e669da5fc5397f3036392184b04525055a0e400f79323bb658c17961a",
+  "bytes": 190479345,
+  "format": "MT5 Export Bars, TAB separated, CRLF, server time",
+  "symbol": "XAUUSD (per filename and price level)",
+  "timeframe": "M1",
+  "quality": {
+    "rows": 3086760,
+    "first": "2018-01-02 10:00:00",
+    "last": "2026-10-09 23:54:00",
+    "duplicates": 0,
+    "non_monotonic": 0,
+    "ohlc_inconsistent": 0,
+    "non_positive": 0,
+    "zero_range_bars": 3976,
+    "spread_zero_bars": 418995,
+    "spread_quantiles_points": {
+      "0.01": 0.0,
+      "0.25": 10.0,
+      "0.5": 100.0,
+      "0.75": 150.0,
+      "0.95": 260.0,
+      "0.99": 610.0
+    },
+    "big_jumps_gt_2pct": 4,
+    "gaps_intraweek_gt_10min": 1835,
+    "weekly_open_hour_mode": 1,
+    "weekly_close_hour_mode": 23,
+    "bars_per_year": {
+      "2018": 350230,
+      "2019": 352033,
+      "2020": 353061,
+      "2021": 352697,
+      "2022": 352525,
+      "2023": 350411,
+      "2024": 352140,
+      "2025": 350752,
+      "2026": 272911
+    },
+    "median_daily_bars": 1375.0,
+    "removed_rows": 0
+  }
+}

@@ -1,0 +1,6 @@
+# heavy / derived data (see data/manifest for hashes and provenance)
+data/raw/
+data/processed/
+__pycache__/
+*.pyc
+.pytest_cache/
