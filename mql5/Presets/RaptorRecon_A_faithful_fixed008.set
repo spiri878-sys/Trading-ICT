@@ -1,0 +1,45 @@
+; RaptorRecon preset A_faithful_fixed008 - see docs/mt5_guide.md
+; Protections (daily loss, max DD, risk cap, trades/day) are OFF on purpose: these presets reproduce the
+; python research conditions for EA-vs-simulator comparison. The EA defaults (protections ON) are for demo use.
+InpProfile=0
+InpMagic=7701001
+InpAllowRealAccount=false
+InpNyOffsetHours=7
+InpLogPrefix=RR_A_faithful_fixed008
+InpStopMode=0
+InpStopFixedPrice=5.0
+InpStopPercent=0.25
+InpStopAtrMult=1.5
+InpMinStopAtrM15=0.0
+InpLotMode=0
+InpFixedLot=0.08
+InpRiskPercent=1.0
+InpRiskBase=0
+InpMaxRiskPctTrade=0.0
+InpCommissionLotSide=3.5
+InpSlipPrice=0.05
+InpTpR=4.0
+InpP1R=0.7
+InpP1Frac=0.2
+InpP2R=2.0
+InpP2Frac=0.2
+InpBreakEven=true
+InpTrailAtr=0.0
+InpMaxHoldMin=4320
+InpFridayCloseMin=1380
+InpMaxPositions=1
+InpMaxTradesPerDay=0
+InpMaxSpreadPrice=5.0
+InpDeviationPoints=20
+InpDailyLossPct=0.0
+InpMaxDdPct=0.0
+InpBreathe=false
+InpNewsFilter=false
+InpCellUnicorn=true
+InpCellOTE=true
+InpCellSilverBullet=false
+InpCellPO3=true
+InpCellMSS=false
+InpCellLS=true
+InpCellPPK=true
+InpTelegram=false
