@@ -71,7 +71,7 @@ public:
    void              Structure(const int k)
      {
       ArrayResize(brk, n); ArrayInitialize(brk, 0);
-      ArrayResize(mss, n); ArrayInitialize(mss, false);
+      ArrayResize(mss, n); ArrayFill(mss, 0, n, false);
       ArrayResize(leg_lo, n); ArrayInitialize(leg_lo, EMPTY_VALUE);
       ArrayResize(leg_hi, n); ArrayInitialize(leg_hi, EMPTY_VALUE);
       ArrayResize(brk_swing, n); ArrayInitialize(brk_swing, -1);

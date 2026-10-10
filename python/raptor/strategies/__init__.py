@@ -4,11 +4,13 @@ Signal columns: bar_time (open time of the closed decision bar), side (+1/-1), o
 price (BID-chart limit price), sl_struct (structural invalidation incl. buffer), atr (signal-TF ATR14),
 expiry_bars, strategy, plus context columns copied by `raptor.features`.
 """
-from .ict import ppk, oteof, po3, uniof, ls, silver_bullet
+from .ict import ppk, mss, oteof, po3, uniof, ls, silver_bullet, mtf_m1
 from .wyckoff import wyckoff_spring
 
 REGISTRY = {
     "PPK": ppk,
+    "MSS": mss,
+    "MTF_M1": mtf_m1,
     "OTEOF": oteof,
     "PO3": po3,
     "UNIOF": uniof,
@@ -18,3 +20,8 @@ REGISTRY = {
 }
 # The five cells named in the Interstellar material (screenshot "La cascata dei modelli").
 ICT_CELLS = ["PPK", "OTEOF", "PO3", "UNIOF", "LS"]
+# The six strategies named on the vendor site (as relayed by the user; site blocked from this environment)
+# mapped to our modules: Unicorn->UNIOF, OTE->OTEOF, Silver Bullet->SILVER_BULLET, Power of Three->PO3,
+# Market Structure Shift->MSS, Liquidity Sweep->LS. PPK has no documented definition (inferred main engine).
+SITE_SIX = {"Unicorn Model": "UNIOF", "OTE": "OTEOF", "Silver Bullet": "SILVER_BULLET", "Power of Three": "PO3",
+            "Market Structure Shift": "MSS", "Liquidity Sweep": "LS"}

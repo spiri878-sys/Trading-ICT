@@ -7,7 +7,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import pandas as pd
 from raptor import pipeline as P, metrics as M
-from raptor.costs import C1, C0, with_cost
+from raptor.costs import C1, C0, C0R, with_cost
 from raptor.engine import LOT_RISK
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from benchmark_final import PROFILES
@@ -15,7 +15,7 @@ from benchmark_final import PROFILES
 ROOT = Path(__file__).resolve().parents[2]
 rows = []
 for name, pf in PROFILES.items():
-    for cname, cm in [("C1", C1), ("C0_recorded", C0)]:
+    for cname, cm in [("C1", C1), ("C0R_rescaled", C0R), ("C0_recorded", C0)]:
         base = replace(P.Params(), **pf["ex"])
         with with_cost(cm, base) as prm:
             lab, _ = P.labelled(pf["strat"], prm, tf=pf["tf"], swing_k=pf["k"])

@@ -85,6 +85,92 @@
    "rejected_stop_invalid": 1
   }
  },
+ "ICT_FAITHFUL|C0R_rescaled|dev": {
+  "trades": 590,
+  "net_profit": -882.45,
+  "return_pct": -88.25,
+  "profit_factor": 0.766,
+  "win_rate_pct": 39.49,
+  "trades_per_month": 12.29,
+  "expectancy_R": -0.2159,
+  "payoff_ratio": 1.173,
+  "max_dd_money": 960.71,
+  "max_dd_pct": 89.51,
+  "max_losing_streak": 19,
+  "positive_months_pct": 22.22,
+  "commission_total": 413.0,
+  "spread_cost_est": 907.7,
+  "avg_risk_pct_of_balance": 2.303,
+  "final_balance": 117.55,
+  "yearly_net": {
+   "2018": -882.45
+  },
+  "signals": 13550,
+  "status": {
+   "skipped_busy": 5702,
+   "rejected_margin": 3733,
+   "expired": 3525,
+   "filled": 590
+  }
+ },
+ "ICT_FAITHFUL|C0R_rescaled|val": {
+  "trades": 124,
+  "net_profit": -858.74,
+  "return_pct": -85.87,
+  "profit_factor": 0.325,
+  "win_rate_pct": 38.71,
+  "trades_per_month": 5.17,
+  "expectancy_R": -0.4115,
+  "payoff_ratio": 0.515,
+  "max_dd_money": 861.39,
+  "max_dd_pct": 86.14,
+  "max_losing_streak": 7,
+  "positive_months_pct": 0.0,
+  "commission_total": 86.8,
+  "spread_cost_est": 181.2,
+  "avg_risk_pct_of_balance": 4.127,
+  "final_balance": 141.26,
+  "yearly_net": {
+   "2022": -858.74
+  },
+  "signals": 6361,
+  "status": {
+   "skipped_busy": 2525,
+   "rejected_margin": 2102,
+   "expired": 1609,
+   "filled": 124,
+   "rejected_stop_invalid": 1
+  }
+ },
+ "ICT_FAITHFUL|C0R_rescaled|test": {
+  "trades": 110,
+  "net_profit": -817.89,
+  "return_pct": -81.79,
+  "profit_factor": 0.449,
+  "win_rate_pct": 39.09,
+  "trades_per_month": 3.31,
+  "expectancy_R": -0.3107,
+  "payoff_ratio": 0.699,
+  "max_dd_money": 911.85,
+  "max_dd_pct": 83.35,
+  "max_losing_streak": 11,
+  "positive_months_pct": 0.0,
+  "commission_total": 77.0,
+  "spread_cost_est": 255.5,
+  "avg_risk_pct_of_balance": 5.32,
+  "final_balance": 182.11,
+  "yearly_net": {
+   "2024": -817.89
+  },
+  "signals": 8832,
+  "status": {
+   "skipped_busy": 3484,
+   "rejected_margin": 2951,
+   "expired": 2286,
+   "filled": 110,
+   "rejected_stop_invalid": 1
+  }
+ },
  "ICT_FAITHFUL|C0_recorded|dev": {
   "trades": 71,
   "net_profit": -888.08,
@@ -340,6 +426,90 @@
    "skipped_busy": 11
   }
  },
+ "WYCKOFF|C0R_rescaled|dev": {
+  "trades": 246,
+  "net_profit": -885.56,
+  "return_pct": -88.56,
+  "profit_factor": 0.479,
+  "win_rate_pct": 33.33,
+  "trades_per_month": 5.13,
+  "expectancy_R": -0.3837,
+  "payoff_ratio": 0.957,
+  "max_dd_money": 975.47,
+  "max_dd_pct": 90.26,
+  "max_losing_streak": 12,
+  "positive_months_pct": 0.0,
+  "commission_total": 172.2,
+  "spread_cost_est": 367.0,
+  "avg_risk_pct_of_balance": 2.299,
+  "final_balance": 114.44,
+  "yearly_net": {
+   "2018": -885.56
+  },
+  "signals": 5429,
+  "status": {
+   "rejected_margin": 5133,
+   "filled": 246,
+   "expired": 29,
+   "skipped_busy": 21
+  }
+ },
+ "WYCKOFF|C0R_rescaled|val": {
+  "trades": 203,
+  "net_profit": -905.96,
+  "return_pct": -90.6,
+  "profit_factor": 0.58,
+  "win_rate_pct": 38.92,
+  "trades_per_month": 8.46,
+  "expectancy_R": -0.313,
+  "payoff_ratio": 0.91,
+  "max_dd_money": 970.74,
+  "max_dd_pct": 94.16,
+  "max_losing_streak": 8,
+  "positive_months_pct": 0.0,
+  "commission_total": 142.1,
+  "spread_cost_est": 341.7,
+  "avg_risk_pct_of_balance": 4.002,
+  "final_balance": 94.04,
+  "yearly_net": {
+   "2022": -905.96
+  },
+  "signals": 2628,
+  "status": {
+   "rejected_margin": 2399,
+   "filled": 203,
+   "skipped_busy": 16,
+   "expired": 10
+  }
+ },
+ "WYCKOFF|C0R_rescaled|test": {
+  "trades": 206,
+  "net_profit": -931.48,
+  "return_pct": -93.15,
+  "profit_factor": 0.511,
+  "win_rate_pct": 43.2,
+  "trades_per_month": 6.19,
+  "expectancy_R": -0.3808,
+  "payoff_ratio": 0.672,
+  "max_dd_money": 931.78,
+  "max_dd_pct": 93.18,
+  "max_losing_streak": 6,
+  "positive_months_pct": 0.0,
+  "commission_total": 144.2,
+  "spread_cost_est": 277.5,
+  "avg_risk_pct_of_balance": 3.334,
+  "final_balance": 68.52,
+  "yearly_net": {
+   "2024": -931.48
+  },
+  "signals": 4192,
+  "status": {
+   "rejected_margin": 3928,
+   "filled": 206,
+   "expired": 33,
+   "skipped_busy": 25
+  }
+ },
  "WYCKOFF|C0_recorded|dev": {
   "trades": 67,
   "net_profit": -907.18,
@@ -584,6 +754,91 @@
   "final_balance": 132.04,
   "yearly_net": {
    "2024": -867.96
+  },
+  "signals": 252,
+  "status": {
+   "rejected_margin": 191,
+   "skipped_busy": 49,
+   "filled": 10,
+   "expired": 2
+  }
+ },
+ "CAND_A_H1|C0R_rescaled|dev": {
+  "trades": 201,
+  "net_profit": 4156.38,
+  "return_pct": 415.64,
+  "profit_factor": 1.372,
+  "win_rate_pct": 48.76,
+  "trades_per_month": 4.19,
+  "expectancy_R": 0.1885,
+  "payoff_ratio": 1.442,
+  "max_dd_money": 1632.85,
+  "max_dd_pct": 73.11,
+  "max_losing_streak": 6,
+  "positive_months_pct": 64.58,
+  "commission_total": 140.7,
+  "spread_cost_est": 268.3,
+  "avg_risk_pct_of_balance": 9.157,
+  "final_balance": 5156.38,
+  "yearly_net": {
+   "2018": 109.38,
+   "2019": 116.47,
+   "2020": 2175.57,
+   "2021": 1754.96
+  },
+  "signals": 326,
+  "status": {
+   "filled": 201,
+   "skipped_busy": 124,
+   "expired": 1
+  }
+ },
+ "CAND_A_H1|C0R_rescaled|val": {
+  "trades": 9,
+  "net_profit": -904.36,
+  "return_pct": -90.44,
+  "profit_factor": 0.176,
+  "win_rate_pct": 11.11,
+  "trades_per_month": 0.38,
+  "expectancy_R": -0.5445,
+  "payoff_ratio": 1.405,
+  "max_dd_money": 1148.66,
+  "max_dd_pct": 114.87,
+  "max_losing_streak": 5,
+  "positive_months_pct": 0.0,
+  "commission_total": 6.3,
+  "spread_cost_est": 14.2,
+  "avg_risk_pct_of_balance": 73.7,
+  "final_balance": 95.64,
+  "yearly_net": {
+   "2022": -904.36
+  },
+  "signals": 160,
+  "status": {
+   "rejected_margin": 127,
+   "skipped_busy": 24,
+   "filled": 9
+  }
+ },
+ "CAND_A_H1|C0R_rescaled|test": {
+  "trades": 10,
+  "net_profit": -878.9,
+  "return_pct": -87.89,
+  "profit_factor": 0.175,
+  "win_rate_pct": 20.0,
+  "trades_per_month": 0.3,
+  "expectancy_R": -0.5795,
+  "payoff_ratio": 0.7,
+  "max_dd_money": 883.72,
+  "max_dd_pct": 88.37,
+  "max_losing_streak": 4,
+  "positive_months_pct": 0.0,
+  "commission_total": 7.0,
+  "spread_cost_est": 8.0,
+  "avg_risk_pct_of_balance": 37.589,
+  "final_balance": 121.1,
+  "yearly_net": {
+   "2024": -878.9
   },
   "signals": 252,
   "status": {

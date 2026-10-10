@@ -14,7 +14,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import pandas as pd
 from raptor import pipeline as P, metrics as M
-from raptor.costs import C0, C1, C2, with_cost
+from raptor.costs import C0, C0R, C1, C2, with_cost
 from raptor.engine import LOT_FIXED
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -32,7 +32,7 @@ def main():
             "spread_cost_est", "avg_risk_pct_of_balance", "final_balance", "yearly_net"]
     res = {}
     for name, pf in PROFILES.items():
-        for cname, cm in [("C1", C1), ("C0_recorded", C0), ("C2", C2)]:
+        for cname, cm in [("C1", C1), ("C0R_rescaled", C0R), ("C0_recorded", C0), ("C2", C2)]:
             for per in ["dev", "val", "test"]:
                 with with_cost(cm, replace(P.Params(), **pf["ex"], lot_mode=LOT_FIXED, fixed_lot=0.10, initial_balance=1000.0)) as prm:
                     s = P.signals(pf["strat"], pf["tf"], pf["k"])

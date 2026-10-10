@@ -1,0 +1,88 @@
+{
+ "best_iter": 58,
+ "inner_valid_corr_2021": 0.1143,
+ "n_features": 44,
+ "val": {
+  "all": {
+   "n": 5166,
+   "mean_R": -0.2597,
+   "sum_R": -1341.7,
+   "win_pct": 43.4,
+   "pf": 0.532,
+   "t_stat": -17.61
+  },
+  "ai_accepted": {
+   "n": 1084,
+   "mean_R": -0.1095,
+   "sum_R": -118.7,
+   "win_pct": 53.1,
+   "pf": 0.761,
+   "t_stat": -3.35
+  },
+  "ai_rejected": {
+   "n": 4082,
+   "mean_R": -0.2996,
+   "sum_R": -1223.0,
+   "win_pct": 40.9,
+   "pf": 0.484,
+   "t_stat": -18.19
+  },
+  "random_same_size_meanR": -0.2588,
+  "random_p05_p95": [
+   -0.3052,
+   -0.2137
+  ],
+  "score_R_corr": 0.1025,
+  "accept_rate_pct": 20.7
+ },
+ "test": {
+  "all": {
+   "n": 7290,
+   "mean_R": -0.1479,
+   "sum_R": -1078.2,
+   "win_pct": 46.2,
+   "pf": 0.724,
+   "t_stat": -10.54
+  },
+  "ai_accepted": {
+   "n": 1468,
+   "mean_R": 0.0006,
+   "sum_R": 0.9,
+   "win_pct": 53.8,
+   "pf": 1.001,
+   "t_stat": 0.02
+  },
+  "ai_rejected": {
+   "n": 5822,
+   "mean_R": -0.1853,
+   "sum_R": -1079.1,
+   "win_pct": 44.3,
+   "pf": 0.667,
+   "t_stat": -11.97
+  },
+  "random_same_size_meanR": -0.1478,
+  "random_p05_p95": [
+   -0.1921,
+   -0.1019
+  ],
+  "score_R_corr": 0.0793,
+  "accept_rate_pct": 20.8
+ },
+ "top_features_gain": {
+  "spread_over_stop": 2952.1,
+  "stop_atr_d1": 2359.6,
+  "vol_d1_rel": 1111.3,
+  "spread_over_atr": 1048.8,
+  "stop_atr_h1": 785.6,
+  "disp_atr": 719.9,
+  "range_24h_atr": 710.4,
+  "dist_ema_d1": 627.9,
+  "ny_sin": 466.0,
+  "entry_dist_atr": 451.8
+ },
+ "onnx_parity_p99_abs_diff": 9.539603443520228e-08,
+ "onnx_parity_max_abs_diff": 0.014067964506310981,
+ "onnx_parity_share_rows_diff_gt_1e-4": 0.001,
+ "onnx_parity_note": "max diff only on rows whose float32 feature equals a split threshold (tie); EA must feed float32",
+ "onnx_sha256": "cb9e8b2fba08b5f096739af10afa3f437577c88c66d4da9ff3bc6bd54e458cf6"
+}

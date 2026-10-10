@@ -1,0 +1,31 @@
+{
+ "header": "<DATE>\t<TIME>\t<OPEN>\t<HIGH>\t<LOW>\t<CLOSE>\t<TICKVOL>\t<VOL>\t<SPREAD>",
+ "max_price_decimals_sample": 2,
+ "first_month_median_spread_below_50pts": "2023-02",
+ "2018_2022_share_multiple_of_10": 1.0,
+ "2018_2022_top_values": {
+  "120": 160985,
+  "130": 149128,
+  "110": 137508,
+  "140": 133316,
+  "100": 118302,
+  "150": 110612,
+  "160": 88659,
+  "80": 84722
+ },
+ "2018_2022_spread_over_median_m1_range": 4.118,
+ "2023_2026_share_multiple_of_10": 0.768,
+ "2023_2026_top_values": {
+  "0": 418971,
+  "20": 170803,
+  "10": 164556,
+  "6": 106432,
+  "5": 105636,
+  "30": 94789,
+  "40": 51441,
+  "3": 32657
+ },
+ "2023_2026_spread_over_median_m1_range": 0.079,
+ "2018_2022_share_bars_spread_gt_range": 0.9214,
+ "2023_2026_share_bars_spread_gt_range": 0.1013
+}

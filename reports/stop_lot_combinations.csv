@@ -1,0 +1,33 @@
+capital,stop,lot,period,trades,avg_risk_money,avg_risk_pct,max_risk_pct,expectancy_R,return_pct,max_dd_pct,rejected
+1000.0,FIXED,FIXED,dev,86,40.96,9.437,42.9,-0.267,-94.05,94.22,{'rejected_margin': 4866}
+1000.0,FIXED,FIXED,val,178,40.96,8.018,26.52,-0.1201,-87.53,88.22,{'rejected_margin': 2273}
+1000.0,FIXED,RISK_PERCENT,dev,695,5.12,0.751,1.0,-0.1383,-49.22,49.45,{'rejected_risk_too_high_for_min_lot': 2516}
+1000.0,FIXED,RISK_PERCENT,val,603,5.12,0.693,0.99,-0.1583,-48.89,48.95,{'rejected_risk_too_high_for_min_lot': 1320}
+1000.0,PERCENT,FIXED,dev,103,27.58,5.627,25.79,-0.3251,-92.65,94.33,{'rejected_margin': 4925}
+1000.0,PERCENT,FIXED,val,187,38.84,7.58,25.59,-0.1251,-88.97,89.32,{'rejected_margin': 2276}
+1000.0,PERCENT,RISK_PERCENT,dev,667,4.31,0.711,1.0,-0.2114,-64.6,66.96,{'rejected_risk_too_high_for_min_lot': 3370}
+1000.0,PERCENT,RISK_PERCENT,val,771,4.96,0.698,1.0,-0.1379,-53.7,53.76,{'rejected_risk_too_high_for_min_lot': 1075}
+1000.0,STRUCTURAL,FIXED,dev,330,10.45,2.622,16.04,-0.3928,-91.38,91.47,{'rejected_margin': 4734}
+1000.0,STRUCTURAL,FIXED,val,183,18.63,4.658,41.35,-0.3917,-89.0,89.78,"{'rejected_margin': 2415, 'rejected_stop_invalid': 1}"
+1000.0,STRUCTURAL,RISK_PERCENT,dev,793,3.01,0.831,1.0,-0.4929,-96.26,96.29,{'rejected_risk_too_high_for_min_lot': 4198}
+1000.0,STRUCTURAL,RISK_PERCENT,val,919,2.75,0.795,1.0,-0.3794,-94.05,94.05,"{'rejected_risk_too_high_for_min_lot': 1596, 'rejected_stop_invalid': 1}"
+1000.0,ATR,FIXED,dev,314,9.7,2.234,15.67,-0.3304,-90.89,91.06,{'rejected_margin': 4793}
+1000.0,ATR,FIXED,val,261,18.16,5.401,26.18,-0.2397,-89.18,89.34,{'rejected_margin': 2356}
+1000.0,ATR,RISK_PERCENT,dev,744,3.27,0.847,1.0,-0.4851,-95.33,95.36,{'rejected_risk_too_high_for_min_lot': 4297}
+1000.0,ATR,RISK_PERCENT,val,967,3.25,0.803,1.0,-0.3165,-92.28,92.32,{'rejected_risk_too_high_for_min_lot': 1512}
+10000.0,FIXED,FIXED,dev,1831,40.96,0.744,1.29,-0.0791,-59.3,68.53,{}
+10000.0,FIXED,FIXED,val,1126,40.96,0.68,1.08,-0.1192,-54.96,62.41,{}
+10000.0,FIXED,RISK_PERCENT,dev,1831,37.73,0.923,1.0,-0.0791,-77.35,81.23,{}
+10000.0,FIXED,RISK_PERCENT,val,1126,45.5,0.926,1.0,-0.1192,-74.6,77.91,{}
+10000.0,PERCENT,FIXED,dev,2325,32.82,1.481,7.36,-0.127,-88.73,95.15,{}
+10000.0,PERCENT,FIXED,val,1194,38.22,0.564,0.85,-0.1048,-47.28,52.1,{}
+10000.0,PERCENT,RISK_PERCENT,dev,2325,20.25,0.79,1.0,-0.127,-92.97,94.14,{}
+10000.0,PERCENT,RISK_PERCENT,val,1194,48.66,0.938,1.0,-0.1048,-71.03,74.0,{}
+10000.0,STRUCTURAL,FIXED,dev,3140,15.73,0.699,17.02,-0.3276,-98.79,99.05,{'rejected_margin': 987}
+10000.0,STRUCTURAL,FIXED,val,1965,17.99,0.329,2.47,-0.2975,-73.04,73.83,{}
+10000.0,STRUCTURAL,RISK_PERCENT,dev,1244,20.68,0.9,1.0,-0.4815,-99.54,99.54,{'rejected_risk_too_high_for_min_lot': 3621}
+10000.0,STRUCTURAL,RISK_PERCENT,val,1645,17.63,0.873,1.0,-0.3344,-99.17,99.21,{'rejected_risk_too_high_for_min_lot': 558}
+10000.0,ATR,FIXED,dev,2802,13.08,0.638,23.78,-0.3665,-98.74,98.77,{'rejected_margin': 1776}
+10000.0,ATR,FIXED,val,2149,16.19,0.307,1.58,-0.2483,-75.15,76.01,{}
+10000.0,ATR,RISK_PERCENT,dev,1273,20.63,0.892,1.0,-0.46,-99.48,99.48,{'rejected_risk_too_high_for_min_lot': 3663}
+10000.0,ATR,RISK_PERCENT,val,1889,19.81,0.873,1.0,-0.2704,-98.9,98.91,{'rejected_risk_too_high_for_min_lot': 359}

@@ -82,6 +82,42 @@ public:
       Push(out, s, p, st);
      }
 
+   //--- Market Structure Shift (site strategy #5): break AGAINST the previous break + displacement + FVG
+   void              MSS(const CRRStructure &st, const RRCellParams &p, RRSignal &out[])
+     {
+      int i = st.n - 1;
+      if(st.brk[i] == 0 || !st.mss[i] || st.atr[i] == EMPTY_VALUE) return;
+      if(st.DispBody(i) < p.min_disp * st.atr[i]) return;
+      int d = st.brk[i];
+      double top, bot;
+      if(!FvgAtBreak(st, i, d, p.min_fvg, top, bot)) return;
+      RRSignal s; Base(s, st, i, "MSS", d, p.expiry);
+      double buf = p.sl_buf_atr * st.atr[i];
+      s.price = (d == 1) ? top : bot;
+      s.sl_struct = (d == 1) ? st.leg_lo[i] - buf : st.leg_hi[i] + buf;
+      s.reason = StringFormat("MSS/CHoCH disp=%.2fATR fvg=[%.2f,%.2f]", st.DispBody(i) / st.atr[i], bot, top);
+      Push(out, s, p, st);
+     }
+
+   //--- Silver Bullet (site strategy #3): FVG formed inside NY 03-04, 10-11, 14-15
+   void              SilverBullet(const CRRStructure &st, const RRCellParams &p, RRSignal &out[], const int ny_offset)
+     {
+      int i = st.n - 1;
+      if(i < 2 || st.atr[i] == EMPTY_VALUE) return;
+      int nym = RRNyMinutes(st.r[i].time, ny_offset);
+      if(!((nym >= 180 && nym < 240) || (nym >= 600 && nym < 660) || (nym >= 840 && nym < 900))) return;
+      double top, bot; int d = 0;
+      if(st.BullFvg(i, top, bot) && top - bot >= p.min_fvg * st.atr[i]) d = 1;
+      else if(st.BearFvg(i, top, bot) && top - bot >= p.min_fvg * st.atr[i]) d = -1;
+      if(d == 0) return;
+      RRSignal s; Base(s, st, i, "SILVER_BULLET", d, p.expiry);
+      double buf = p.sl_buf_atr * st.atr[i];
+      s.price = (d == 1) ? top : bot;
+      s.sl_struct = (d == 1) ? st.r[i - 2].low - buf : st.r[i - 2].high + buf;
+      s.reason = StringFormat("silver bullet window fvg=[%.2f,%.2f]", bot, top);
+      Push(out, s, p, st);
+     }
+
    void              OTEOF(const CRRStructure &st, const RRCellParams &p, RRSignal &out[])
      {
       int i = st.n - 1;

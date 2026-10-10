@@ -74,6 +74,49 @@ def ppk(f, p):
     return _frame(f, m, side, price, sl, "PPK", p.get("expiry", 12))
 
 
+def mss(f, p):
+    """Market Structure Shift (one of the six strategies named on the vendor site): a break AGAINST the
+    previous break direction (CHoCH) with displacement and FVG; limit at the FVG; stop beyond the leg."""
+    a = f.atr.values
+    disp = f.disp_body.values >= p.get("min_disp", 1.2) * a
+    ok_up, ok_dn, btop, bbot, stop_, sbot = _fvg_at_break(f, p.get("min_fvg", 0.15))
+    up = (f.brk.values == 1) & f.is_mss.values & disp & ok_up
+    dn = (f.brk.values == -1) & f.is_mss.values & disp & ok_dn
+    up, dn = _sessions(f, p, up, dn)
+    buf = p.get("sl_buf_atr", 0.2) * a
+    side = np.where(up, 1, -1)
+    price = np.where(up, btop, sbot)
+    sl = np.where(up, f.leg_lo.values - buf, f.leg_hi.values + buf)
+    m = (up | dn) & _risk_ok(f, side, price, sl, p)
+    return _frame(f, m, side, price, sl, "MSS", p.get("expiry", 12))
+
+
+def mtf_m1(f, p):
+    """EXPERIMENTAL multi-timeframe model (not documented by the vendor): H4 and H1 bias (close vs EMA50 of
+    the last CLOSED bars) agree; on the execution timeframe (M1) a liquidity raid of the last 30-bar range is
+    followed by an MSS with displacement + FVG in the bias direction; limit at the FVG, stop beyond the raid."""
+    a = f.atr.values
+    w = p.get("raid_window", 30)
+    bias_up = (f.h1_close.values > f.h1_ema.values) & (f.h4_close.values > f.h4_ema.values)
+    bias_dn = (f.h1_close.values < f.h1_ema.values) & (f.h4_close.values < f.h4_ema.values)
+    lo_w = pd.Series(f.low.values).rolling(w, min_periods=w).min().values
+    hi_w = pd.Series(f.high.values).rolling(w, min_periods=w).max().values
+    prev_lo = pd.Series(f.low.values).shift(w).rolling(3 * w, min_periods=w).min().values
+    prev_hi = pd.Series(f.high.values).shift(w).rolling(3 * w, min_periods=w).max().values
+    raid_lo = lo_w < prev_lo; raid_hi = hi_w > prev_hi
+    disp = f.disp_body.values >= p.get("min_disp", 1.5) * a
+    ok_up, ok_dn, btop, bbot, stop_, sbot = _fvg_at_break(f, p.get("min_fvg", 0.2))
+    up = (f.brk.values == 1) & f.is_mss.values & disp & ok_up & raid_lo & bias_up
+    dn = (f.brk.values == -1) & f.is_mss.values & disp & ok_dn & raid_hi & bias_dn
+    up, dn = _sessions(f, p, up, dn)
+    buf = p.get("sl_buf_atr", 0.3) * a
+    side = np.where(up, 1, -1)
+    price = np.where(up, btop, sbot)
+    sl = np.where(up, lo_w - buf, hi_w + buf)
+    m = (up | dn) & _risk_ok(f, side, price, sl, p)
+    return _frame(f, m, side, price, sl, "MTF_M1", p.get("expiry", 15))
+
+
 def oteof(f, p):
     a = f.atr.values
     disp = f.disp_body.values >= p.get("min_disp", 1.2) * a

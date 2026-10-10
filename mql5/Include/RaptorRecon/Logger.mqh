@@ -12,7 +12,6 @@ class CRRLogger
   {
 private:
    string            m_prefix;
-   bool              m_header_done[3];
    string            Path(const int kind)
      {
       string names[3] = {"signals", "trades", "events"};
