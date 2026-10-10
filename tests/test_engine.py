@@ -161,3 +161,19 @@ def test_friday_cutoff_blocks_entries():
     # available 23:01 -> after the cutoff: no entry
     tr, s = run(mk, sig("2024-01-05 22:56"), replace(BASE, friday_close_min=23 * 60))
     assert len(tr) == 0
+
+
+def test_breathing_risk_reduces_after_drawdown_and_never_exceeds_base():
+    # 12 consecutive losing trades of 1R each at 2% risk: DD passes 5% -> multiplier < 1, never > 1
+    seg = [(101, 101, 99.95, 100.2), (100.2, 100.2, 98.5, 98.6)] + flat(3, 101.0)
+    path = flat(4) + seg * 12
+    mk = make_market(path)
+    starts = [mk.index[4 + 5 * j] - pd.Timedelta(minutes=5) for j in range(12)]
+    s = pd.concat([sig(t) for t in starts], ignore_index=True)
+    prm = replace(BASE, lot_mode=LOT_RISK, risk_percent=2.0, initial_balance=100000, breathe=True,
+                  breathe_dd_full=5.0, breathe_dd_min=23.75, breathe_mult_min=0.25, breathe_recover_wins=20)
+    tr, _ = run(mk, s, prm)
+    assert len(tr) == 12 and (tr.net < 0).all()
+    assert (tr.risk_mult <= 1.0).all() and tr.risk_mult.iloc[0] == 1.0
+    assert tr.risk_mult.iloc[-1] < 1.0 and tr.risk_mult.iloc[-1] >= 0.25
+    assert (tr.risk_money.diff().dropna() <= 1e-9).all()   # risk never increases after losses (no martingale)

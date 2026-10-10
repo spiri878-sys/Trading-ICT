@@ -1,0 +1,13 @@
+{
+ "note": "Results printed to console when run (scripts exp03_ml_filter.py, exp08_ml_htf_and_longbias.py); transcribed here. Re-run the scripts to regenerate.",
+ "EXP-03 (M5 k=8, min stop 3 ATR M15, ladder exits, C1; train dev, evaluate val once)": {
+  "best_iter": 3, "inner_valid_corr": 0.0039, "val_corr": -0.0357,
+  "val_all": {"n": 5838, "mean_R": -0.0614, "pf": 0.862},
+  "val_taken": {"n": 1172, "mean_R": -0.1862, "pf": 0.601},
+  "val_rejected": {"n": 4666, "mean_R": -0.03, "pf": 0.931}},
+ "EXP-08 (dev only)": {
+  "15min_k3_ML_2021": {"corr": 0.054, "all_meanR": -0.2516, "accepted_meanR": -0.1056, "accepted_n": 196},
+  "5min_k8_ML_2021": {"corr": 0.0929, "all_meanR": -0.2682, "accepted_meanR": -0.0601, "accepted_n": 575},
+  "H9_long_only_D1_up_15min": {"n": 1084, "mean_R": -0.1926, "by_year": {"2018": -0.338, "2019": -0.160, "2020": -0.129, "2021": -0.250}},
+  "H9_long_only_D1_up_5min_k8": {"n": 2740, "mean_R": -0.233}}
+}
