@@ -177,3 +177,12 @@ def test_breathing_risk_reduces_after_drawdown_and_never_exceeds_base():
     assert (tr.risk_mult <= 1.0).all() and tr.risk_mult.iloc[0] == 1.0
     assert tr.risk_mult.iloc[-1] < 1.0 and tr.risk_mult.iloc[-1] >= 0.25
     assert (tr.risk_money.diff().dropna() <= 1e-9).all()   # risk never increases after losses (no martingale)
+
+
+def test_trailing_without_partial_is_active_from_entry():
+    # long from 100, R=1; price rallies to 105 then falls: trail 1 ATR(=1) on closes must exit near 104, not at the stop
+    path = flat(4) + [(101, 101, 99.95, 100.2)] + [(100.2 + i, 101.2 + i, 100.1 + i, 101.0 + i) for i in range(5)] + \
+           [(105, 105, 101, 101.2)]
+    prm = replace(BASE, tp_r=50.0, p1_frac=0.0, p2_frac=0.0, trail_atr=1.0)
+    tr, _ = run(make_market(path), sig("2024-01-02 09:59", atr=1.0), prm)
+    assert tr.iloc[0].exit_reason == "TRAIL" and tr.iloc[0].gross > 0

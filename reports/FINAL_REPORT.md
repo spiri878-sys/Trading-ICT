@@ -2,6 +2,16 @@
 
 > **Aggiornamento: secondo giro di ricerca, solo ICT (sezione 0).** Un selettore walk-forward annidato su 1008 configurazioni ICT ha isolato un candidato debole ma coerente: il **profilo C, Unicorn LONG** (M15, stop oltre lo swing H4, TP 3R / 48h). Con rischio 1%: +58% nel 2018–2026 (PF 1,32, DD max 15%) e +26% nel tratto walk-forward 2022–2026 (PF 1,27, DD 9%). Robusto a costi e parametri vicini, ma **il lato short perde sempre**: gran parte del vantaggio è la tendenza rialzista dell'oro, non l'ICT in sé. Le prime righe qui sotto descrivono il primo giro e restano valide per i profili A e B.
 
+## 0-ter. Quarto giro: trend following classico (letteratura sul time-series momentum)
+
+| ID | Test | Esito |
+|---|---|---|
+| TF-01 | Rottura Donchian {20, 55, 100} su H4 / D1, stop {2, 3} ATR, uscita trailing o TP 3R, long e short; selettore walk-forward (top 3) | Long: 100% delle configurazioni > 0; **short: 4% > 0**. I trade isolati si sovrappongono (lo stesso trend viene contato più volte), quindi la R aggregata è gonfiata. Corretto un bug: il trailing senza parziale non si attivava (test aggiunto) |
+| TF-02 | Regola **pre-registrata dalla letteratura** (Turtle: Donchian 55 su H4, stop e trailing 3 ATR), una posizione, rischio 1%, capitale 10.000 | Long + short: **+16%** nel 2018–26 (PF 1,20, DD 9,2%); trade short −0,16R, trade long +0,21R. **Solo long: +31%** (PF 1,68, DD 9,7%); 2022–26 +23% (PF 2,19, DD 2,6%). Robusto ai costi ×2. Anni negativi: 2018, 2021 (e 2022 lieve) |
+| B&H | Compra e tieni l'oro, senza leva | **+220%** nel 2018 → ott. 2026 (2025: +64%) |
+
+**Lettura.** Ogni sistema profittevole trovato (profilo C, Turtle long) guadagna **stando long sull'oro durante il rialzo 2018–2026**, e con rischio 1% per trade rende **molto meno del semplice compra e tieni**. Il loro valore è il controllo del rischio (DD intorno al 10%), non un vantaggio "magico". Nessun sistema short o simmetrico è risultato positivo.
+
 ## 0-bis. Terzo giro: Wyckoff multi-timeframe con gestione AI (richiesta del 10/10/2026)
 
 **Modello** (`python/raptor/strategies/wyckoff_mtf.py`, SPERIMENTALE):

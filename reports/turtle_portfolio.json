@@ -1,0 +1,210 @@
+{
+ "C1|long_short|2018_2026": {
+  "trades": 250,
+  "return_pct": 16.07,
+  "profit_factor": 1.203,
+  "win_rate_pct": 38.8,
+  "expectancy_R": 0.0651,
+  "max_dd_pct": 9.2,
+  "max_losing_streak": 9,
+  "yearly_net": {
+   "2018": -251.67,
+   "2019": 92.64,
+   "2020": 1021.02,
+   "2021": -524.88,
+   "2022": -222.66,
+   "2023": 831.13,
+   "2024": 38.22,
+   "2025": 450.55,
+   "2026": 172.64
+  },
+  "by_strategy_R": {
+   "TURTLE_H4_55": [
+    250,
+    0.065
+   ]
+  },
+  "short_trades_R": -0.162,
+  "long_trades_R": 0.209
+ },
+ "C1|long_short|2022_2026": {
+  "trades": 137,
+  "return_pct": 8.99,
+  "profit_factor": 1.234,
+  "win_rate_pct": 40.88,
+  "expectancy_R": 0.0814,
+  "max_dd_pct": 6.51,
+  "max_losing_streak": 7,
+  "yearly_net": {
+   "2022": -189.06,
+   "2023": 669.54,
+   "2024": -56.76,
+   "2025": 432.52,
+   "2026": 42.8
+  },
+  "by_strategy_R": {
+   "TURTLE_H4_55": [
+    137,
+    0.081
+   ]
+  }
+ },
+ "C1|long_only|2018_2026": {
+  "trades": 153,
+  "return_pct": 30.74,
+  "profit_factor": 1.677,
+  "win_rate_pct": 44.44,
+  "expectancy_R": 0.2088,
+  "max_dd_pct": 9.73,
+  "max_losing_streak": 9,
+  "yearly_net": {
+   "2018": -365.43,
+   "2019": 334.45,
+   "2020": 1193.92,
+   "2021": -729.02,
+   "2022": -84.71,
+   "2023": 850.93,
+   "2024": 684.73,
+   "2025": 806.61,
+   "2026": 382.5
+  },
+  "by_strategy_R": {
+   "TURTLE_H4_55": [
+    153,
+    0.209
+   ]
+  },
+  "short_trades_R": null,
+  "long_trades_R": 0.209
+ },
+ "C1|long_only|2022_2026": {
+  "trades": 85,
+  "return_pct": 22.91,
+  "profit_factor": 2.19,
+  "win_rate_pct": 49.41,
+  "expectancy_R": 0.3058,
+  "max_dd_pct": 2.58,
+  "max_losing_streak": 4,
+  "yearly_net": {
+   "2022": -78.38,
+   "2023": 738.18,
+   "2024": 490.5,
+   "2025": 758.46,
+   "2026": 382.5
+  },
+  "by_strategy_R": {
+   "TURTLE_H4_55": [
+    85,
+    0.306
+   ]
+  }
+ },
+ "C2|long_short|2018_2026": {
+  "trades": 249,
+  "return_pct": 9.39,
+  "profit_factor": 1.119,
+  "win_rate_pct": 38.15,
+  "expectancy_R": 0.0415,
+  "max_dd_pct": 9.38,
+  "max_losing_streak": 10,
+  "yearly_net": {
+   "2018": -332.33,
+   "2019": 51.82,
+   "2020": 1014.12,
+   "2021": -544.79,
+   "2022": -229.68,
+   "2023": 622.54,
+   "2024": -90.94,
+   "2025": 409.02,
+   "2026": 39.04
+  },
+  "by_strategy_R": {
+   "TURTLE_H4_55": [
+    249,
+    0.042
+   ]
+  }
+ },
+ "C2|long_short|2022_2026": {
+  "trades": 136,
+  "return_pct": 7.38,
+  "profit_factor": 1.192,
+  "win_rate_pct": 40.44,
+  "expectancy_R": 0.0602,
+  "max_dd_pct": 6.7,
+  "max_losing_streak": 7,
+  "yearly_net": {
+   "2022": -212.34,
+   "2023": 662.42,
+   "2024": -80.63,
+   "2025": 430.48,
+   "2026": -62.04
+  },
+  "by_strategy_R": {
+   "TURTLE_H4_55": [
+    136,
+    0.06
+   ]
+  }
+ },
+ "C2|long_only|2018_2026": {
+  "trades": 153,
+  "return_pct": 29.73,
+  "profit_factor": 1.658,
+  "win_rate_pct": 44.44,
+  "expectancy_R": 0.1873,
+  "max_dd_pct": 9.66,
+  "max_losing_streak": 9,
+  "yearly_net": {
+   "2018": -369.0,
+   "2019": 289.16,
+   "2020": 1157.85,
+   "2021": -698.57,
+   "2022": -86.9,
+   "2023": 856.2,
+   "2024": 658.88,
+   "2025": 784.52,
+   "2026": 380.62
+  },
+  "by_strategy_R": {
+   "TURTLE_H4_55": [
+    153,
+    0.187
+   ]
+  }
+ },
+ "C2|long_only|2022_2026": {
+  "trades": 85,
+  "return_pct": 22.1,
+  "profit_factor": 2.14,
+  "win_rate_pct": 49.41,
+  "expectancy_R": 0.2892,
+  "max_dd_pct": 2.55,
+  "max_losing_streak": 4,
+  "yearly_net": {
+   "2022": -89.37,
+   "2023": 688.69,
+   "2024": 492.46,
+   "2025": 737.78,
+   "2026": 380.62
+  },
+  "by_strategy_R": {
+   "TURTLE_H4_55": [
+    85,
+    0.289
+   ]
+  }
+ },
+ "buy_and_hold_gold_pct_by_year": {
+  "2018": -2.1,
+  "2019": 18.4,
+  "2020": 24.7,
+  "2021": -4.3,
+  "2022": -0.3,
+  "2023": 12.8,
+  "2024": 26.6,
+  "2025": 64.1,
+  "2026": -4.4
+ },
+ "buy_and_hold_2018_2026_pct": 220.3
+}

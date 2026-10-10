@@ -150,7 +150,7 @@ def _manage(o, h, l, c, sp, dow, mod, fi, side, entry, sl, rd, atr_sig,
             else:
                 px = cur_sl - side * slip
             pnl += rem * (px - entry) * side
-            if npart == 0:
+            if npart == 0 and not (trail_atr > 0 and p1_frac <= 0):
                 r = 1
             elif trail_atr > 0:
                 r = 4
@@ -179,7 +179,7 @@ def _manage(o, h, l, c, sp, dow, mod, fi, side, entry, sl, rd, atr_sig,
             # break-even level also inside this bar: assume it was hit after the partial
             pnl += rem * (cur_sl - side * slip - entry) * side
             return i, pnl, 3, npart, mfe, mae
-        if trail_atr > 0 and npart >= 1:
+        if trail_atr > 0 and (npart >= 1 or p1_frac <= 0):   # without a partial the trail is active from entry
             if side == 1:
                 ns = c[i] - trail_atr * atr_sig
                 if ns > cur_sl: cur_sl = ns
