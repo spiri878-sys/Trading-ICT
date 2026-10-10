@@ -204,7 +204,7 @@ def _stop_price(stop_mode, fill, side, sl_struct, stop_fixed, stop_pct, stop_atr
 
 
 @njit(cache=True)
-def _label(o, h, l, c, sp, dow, mod, s_avail, s_exp, s_side, s_mkt, s_price, s_sl, s_atr,
+def _label(o, h, l, c, sp, dow, mod, s_avail, s_exp, s_side, s_mkt, s_price, s_sl, s_atr, s_tpr,
            stop_mode, stop_fixed, stop_pct, stop_atr, tp_r, p1_r, p1_frac, p2_r, p2_frac, be_on, on_close,
            trail_atr, max_hold, fri_close, slip, max_spread, comm_px):
     """Isolated outcome of every signal (as if it were the only trade). R is net of all costs."""
@@ -220,7 +220,8 @@ def _label(o, h, l, c, sp, dow, mod, s_avail, s_exp, s_side, s_mkt, s_price, s_s
         rd = (fp - sl) * s_side[k]
         if not (rd > 0):
             continue
-        ei, pnl, rs, npart, a, b = _manage(o, h, l, c, sp, dow, mod, fi, s_side[k], fp, sl, rd, s_atr[k], tp_r, p1_r,
+        tpk = s_tpr[k] if s_tpr[k] > 0 else tp_r
+        ei, pnl, rs, npart, a, b = _manage(o, h, l, c, sp, dow, mod, fi, s_side[k], fp, sl, rd, s_atr[k], tpk, p1_r,
                                            p1_frac, p2_r, p2_frac, be_on, on_close, trail_atr, max_hold, fri_close, slip)
         filled[k] = True; fill_i[k] = fi; exit_i[k] = ei; reason[k] = rs
         r_out[k] = (pnl - 2 * comm_px) / (rd + slip + 2 * comm_px)
@@ -229,7 +230,7 @@ def _label(o, h, l, c, sp, dow, mod, s_avail, s_exp, s_side, s_mkt, s_price, s_s
 
 
 @njit(cache=True)
-def _portfolio(o, h, l, c, sp, day, dow, mod, s_avail, s_exp, s_side, s_mkt, s_price, s_sl, s_atr, s_take,
+def _portfolio(o, h, l, c, sp, day, dow, mod, s_avail, s_exp, s_side, s_mkt, s_price, s_sl, s_atr, s_tpr, s_take,
                init_bal, stop_mode, stop_fixed, stop_pct, stop_atr, lot_mode, fixed_lot, risk_pct,
                tp_r, p1_r, p1_frac, p2_r, p2_frac, be_on, on_close, trail_atr, max_hold, fri_close,
                contract, min_lot, lot_step, max_lot, leverage, comm, slip, max_spread, stops_level,
@@ -292,7 +293,8 @@ def _portfolio(o, h, l, c, sp, day, dow, mod, s_avail, s_exp, s_side, s_mkt, s_p
                 status[k] = 12; busy_until = fi; continue
         if lot * contract * fp / leverage > bal:
             status[k] = 5; busy_until = fi; continue
-        ei, pnl, rs, npart, a, b = _manage(o, h, l, c, sp, dow, mod, fi, side, fp, sl, rd, s_atr[k], tp_r, p1_r,
+        tpk = s_tpr[k] if s_tpr[k] > 0 else tp_r
+        ei, pnl, rs, npart, a, b = _manage(o, h, l, c, sp, dow, mod, fi, side, fp, sl, rd, s_atr[k], tpk, p1_r,
                                            p1_frac, p2_r, p2_frac, be_on, on_close, trail_atr, max_hold, fri_close, slip)
         money = pnl * lot * contract
         cm = 2 * comm * lot
@@ -337,8 +339,10 @@ def _sig_arrays(mk: Market, sig: pd.DataFrame, tf_minutes: int):
     s_avail = np.searchsorted(mk.index.values, avail_t, side="left").astype(np.int64)
     exp_t = avail_t + (sig.expiry_bars.values.astype("int64") * tf_minutes).astype("timedelta64[m]")
     s_exp = (np.searchsorted(mk.index.values, exp_t, side="left") - 1).astype(np.int64)
+    tpr = sig["tp_r"].values.astype(np.float64) if "tp_r" in sig.columns else np.zeros(len(sig))
     return (s_avail, s_exp, sig.side.values.astype(np.int64), (sig.otype.values == "market").astype(np.int64),
-            sig.price.values.astype(np.float64), sig.sl_struct.values.astype(np.float64), sig.atr.values.astype(np.float64))
+            sig.price.values.astype(np.float64), sig.sl_struct.values.astype(np.float64), sig.atr.values.astype(np.float64),
+            np.nan_to_num(tpr))
 
 
 def label(mk: Market, sig: pd.DataFrame, prm: Params, tf_minutes: int = 5, spread_mult: float = 1.0) -> pd.DataFrame:

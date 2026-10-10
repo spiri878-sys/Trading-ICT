@@ -6,6 +6,7 @@ expiry_bars, strategy, plus context columns copied by `raptor.features`.
 """
 from .ict import ppk, mss, oteof, po3, uniof, ls, silver_bullet, mtf_m1
 from .wyckoff import wyckoff_spring
+from .wyckoff_mtf import wyckoff_mtf
 
 REGISTRY = {
     "PPK": ppk,
@@ -17,6 +18,7 @@ REGISTRY = {
     "LS": ls,
     "SILVER_BULLET": silver_bullet,
     "WYCKOFF": wyckoff_spring,
+    "WYCKOFF_MTF": wyckoff_mtf,
 }
 # The five cells named in the Interstellar material (screenshot "La cascata dei modelli").
 ICT_CELLS = ["PPK", "OTEOF", "PO3", "UNIOF", "LS"]

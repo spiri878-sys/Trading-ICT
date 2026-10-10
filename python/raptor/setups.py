@@ -92,6 +92,8 @@ def build_features(m1: pd.DataFrame, tf: str = "5min", swing_k: int = 3) -> pd.D
     f["atr"] = a
     f["atr_rel"] = a / pd.Series(a).rolling(100, min_periods=20).mean().values
     f["ema50"] = ema(c, 50)
+    tv = b.tickvol.values.astype(float)
+    f["tv_rel"] = tv / pd.Series(tv).rolling(96, min_periods=20).median().values   # relative tick volume (effort)
     f["body"] = np.abs(c - o)
     f["brk"], f["is_mss"], f["leg_lo"], f["leg_hi"] = brk, mss, leg_lo, leg_hi
     f["brk_zlo"], f["brk_zhi"] = zlo, zhi

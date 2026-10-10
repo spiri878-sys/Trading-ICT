@@ -5,7 +5,7 @@ All values are known at the close of the decision bar.
 import numpy as np
 import pandas as pd
 
-CELLS = ["PPK", "MSS", "MTF_M1", "OTEOF", "PO3", "UNIOF", "LS", "SILVER_BULLET", "WYCKOFF"]
+CELLS = ["PPK", "MSS", "MTF_M1", "OTEOF", "PO3", "UNIOF", "LS", "SILVER_BULLET", "WYCKOFF", "WYCKOFF_MTF"]
 
 
 def signal_features(f: pd.DataFrame, sig: pd.DataFrame) -> pd.DataFrame:
@@ -54,6 +54,8 @@ def signal_features(f: pd.DataFrame, sig: pd.DataFrame) -> pd.DataFrame:
         X[f"dist_{h}_swing_lo"] = (c - g(f"{h}_swing_lo")) / g(f"{h}_atr")
         X[f"dist_{h}_swing_hi"] = (g(f"{h}_swing_hi") - c) / g(f"{h}_atr")
     X["stop_atr_h4"] = risk / g("h4_atr")
+    X["tv_rel"] = g("tv_rel")
+    X["tp_r_sig"] = sig["tp_r"].values if "tp_r" in sig.columns else 0.0
     ny = g("ny_min")
     X["ny_sin"] = np.sin(2 * np.pi * ny / 1440); X["ny_cos"] = np.cos(2 * np.pi * ny / 1440)
     X["ny_hour"] = ny // 60

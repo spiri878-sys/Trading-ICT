@@ -2,6 +2,29 @@
 
 > **Aggiornamento: secondo giro di ricerca, solo ICT (sezione 0).** Un selettore walk-forward annidato su 1008 configurazioni ICT ha isolato un candidato debole ma coerente: il **profilo C, Unicorn LONG** (M15, stop oltre lo swing H4, TP 3R / 48h). Con rischio 1%: +58% nel 2018–2026 (PF 1,32, DD max 15%) e +26% nel tratto walk-forward 2022–2026 (PF 1,27, DD 9%). Robusto a costi e parametri vicini, ma **il lato short perde sempre**: gran parte del vantaggio è la tendenza rialzista dell'oro, non l'ICT in sé. Le prime righe qui sotto descrivono il primo giro e restano valide per i profili A e B.
 
+## 0-bis. Terzo giro: Wyckoff multi-timeframe con gestione AI (richiesta del 10/10/2026)
+
+**Modello** (`python/raptor/strategies/wyckoff_mtf.py`, SPERIMENTALE):
+
+- **Contesto**: trading range laterale su 48–120 h (altezza 3–15 ATR H1, deriva ≤ 50% dell'altezza).
+- **Evento su M15**: Spring o Upthrust oltre il range con rientro; filtro opzionale sul tick volume.
+- **Conferma**: SOS / SOW (rottura della struttura M15).
+- **Ingresso**: a mercato sul SOS oppure sul pullback LPS.
+- **Stop e target**: stop oltre lo spring; target sul lato opposto del range (R/R ≥ 1,5).
+
+| ID | Test | Esito |
+|---|---|---|
+| WY-01 | 48 set di segnali × 5 gestioni × {entrambi, long, short} = 720 configurazioni; stesso selettore walk-forward annidato di WF-01 | **OOS 2020–2026: −0,004R/trade su 835 trade (t −0,12)**. Annuale (somma R): +12,8 / +34,6 / +5,0 / −14,9 / −3,8 / −1,4 / −35,9. Sull'intero periodo solo il 28% delle configurazioni è > 0; la migliore ha t 1,6 (solo long, in-sample) |
+| WY-02 | **Gestione AI**: per ogni trade un LightGBM per politica (range TP, range TP + 50% a 1R + BE, scala del venditore, TP 2R, 50% a 1R + BE + trailing 2 ATR) sceglie la politica o salta il trade, addestrato solo sugli anni precedenti | AI: **−0,073R** (con salto: −0,051R). Migliore politica fissa (trailing): −0,029R. Politica "migliore finora": −0,068R. **L'AI non migliora la gestione** |
+
+**Verdetto**: il Wyckoff multi-timeframe non ha vantaggio fuori campione su XAUUSD 2020–2026, nemmeno con la gestione AI. Non è stato aggiunto come profilo raccomandato.
+
+File:
+
+- `experiments/wy01_selector.csv`
+- `experiments/wy01_full_period_configs.csv`
+- `experiments/wy02_ai_exit_policy.json`
+
 ## 0. Secondo giro: ricerca solo ICT (Wyckoff escluso)
 
 | ID | Ipotesi | Esito |
