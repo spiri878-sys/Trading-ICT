@@ -34,7 +34,8 @@ enum ENUM_RR_PROFILE
   {
    RR_PROFILE_FAITHFUL_M5   = 0, // A: evidence-based reconstruction (5 ICT cells, M5, ladder 0.7/2/4R)
    RR_PROFILE_EXPERIMENTAL  = 1, // B: H1 continuation (PPK+UNIOF, market entry, 3R/48h) - FAILED validation
-   RR_PROFILE_WYCKOFF_BENCH = 2  // Wyckoff spring/upthrust benchmark (same execution)
+   RR_PROFILE_WYCKOFF_BENCH = 2, // Wyckoff spring/upthrust benchmark (same execution)
+   RR_PROFILE_UNICORN_LONG  = 3  // C: Unicorn LONG only, M15, stop beyond H4 swing, TP 3R / 48h (walk-forward survivor, weak edge)
   };
 
 //--- candidate signal produced by a cell

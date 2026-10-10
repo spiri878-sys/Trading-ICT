@@ -51,6 +51,7 @@ Per tutte le celle valgono queste regole comuni:
 |---|---|---|
 | **A: FAITHFUL_M5** | Celle su M5 (k = 3). Gestione E-25: 20% a +0,7R + break-even, 20% a +2R, il resto a 4R; decisioni sulla barra M1 chiusa; massimo 3 giorni di durata; chiusura il venerdì alle 23:00 server | Ricostruzione fedele. **Aspettativa negativa** (reports) |
 | **B: EXPERIMENTAL** | PPK + UNIOF su H1 (k = 3), ingresso a mercato, TP 3R, nessun parziale, durata massima 48 h | Positivo in dev, **respinto** in validazione (VAL-01) |
+| **C: UNICORN_LONG** | Solo UNIOF, solo long, M15 (k = 3), stop = min(stop della cella, ultimo swing low H4 confermato − 0,2 ATR H4), scartato se il rischio > 6 ATR H4; TP 3R, nessun parziale, durata massima 48 h | SPERIMENTALE, sopravvissuto al walk-forward (WF-01). Positivo, ma **dipendente dalla tendenza rialzista dell'oro** (gli short perdono in tutte le varianti) |
 | **W: WYCKOFF_BENCH** | Solo Wyckoff, stessa esecuzione | Benchmark, negativo |
 
 ## Timeframe usati e motivazione

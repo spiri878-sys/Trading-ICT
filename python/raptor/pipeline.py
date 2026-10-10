@@ -1,6 +1,7 @@
 """Glue: data -> features -> signals -> labels / simulation."""
 from functools import lru_cache
 from pathlib import Path
+import numpy as np
 import pandas as pd
 
 from . import data as D
@@ -71,13 +72,30 @@ def apply_min_stop(sig: pd.DataFrame, f: pd.DataFrame, min_atr_m15: float) -> pd
     return sig.assign(sl_struct=sl, stop_floored=floored)
 
 
+def apply_htf_stop(sig: pd.DataFrame, f: pd.DataFrame, htf: str = "h1", buf_atr: float = 0.2,
+                   max_atr_htf: float = 6.0) -> pd.DataFrame:
+    """EXPERIMENTAL (motivated by E-25/E-29: vendor stops ~$21, >= 2 ATR M15): put the stop beyond the last
+    confirmed swing of the higher timeframe `htf` (h1/h4) when that is further than the cell's own stop.
+    Signals whose resulting risk exceeds `max_atr_htf` x ATR(htf) are dropped (no silent widening beyond it)."""
+    i = sig.bar_i.values
+    a = f[f"{htf}_atr"].values[i]
+    lo = f[f"{htf}_swing_lo"].values[i] - buf_atr * a
+    hi = f[f"{htf}_swing_hi"].values[i] + buf_atr * a
+    sl = np.where(sig.side > 0, np.fmin(sig.sl_struct, lo), np.fmax(sig.sl_struct, hi))
+    out = sig.assign(sl_struct=sl, stop_htf=htf)
+    risk = (out.price - out.sl_struct) * out.side
+    return out[(risk > 0) & (risk <= max_atr_htf * a)].reset_index(drop=True)
+
+
 def in_period(df, period, col="bar_time"):
     a, b = PERIODS[period] if isinstance(period, str) else period
     return df[(df[col] >= a) & (df[col] < b)]
 
 
-def labelled(strategies: dict, prm: Params, tf="5min", swing_k=3, spread_mult=1.0, min_stop_m15=0.0):
+def labelled(strategies: dict, prm: Params, tf="5min", swing_k=3, spread_mult=1.0, min_stop_m15=0.0, htf_stop=None):
     s = apply_min_stop(signals(strategies, tf, swing_k), feats(tf, swing_k), min_stop_m15)
+    if htf_stop:
+        s = apply_htf_stop(s, feats(tf, swing_k), htf_stop)
     lab = label(market(), s, prm, int(pd.Timedelta(tf).total_seconds() // 60), spread_mult)
     X = signal_features(feats(tf, swing_k), s)
     return lab, X

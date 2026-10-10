@@ -62,12 +62,18 @@ def _breaker_zone(o, h, l, c, brk, brk_swing, look):
     return zlo, zhi
 
 
-def _htf(m1: pd.DataFrame, rule: str, minutes: int, prefix: str) -> pd.DataFrame:
+def _htf(m1: pd.DataFrame, rule: str, minutes: int, prefix: str, swing_k: int = 2) -> pd.DataFrame:
     b = D.resample(m1, rule)
-    a = atr(b.high.values, b.low.values, b.close.values, 14)
-    e = ema(b.close.values, 50)
-    out = pd.DataFrame({f"{prefix}_atr": a, f"{prefix}_ema": e, f"{prefix}_close": b.close.values,
-                        f"{prefix}_atr_rel": a / pd.Series(a).rolling(100, min_periods=20).mean().values},
+    o, h, l, c = (b[k].values for k in ("open", "high", "low", "close"))
+    a = atr(h, l, c, 14)
+    e = ema(c, 50)
+    # HTF structure: last confirmed swings and direction of the last break (both known at bar close)
+    sh, shi, slv, sli = confirmed_swings(h, l, swing_k)
+    brk = _structure(o, h, l, c, sh, shi, slv, sli)[0]
+    trend = pd.Series(np.where(brk != 0, brk, np.nan)).ffill().fillna(0).values
+    out = pd.DataFrame({f"{prefix}_atr": a, f"{prefix}_ema": e, f"{prefix}_close": c,
+                        f"{prefix}_atr_rel": a / pd.Series(a).rolling(100, min_periods=20).mean().values,
+                        f"{prefix}_swing_hi": sh, f"{prefix}_swing_lo": slv, f"{prefix}_trend": trend},
                        index=b.index + pd.Timedelta(minutes=minutes))
     out.index.name = "t"
     return out

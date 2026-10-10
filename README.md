@@ -2,6 +2,8 @@
 
 Ricostruzione **indipendente** del comportamento pubblicamente descritto di *ICT RAPTOR AI PRIME* (AutoTrader Forex Club), solo per **XAUUSD**. Non è affiliata al prodotto commerciale e non ne è una copia: il suo codice e i suoi modelli non sono disponibili.
 
+> **Profilo migliore trovato: C, Unicorn LONG (M15, stop H4, TP 3R / 48h).** Con rischio 1%: +58% nel 2018–2026 (PF 1,32, DD 15%) e +26% nel walk-forward 2022–2026. Robusto ai costi, ma dipende dal trend rialzista dell'oro: gli short perdono sempre. Preset `RaptorRecon_C_unicorn_long_risk1pct.set`.
+>
 > **Esito della ricerca** (`reports/FINAL_REPORT.md`): nessuna strategia testata (6 strategie del sito + PPK, combinazioni, profilo sperimentale, filtro AI, benchmark Wyckoff) mostra un vantaggio statistico robusto dopo i costi su XAUUSD M1 2018–2026. L'EA MQL5 non è stato compilato né testato in MT5. **Usare solo su conto demo.**
 
 ## Struttura

@@ -49,6 +49,11 @@ def signal_features(f: pd.DataFrame, sig: pd.DataFrame) -> pd.DataFrame:
     X["pos_day"] = np.where(s > 0, (c - g("day_lo")), (g("day_hi") - c)) / np.maximum(g("day_hi") - g("day_lo"), 1e-9)
     X["dist_pdh_atr"] = (g("pdh") - c) / g("h1_atr")
     X["dist_pdl_atr"] = (c - g("pdl")) / g("h1_atr")
+    for h in ("h1", "h4"):
+        X[f"{h}_trend_al"] = np.sign(g(f"{h}_trend")) * s
+        X[f"dist_{h}_swing_lo"] = (c - g(f"{h}_swing_lo")) / g(f"{h}_atr")
+        X[f"dist_{h}_swing_hi"] = (g(f"{h}_swing_hi") - c) / g(f"{h}_atr")
+    X["stop_atr_h4"] = risk / g("h4_atr")
     ny = g("ny_min")
     X["ny_sin"] = np.sin(2 * np.pi * ny / 1440); X["ny_cos"] = np.cos(2 * np.pi * ny / 1440)
     X["ny_hour"] = ny // 60

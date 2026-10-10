@@ -54,6 +54,7 @@ public:
    double            leg_lo[], leg_hi[];
    int               brk_swing[];
    double            zlo[], zhi[]; // breaker candle zone at a break
+   double            last_sh, last_sl; // last confirmed swing high/low after the last CLOSED bar
 
    bool              Load(const string sym, const ENUM_TIMEFRAMES tf, const int bars, const int k)
      {
@@ -117,6 +118,7 @@ public:
             if(is_l) { sl = r[p].low; sli = p; }
            }
          p_sh = sh; p_shi = shi; p_sl = sl; p_sli = sli;
+         last_sh = (shi >= 0) ? sh : EMPTY_VALUE; last_sl = (sli >= 0) ? sl : EMPTY_VALUE;
          // 3) breaker zone (last opposite candle at/just before the broken swing)
          if(brk[i] != 0 && brk_swing[i] >= 0)
            {

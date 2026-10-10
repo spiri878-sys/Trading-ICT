@@ -1,6 +1,34 @@
 # Raptor Recon: report finale di ricerca (XAUUSD)
 
-**In una frase:** con i dati e le fonti disponibili **non è stato trovato un vantaggio statistico robusto** dopo i costi.
+> **Aggiornamento: secondo giro di ricerca, solo ICT (sezione 0).** Un selettore walk-forward annidato su 1008 configurazioni ICT ha isolato un candidato debole ma coerente: il **profilo C, Unicorn LONG** (M15, stop oltre lo swing H4, TP 3R / 48h). Con rischio 1%: +58% nel 2018–2026 (PF 1,32, DD max 15%) e +26% nel tratto walk-forward 2022–2026 (PF 1,27, DD 9%). Robusto a costi e parametri vicini, ma **il lato short perde sempre**: gran parte del vantaggio è la tendenza rialzista dell'oro, non l'ICT in sé. Le prime righe qui sotto descrivono il primo giro e restano valide per i profili A e B.
+
+## 0. Secondo giro: ricerca solo ICT (Wyckoff escluso)
+
+| ID | Ipotesi | Esito |
+|---|---|---|
+| WF-01 | Selettore walk-forward annidato. Ogni anno Y dal 2020 al 2026 sceglie le 5 configurazioni con il t-stat più alto, usando solo i dati < Y. Griglia: 7 celle × {M5, M15} × stop {strutturale, min 2 ATR M15, swing H1, swing H4} × uscite {scala del venditore, TP 3R 48h, TP 2R 24h} × bias {nessuno, H1, H4} × {entrambi, solo long} | **OOS 2020–2026: +0,003R/trade su 1989 trade (t 0,12)**. Annuale (somma R): 2020 +15,5, 2021 −20,6, 2022 −52,0, 2023 +19,0, 2024 +15,6, 2025 +17,2, 2026 +11,5. Dal 2022 il selettore converge su Unicorn long M15 con stop H4 |
+| WF-02 | Il sopravvissuto contro ingressi long **casuali** con la stessa distribuzione di stop e la stessa uscita | Strategia +0,167R (396 trade, t 2,43). Casuale in media +0,03R, con banda 5–95% annuale circa da −0,3 a +0,5. Nel tratto 2022–26: +0,15R contro +0,06R del casuale. **Vantaggio di timing ~+0,1R, non significativo** |
+| WF-03 | Metodo dichiarato dal venditore: gradient boosting **riaddestrato ogni anno** su tutti i segnali delle celle, stop larghi H1/H4, soglia viva q80/1000 | **OOS 2020–2026: −0,055R** (3457 trade, t −3,0; pool primario pre-registrato M5, stop H1, scala), negativo in 6 anni su 7. Varianti: −0,05 / −0,10 / −0,06R |
+| C-PORT | Profilo C in portafoglio: 1 posizione, rischio 1%, capitale 10.000 | C1: +58,4% nel 2018–26 (331 trade, PF 1,32, DD 15,1%, 42,6% vincenti); 2022–26: +25,6% (PF 1,27, DD 8,7%). C0R: +68,6%. C2 (costi ×2): +48,6%. Anni negativi: 2018 (−1066 $) e 2026 fino a ottobre (−394 $) |
+| C-ROB | Vicinato: k {2, 3, 4} × TP {2, 3, 4} × durata {24, 48, 96 h} × stop {H1, H4}, long e short | Long: 93% delle varianti > 0 (2022–26: 100%), mediana +0,09R. **Short: 0% > 0**, mediana −0,14R |
+
+**Lettura onesta.**
+
+- Il profilo C è la cosa migliore trovata ed è stabile, ma si basa sul presupposto che l'oro continui a salire.
+- Rispetto a un long casuale aggiunge poco: circa +0,1R per trade, non significativo.
+- Non è stato scelto su dati futuri: dal 2022 il selettore lo indicava usando solo gli anni precedenti.
+- Però questo stesso secondo giro di ricerca è stato fatto dopo aver visto i periodi val e test del primo giro. Il vero banco di prova sono i dati successivi a ottobre 2026 e il demo.
+
+File:
+
+- `experiments/wf01_selector.csv`
+- `experiments/wf02_unicorn_vs_drift.json`
+- `experiments/wf03_ml_walkforward.json`
+- `experiments/candidate_c_robustness.csv`
+- `reports/candidate_c_portfolio.json`
+- `reports/trades_CAND_C_*.csv`
+
+**In una frase (primo giro):** con i dati e le fonti disponibili **non è stato trovato un vantaggio statistico robusto** dopo i costi per i profili A e B. Il profilo C (sezione 0) è positivo, ma dipende dalla tendenza rialzista dell'oro.
 
 - Nessuna cella ICT, nessuna combinazione e nemmeno il benchmark Wyckoff ha aspettativa positiva fuori campione.
 - Il filtro AI migliora in modo significativo rispetto alla selezione casuale, ma porta l'aspettativa solo a circa 0R.

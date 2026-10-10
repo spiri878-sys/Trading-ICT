@@ -1,0 +1,164 @@
+{
+ "C1|2018_2026": {
+  "trades": 331,
+  "net_profit": 5839.42,
+  "return_pct": 58.39,
+  "profit_factor": 1.321,
+  "win_rate_pct": 42.6,
+  "expectancy_R": 0.158,
+  "max_dd_pct": 15.09,
+  "max_losing_streak": 10,
+  "trades_per_month": 3.14,
+  "positive_months_pct": 51.46,
+  "yearly_net": {
+   "2018": -1065.55,
+   "2019": 1358.42,
+   "2020": 341.1,
+   "2021": 1647.51,
+   "2022": 301.64,
+   "2023": 1386.6,
+   "2024": 639.95,
+   "2025": 1623.53,
+   "2026": -393.79
+  },
+  "exit_reasons": {
+   "SL": 142,
+   "TIME": 86,
+   "FRIDAY": 62,
+   "TP": 41
+  }
+ },
+ "C1|OOS_2022_2026": {
+  "trades": 197,
+  "net_profit": 2562.42,
+  "return_pct": 25.62,
+  "profit_factor": 1.267,
+  "win_rate_pct": 42.64,
+  "expectancy_R": 0.1487,
+  "max_dd_pct": 8.68,
+  "max_losing_streak": 10,
+  "trades_per_month": 3.44,
+  "positive_months_pct": 52.73,
+  "yearly_net": {
+   "2022": 183.13,
+   "2023": 1074.98,
+   "2024": 526.69,
+   "2025": 1082.7,
+   "2026": -305.07
+  },
+  "exit_reasons": {
+   "SL": 84,
+   "TIME": 56,
+   "FRIDAY": 35,
+   "TP": 22
+  }
+ },
+ "C0R|2018_2026": {
+  "trades": 354,
+  "net_profit": 6858.97,
+  "return_pct": 68.59,
+  "profit_factor": 1.348,
+  "win_rate_pct": 43.22,
+  "expectancy_R": 0.1693,
+  "max_dd_pct": 14.03,
+  "max_losing_streak": 9,
+  "trades_per_month": 3.36,
+  "positive_months_pct": 54.29,
+  "yearly_net": {
+   "2018": -958.11,
+   "2019": 1385.96,
+   "2020": 365.43,
+   "2021": 1794.33,
+   "2022": 244.67,
+   "2023": 1136.7,
+   "2024": 1478.13,
+   "2025": 1714.64,
+   "2026": -302.79
+  },
+  "exit_reasons": {
+   "SL": 151,
+   "TIME": 93,
+   "FRIDAY": 67,
+   "TP": 43
+  }
+ },
+ "C0R|OOS_2022_2026": {
+  "trades": 204,
+  "net_profit": 3125.23,
+  "return_pct": 31.25,
+  "profit_factor": 1.319,
+  "win_rate_pct": 43.63,
+  "expectancy_R": 0.1653,
+  "max_dd_pct": 7.83,
+  "max_losing_streak": 9,
+  "trades_per_month": 3.56,
+  "positive_months_pct": 55.36,
+  "yearly_net": {
+   "2022": 126.11,
+   "2023": 835.79,
+   "2024": 1133.1,
+   "2025": 1396.83,
+   "2026": -366.6
+  },
+  "exit_reasons": {
+   "SL": 85,
+   "TIME": 61,
+   "FRIDAY": 36,
+   "TP": 22
+  }
+ },
+ "C2|2018_2026": {
+  "trades": 289,
+  "net_profit": 4855.89,
+  "return_pct": 48.56,
+  "profit_factor": 1.314,
+  "win_rate_pct": 41.52,
+  "expectancy_R": 0.1619,
+  "max_dd_pct": 11.33,
+  "max_losing_streak": 14,
+  "trades_per_month": 2.75,
+  "positive_months_pct": 51.0,
+  "yearly_net": {
+   "2018": -574.0,
+   "2019": 779.82,
+   "2020": 542.98,
+   "2021": 1215.04,
+   "2022": 437.34,
+   "2023": 1010.18,
+   "2024": 356.68,
+   "2025": 1506.03,
+   "2026": -418.2
+  },
+  "exit_reasons": {
+   "SL": 120,
+   "TIME": 77,
+   "FRIDAY": 56,
+   "TP": 36
+  }
+ },
+ "C2|OOS_2022_2026": {
+  "trades": 184,
+  "net_profit": 2482.86,
+  "return_pct": 24.83,
+  "profit_factor": 1.286,
+  "win_rate_pct": 42.93,
+  "expectancy_R": 0.1485,
+  "max_dd_pct": 8.78,
+  "max_losing_streak": 9,
+  "trades_per_month": 3.21,
+  "positive_months_pct": 54.55,
+  "yearly_net": {
+   "2022": 341.87,
+   "2023": 831.04,
+   "2024": 366.09,
+   "2025": 1033.51,
+   "2026": -89.65
+  },
+  "exit_reasons": {
+   "SL": 76,
+   "TIME": 53,
+   "FRIDAY": 35,
+   "TP": 20
+  }
+ }
+}

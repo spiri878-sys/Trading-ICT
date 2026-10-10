@@ -144,7 +144,13 @@ int OnInit()
    g_guard.Init(InpMagic);
    g_pm.Init(&g_trade, &g_log, InpMagic);
    g_tg.Init(InpTelegram, InpTelegramToken, InpTelegramChat);
-   if(InpProfile == RR_PROFILE_EXPERIMENTAL)
+   if(InpProfile == RR_PROFILE_UNICORN_LONG)
+     {
+      g_tf = PERIOD_M15; g_swing_k = 3;
+      g_mgmt.tp_r = 3.0; g_mgmt.p1_r = 0; g_mgmt.p1_frac = 0; g_mgmt.p2_r = 0; g_mgmt.p2_frac = 0;
+      g_mgmt.be_after_p1 = false; g_mgmt.trail_atr = 0; g_mgmt.max_hold_min = 2880;
+     }
+   else if(InpProfile == RR_PROFILE_EXPERIMENTAL)
      {
       g_tf = PERIOD_H1; g_swing_k = 3;
       g_mgmt.tp_r = 3.0; g_mgmt.p1_r = 0; g_mgmt.p1_frac = 0; g_mgmt.p2_r = 0; g_mgmt.p2_frac = 0;
@@ -258,6 +264,27 @@ int Candidates(RRSignal &out[])
      {
       CellDefaults(p, 0, 0, 1, true);
       g_cells.Wyckoff(g_st, p, out, RRHtfAtr(_Symbol, PERIOD_H1));
+      return ArraySize(out);
+     }
+   if(InpProfile == RR_PROFILE_UNICORN_LONG)
+     {
+      // mirror of python/scripts/candidate_c_portfolio.py: UNIOF on M15, long only, stop = min(own stop,
+      // last confirmed H4 swing low - 0.2 ATR(H4)), dropped if risk > 6 ATR(H4)
+      RRSignal raw[];
+      CellDefaults(p, 1.2, 0.1, 4, false); p.max_r_atr = 40.0;
+      g_cells.UNIOF(g_st, p, raw);
+      CRRStructure h4;
+      if(!h4.Load(_Symbol, PERIOD_H4, 400, 2) || h4.last_sl == EMPTY_VALUE) return 0;
+      double a4 = h4.atr[h4.n - 1];
+      for(int i = 0; i < ArraySize(raw); i++)
+        {
+         if(raw[i].side != 1) continue;
+         raw[i].sl_struct = MathMin(raw[i].sl_struct, h4.last_sl - 0.2 * a4);
+         double risk = raw[i].price - raw[i].sl_struct;
+         if(risk <= 0 || risk > 6.0 * a4) continue;
+         raw[i].reason += StringFormat(" | H4 swing stop %.2f", raw[i].sl_struct);
+         int k = ArraySize(out); ArrayResize(out, k + 1); out[k] = raw[i];
+        }
       return ArraySize(out);
      }
    if(InpProfile == RR_PROFILE_EXPERIMENTAL)

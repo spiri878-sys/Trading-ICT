@@ -31,7 +31,7 @@ Se compaiono errori, inviameli: il log verrà analizzato e corretto.
 | **Modelling** | **Every tick based on real ticks** | Il video del venditore usava "1 minute OHLC" (E-14), troppo ottimistico per stop di pochi dollari |
 | Delays | Random delay, oppure 50–200 ms | **Non** "Zero latency, ideal execution" |
 | Deposito / leva | 10.000 USD, 1:100 (anche 1.000 per vedere i rifiuti per lotto minimo) | |
-| Preset | `RaptorRecon_A_faithful_risk1pct.set` (profilo A), poi `…_fixed008`, `…_W_wyckoff_benchmark`, `…_B_experimental_H1` | |
+| Preset | `RaptorRecon_C_unicorn_long_risk1pct.set` (profilo C, il migliore), `RaptorRecon_A_faithful_risk1pct.set` (profilo A), poi `…_fixed008`, `…_W_wyckoff_benchmark`, `…_B_experimental_H1` | |
 
 Durante e dopo il test raccogli:
 
@@ -65,7 +65,7 @@ Differenze attese, da spiegare caso per caso:
 
 | Gruppo | Input | Default | Note |
 |---|---|---|---|
-| Generale | `InpProfile` | FAITHFUL_M5 | A / B (sperimentale, fallito in validazione) / Wyckoff |
+| Generale | `InpProfile` | FAITHFUL_M5 | A / B (sperimentale, fallito in validazione) / Wyckoff / **C Unicorn long** (consigliato per i test) |
 | | `InpAllowRealAccount` | false | Su un conto reale l'EA non parte |
 | | `InpNyOffsetHours` | 7 | Ora server − ora New York: **va verificato sul proprio broker** |
 | Stop | `InpStopMode` | STRUCTURAL | FIXED / PERCENT obbligatorie, STRUCTURAL / ATR aggiuntive (vedi `stop_and_lot.md`) |
