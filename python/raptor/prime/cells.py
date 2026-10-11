@@ -39,7 +39,8 @@ def _out(f, cell, mask, side, price, sl, expiry, otype="limit", leg_lo=None, leg
         "bar_i": idx, "bar_time": f.index[idx], "cell": cell, "tf": f.attrs.get("tf", ""),
         "side": np.asarray(side)[idx].astype(int), "otype": otype,
         "price": np.asarray(price, float)[idx], "sl_struct": np.asarray(sl, float)[idx],
-        "atr": f.atr.values[idx], "expiry_bars": expiry,
+        "atr": f.atr.values[idx], "atr_m15": (f.m15_atr.values[idx] if "m15_atr" in f else np.nan),
+        "expiry_bars": expiry,
         "leg_lo": pick(leg_lo), "leg_hi": pick(leg_hi), "zone_lo": pick(zlo), "zone_hi": pick(zhi),
         "reason": reason})
 
