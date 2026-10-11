@@ -10,3 +10,6 @@ output/video/*/all/
 output/foto/crops/
 output/documenti/presentazione/p-*.png
 output/documenti/presentazione/hi-9.png
+output/video/*/crops/
+output/video/*/zoom*/
+output/video/*/tmp*/
