@@ -6,13 +6,13 @@ Stati: **fatto** · **escluso** (con motivo) · **da fare** (fase prevista).
 
 | # | Voce | Stato | Fase |
 |---|---|---|---|
-| 1 | Riferimento PRIME (non CORE/PLUS) e priorità delle fonti | da fare | 1 |
-| 2 | Cella Raptor Mode (displacement, ritraccio confermato) | da fare | 1–2 |
-| 3 | Cella Order Flow OTE (ritraccio 62–79%) | da fare | 1–2 |
-| 4 | Cella PO3 (accumulo, manipolazione, distribuzione) | da fare | 1–2 |
-| 5 | Cella Unicorn (breaker + FVG non mitigato) | da fare | 1–2 |
-| 6 | Cella Liquidity Sweep | da fare | 1–2 |
-| 7 | Cella Breaker Block | da fare | 1–2 |
+| 1 | Riferimento PRIME (non CORE/PLUS) e priorità delle fonti | **fatto** (`regole.md`) | 1 |
+| 2 | Cella Raptor Mode (displacement, ritraccio confermato) | regole scritte (`regole.md` §2), codice da fare | 2 |
+| 3 | Cella Order Flow OTE (ritraccio 62–79%) | regole scritte (`regole.md` §2), codice da fare | 2 |
+| 4 | Cella PO3 (accumulo, manipolazione, distribuzione) | regole scritte (`regole.md` §2), codice da fare | 2 |
+| 5 | Cella Unicorn (breaker + FVG non mitigato) | regole scritte (`regole.md` §2), codice da fare | 2 |
+| 6 | Cella Liquidity Sweep | regole scritte (`regole.md` §2), codice da fare | 2 |
+| 7 | Cella Breaker Block | regole scritte (`regole.md` §2), codice da fare | 2 |
 | 8 | Marchio della cella su ogni ordine | da fare | 8 |
 | 9 | Ogni set decide celle attive e soglie AI | da fare | 5, 8 |
 | 10 | AI livello 1 — Occhio: 8 reti a maggioranza, soglie 0,60–0,70 | da fare | 5 |
@@ -55,7 +55,7 @@ Stati: **fatto** · **escluso** (con motivo) · **da fare** (fase prevista).
 | 42 | La Voce (pannello e Telegram con contesto macro) | da fare | 8 |
 | 43 | Gestione: 1R, parziale (90%) a +1R, pareggio, trailing strutturale, uscita adattiva | da fare | 3 |
 | 44 | Drawdown giornaliero in % o in valuta | da fare | 8 |
-| 45 | Menu V5 (29 voci): sizing a rischio % o lotto fisso, ATR, RR, sessioni, grafica, Telegram | da fare | 1, 8 |
+| 45 | Menu V5 (29 voci): sizing a rischio % o lotto fisso, ATR, RR, sessioni, grafica, Telegram | **documentato** (`menu_input.md` B, D); implementazione | 8 |
 | 46 | Telegram V5: screenshot, chiusure, parziali, "+2R bloccato", report settimanale, scarti AI | da fare | 8 |
 | 47 | Magic automatici per cella; ripresa dopo riavvio del VPS | da fare | 8 |
 
@@ -71,7 +71,7 @@ Stati: **fatto** · **escluso** (con motivo) · **da fare** (fase prevista).
 
 | # | Voce | Stato | Fase |
 |---|---|---|---|
-| 51 | Menu reale, operazioni sul grafico, trade dei backtest, messaggi Telegram | da fare | 1 |
+| 51 | Menu reale, operazioni sul grafico, trade dei backtest, messaggi Telegram | **fatto**: menu (`menu_input.md`); report dei 5 video; 5 trade e 16 segnali scartati XAU (`trade_riferimento.csv`); **nei video nessuna operazione singola è leggibile** | 1 |
 
 ## Dati (Fase 0)
 
@@ -80,3 +80,11 @@ Stati: **fatto** · **escluso** (con motivo) · **da fare** (fase prevista).
 | D1 | Inventario, duplicati, buchi, fuso, spread, coerenza tra fonti | **fatto** (`report_fase0.md`) |
 | D2 | Cache Parquet e timeframe derivati M3, M5, M12, M15, M30, H1, H4, D1, W1 | **fatto** (`output/cache/`) |
 | D3 | Anno di inizio dell'addestramento | **decisione cliente** (vedi report) |
+
+## Fase 1
+
+| # | Voce | Stato |
+|---|---|---|
+| F1 | `regole.md`, `menu_input.md`, `trade_riferimento.csv`, `numeri_dichiarati.md` | **fatto** |
+| F2 | 4 pagine guida del sito e app Lovable | **non ricevute**: lacuna dichiarata |
+| F3 | Trascrizione dell'audio dei video | **non necessaria**: i video non hanno parlato (solo musica e titoli) |

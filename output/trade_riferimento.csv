@@ -1,0 +1,22 @@
+fonte,mercato,set,tipo,data_ora,fuso,direzione,cella,prezzo_ingresso,stop,target,esito,punteggio,soglia,note
+FOTO 28c5753c+4ec6d52b+cda831aa,XAUUSD,tester 2026 (modelli congelati al 31/12/2025),TRADE,2026-01-08 12:20,etichetta UTC; prezzo coerente con ora server NY+7,BUY,PPK,4424.56,stop 21 $ = 1R (circa 4403.56),4R (circa 4508.56),+2.97R in 29 ore,0.6081,-0.0932,"20% a +0,7R + BE; 20% a +2R; 60% a 4R"
+FOTO 8ed5759d,XAUUSD,tester 2026,TRADE,2026-01-12 11:15,etichetta UTC,BUY,PPK,,,,"incerto (+2.98R o ...0.07R)",-0.01,-0.07,PRESO
+FOTO a73dd514,XAUUSD,tester 2026,TRADE,2026-01 (prima del 07/01 00:50),,,,,,,+0.18R,,,data illeggibile
+FOTO 653ae130,XAUUSD,tester 2026,TRADE,2026-01 (prima del 16/01),,,,,,,-1.00R,,,data illeggibile
+FOTO 653ae130,XAUUSD,tester 2026,TRADE,2026-01 (prima del 16/01),,,,,,,-1.00R,,,data illeggibile
+FOTO a73dd514,XAUUSD,tester 2026,SCARTATO,2026-01-07 00:50,etichetta UTC,BUY,PPK,,,,,-0.34,0.24,probabilita si/no della cella
+FOTO 653ae130,XAUUSD,tester 2026,SCARTATO,2026-01-16 01:50,etichetta UTC,SELL,PPK,,,,,-0.23,-0.07,posizione nel range 4h
+FOTO 248edcdc,XAUUSD,tester 2026,SCARTATO,2026-09-25 01:55,AMBIGUO,BUY,PPK,,,,,-0.38,-0.02,volatilita fuori norma; stop fuori misura
+FOTO 248edcdc,XAUUSD,tester 2026,SCARTATO,2026-09-25 06:30,AMBIGUO,SELL,UNIOF,,,,,-0.35,-0.02,rotture contro; stop fuori misura
+FOTO 248edcdc,XAUUSD,tester 2026,SCARTATO,2026-09-25 07:30,AMBIGUO,BUY,PPK,,,,,-0.35,-0.02,visione del grafico asse; notizia in arrivo
+FOTO 248edcdc,XAUUSD,tester 2026,SCARTATO,2026-09-25 11:35,AMBIGUO,BUY,PPK,,,,,-0.02,-0.02,stop fuori misura (H1); spinta a 60 minuti
+FOTO 248edcdc,XAUUSD,tester 2026,SCARTATO,2026-09-25 13:15,AMBIGUO,BUY,UNIOF,,,,,-0.35,-0.02,la cella e al limite; stop fuori misura
+FOTO 248edcdc,XAUUSD,tester 2026,SCARTATO,2026-09-25 14:45,AMBIGUO,SELL,PPK,,,,,-0.42,-0.02,la cella e al limite; visione del grafico asse
+FOTO 248edcdc,XAUUSD,tester 2026,SCARTATO,2026-09-25 16:35,AMBIGUO,BUY,PPK,,,,,-0.27,-0.02,la cella e al limite; notizia in arrivo
+FOTO 248edcdc,XAUUSD,tester 2026,SCARTATO,2026-09-25 17:40,AMBIGUO,BUY,PPK,,,,,-0.57,-0.02,la cella non e convinta; visione del grafico asse
+FOTO 248edcdc,XAUUSD,tester 2026,SCARTATO,2026-09-28 00:30,AMBIGUO (00:30 di lunedi e fuori orario sul server NY+7),SELL,UNIOF,,,,,-0.28,-0.02,distanza dalla media; posizione nel range
+FOTO 248edcdc,XAUUSD,tester 2026,SCARTATO,2026-09-28 00:35,AMBIGUO,SELL,PPK,,,,,-0.12,-0.02,volatilita fuori norma; posizione nel range 4h
+FOTO 248edcdc,XAUUSD,tester 2026,SCARTATO,2026-09-28 09:55,AMBIGUO,SELL,PPK,,,,,-0.43,-0.02,poche rotture a favore; stop fuori misura (M15)
+FOTO 248edcdc,XAUUSD,tester 2026,SCARTATO,2026-09-28 11:20,AMBIGUO,SELL,PPK,,,,,-0.77,-0.02,poche rotture a favore; volatilita fuori norma
+FOTO 248edcdc,XAUUSD,tester 2026,SCARTATO,2026-09-28 11:30,AMBIGUO,SELL,PPK,,,,,-0.10,-0.02,volatilita fuori norma; poche rotture a favore
+FOTO 248edcdc,XAUUSD,tester 2026,SCARTATO,2026-09-28 13:50,AMBIGUO,SELL,PPK,,,,,-0.78,-0.02,poche rotture a favore; spinta a 3 ore

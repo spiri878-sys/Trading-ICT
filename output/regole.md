@@ -141,3 +141,25 @@ Due descrizioni dello stesso sistema in due generazioni. Si implementano **entra
 4. Livelli di liquidità della cella Sweep e tipo d'ordine.
 5. Architettura AI: catena SITO (Occhio, Selettori, LiqBias, Semaforo) contro V5 (Selettore, Gate, Supervisore, Forecaster). Si costruiscono entrambe e si sceglie in validazione.
 6. Significato di "MAIN" e "SEC" nel Premium.
+
+---
+
+## 9. Dettagli da video e foto (integrano i §2–6)
+
+| Tema | Evidenza | Effetto sulla ricostruzione |
+|---|---|---|
+| Timeframe di segnale delle celle oro | FOTO: orari dei segnali PPK e UNIOF sempre multipli di 5 minuti (12:20, 11:15, 01:55, 06:30…). Simbolo dei video in M5 | PPK su M5 (coerente con V5). Per UNIOF i minuti visti (06:30, 13:15, 00:30) sono compatibili sia con M5 sia con M15: si decide in Fase 2 |
+| Celle attive in XAUUSD PRIME 1 | FOTO: solo **PPK** e **UNIOF** compaiono nell'oro 2026 | Probabile composizione del SET XAU PRIME 1 = PPK + UNIOF (INFERITO). Da verificare in Fase 2 sulla frequenza |
+| Fuso dei segnali | FOTO: "UTC" in etichetta, ma l'ingresso 4424,56 dell'8/1/2026 12:20 cade nel range della barra delle 12:20 **ora server** (non delle 14:20) | Confronti della Fase 2 in ora server. Settembre è **AMBIGUO** (lunedì 00:30 è fuori orario sul server): si provano offset di 0 e ±1 h |
+| Ingressi in sequenza | VID: "BE + PARZIALE LIBERA IL POSTO = true (false = conteggio normale)". SITO: "tre ingressi in sequenza" | Una posizione a pareggio dopo il parziale non conta nel limite di posizioni: si può aprire un nuovo ingresso |
+| Gestione del set oro | FOTO: 20% a +0,7R e BE, 20% a +2R, 60% a 4R, "decisi sulla barra chiusa". VID XAU: payoff 0,25 con 85% di vincite | Profilo **FOTO** come candidato principale per l'oro; profilo **V5** (90% a +1R) come alternativa da confrontare |
+| Prop Challenge | VID: TRAGUARDO FASE 1 = 10, FASE 2 = 5, LIMITE GIORNALIERO 4, LIMITE TOTALE 10, MISURA = EQUITY, AL TRAGUARDO = CHIUDI E FERMATI / CHIUDI E CONTINUA, MARGINE DI SICUREZZA 0,2, LEVA IMPOSTA DALLA PROP | Parametri del modo Challenge. Il margine di sicurezza (0,2) è INFERITO come distanza minima dai limiti, in punti percentuali |
+| Funded | CAPITALE FINANZIATO, QUANTO SPINGERE, AVVISA AL GUADAGNO DI | Avviso Telegram al raggiungimento del guadagno (prelievo) |
+| Live | CRESCITA DEL LOTTO: COMPOSTO / BASE FISSA | Base del rischio = equity corrente (composto) oppure capitale iniziale (fissa) |
+| Flip | OBIETTIVO 2X…5X, STOP-PIANO 30 | Coerente con il SITO (−30% chiude tutto); obiettivo di moltiplicazione del capitale |
+| Supervisore | "SUPERVISORE LIQBIAS (**false = come certificato**)", soglia 1..99 (−1 = quella della cella) | Il supervisore è **spento di default** nei set certificati: è un filtro extra attivabile. È in linea con la catena V5 ma va verificato in validazione |
+| Filtro notizie | NON OPERARE SULLE NOTIZIE = false, 30/30 minuti | Default spento |
+| Stop minimo | "STOP MINIMO IN ATR (0 = spento)" (solo nella versione più recente) | Input facoltativo |
+| AI | FOTO: punteggio di un gradient boosting (92 feature a soli rapporti) contro una **soglia viva** (quantile 80% degli ultimi 1.000 punteggi). Ogni rifiuto riporta i 3 motivi contro (contributi per sostituzione con la mediana) | Fase 5: modello a punteggio con soglia viva come alternativa alle soglie fisse del SITO. "Giornale dei perché" in Telegram e nel log |
+| Rischio | FOTO: base 1,92%, "respira" (pieno fino a −5% di DD, ×0,25 a −23,75%, ripristino dopo 20 trade in utile, mai aumenti) | Variante del rischio adattivo per il modo Live |
+| Orari XAU | VID XAU: picco d'ingressi all'**ora server 01** (apertura asiatica) | Nessuna killzone restrittiva nei set XAU (V5: "Filtro sessioni OFF = come da certificazione") |

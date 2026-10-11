@@ -65,6 +65,13 @@ Nessuna voce INFERITA o SPERIMENTALE va letta come regola del prodotto originale
 | E-32 | D1 | Dati | MT5 Export Bars, server time, 2018-01-02 10:00 → 2026-10-09 23:54; il nome dice "2017" ma i dati partono dal 2018; **M5 dal 2005 non fornito** | OSSERVATO | Periodi di ricerca limitati al 2018–2026 | data_quality.md |
 | E-33 | D1 | Spread | 2018–2022: 100–240 punti, sempre multipli di 10, maggiori dell'intero range M1 nel 92% delle barre; 2023+: 0–20 punti (43–49% di zeri) | OSSERVATO; unità 2018–22 = 0,001 **INFERITA** | Modelli di costo C1 / C0 / C0R / C2 | spread_diagnosis.json |
 | E-34 | D1 | Ora server | Pausa giornaliera 23:55 → 01:01 e apertura settimanale alle 01:00 → server = New York + 7h | INFERITO (forte) | `NY_OFFSET_H = 7`, input `InpNyOffsetHours` | Verificare sul broker |
+| E-35 | Sito HTML (salvato dal cliente, 11/10/2026) | Fonte primaria PRIME | Testo completo + dati nascosti dei 18 set (`output/sito/dati.json`); 6 celle, catena AI a 5 livelli, 4 modi, 3 livelli, Premium, macro | DOCUMENTATO | Sostituisce S1/S2 (prima inaccessibili) | — |
+| E-36 | Manuale PRO V5 | Strategie, AI, gestione | 5 strategie con TF interni (Sweep M3, PO3 M5, Raptor M5, Unicorn M15, OTE M12); 37 reti in 4 famiglie; gestione "90% a +1R" | DOCUMENTATO | `output/documenti/note.md` | — |
+| E-37 | Presentazione prima versione | Prima versione | Market Brain, Trade Manager, Strategy Filter; menu con mediazioni (escluse) | DOCUMENTATO | Solo Piano B | — |
+| E-38 | Video XAU (s_00008) | Menu PRIME | Menu PRIME completo di alto livello: SET interno, modi, QUANTO SPINGERE, CRESCITA DEL LOTTO, supervisore "false = come certificato" | OSSERVATO | `output/menu_input.md` | — |
+| E-39 | Video XAU (report) | Report XAU | Simbolo "XAUUSD_2005_TO_MAY 2025", Vantage demo, M5; 4646 trade/6152 deal, PF 1,46, 85% vinti, payoff 0,25 | OSSERVATO | `output/numeri_dichiarati.md` | Fase 9 |
+| E-40 | Foto 248edcdc | Segnali scartati | 14 segnali XAU scartati (25–28/09/2026) con cella, direzione, punteggio, motivi | OSSERVATO | `output/trade_riferimento.csv` | Fase 2 (orari dei segnali) |
+| E-41 | Foto 28c5753c | Fuso dei segnali | L'orario "UTC" delle foto corrisponde all'ora server NY+7 (ingresso 4424,56 l'8/1/2026 12:20) | OSSERVATO + verifica sui dati | Fuso dei riferimenti | Fase 2 |
 
 ## Contraddizioni rilevate
 
