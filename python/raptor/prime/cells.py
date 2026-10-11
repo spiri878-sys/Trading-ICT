@@ -307,6 +307,113 @@ def bb(f, p):
 CELLS = {"PPK": ppk, "OTEOF": oteof, "PO3": po3, "UNIOF": uniof, "LS": ls, "BB": bb}
 
 
+# --------------------------------------------------------------------------- Piano B: celle della prima versione
+def silver_bullet(f, p):
+    """Silver Bullet (M5). Nelle finestre NY 03-04, 10-11, 14-15: dopo uno sweep di liquidità nelle ultime
+    sweep_bars barre, il primo FVG nella direzione opposta allo sweep; limit sul bordo prossimale dell'FVG,
+    stop oltre l'estremo dello sweep."""
+    a = f.atr.values
+    sw_lo, sw_hi, _, _ = liquidity_sweeps(f)
+    n = p["sweep_bars"]
+    win = _window(f, p["windows"])
+    up_f, dn_f, bt, bb_, st, sb = _fvg_now(f, p["min_fvg"])
+    up = win & up_f & _recent(sw_lo, n)
+    dn = win & dn_f & _recent(sw_hi, n) & ~up
+    ext_lo = pd.Series(f.low.values).rolling(n, min_periods=1).min().values
+    ext_hi = pd.Series(f.high.values).rolling(n, min_periods=1).max().values
+    buf = p["sl_buf_atr"] * a
+    side = np.where(up, 1, -1)
+    price = np.where(up, bt, sb)
+    sl = np.where(up, ext_lo - buf, ext_hi + buf)
+    m = (up | dn) & _risk_ok(f, side, price, sl, p)
+    return _out(f, "SB", m, side, price, sl, p["expiry"], leg_lo=ext_lo, leg_hi=ext_hi,
+                zlo=np.where(up, bb_, sb), zhi=np.where(up, bt, st), reason="window+sweep+FVG")
+
+
+def mss(f, p):
+    """Market Structure Shift (M5). Rottura contro la direzione della rottura precedente (CHoCH) con
+    displacement e FVG; limit sul bordo dell'FVG, stop oltre la gamba."""
+    a = f.atr.values
+    fu, fd, bt, bb_, st, sb = _fvg_recent(f, p["min_fvg"], n=2)
+    with np.errstate(invalid="ignore"):
+        disp = f.disp_body.values >= p["min_disp"] * a
+    up = (f.brk.values == 1) & f.is_mss.values & disp & fu
+    dn = (f.brk.values == -1) & f.is_mss.values & disp & fd
+    buf = p["sl_buf_atr"] * a
+    side = np.where(up, 1, -1)
+    price = np.where(up, bt, sb)
+    sl = np.where(up, f.leg_lo.values - buf, f.leg_hi.values + buf)
+    m = (up | dn) & _risk_ok(f, side, price, sl, p)
+    return _out(f, "MSS", m, side, price, sl, p["expiry"], leg_lo=f.leg_lo.values, leg_hi=f.leg_hi.values,
+                zlo=np.where(up, bb_, sb), zhi=np.where(up, bt, st), reason="CHoCH+disp+FVG")
+
+
+def judas(f, p):
+    """Judas Swing (M5). Finestra di Londra (NY 00:00-05:00): falsa mossa CONTRO il bias del giorno (trend H4)
+    oltre il massimo/minimo asiatico (sweep entro raid_bars), poi MSS nella direzione del bias con FVG;
+    limit sull'FVG, stop oltre l'estremo della falsa mossa."""
+    a = f.atr.values
+    n = p["raid_bars"]
+    bias = np.sign(f[f"{p['bias_tf']}_trend"].values)
+    raid_lo = _recent(f.sweep_asia_lo.values, n)
+    raid_hi = _recent(f.sweep_asia_hi.values, n)
+    fu, fd, bt, bb_, st, sb = _fvg_recent(f, p["min_fvg"], n=2)
+    win = _window(f, p["sessions"])
+    up = win & (bias > 0) & raid_lo & (f.brk.values == 1) & f.is_mss.values & fu
+    dn = win & (bias < 0) & raid_hi & (f.brk.values == -1) & f.is_mss.values & fd
+    ext_lo = pd.Series(f.low.values).rolling(n, min_periods=1).min().values
+    ext_hi = pd.Series(f.high.values).rolling(n, min_periods=1).max().values
+    buf = p["sl_buf_atr"] * a
+    side = np.where(up, 1, -1)
+    price = np.where(up, bt, sb)
+    sl = np.where(up, ext_lo - buf, ext_hi + buf)
+    m = (up | dn) & _risk_ok(f, side, price, sl, p)
+    return _out(f, "JUDAS", m, side, price, sl, p["expiry"], leg_lo=ext_lo, leg_hi=ext_hi,
+                zlo=np.where(up, bb_, sb), zhi=np.where(up, bt, st), reason="bias+falsa mossa+MSS")
+
+
+def ob(f, p):
+    """Order Block model (M15). BOS con displacement nella direzione del trend H1; order block = ultima
+    candela opposta (entro look barre) prima della barra di rottura; limit sul bordo prossimale del blocco al
+    ritorno, stop oltre il bordo distale."""
+    a = f.atr.values
+    o, c, h, l = f.open.values, f.close.values, f.high.values, f.low.values
+    with np.errstate(invalid="ignore"):
+        disp = f.disp_body.values >= p["min_disp"] * a
+    tr = np.sign(f.h1_trend.values)
+    up = (f.brk.values == 1) & disp & (tr > 0)
+    dn = (f.brk.values == -1) & disp & (tr < 0)
+    zlo = np.full(len(f), np.nan); zhi = np.full(len(f), np.nan)
+    for i in np.flatnonzero(up | dn):
+        want_bear = up[i]
+        for j in range(i - 1, max(-1, i - 1 - p["look"]), -1):
+            if (want_bear and c[j] < o[j]) or ((not want_bear) and c[j] > o[j]):
+                zlo[i], zhi[i] = l[j], h[j]
+                break
+    ok = np.isfinite(zlo)
+    up &= ok; dn &= ok
+    buf = p["sl_buf_atr"] * a
+    side = np.where(up, 1, -1)
+    price = np.where(up, zhi, zlo)
+    sl = np.where(up, zlo - buf, zhi + buf)
+    m = (up | dn) & _risk_ok(f, side, price, sl, p)
+    return _out(f, "OB", m, side, price, sl, p["expiry"], leg_lo=f.leg_lo.values, leg_hi=f.leg_hi.values,
+                zlo=zlo, zhi=zhi, reason="BOS+trend H1+OB")
+
+
+EXTRA_CELLS = {"SB": silver_bullet, "MSS": mss, "JUDAS": judas, "OB": ob}
+TF_OF.update({"SB": "5min", "MSS": "5min", "JUDAS": "5min", "OB": "15min"})
+DEFAULTS.update({
+    "SB": dict(k=3, windows=[(180, 240), (600, 660), (840, 900)], sweep_bars=12, min_fvg=0.2, sl_buf_atr=0.2,
+               expiry=12, min_r_atr=0.5, max_r_atr=15.0),
+    "MSS": dict(k=3, min_disp=1.2, min_fvg=0.15, sl_buf_atr=0.2, expiry=12, min_r_atr=0.5, max_r_atr=15.0),
+    "JUDAS": dict(k=3, raid_bars=24, min_fvg=0.1, sessions=[(0, 300)], bias_tf="h4", sl_buf_atr=0.2, expiry=12,
+                  min_r_atr=0.5, max_r_atr=15.0),
+    "OB": dict(k=3, min_disp=1.0, look=8, sl_buf_atr=0.2, expiry=24, min_r_atr=0.5, max_r_atr=15.0),
+})
+ALL_CELLS = {**CELLS, **EXTRA_CELLS}
+
+
 def generate(feats_by_tf: dict, cells=None, params=None, degraded=None, fri_close_hour=22) -> pd.DataFrame:
     """feats_by_tf: {tf: features}. params: {cell: overrides}. Filtri comuni: niente segnali nei giorni
     degradati (Fase 0) e niente segnali dopo fri_close_hour del venerdì (ora server)."""
@@ -316,7 +423,7 @@ def generate(feats_by_tf: dict, cells=None, params=None, degraded=None, fri_clos
         tf = p.get("tf", TF_OF[cell])
         f = feats_by_tf[(tf, p["k"])]
         f.attrs["tf"] = tf
-        s = CELLS[cell](f, p)
+        s = ALL_CELLS[cell](f, p)
         s["tf"] = tf
         s["known_at"] = s.bar_time + pd.Timedelta(tf)
         out.append(s)

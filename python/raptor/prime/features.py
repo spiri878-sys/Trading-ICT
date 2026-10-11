@@ -62,7 +62,7 @@ class M1Context:
         return j0
 
 
-def prime_features(sig: pd.DataFrame, F: dict, ctx: M1Context) -> pd.DataFrame:
+def prime_features(sig: pd.DataFrame, F: dict, ctx: M1Context, onehot=None) -> pd.DataFrame:
     """sig: segnali di cells.generate (colonne bar_i, known_at, cell, tf, side, price, sl_struct, atr_m15, ...).
     F: {(tf, k): feature del TF} usate per generare i segnali (k di default per cella)."""
     sig = sig.reset_index(drop=True)
@@ -101,7 +101,7 @@ def prime_features(sig: pd.DataFrame, F: dict, ctx: M1Context) -> pd.DataFrame:
 
     # ---------------- A. segnale
     put("side", s, "A")
-    for cell in CELLS:
+    for cell in (onehot or CELLS):
         put(f"cell_{cell}", (sig.cell.values == cell).astype(float), "A")
     put("is_market", (sig.otype.values == "market").astype(float), "A")
     put("entry_n", sig["entry_n"].fillna(1).values if "entry_n" in sig else np.ones(n), "A")
@@ -214,7 +214,7 @@ def prime_features(sig: pd.DataFrame, F: dict, ctx: M1Context) -> pd.DataFrame:
     put("sig_all_1h", cnt(ts, hour), "H")
     put("sig_all_24h", cnt(ts, day), "H")
     same1 = np.zeros(n); same24 = np.zeros(n)
-    for cell in CELLS:
+    for cell in np.unique(sig.cell.values):
         m = sig.cell.values == cell
         tc = np.sort(t[m])
         same1[m] = (np.searchsorted(tc, t[m], side="left") - np.searchsorted(tc, t[m] - hour, side="left"))

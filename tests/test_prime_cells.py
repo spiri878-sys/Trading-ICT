@@ -19,10 +19,10 @@ def _synthetic_m1(days=6, seed=1):
                         index=idx)
 
 
-@pytest.mark.parametrize("cell", list(C.CELLS))
+@pytest.mark.parametrize("cell", list(C.ALL_CELLS))
 def test_truncation_invariance(cell):
     """Segnali fino a T identici calcolando con dati fino a T o con dati successivi: nessun lookahead."""
-    m1 = _synthetic_m1(days=30 if cell == "PO3" else 6)
+    m1 = _synthetic_m1(days=30 if cell in ("PO3", "JUDAS") else 6)
     tf = C.TF_OF[cell]
     k = C.DEFAULTS[cell]["k"]
     prm = {"PO3": {"min_disp": 0.5, "min_fvg": 0.02}}
