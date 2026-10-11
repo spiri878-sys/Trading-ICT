@@ -4,7 +4,7 @@ import pandas as pd
 from . import pipeline as P
 
 
-def setups(kind, buf=0.1, stop="range", stop_k=1.5, N=12, sq=1.0, regime="both"):
+def setups(kind, buf=0.1, stop="range", stop_k=1.5, N=12, sq=1.0, regime="both", hours=None, vol_max=None):
     if kind in ("ASIA", "PDHL"):
         f = P.feats("15min", 3); tfm = 15
         hr, mi = f.index.hour, f.index.minute
@@ -32,6 +32,10 @@ def setups(kind, buf=0.1, stop="range", stop_k=1.5, N=12, sq=1.0, regime="both")
         if kind == "SQZ":
             m &= (hi - lo) <= sq * a * np.sqrt(N)
         valid = 1
+    if hours is not None:      # server hours of the decision bar (orders live during the NEXT hour)
+        m &= np.isin(f.index.hour, hours)
+    if vol_max is not None:    # skip abnormal volatility: H1 ATR relative to its 100-bar mean
+        m &= f.h1_atr_rel.values <= vol_max
     idx = np.flatnonzero(m & np.isfinite(hi) & np.isfinite(lo) & np.isfinite(a))
     hi, lo, a = hi[idx], lo[idx], a[idx]
     p_hi, p_lo = hi + buf * a, lo - buf * a

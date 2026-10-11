@@ -1,0 +1,39 @@
+{
+ "OCO_SQZ_REGIME": {
+  "pos_months_pct": 58.1,
+  "neg_months": 43,
+  "zero_months": 1,
+  "worst_month_R": -3.34,
+  "mean_month_R": 0.497,
+  "pos_quarters_pct": 71.4,
+  "pos_years": 6
+ },
+ "TREND_REGIME_H4": {
+  "pos_months_pct": 41.9,
+  "neg_months": 32,
+  "zero_months": 29,
+  "worst_month_R": -1.7,
+  "mean_month_R": 0.378,
+  "pos_quarters_pct": 60.0,
+  "pos_years": 6
+ },
+ "COMBINED_50_50": {
+  "pos_months_pct": 57.1,
+  "neg_months": 45,
+  "zero_months": 0,
+  "worst_month_R": -1.67,
+  "mean_month_R": 0.437,
+  "pos_quarters_pct": 65.7,
+  "pos_years": 6
+ },
+ "COMBINED_1pct_each": {
+  "pos_months_pct": 57.1,
+  "neg_months": 45,
+  "zero_months": 0,
+  "worst_month_R": -3.34,
+  "mean_month_R": 0.875,
+  "pos_quarters_pct": 65.7,
+  "pos_years": 6
+ },
+ "monthly_corr": 0.387
+}

@@ -80,3 +80,13 @@ Riepilogo:
 | `XauOcoBreakout_1000_FIXED002_PRUDENT.set` | Lotto 0,02 con limiti di perdita |
 | `XauOcoBreakout_DEMO_PRUDENT.set` | Lotto 0,01 per la prima prova demo |
 | `XauOcoBreakout_ORIGINAL_BOTH_FIXED010.set` | Idea originale, solo per confronto |
+
+## Aggiornamento: tentativi di "tutti i mesi in profitto" e di ordini che seguono il prezzo
+
+| Esperimento | Esito |
+|---|---|
+| OCO-05: stop mensile {5, 10, 15%} × blocco profitto mensile {10, 20, 30%} × orari {tutti, Londra + NY, solo NY} × filtro volatilità, scelto sul 2018–2022 e verificato sul 2023–2026 | **Nessun miglioramento.** Il migliore in dev (blocco +10% mensile) porta i mesi positivi dal 51,7% al 55%. Nel test 2023–2026 i mesi negativi restano 14, come nella versione di base, il saldo finale è più basso (11.502 contro 14.240) e il DD peggiora (67% contro 60%) → **non adottato** |
+| OCO-06: ordini **che seguono il prezzo** (buy stop a distanza d dal minimo raggiunto, sell stop a distanza d dal massimo; 96 varianti) | Solo il 7% delle varianti è positivo; walk-forward OOS **−0,016R/trade** (2021 −13, 2022 −44, 2023 −43 R). Un ordine che segue il prezzo scatta sui rimbalzi, cioè diventa un'entrata di inversione, che sull'oro non funziona → **non adottato**. Restano gli ordini sul range compresso rinnovati ogni ora |
+| OCO-07: OCO-SQZ + TREND-REGIME H4 sullo stesso conto | Mesi positivi: OCO 58%, trend 42%, insieme 57% (correlazione mensile 0,39). Trimestri positivi 66–71%; mese peggiore dimezzato (da −3,3R a −1,7R con metà rischio ciascuno) |
+
+**Conclusione onesta:** con questi dati, circa il 55–60% di mesi positivi e il 65–70% di trimestri positivi sono il massimo realistico. I sistemi che mostrano "tutti i mesi positivi" di solito nascondono il rischio (martingala, griglie, nessuno stop) oppure sono ottimizzati sul passato, e prima o poi lo pagano con un mese catastrofico.

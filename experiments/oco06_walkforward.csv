@@ -1,0 +1,14 @@
+year,cfg,t_in,n_oos,meanR_oos,sumR_oos
+2020,"dist=3.0,sl=2.5,tp=2.0,trail=1.5,regime=True",0.34,176,0.084,14.8
+2020,"dist=3.0,sl=2.5,tp=100.0,trail=1.5,regime=True",0.29,172,0.089,15.4
+2021,"dist=3.0,sl=2.5,tp=2.0,trail=1.5,regime=True",1.13,185,-0.027,-5.1
+2021,"dist=3.0,sl=2.5,tp=100.0,trail=1.5,regime=True",1.1,180,-0.004,-0.7
+2021,"dist=3.0,sl=1.5,tp=100.0,trail=1.5,regime=True",0.92,183,-0.041,-7.5
+2022,"dist=3.0,sl=2.5,tp=100.0,trail=1.5,regime=True",0.92,204,-0.057,-11.7
+2022,"dist=3.0,sl=2.5,tp=2.0,trail=1.5,regime=True",0.74,206,-0.053,-10.9
+2022,"dist=3.0,sl=1.5,tp=100.0,trail=1.5,regime=True",0.58,206,-0.105,-21.6
+2023,"dist=3.0,sl=2.5,tp=100.0,trail=1.5,regime=True",0.33,211,-0.103,-21.7
+2023,"dist=3.0,sl=2.5,tp=2.0,trail=1.5,regime=True",0.17,212,-0.098,-20.8
+2026,"dist=3.0,sl=2.5,tp=2.0,trail=1.5,regime=True",0.1,125,0.084,10.4
+2026,"dist=3.0,sl=2.5,tp=100.0,trail=2.5,regime=True",0.09,98,0.147,14.4
+2026,"dist=3.0,sl=2.5,tp=100.0,trail=1.5,regime=True",0.08,123,0.078,9.6

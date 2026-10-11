@@ -39,17 +39,23 @@ def _stop_fill(o, h, l, sp, dow, mod, i0, iexp, side, price, slip, fri_close):
 def _run(o, h, l, c, sp, day, dow, mod, sw_l, sw_s,
          s_avail, s_exp, p_hi, p_lo, sl_hi, sl_lo, s_atr,
          init_bal, lot_mode, fixed_lot, risk_pct, tp_r, trail_atr, max_hold, fri_close, slip, comm, contract,
-         leverage, min_lot, lot_step, stop_out_level):
+         leverage, min_lot, lot_step, stop_out_level, mon, m_loss, m_profit):
     ns = s_avail.size
     t_fi = np.zeros(ns, np.int64); t_ei = np.zeros(ns, np.int64); t_side = np.zeros(ns, np.int8)
     t_lot = np.zeros(ns); t_entry = np.zeros(ns); t_sl = np.zeros(ns); t_net = np.zeros(ns); t_bal = np.zeros(ns)
     t_mae = np.zeros(ns); t_reason = np.zeros(ns, np.int8); t_tie = np.zeros(ns, np.bool_)
     nt = 0; bal = init_bal; busy = -1; n_skip_margin = 0; dead = False
+    cur_m = -1; m_start = init_bal; m_pnl = 0.0
     for k in range(ns):
         if dead:
             break
         start = max(s_avail[k], busy + 1)
         if start > s_exp[k] or start >= o.size:
+            continue
+        # monthly guard: no new trade once the month's realised P&L hits the loss cap or the profit lock
+        if mon[start] != cur_m:
+            cur_m = mon[start]; m_start = bal; m_pnl = 0.0
+        if (m_loss > 0 and m_pnl <= -m_loss / 100.0 * m_start) or (m_profit > 0 and m_pnl >= m_profit / 100.0 * m_start):
             continue
         # both levels must still be on the correct side of the market when (re)placed
         if o[start] + sp[start] >= p_hi[k] or o[start] <= p_lo[k]:
@@ -98,6 +104,8 @@ def _run(o, h, l, c, sp, day, dow, mod, sw_l, sw_s,
         t_sl[nt] = b_sl; t_net[nt] = best_net; t_reason[nt] = b_rs; t_tie[nt] = cand == 2
         t_mae[nt] = bal + b_mae
         bal += best_net
+        if mon[b_fi] == cur_m:
+            m_pnl += best_net
         t_bal[nt] = bal
         nt += 1
         busy = b_ei
@@ -106,13 +114,20 @@ def _run(o, h, l, c, sp, day, dow, mod, sw_l, sw_s,
     return nt, t_fi, t_ei, t_side, t_lot, t_entry, t_sl, t_net, t_bal, t_mae, t_reason, t_tie, n_skip_margin, dead
 
 
+def _month_ids(mk):
+    if not hasattr(mk, "_mon"):
+        d = mk.index.values.astype("datetime64[M]").astype(np.int64)
+        mk._mon = d
+    return mk._mon
+
+
 EXIT = {1: "SL", 2: "TP", 3: "BE", 4: "TRAIL", 5: "TIME", 6: "FRIDAY", 7: "END"}
 
 
 def run(mk: Market, setups: pd.DataFrame, *, tf_minutes: int, spread: np.ndarray, init_bal=1000.0, lot_mode=0,
         fixed_lot=0.10, risk_pct=1.0, tp_r=100.0, trail_atr=2.0, max_hold_min=2880, fri_close=23 * 60,
         slip=0.05, comm=3.5, contract=100.0, leverage=100.0, swap_long=-0.066, swap_short=0.029,
-        min_lot=0.01, lot_step=0.01, stop_out_level=0.0):
+        min_lot=0.01, lot_step=0.01, stop_out_level=0.0, month_loss_pct=0.0, month_profit_pct=0.0):
     """setups columns: bar_time (decision bar open time), valid_bars, p_hi, p_lo, sl_hi, sl_lo, atr."""
     s = setups.sort_values("bar_time").reset_index(drop=True)
     avail_t = s.bar_time.values + np.timedelta64(tf_minutes, "m")
@@ -122,7 +137,8 @@ def run(mk: Market, setups: pd.DataFrame, *, tf_minutes: int, spread: np.ndarray
     r = _run(mk.o, mk.h, mk.l, mk.c, spread, mk.day, mk.dow, mk.mod, swap_long, swap_short,
              s_avail, s_exp, s.p_hi.values.astype(float), s.p_lo.values.astype(float), s.sl_hi.values.astype(float),
              s.sl_lo.values.astype(float), s.atr.values.astype(float), init_bal, lot_mode, fixed_lot, risk_pct, tp_r,
-             trail_atr, max_hold_min, fri_close, slip, comm, contract, leverage, min_lot, lot_step, stop_out_level)
+             trail_atr, max_hold_min, fri_close, slip, comm, contract, leverage, min_lot, lot_step, stop_out_level,
+             _month_ids(mk), month_loss_pct, month_profit_pct)
     nt, fi, ei, side, lot, entry, sl, net, bal, eqlow, rs, tie, skip_margin, dead = r
     sl_ = slice(0, nt)
     tr = pd.DataFrame({"entry_time": mk.index[fi[sl_]], "exit_time": mk.index[ei[sl_]], "side": side[sl_], "lot": lot[sl_],

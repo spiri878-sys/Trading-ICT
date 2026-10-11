@@ -1,0 +1,44 @@
+{
+ "chosen_on_2018_2022": {
+  "mloss": 0,
+  "mprof": 10,
+  "hours": "all",
+  "vol": null
+ },
+ "baseline|dev_2018_2022": {
+  "trades": 391,
+  "final": 3887.0,
+  "pos_months_pct": 51.7,
+  "neg_months": 29,
+  "flat_months": 0,
+  "worst_month": -634.0,
+  "max_dd_pct": 55.4
+ },
+ "baseline|TEST_2023_2026": {
+  "trades": 271,
+  "final": 14240.0,
+  "pos_months_pct": 67.4,
+  "neg_months": 14,
+  "flat_months": 1,
+  "worst_month": -1160.0,
+  "max_dd_pct": 60.2
+ },
+ "chosen|dev_2018_2022": {
+  "trades": 343,
+  "final": 3729.0,
+  "pos_months_pct": 55.0,
+  "neg_months": 27,
+  "flat_months": 0,
+  "worst_month": -376.0,
+  "max_dd_pct": 43.4
+ },
+ "chosen|TEST_2023_2026": {
+  "trades": 218,
+  "final": 11502.0,
+  "pos_months_pct": 67.4,
+  "neg_months": 14,
+  "flat_months": 1,
+  "worst_month": -1160.0,
+  "max_dd_pct": 67.0
+ }
+}
