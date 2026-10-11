@@ -1,0 +1,34 @@
+# Ricostruzione ICT RAPTOR AI PRIME su XAUUSD: parametri globali (letti dagli script; nessun valore "a occhio")
+project: raptor_prime_xau
+seed: 20261011
+
+data:
+  master_m1: output/cache/XAUUSD_M1_master.parquet      # 2004-06-11 -> 2026-10-09, ora server
+  timeframes_dir: output/cache/tf                      # M3 M5 M12 M15 M30 H1 H4 D1 W1
+  day_quality: output/cache/day_quality.parquet        # giorni 'degraded' da saltare
+  timezone: "server = New York + 7 h (apertura settimanale lun 01:00, pausa giornaliera 00:00-01:00)"
+  price_side: BID
+
+split:                       # FISSA (CLAUDE.md sezione 6)
+  train: ["2005-01-01", "2017-12-31"]
+  train_effective_start: null   # DECISIONE CLIENTE: 2005 (specifica) oppure 2008 (copertura M1 >= 88%), vedi report_fase0
+  validation: ["2018-01-01", "2021-12-31"]
+  test: ["2022-01-01", "2026-10-09"]
+  test_locked: true          # non usare per scegliere nulla fino alla Fase 9
+  test_note: "il 2022-2026 e' gia' stato esaminato in lavori precedenti: non e' vergine; la prova pulita e' il forward su demo"
+  embargo_days: 5            # purging/embargo nel walk-forward
+
+costs:                       # scenari dichiarati (python/raptor/costs.py)
+  contract_oz_per_lot: 100
+  C1:  {spread_usd: 0.30, commission_per_lot_side: 3.5, slippage_usd: 0.05}   # decisioni
+  C1H: {spread: hourly_profile, profile_file: output/cache/spread_profile_by_hour.csv, floor_usd: 0.20,
+        commission_per_lot_side: 3.5, slippage_usd: 0.05}                      # variante per ora del giorno
+  C2:  {spread_usd: 0.60, commission_per_lot_side: 7.0, slippage_usd: 0.10}   # stress x2
+
+cells:                       # timeframe interni certificati per XAUUSD (manuale V5); Breaker Block: da ricavare in Fase 1
+  liquidity_sweep: M3
+  po3: M5
+  raptor_mode: M5
+  unicorn: M15
+  ote: M12
+  breaker_block: null

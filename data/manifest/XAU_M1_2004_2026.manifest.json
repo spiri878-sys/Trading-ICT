@@ -1,0 +1,102 @@
+{
+ "file": "XAU_1m_data.csv",
+ "source": "user upload barre.part01-03.rar (RAR multivolume)",
+ "format": "Date;Open;High;Low;Close;Volume (tick volume), ora server, nessuno spread",
+ "path": "data/raw/m1_new/XAU_1m_data.csv",
+ "sha256": "996bc9d249a3d57b29f31efe5d9ed7429486fd935ef4ed2dd664ea26dc8e6cd7",
+ "bytes": 348182728,
+ "quality": {
+  "rows": 6789606,
+  "first": "2004-06-11 07:18:00",
+  "last": "2026-01-30 23:59:00",
+  "duplicates": 0,
+  "non_monotonic": 0,
+  "ohlc_inconsistent": 0,
+  "non_positive": 0,
+  "zero_range_bars": 308445,
+  "spread_zero_bars": 0,
+  "spread_quantiles_points": {},
+  "big_jumps_gt_2pct": 9,
+  "gaps_intraweek_gt_10min": 15710,
+  "weekly_open_hour_mode": 1,
+  "weekly_close_hour_mode": 23,
+  "bars_per_year": {
+   "2004": 79588,
+   "2005": 140683,
+   "2006": 166248,
+   "2007": 241895,
+   "2008": 315462,
+   "2009": 329281,
+   "2010": 316648,
+   "2011": 323126,
+   "2012": 329914,
+   "2013": 348635,
+   "2014": 348450,
+   "2015": 346707,
+   "2016": 350238,
+   "2017": 349038,
+   "2018": 349718,
+   "2019": 349507,
+   "2020": 351246,
+   "2021": 351014,
+   "2022": 352888,
+   "2023": 352744,
+   "2024": 355661,
+   "2025": 321867,
+   "2026": 19048
+  },
+  "median_daily_bars": 1369.0,
+  "removed_rows": 0
+ },
+ "bad_ticks_removed": [
+  {
+   "time": "2004-10-04 23:47:00",
+   "open": 418.8,
+   "high": 418.8,
+   "low": 418.8,
+   "close": 418.8,
+   "tickvol": 1
+  },
+  {
+   "time": "2006-04-03 01:07:00",
+   "open": 572.2,
+   "high": 572.2,
+   "low": 572.2,
+   "close": 572.2,
+   "tickvol": 1
+  },
+  {
+   "time": "2006-10-02 01:21:00",
+   "open": 578.1,
+   "high": 578.1,
+   "low": 578.1,
+   "close": 578.1,
+   "tickvol": 1
+  },
+  {
+   "time": "2011-07-18 08:06:00",
+   "open": 1597.03,
+   "high": 1597.03,
+   "low": 1495.75,
+   "close": 1596.91,
+   "tickvol": 15
+  }
+ ],
+ "vendor_htf": {
+  "vendor_XAU_30m.csv": {
+   "path": "data/raw/htf/XAU_30m.csv",
+   "sha256": "5d1689c1d06b11653f3cd88ca38f44c3e6cfb208aa49de0df73d355d1e7f1435",
+   "bytes": 12972983
+  },
+  "vendor_XAU_4h.csv": {
+   "path": "data/raw/htf/XAU_4h.csv",
+   "sha256": "4b2fea68d3b67d515b3a042e877f72f3e60d660cb77b3f597ca7a925732dc0f4",
+   "bytes": 1746277
+  },
+  "vendor_XAU_1w.csv": {
+   "path": "data/raw/htf/XAU_1w.csv",
+   "sha256": "77def6990c3292b7fb52ccca043872eb4f88c4764a9dce59eb51f01c225b9f68",
+   "bytes": 61191
+  }
+ }
+}

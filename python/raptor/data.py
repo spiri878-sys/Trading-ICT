@@ -41,6 +41,22 @@ def load_mt5_csv(path: Path) -> pd.DataFrame:
                       "tickvol": np.int64, "vol": np.int64, "spread": np.int64})
 
 
+def load_semicolon_csv(path: Path) -> pd.DataFrame:
+    """Load the 'Date;Open;High;Low;Close;Volume' export (e.g. XAU_1m_data.csv, 2004 -> 2026).
+
+    Same column names as load_mt5_csv; the file has no spread, so `spread` is -1 (unknown) and
+    `vol` is 0. Volume is the tick volume."""
+    df = pd.read_csv(path, sep=";", dtype={"Date": str})
+    df.index = pd.to_datetime(df.pop("Date"), format="%Y.%m.%d %H:%M")
+    df.index.name = "time"
+    df.columns = [c.lower() for c in df.columns]
+    df = df.rename(columns={"volume": "tickvol"})
+    df["vol"] = 0
+    df["spread"] = -1
+    return df.astype({"open": float, "high": float, "low": float, "close": float,
+                      "tickvol": np.int64, "vol": np.int64, "spread": np.int64})
+
+
 def load_m1(cache: bool = True) -> pd.DataFrame:
     """Load XAUUSD M1 (parquet cache if present)."""
     pq = PROCESSED / "XAUUSD_M1.parquet"
@@ -109,7 +125,8 @@ def quality(df_raw: pd.DataFrame) -> QualityReport:
         duplicates=dup, non_monotonic=nonmono, ohlc_inconsistent=incons, non_positive=nonpos,
         zero_range_bars=int((df.high == df.low).sum()),
         spread_zero_bars=int((df.spread == 0).sum()),
-        spread_quantiles_points={str(q): float(df.spread.quantile(q)) for q in (0.01, 0.25, 0.5, 0.75, 0.95, 0.99)},
+        spread_quantiles_points={str(q): float(df.spread.quantile(q)) for q in (0.01, 0.25, 0.5, 0.75, 0.95, 0.99)}
+        if (df.spread >= 0).any() else {},
         big_jumps_gt_2pct=int((ret > 0.02).sum()),
         gaps_intraweek_gt_10min=int(big_gap.sum()),
         weekly_open_hour_mode=int(wk_first.mode().iloc[0]), weekly_close_hour_mode=int(wk_last.mode().iloc[0]),
