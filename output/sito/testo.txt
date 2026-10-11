@@ -1,0 +1,352 @@
+Expert Advisor Forex AI ICT/SMC | Autotrader Forex Club
+Salta →
+AUTOTRADER FOREX CLUB ICT RAPTOR AI
+Seleziona la lingua · Select your language
+Italiano disponibile
+English disponibile
+Español disponibile
+Deutsch disponibile
+AUTOTRADER FOREX CLUB
+I robot
+Come funziona
+Operazioni
+Quale robot
+Contatti
+Menu
+Entra subito →
+I robot
+Come funziona
+Operazioni
+Quale robot
+Contatti
+Expert Advisor Forex AI per Trading Automatico ICT/SMC
+Sei strategie.
+Quattro controlli.
+Una decisione.
+Dentro il robot lavorano sei celle ICT indipendenti — struttura rotta, caccia agli stop, ritraccio ottimale, e altre tre. Quando una riconosce uno schema, la decisione passa attraverso quattro livelli di intelligenza artificiale prima di diventare un ordine a mercato.
+Ogni livello può fermare tutto. È il motivo per cui il robot apre meno di quanto potrebbe.
+I modelli AI →
+I tre robot
+Instagram I feedback di chi li usa
+YouTube Backtest e robot in azione
+Telegram Guide complete e acquisto
+Clicca qui
+34.788
+Operazioni analizzate
+168
+Modelli AI per file
+504
+Righe di rischio
+6
+Celle di strategia
+01
+I tre Expert Advisor del RAPTOR Ecosystem
+Dal più semplice al più completo. Tocca una capsula per vedere la scheda completa: primati, numeri misurati e l'anatomia di una sua operazione.
+Il chirurgo
+CORE
+Sbaglia meno di tutti gli altri.
+€ 3.899
+una tantum · licenza legata al conto
+Maggiori informazioni →
+Il vigile
+PLUS
+Incassa di più su ogni colpo.
+€ 5.999
+una tantum · licenza legata al conto
+Maggiori informazioni →
+Il predatore
+PRIME
+Novità · Premium
+Il top di gamma. Non prende tutto. Prende le migliori.
+€ 9.997
+una tantum · licenza legata al conto
+Maggiori informazioni →
+02
+Le tre schede complete
+Tre gradini, non tre versioni. Il CORE opera sulla struttura del prezzo. Il PLUS aggiunge il reparto notizie che ti avvisa. Il PRIME aggiunge il secondo motore che sulle notizie ci opera, e il Premium.
+CORE
+PLUS
+PRIME
+Il chirurgo
+ICT Raptor AI CORE
+Un solo braccio operativo. Nessuna distrazione.
+Il CORE legge la struttura del prezzo e opera solo su quella . Il calendario economico non lo tocca: non ci apre e non ti avvisa. Un braccio, una logica, un modo di sbagliare — è il gradino d'ingresso della famiglia e il più semplice da tenere sotto controllo. EUR CORE 1 chiude in guadagno il 77,9% delle volte.
+Un braccio operativo : la struttura del prezzo, nient'altro
+Sei set certificati su oro, Nasdaq ed EUR/USD
+Filtro notizie: può astenersi nella finestra che scegli tu
+Nessun avviso da leggere, nessun evento da gestire
+Non conosce il calendario economico e non apre mai sulle notizie.
+operazioni misurate 8.300
+win rate migliore 77,9%
+challenge più rapida 27 gg
+drawdown combinaz. 16,3%
+€ 3.899
+una tantum · licenza legata al conto
+Richiedi il CORE → Guarda i miei backtest
+Il vigile
+ICT Raptor AI PLUS
+Sa cosa sta per succedere. E te lo dice.
+Il PLUS sale di un gradino: monta il reparto notizie , che il CORE non ha. Agenda al mattino, preavviso prima di ogni dato e una previsione calcolata sul tuo simbolo — non una regola generale, ma reti addestrate su come quel mercato si è mosso dopo quel tipo di evento per vent'anni. XAU PLUS 2 ha il rapporto più alto dei diciotto set: 1,45.
+Reparto notizie a bordo : agenda, preavviso e previsione
+Previsione sul tuo simbolo, non sul dollaro in astratto
+Sei set certificati propri, diversi da quelli del CORE
+Due set Nasdaq con tenuta piena e challenge al 100%
+Sugli eventi ti avvisa ma non apre posizioni: quel permesso ce l'ha solo il PRIME.
+operazioni misurate 13.315
+miglior rapporto 1,45
+challenge più rapida 13 gg
+operazioni all'anno 374
+€ 5.999
+una tantum · licenza legata al conto
+Richiedi il PLUS → Guarda i miei backtest
+Il predatore
+ICT Raptor AI PRIME
+Due motori. Il secondo opera dove gli altri si fermano.
+Il PRIME è l'unico che apre posizioni sugli eventi . Dove il CORE tace e il PLUS si limita ad avvisarti, lui ha un secondo motore che opera: tre configurazioni macro e 93 modelli addestrati solo sul calendario, che gli altri due non montano. E ha il Premium , tre livelli di selezione che nessun altro robot della famiglia possiede. È il vertice.
+Secondo motore : l'unico che opera sugli eventi economici
+Premium A · A+ · A++ : selezione sui ritracciamenti, solo su questo robot
+93 modelli dedicati al calendario, che gli altri due non hanno
+Motore notizie ricalibrato: 72 combinazioni tarate mercato per mercato
+Il macro è alternativo, non aggiuntivo: su un grafico in modalità macro le sei celle ICT restano ferme.
+livelli Premium 3
+modelli macro 93
+combinazioni tarate 72
+operazioni di calibrazione 3.846
+€ 9.997
+una tantum · licenza legata al conto
+Richiedi il PRIME → Guarda i miei backtest
+03
+Le sei celle di strategia
+Sei strategie ICT indipendenti, ognuna col suo modello AI. Lavorano insieme sullo stesso grafico e ognuna marca i propri ordini: nello storico sai sempre chi ha aperto cosa.
+01/06 🦖 Raptor Mode Prop Pass Killer
+Aspetta lo spostamento. Poi la conferma. Il motore che fa il grosso del lavoro: riconosce la struttura, attende lo spostamento deciso ed entra solo sul ritraccio confermato.
+02/06 🦅 Order Flow OTE Optimal Trade Entry
+Non insegue. Aspetta che il prezzo torni. Cerca il ritraccio ottimale fra il 62% e il 79%. Chi insegue paga il prezzo peggiore.
+03/06 🔋 PO3 Power of Three
+Sfrutta la trappola invece di caderci. Accumulo, manipolazione, distribuzione: entra sulla terza fase, dalla parte di chi la trappola l'ha piazzata.
+04/06 🦄 Unicorn Breaker + FVG
+Due ragioni per entrare, non una. Il punto in cui un breaker e un imbalance non mitigato si sovrappongono. Raro, e proprio per questo pesante.
+05/06 🌊 Liquidity Sweep Caccia agli stop
+Entra dopo che gli stop sono stati mangiati. Il prezzo spazza la liquidità sotto un minimo, gira e riparte. Qui lavora di più il supervisore AI.
+06/06 🔨 Breaker Block Struttura rotta
+Quello che era supporto ora respinge. Quando un ordine istituzionale fallisce, quella zona cambia segno. La cella la marca e aspetta il ritorno.
+Non le scegli tu. Ogni set decide quali celle attivare e con quali soglie AI: tu scegli il set, il resto è già deciso a partire dai numeri.
+04
+Come funzionano i modelli AI dell'Expert Advisor
+Non un modello solo: una catena in cui ogni livello risponde a una domanda diversa e ognuno può fermare il trade . Un segnale deve passarli tutti per diventare un ordine.
+[1/5] 👁 Occhio
+Otto reti votano. La maggioranza decide.
+0.60–0.70
+[2/5] 🎯 Selettori
+Scarta i segnali che sembrano buoni.
+0.78–0.92
+[3/5] 🧭 Supervisore LiqBias
+Può dire no quando tutti dicono sì.
+0.70–0.72
+[4/5] 🚦 Semaforo e percorso
+Decide quanto capitale merita il trade.
+2 modelli
+[5/5] 📅 Reparto macro
+Novantatré reti che leggono il calendario.
+93 modelli
+Se un livello dice no l'ordine non parte
+168 modelli ONNX dentro un solo file. Nessuna dipendenza esterna: il robot non scarica niente e non interroga nessun server per decidere. Addestrati su segnali reali, validati su periodi mai visti, senza lookahead.
+05
+I quattro modi di operare
+Lo stesso robot, con lo stesso set, si comporta in quattro modi diversi a seconda di cosa deve ottenere. Cambia l'obiettivo, cambiano le protezioni, cambia la tabella di rischio. Dentro ogni modo scegli poi quanto spingere: aggressivo, equilibrato o prudente.
+🏆
+Prop Challenge
+Arrivare al traguardo. Poi fermarsi.
+La quota la ricompri: quello che conta è arrivare a +10% senza toccare i limiti della prop. Al traguardo il robot chiude tutte le posizioni, cancella i pendenti e si ferma — ogni trade in più sarebbe solo rischio su una sfida già vinta.
+🏦
+Prop Funded
+Il conto non è tuo. Va difeso.
+Qui non c'è un traguardo da tagliare: c'è un conto da tenere in vita mese dopo mese. Il robot lavora per il prelievo, non per il record, e le protezioni sono più severe perché una violazione non si recupera.
+💼
+Live Account
+Nessuna regola esterna. Solo le tue.
+Sul tuo conto non c'è una prop che ti butta fuori: il limite lo decidi tu. Il robot può quindi rischiare di più e lasciar correre più a lungo, ed è la modalità dove i set esprimono la resa più alta della famiglia.
+⚡
+Flip
+Capitale piccolo, obiettivo grosso.
+Il flip è l'unica modalità in cui il rischio scende da solo mentre il conto perde, invece di fermarsi: −15% dimezza, −25% lo porta a un quarto, −30% chiude tutto. È la differenza tra un flip e una scommessa.
+06
+I tre livelli, dentro ogni modo
+Lo stesso set cambia comportamento a seconda di quanto lo lasci spingere. E sulla challenge il rapporto è meno ovvio di quanto sembri: il prudente, che rischia meno di tutti, non passa di più .
+Robot
+CORE
+PLUS
+PRIME
+Prudente
+Equilibrato
+Aggressivo
+⚡
+Aggressivo Tutto quello che la leva concede.
+Sul set più rapido la challenge si chiude in poco più di due settimane. Ma ogni perdita scava il doppio: se i primi trade vanno male tocchi i limiti della prop prima di aver costruito un margine.
+— —
+⚖️
+Equilibrato L'impostazione di serie. E non per caso.
+È il punto in cui la probabilità di passare è più alta di tutte, ed è il valore che trovi in ogni tabella di questo sito. Non è una via di mezzo: è la taratura che i numeri indicano come migliore.
+— —
+🛡
+Prudente Rischia meno di tutti. Non passa di più.
+Con rischio basso servono molti più trade per arrivare a +10%, e ogni trade in più è un'altra occasione di incontrare una serie negativa. È il paradosso che quasi nessuno racconta.
+— —
+07
+Operatività su MetaTrader 5
+Come si comporta davvero sul grafico: dove entra, dove sposta lo stop, dove chiude una parte e dove lascia correre il resto. Cinque operazioni, cinque comportamenti diversi.
+NAS100 · H4 · Breaker Block
+Stop portato in pari, posizione lasciata correre
+—
+‹
+›
+Le immagini provengono dal terminale MetaTrader 5. Gestione a pareggio e chiusure parziali sono comportamenti previsti dal robot, non interventi manuali: nello storico ogni operazione porta il marchio della cella che l'ha aperta.
+08
+Cosa ti scrive su Telegram
+Il robot lavora anche quando tu non guardi, ma non lavora di nascosto . Ogni decisione che prende ti arriva sul telefono, scritta in italiano e coi numeri già calcolati. Quelli qui sotto sono i messaggi veri, non esempi inventati.
+17:22
+Martedì 18 agosto
+🏆 CHALLENGE SUPERATA +10,05% in 15 giorni · robot fermo 17:22
+🏁 TARGET COLPITO NAS100 · +1,30R · +341,20 € 11:45
+💰 OBIETTIVO DEL MESE Finanziato in utile · prelievo disponibile 09:15
+📈 ORDINE APERTO NAS100 · BUY 0,42 lotti · Liquidity Sweep 09:31
+🌅 AGENDA DI OGGI 3 eventi ad alto impatto · robot pronto 08:00
+Challenge superata.
+Te lo scrive lui.
+Il traguardo, il target colpito, il mese chiuso in utile: ogni risultato ti arriva appena succede, coi numeri già fatti. E quando una protezione scatta te lo dice allo stesso modo, col motivo e la condizione di ripartenza — perché un robot che si ferma in silenzio è un robot di cui non ti fidi più.
+🚀
+All'avvio Sai cosa sta per fare, prima che lo faccia.
+📅
+Agenda macro Alle otto sai già come sarà la giornata.
+📈
+Operazioni Ogni ordine, coi numeri già calcolati.
+🛡
+Protezioni Quando si ferma, ti dice perché.
+09
+Macro Events: trading sugli eventi macroeconomici
+Il CORE non sa che esiste. Il PLUS te lo racconta. Il PRIME ci opera.
+Tre configurazioni dedicate, 93 reti addestrate solo sul calendario , e un ordine che aspetta il ritraccio invece di inseguire la notizia.
+⚪ CORE Nessun calendario
+Non sa nemmeno che esistono i dati. Il robot non conosce gli eventi e non li evita: opera come sempre, solo sulla struttura di prezzo. Se preferisci nessuna esposizione decisa da un modello macro, è il comportamento che vuoi.
+🔵 PLUS Informativo
+Ti avvisa. Non ci opera. Ogni mattina l'agenda dei dati del giorno, dieci minuti prima il promemoria con la previsione. Ma gli ordini restano delle sei celle ICT: l'informazione è per te, non per il robot.
+🟣 PRIME Operativo
+L'unico che apre sul dato. Tre configurazioni dedicate — XAU, NAS ed EUR — con 93 reti addestrate solo sul calendario. Stop, obiettivo, parziale e freni sono tarati mercato per mercato : 72 combinazioni misurate una a una.
+08:00 Agenda La mattina, cosa esce oggi
+14:20 Preavviso Dieci minuti prima, la previsione
+14:30 Il dato Esce il numero vero
+14:30 La rete Ordine sul ritraccio previsto
+15:10 L'esito Ti scrive com'è andata
+10
+I numeri della calibrazione
+Il motore notizie è stato ricalibrato da capo su 3.846 operazioni reali dal 2018 al 2026 . Non a occhio, e non provando qualche valore per vedere quale rendeva di più: ogni livello di rischio viene da migliaia di simulazioni. Tre mercati, quattro modi di lavorare, tre livelli: 72 combinazioni , ognuna col proprio numero.
+Prop Challenge · i numeri della calibrazione
+rischio per operazione · probabilità di arrivare a +10% · giorni attesi
+📈 Nasdaq
+Aggressivo 3,20% 97,5% 4 gg
+Equilibrato 2,40% 99,4% 4 gg
+Prudente 2,00% 100% 6 gg
+🥇 Oro
+Aggressivo 2,40% 95,4% 6 gg
+Equilibrato 1,60% 99,3% 10 gg
+Prudente 1,00% 99,9% 17 gg
+💶 EURUSD
+Aggressivo 3,20% 98,1% 18 gg
+Equilibrato 2,80% 99,4% 20 gg
+Prudente 2,40% 100% 23 gg
+Da dove vengono questi numeri. Da simulazioni Monte Carlo — 3.000 giri per riga, rimescolando a blocchi perché i grappoli di perdite restino — costruite su 3.846 operazioni storiche del robot, simulate sulla metà di periodo che la taratura ha visto meno. Servono a confrontare i livelli fra loro , non a promettere un risultato: sono da leggere come limite superiore, non come garanzia. Il mercato futuro non è replicabile da un test, e un vantaggio misurato su otto anni può ridursi o sparire. Un anno di prova su demo vale più di qualunque simulazione.
+11
+Premium
+Il robot smette di prendere tutto. Con il Premium acceso il PRIME non entra su ogni configurazione che riconosce: prende solo quelle che superano un vaglio più severo — e le prende a un prezzo migliore, aspettando il ritracciamento invece di inseguire il segnale.
+Stessa operazione. Prezzo migliore.
+L'ingresso non viene piazzato appena lo schema compare, ma sui livelli di ritracciamento di Fibonacci : il robot aspetta che il prezzo torni indietro fino alla zona favorevole. A parità di obiettivo, lo stop è più vicino — quindi il rischio per operazione è più contenuto.
+A
+Il primo scalino
+Ottimizza l'ingresso mantenendo un buon numero di operazioni. È l'ingresso al Premium senza rinunciare all'operatività.
+A+
+Vaglio sulla direzione
+Aggiunge un controllo su dove sta andando il mercato. Meno operazioni, meglio selezionate.
+A++
+Il più selettivo
+Opera solo quando ogni criterio concorda. Poche occasioni all'anno. Le migliori che il robot sappia riconoscere.
+🎯
+Tarato mercato per mercato
+Oro, Nasdaq ed EURUSD non si comportano allo stesso modo: ognuno ha i suoi criteri. Il robot capisce da solo su quale mercato lavora. Nessuna impostazione da toccare.
+🔀
+Si accende e si spegne quando vuoi
+Con il Premium spento hai il robot che conosci. Acceso, hai un robot che dice di no molto più spesso. Il motore notizie non viene toccato: sono due mestieri diversi.
+Con il Premium il robot opera di meno. È voluto.
+Meno operazioni non significa meno risultato: significa scegliere invece di prendere tutto. Non abbiamo misurato Premium acceso contro spento su un test completo — sono state tarate le configurazioni, non confrontati i risultati. Quindi non ti diciamo che rende di più: ti diciamo che seleziona molto più stretto.
+12
+Quale robot fa per te
+Tre domande, trenta secondi: alla fine sai quale dei tre assomiglia a come vuoi operare — e perché .
+1 di 3
+1 Cosa devi ottenere?
+Non perdere Prima di tutto voglio un conto che regge. La crescita viene dopo.
+Crescere con ordine Un buon rendimento, ma con un drawdown che riesco a guardare.
+Spingere Voglio il massimo che il motore può dare, e accetto le oscillazioni.
+2 E quando escono le notizie?
+Voglio starne fuori Nessuna esposizione decisa da un modello macro. Solo struttura di prezzo.
+Voglio saperlo Mi avvisi cosa sta per uscire, poi decido io se restare davanti allo schermo.
+Voglio operarci Se c'è un'occasione sul dato, il robot la deve prendere al posto mio.
+3 Cosa ti fa spegnere un robot?
+Vedere troppe perdite Se perde spesso non lo tengo acceso, anche se alla fine guadagna.
+Vedere poche vincite grosse Accetto di sbagliare, se quando prendo bene incasso davvero.
+Niente, resto acceso Guardo il risultato dell'anno, non quello della settimana.
+← Cambia risposta
+Il tuo robot
+Richiedi →
+Rispondi alle tre domande per vedere il risultato.
+13
+Numero chiuso
+Diciotto set misurati. Non per tutti.
+Ogni licenza è legata a un conto e a una persona: non rivendibile, non condivisibile. Scrivici e ti mandiamo la guida completa del robot che ti interessa — tutte le tabelle per esteso, ogni set a ogni livello, in tutte e quattro le modalità. Prima di qualunque pagamento.
+Richiedi accesso →
+34.788 Operazioni analizzate Ogni numero del sito viene da qui: operazioni reali, degrado già scontato, spread applicato.
+168 Modelli AI in un solo file Nessuna dipendenza esterna. Il robot non scarica niente e non interroga nessun server.
+100% Due set del PRIME, in simulazione Arrivano al traguardo della challenge in tutte le simulazioni eseguite.
+14
+Contatti
+Instagram feedback e novità
+YouTube backtest e robot in azione
+Telegram guide e acquisto
+Ci trovi su Telegram.
+Per acquistare entra nel canale, dove ci sono le sezioni dei tre robot, oppure scrivi a uno dei due operatori: ti mandano la guida completa prima di qualunque pagamento.
+Entra nel canale
+Seid
+SD Forex
+Licenza legata a un conto e a una persona · non rivendibile, non condivisibile
+15
+Prima di partire
+Leggi questa pagina prima di acquistare. Non è una formalità: è la parte che ti dice cosa stai comprando e cosa no.
+Stai comprando un software.
+Non un consiglio.
+Autotrader Forex Club non è un consulente finanziario e non svolge attività di consulenza in materia di investimenti. La nostra attività è la vendita di software per MetaTrader 5: non gestiamo conti, non riceviamo denaro in gestione e non forniamo raccomandazioni personalizzate.
+Da dove vengono i numeri
+Tutti i numeri di questo sito provengono da simulazioni eseguite sullo Strategy Tester di MetaTrader 5 e da simulazioni Monte Carlo costruite sulle operazioni così ottenute. Il degrado del vantaggio è già scontato e lo spread di un broker medio è già applicato. Non sono risultati di conto reale.
+I modelli di intelligenza artificiale sono stati addestrati su segnali prodotti dal sistema stesso e validati su periodi che non hanno mai incontrato in addestramento. Ogni dato pubblicato qui è verificabile nelle guide complete , che ti inviamo prima di qualunque pagamento.
+Rischio e responsabilità
+I risultati passati non garantiscono risultati futuri. Le condizioni di mercato cambiano, e un vantaggio misurato su un periodo può ridursi o sparire su quello successivo. Il trading su strumenti a leva comporta un rischio elevato di perdita del capitale investito.
+L'utilizzo del software avviene sotto la responsabilità esclusiva dell'acquirente. Autotrader Forex Club non risponde di alcuna perdita , diretta o indiretta, derivante dall'uso dei propri prodotti, né di malfunzionamenti dovuti a broker, connessione, configurazione o condizioni di mercato.
+Prima di operare con capitale reale, rivolgiti alla figura professionale che segue i tuoi investimenti . Un consulente abilitato può valutare se questo strumento è compatibile con la tua situazione patrimoniale, con i tuoi obiettivi e con la tua tolleranza al rischio. Noi non possiamo farlo, e non lo facciamo.
+AUTOTRADER FOREX CLUB ALGORITHMIC TRADING
+Autotrader Forex Club — software di trading automatico per MetaTrader 5. Expert Advisor con metodologia ICT e Smart Money Concepts, intelligenza artificiale con modelli ONNX proprietari, su oro, Nasdaq ed EUR/USD. Licenze a distribuzione limitata.
+I robot
+ICT Raptor AI Core
+ICT Raptor AI Plus
+ICT Raptor AI Prime
+Come funziona
+Le sei celle
+La catena AI
+I quattro modi
+Operazioni sul terminale
+Telegram
+Quale robot fa per te
+Guide
+Cos'è un Expert Advisor per MetaTrader 5
+ICT e Smart Money Concepts
+Prop firm challenge: come funziona
+Backtest e Monte Carlo: leggere i numeri
+Le rese, le probabilità e i tempi mostrati in questa pagina derivano da simulazioni Monte Carlo costruite sulle operazioni storiche di ciascun set, con il degrado del vantaggio già applicato e lo spread di un broker medio. Non sono risultati di conto reale, non costituiscono una previsione e non garantiscono alcun risultato futuro. Il trading comporta rischi significativi e può non essere adatto a tutti gli investitori: sul flip in particolare è previsto e possibile perdere il capitale impiegato. Vendiamo esclusivamente software: non forniamo consulenza finanziaria né gestione di patrimoni.
+© 2023 Autotrader Forex Club · Marchio registrato P. IVA 17531191009
+Tutti i diritti riservati
