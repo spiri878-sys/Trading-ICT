@@ -1,0 +1,24 @@
+; XauOcoBreakout preset: demo prudente: lotto 0.01, perdita giornaliera 2%, DD 20%
+InpMagic=7703001
+InpAllowRealAccount=false
+InpLogPrefix=XOB_demo
+LotMode=0
+FixedLot=0.01
+RiskPercent=1.0
+RiskBase=1
+CommissionLotSide=3.5
+SlipPrice=0.05
+MaxRiskPctTrade=0
+DailyLossPct=2
+MaxDrawdownPct=20
+MaxSpreadPrice=1.0
+FridayCloseMin=1380
+Sides=0
+RangeBars=24
+Compression=1.0
+BufferAtr=0.1
+TpR=2.0
+TrailAtr=2.0
+MaxHoldM1Bars=1440
+RegimeEmaD1=50
+H4SwingK=2

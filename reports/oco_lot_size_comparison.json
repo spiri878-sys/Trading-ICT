@@ -1,0 +1,26 @@
+{
+ "0.02": {
+  "final_2018_2026": 4225.0,
+  "max_dd_pct": 16.6,
+  "12m_share_profit": 79.8,
+  "12m_median_final": 1168.0,
+  "12m_share_lost_half": 0.0,
+  "12m_worst": 842.0
+ },
+ "0.05": {
+  "final_2018_2026": 9063.0,
+  "max_dd_pct": 34.9,
+  "12m_share_profit": 79.8,
+  "12m_median_final": 1420.0,
+  "12m_share_lost_half": 1.1,
+  "12m_worst": 604.0
+ },
+ "0.1": {
+  "final_2018_2026": 17126.0,
+  "max_dd_pct": 55.4,
+  "12m_share_profit": 75.5,
+  "12m_median_final": 1624.0,
+  "12m_share_lost_half": 27.7,
+  "12m_worst": 182.0
+ }
+}

@@ -1,0 +1,24 @@
+; XauOcoBreakout preset: idea originale: buy stop + sell stop sempre (negativa 2018-2026)
+InpMagic=7703001
+InpAllowRealAccount=false
+InpLogPrefix=XOB_both
+LotMode=0
+FixedLot=0.10
+RiskPercent=1.0
+RiskBase=1
+CommissionLotSide=3.5
+SlipPrice=0.05
+MaxRiskPctTrade=0
+DailyLossPct=0
+MaxDrawdownPct=0
+MaxSpreadPrice=1.0
+FridayCloseMin=1380
+Sides=1
+RangeBars=24
+Compression=1.0
+BufferAtr=0.1
+TpR=2.0
+TrailAtr=2.0
+MaxHoldM1Bars=1440
+RegimeEmaD1=50
+H4SwingK=2

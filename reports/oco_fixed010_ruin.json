@@ -1,0 +1,21 @@
+{
+ "starts": 94,
+ "share_profitable_after_12m": 75.5,
+ "median_final": 1624.0,
+ "p10_final": 654.3000000000001,
+ "p90_final": 5623.700000000002,
+ "share_equity_below_500": 27.7,
+ "share_blocked_by_margin": 4.3,
+ "worst_start": {
+  "start": "2023-06",
+  "final": 182.0,
+  "min_balance": 152.0,
+  "skipped_margin": 74
+ },
+ "best_start": {
+  "start": "2025-02",
+  "final": 8855.0,
+  "min_balance": 965.0,
+  "skipped_margin": 0
+ }
+}
