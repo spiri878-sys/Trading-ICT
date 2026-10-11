@@ -43,7 +43,7 @@ Stati: **fatto** · **escluso** (con motivo) · **da fare** (fase prevista).
 | 30 | Tendine MERCATO e MODALITÀ; riga "Preset cella applicato"; combinazioni non certificate rifiutate | da fare | 8 |
 | 31 | Timeframe interni: Sweep M3, PO3 M5, Raptor M5, Unicorn M15, OTE M12 | **fatto (dati)**: timeframe costruiti da M1, M3 e M12 ancorati all'ora; logica da fare | 0 → 2 |
 | 32 | Catena: segnale → regimi → AI 1-2 → supervisore → macro → forecast → trade | da fare | 5 |
-| 33 | Selettore: 15 reti, una per cella, oltre 100 caratteristiche, probabilità di "big-runner" | da fare | 4–5 |
+| 33 | Selettore: 15 reti, una per cella, oltre 100 caratteristiche, probabilità di "big-runner" | feature **fatte** (105, `feature.md`); etichetta big-runner fatta (Fase 3); modelli da fare | 5 |
 | 34 | Gate Sì/No: 16 reti, qualità dell'ingresso, doppio consenso | da fare | 5 |
 | 35 | Supervisore di liquidità su M5 | da fare | 5 |
 | 36 | Forecaster della direzione della barra successiva (blocca, aumenta, si astiene) | da fare | 5 |
@@ -90,3 +90,4 @@ Stati: **fatto** · **escluso** (con motivo) · **da fare** (fase prevista).
 | F3 | Trascrizione dell'audio dei video | **non necessaria**: i video non hanno parlato (solo musica e titoli) |
 | F4 | Fase 2: generatore delle 6 celle, frequenze 2008–2021, confronto con i riferimenti | **fatto**; corrispondenza con i segnali del venditore al livello del caso (`report_fase2.md`) |
 | F5 | Fase 3: etichette (big-runner, ingresso pulito, R) e baseline 2008–2021 | **fatto**: nessuna cella con vantaggio senza filtri (`report_fase3.md`) |
+| F6 | Fase 4: 105 feature causali documentate, diagnostica sull'addestramento | **fatto** (`report_fase4.md`) |

@@ -1,0 +1,322 @@
+{
+ "n_features": 105,
+ "n_signals_total": 120643,
+ "n_train": 60587,
+ "groups": {
+  "Segnale": 20,
+  "Volatilit\u00e0": 18,
+  "Struttura": 37,
+  "Momentum ed efficienza": 9,
+  "Volumi": 2,
+  "Sessione e tempo": 10,
+  "Costi": 3,
+  "Contesto delle celle": 6
+ },
+ "missing_pct_train": {
+  "f_dist_asia_hi_atr_h1": 25.2959,
+  "f_dist_asia_lo_atr_h1": 25.2959,
+  "f_asia_range_atr_h1": 25.2959
+ },
+ "constant_train": [],
+ "corr_pairs_gt_095": [
+  [
+   "cell_LS",
+   "is_market",
+   1.0
+  ],
+  [
+   "stop_struct_atr_m15",
+   "stop_struct_over_atr3",
+   1.0
+  ],
+  [
+   "stop_struct_atr_h1",
+   "stop_struct_atr_h4",
+   0.977
+  ],
+  [
+   "stop_struct_atr_h4",
+   "stop_struct_atr_d1",
+   0.968
+  ],
+  [
+   "stop_atr3_atr_h1",
+   "atr_m15_over_h1",
+   1.0
+  ],
+  [
+   "rvol_30m_over_atr_h1",
+   "rvol_60m_over_atr_h1",
+   0.954
+  ],
+  [
+   "brk_now_al",
+   "is_mss",
+   0.962
+  ],
+  [
+   "push_1440m_atr_h1",
+   "efficiency_24h_signed",
+   0.991
+  ]
+ ],
+ "top20_by_auc_big_runner": [
+  {
+   "feature": "dist_pwh_atr_d1",
+   "group": "Struttura",
+   "auc_big_runner": 0.466,
+   "auc_clean_entry": 0.4877,
+   "r_q1": -0.0059,
+   "r_q5": -0.1875
+  },
+  {
+   "feature": "range_24h_atr_h1",
+   "group": "Volatilit\u00e0",
+   "auc_big_runner": 0.4693,
+   "auc_clean_entry": 0.4927,
+   "r_q1": 0.0072,
+   "r_q5": -0.16
+  },
+  {
+   "feature": "pos_week",
+   "group": "Struttura",
+   "auc_big_runner": 0.5299,
+   "auc_clean_entry": 0.5148,
+   "r_q1": -0.1835,
+   "r_q5": -0.0221
+  },
+  {
+   "feature": "dist_asia_hi_atr_h1",
+   "group": "Struttura",
+   "auc_big_runner": 0.4727,
+   "auc_clean_entry": 0.4837,
+   "r_q1": -0.0377,
+   "r_q5": -0.145
+  },
+  {
+   "feature": "dist_h4_ema",
+   "group": "Struttura",
+   "auc_big_runner": 0.5262,
+   "auc_clean_entry": 0.5108,
+   "r_q1": -0.1619,
+   "r_q5": -0.043
+  },
+  {
+   "feature": "vol_h4_atr_rel",
+   "group": "Volatilit\u00e0",
+   "auc_big_runner": 0.4739,
+   "auc_clean_entry": 0.5009,
+   "r_q1": -0.0286,
+   "r_q5": -0.0996
+  },
+  {
+   "feature": "efficiency_24h",
+   "group": "Momentum ed efficienza",
+   "auc_big_runner": 0.474,
+   "auc_clean_entry": 0.4991,
+   "r_q1": -0.0305,
+   "r_q5": -0.1487
+  },
+  {
+   "feature": "atr_h4_over_d1",
+   "group": "Volatilit\u00e0",
+   "auc_big_runner": 0.4756,
+   "auc_clean_entry": 0.5024,
+   "r_q1": -0.0376,
+   "r_q5": -0.0994
+  },
+  {
+   "feature": "dist_d1_swing_adv",
+   "group": "Struttura",
+   "auc_big_runner": 0.5242,
+   "auc_clean_entry": 0.5102,
+   "r_q1": -0.141,
+   "r_q5": -0.0362
+  },
+  {
+   "feature": "dist_pdh_atr_h1",
+   "group": "Struttura",
+   "auc_big_runner": 0.4778,
+   "auc_clean_entry": 0.4883,
+   "r_q1": -0.043,
+   "r_q5": -0.1631
+  },
+  {
+   "feature": "dist_h1_ema",
+   "group": "Struttura",
+   "auc_big_runner": 0.5218,
+   "auc_clean_entry": 0.5122,
+   "r_q1": -0.187,
+   "r_q5": -0.0625
+  },
+  {
+   "feature": "atr_h1_over_d1",
+   "group": "Volatilit\u00e0",
+   "auc_big_runner": 0.4788,
+   "auc_clean_entry": 0.503,
+   "r_q1": -0.0662,
+   "r_q5": -0.0879
+  },
+  {
+   "feature": "dist_d1_swing_fav",
+   "group": "Struttura",
+   "auc_big_runner": 0.4794,
+   "auc_clean_entry": 0.492,
+   "r_q1": -0.0528,
+   "r_q5": -0.134
+  },
+  {
+   "feature": "dist_h4_swing_fav",
+   "group": "Struttura",
+   "auc_big_runner": 0.4803,
+   "auc_clean_entry": 0.4871,
+   "r_q1": -0.0685,
+   "r_q5": -0.1723
+  },
+  {
+   "feature": "pos_range_24h",
+   "group": "Struttura",
+   "auc_big_runner": 0.5194,
+   "auc_clean_entry": 0.5164,
+   "r_q1": -0.1616,
+   "r_q5": -0.0398
+  },
+  {
+   "feature": "dist_h1_swing_fav",
+   "group": "Struttura",
+   "auc_big_runner": 0.4818,
+   "auc_clean_entry": 0.4881,
+   "r_q1": -0.0607,
+   "r_q5": -0.1604
+  },
+  {
+   "feature": "dist_m15_ema",
+   "group": "Struttura",
+   "auc_big_runner": 0.5174,
+   "auc_clean_entry": 0.5151,
+   "r_q1": -0.1501,
+   "r_q5": -0.0599
+  },
+  {
+   "feature": "vol_h1_atr_rel",
+   "group": "Volatilit\u00e0",
+   "auc_big_runner": 0.4829,
+   "auc_clean_entry": 0.5013,
+   "r_q1": -0.0784,
+   "r_q5": -0.0846
+  },
+  {
+   "feature": "day_range_atr_d1",
+   "group": "Volatilit\u00e0",
+   "auc_big_runner": 0.4857,
+   "auc_clean_entry": 0.5035,
+   "r_q1": -0.1015,
+   "r_q5": -0.0926
+  },
+  {
+   "feature": "side",
+   "group": "Segnale",
+   "auc_big_runner": 0.4864,
+   "auc_clean_entry": 0.4958,
+   "r_q1": NaN,
+   "r_q5": NaN
+  }
+ ],
+ "top15_by_r_quintile_spread": [
+  {
+   "feature": "dist_pwh_atr_d1",
+   "r_q1": -0.0059,
+   "r_q5": -0.1875,
+   "r_spread_q5_q1": -0.1817
+  },
+  {
+   "feature": "range_24h_atr_h1",
+   "r_q1": 0.0072,
+   "r_q5": -0.16,
+   "r_spread_q5_q1": -0.1672
+  },
+  {
+   "feature": "pos_week",
+   "r_q1": -0.1835,
+   "r_q5": -0.0221,
+   "r_spread_q5_q1": 0.1614
+  },
+  {
+   "feature": "dist_h1_ema",
+   "r_q1": -0.187,
+   "r_q5": -0.0625,
+   "r_spread_q5_q1": 0.1245
+  },
+  {
+   "feature": "pos_range_24h",
+   "r_q1": -0.1616,
+   "r_q5": -0.0398,
+   "r_spread_q5_q1": 0.1218
+  },
+  {
+   "feature": "dist_pdh_atr_h1",
+   "r_q1": -0.043,
+   "r_q5": -0.1631,
+   "r_spread_q5_q1": -0.1201
+  },
+  {
+   "feature": "dist_h4_ema",
+   "r_q1": -0.1619,
+   "r_q5": -0.043,
+   "r_spread_q5_q1": 0.1188
+  },
+  {
+   "feature": "efficiency_24h",
+   "r_q1": -0.0305,
+   "r_q5": -0.1487,
+   "r_spread_q5_q1": -0.1182
+  },
+  {
+   "feature": "dist_h1_swing_adv",
+   "r_q1": -0.1374,
+   "r_q5": -0.026,
+   "r_spread_q5_q1": 0.1114
+  },
+  {
+   "feature": "dist_asia_hi_atr_h1",
+   "r_q1": -0.0377,
+   "r_q5": -0.145,
+   "r_spread_q5_q1": -0.1073
+  },
+  {
+   "feature": "dist_d1_swing_adv",
+   "r_q1": -0.141,
+   "r_q5": -0.0362,
+   "r_spread_q5_q1": 0.1048
+  },
+  {
+   "feature": "dist_h4_swing_fav",
+   "r_q1": -0.0685,
+   "r_q5": -0.1723,
+   "r_spread_q5_q1": -0.1038
+  },
+  {
+   "feature": "dist_h1_swing_fav",
+   "r_q1": -0.0607,
+   "r_q5": -0.1604,
+   "r_spread_q5_q1": -0.0997
+  },
+  {
+   "feature": "dist_m15_ema",
+   "r_q1": -0.1501,
+   "r_q5": -0.0599,
+   "r_spread_q5_q1": 0.0902
+  },
+  {
+   "feature": "dist_d1_ema",
+   "r_q1": -0.1344,
+   "r_q5": -0.0493,
+   "r_spread_q5_q1": 0.085
+  }
+ ],
+ "base_rates_train": {
+  "big_runner": 0.228,
+  "clean_entry": 0.284,
+  "avg_r_foto_atr": -0.0857
+ }
+}
