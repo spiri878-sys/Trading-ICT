@@ -20,7 +20,7 @@ def sig(t, side=1, price=100.0, sl=99.0, otype="limit", expiry=10, atr=1.0):
                          "sl_struct": [sl], "atr": [atr], "expiry_bars": [expiry], "strategy": ["T"]})
 
 
-BASE = Params(spread_floor=0.0, slippage=0.0, commission_per_lot_side=0.0, p1_frac=0.0, p2_frac=0.0,
+BASE = Params(swap_long_annual=0.0, swap_short_annual=0.0, spread_floor=0.0, slippage=0.0, commission_per_lot_side=0.0, p1_frac=0.0, p2_frac=0.0,
               be_after_p1=False, tp_r=2.0, fixed_lot=0.10, friday_close_min=24 * 60, max_spread=10)
 
 
@@ -186,3 +186,23 @@ def test_trailing_without_partial_is_active_from_entry():
     prm = replace(BASE, tp_r=50.0, p1_frac=0.0, p2_frac=0.0, trail_atr=1.0)
     tr, _ = run(make_market(path), sig("2024-01-02 09:59", atr=1.0), prm)
     assert tr.iloc[0].exit_reason == "TRAIL" and tr.iloc[0].gross > 0
+
+
+def test_swap_charged_per_night_long_and_credited_short():
+    # a long held over 2 server-day rollovers pays 2 nights of swap; a short receives it
+    idx = pd.date_range("2024-01-02 22:55", periods=2 * 1440 + 30, freq="1min")
+    df = pd.DataFrame({"open": 100.0, "high": 100.1, "low": 99.9, "close": 100.0, "spread": 0}, index=idx)
+    mk = Market(df)
+    prm = replace(BASE, tp_r=50.0, max_hold_min=2 * 1440 + 10, swap_long_annual=-0.0365, swap_short_annual=0.0365)
+    trl, _ = run(mk, sig("2024-01-02 22:50", otype="market", price=100.0, sl=90.0), prm)
+    trs, _ = run(mk, sig("2024-01-02 22:50", side=-1, otype="market", price=100.0, sl=110.0), prm)
+    # 2 nights x 100 x 0.0365/365 = 0.02 USD/oz -> x 0.10 lot x 100 oz = 0.2 USD
+    assert trl.iloc[0].gross == pytest.approx(-0.2, abs=1e-6)
+    assert trs.iloc[0].gross == pytest.approx(0.2, abs=1e-6)
+
+
+def test_market_day_index_counts_calendar_days():
+    idx = pd.to_datetime(["2024-01-02 23:59", "2024-01-03 00:00", "2024-01-05 12:00"])
+    df = pd.DataFrame({"open": 1.0, "high": 1.0, "low": 1.0, "close": 1.0, "spread": 0}, index=idx)
+    d = Market(df).day
+    assert d[1] - d[0] == 1 and d[2] - d[0] == 3

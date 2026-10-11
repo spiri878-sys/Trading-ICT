@@ -17,7 +17,7 @@ C0 = dict(kind="recorded", floor=0.05, commission_per_lot_side=3.5, slippage=0.0
 # exceed the whole M1 range in 92% of bars -> most likely expressed in 0.001 units. Divide them by 10.
 C0R = dict(kind="recorded_rescaled", floor=0.05, commission_per_lot_side=3.5, slippage=0.05, rescale_before="2023-01-01")
 C2 = dict(kind="fixed", spread=0.60, commission_per_lot_side=7.0, slippage=0.10)
-ZERO = dict(kind="fixed", spread=0.0, commission_per_lot_side=0.0, slippage=0.0)
+ZERO = dict(kind="fixed", spread=0.0, commission_per_lot_side=0.0, slippage=0.0, swap=False)
 
 
 @contextmanager
@@ -27,6 +27,8 @@ def with_cost(cm: dict, base: Params | None = None):
     raw = mk.sp_raw.copy()
     prm = replace(base or Params(), commission_per_lot_side=cm["commission_per_lot_side"],
                   slippage=cm["slippage"], max_spread=5.0)
+    if not cm.get("swap", True):
+        prm = replace(prm, swap_long_annual=0.0, swap_short_annual=0.0)
     try:
         if cm["kind"] == "fixed":
             mk.sp_raw[:] = cm["spread"]; prm = replace(prm, spread_floor=0.0)

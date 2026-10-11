@@ -69,6 +69,10 @@ class Params:
     # ---- account protection
     daily_loss_pct: float = 0.0        # 0 = off. Checked on closed P&L of the server day at entry time
     max_dd_pct: float = 0.0            # 0 = off. Kill switch on closed-balance drawdown
+    # ---- overnight swap as an annual fraction of notional (E-28, Vantage 2026: long -79.48 / short +34.41
+    #      USD per lot per night at ~4400 -> about -6.6% / +2.9% per year). Charged per server-day rollover.
+    swap_long_annual: float = -0.066
+    swap_short_annual: float = 0.029
     # ---- "breathing" risk (risk-percent mode only): never above base
     breathe: bool = False
     breathe_dd_full: float = 5.0
@@ -204,7 +208,7 @@ def _stop_price(stop_mode, fill, side, sl_struct, stop_fixed, stop_pct, stop_atr
 
 
 @njit(cache=True)
-def _label(o, h, l, c, sp, dow, mod, s_avail, s_exp, s_side, s_mkt, s_price, s_sl, s_atr, s_tpr,
+def _label(o, h, l, c, sp, day, dow, mod, sw_l, sw_s, s_avail, s_exp, s_side, s_mkt, s_price, s_sl, s_atr, s_tpr,
            stop_mode, stop_fixed, stop_pct, stop_atr, tp_r, p1_r, p1_frac, p2_r, p2_frac, be_on, on_close,
            trail_atr, max_hold, fri_close, slip, max_spread, comm_px):
     """Isolated outcome of every signal (as if it were the only trade). R is net of all costs."""
@@ -223,6 +227,8 @@ def _label(o, h, l, c, sp, dow, mod, s_avail, s_exp, s_side, s_mkt, s_price, s_s
         tpk = s_tpr[k] if s_tpr[k] > 0 else tp_r
         ei, pnl, rs, npart, a, b = _manage(o, h, l, c, sp, dow, mod, fi, s_side[k], fp, sl, rd, s_atr[k], tpk, p1_r,
                                            p1_frac, p2_r, p2_frac, be_on, on_close, trail_atr, max_hold, fri_close, slip)
+        nights = day[ei] - day[fi]
+        pnl += (sw_l if s_side[k] == 1 else sw_s) * fp * nights / 365.0
         filled[k] = True; fill_i[k] = fi; exit_i[k] = ei; reason[k] = rs
         r_out[k] = (pnl - 2 * comm_px) / (rd + slip + 2 * comm_px)
         mfe[k] = a; mae[k] = b
@@ -230,7 +236,7 @@ def _label(o, h, l, c, sp, dow, mod, s_avail, s_exp, s_side, s_mkt, s_price, s_s
 
 
 @njit(cache=True)
-def _portfolio(o, h, l, c, sp, day, dow, mod, s_avail, s_exp, s_side, s_mkt, s_price, s_sl, s_atr, s_tpr, s_take,
+def _portfolio(o, h, l, c, sp, day, dow, mod, sw_l, sw_s, s_avail, s_exp, s_side, s_mkt, s_price, s_sl, s_atr, s_tpr, s_take,
                init_bal, stop_mode, stop_fixed, stop_pct, stop_atr, lot_mode, fixed_lot, risk_pct,
                tp_r, p1_r, p1_frac, p2_r, p2_frac, be_on, on_close, trail_atr, max_hold, fri_close,
                contract, min_lot, lot_step, max_lot, leverage, comm, slip, max_spread, stops_level,
@@ -296,6 +302,8 @@ def _portfolio(o, h, l, c, sp, day, dow, mod, s_avail, s_exp, s_side, s_mkt, s_p
         tpk = s_tpr[k] if s_tpr[k] > 0 else tp_r
         ei, pnl, rs, npart, a, b = _manage(o, h, l, c, sp, dow, mod, fi, side, fp, sl, rd, s_atr[k], tpk, p1_r,
                                            p1_frac, p2_r, p2_frac, be_on, on_close, trail_atr, max_hold, fri_close, slip)
+        nights = day[ei] - day[fi]
+        pnl += (sw_l if side == 1 else sw_s) * fp * nights / 365.0
         money = pnl * lot * contract
         cm = 2 * comm * lot
         net = money - cm
@@ -326,7 +334,7 @@ class Market:
         self.index = m1.index
         self.o, self.h, self.l, self.c = (m1[k].values.astype(np.float64) for k in ("open", "high", "low", "close"))
         self.sp_raw = m1.spread.values.astype(np.float64) * point
-        self.day = (m1.index.normalize().values.astype("int64") // 86_400_000_000_000).astype(np.int64)
+        self.day = m1.index.values.astype("datetime64[D]").astype(np.int64)
         self.dow = m1.index.dayofweek.values.astype(np.int64)
         self.mod = (m1.index.hour * 60 + m1.index.minute).values.astype(np.int64)
 
@@ -350,7 +358,8 @@ def label(mk: Market, sig: pd.DataFrame, prm: Params, tf_minutes: int = 5, sprea
     sp = mk.spread(prm, spread_mult)
     a = _sig_arrays(mk, sig, tf_minutes)
     comm_px = prm.commission_per_lot_side / prm.contract
-    filled, fi, ei, r, mfe, mae, rs = _label(mk.o, mk.h, mk.l, mk.c, sp, mk.dow, mk.mod, *a,
+    filled, fi, ei, r, mfe, mae, rs = _label(mk.o, mk.h, mk.l, mk.c, sp, mk.day, mk.dow, mk.mod,
+                                             prm.swap_long_annual, prm.swap_short_annual, *a,
                                              prm.stop_mode, prm.stop_fixed_usd, prm.stop_percent, prm.stop_atr_mult,
                                              prm.tp_r, prm.p1_r, prm.p1_frac, prm.p2_r, prm.p2_frac, prm.be_after_p1,
                                              prm.mgmt_on_close, prm.trail_atr, prm.max_hold_min, prm.friday_close_min,
@@ -372,7 +381,7 @@ def run(mk: Market, sig: pd.DataFrame, prm: Params, tf_minutes: int = 5, spread_
     sp = mk.spread(prm, spread_mult)
     a = _sig_arrays(mk, sig, tf_minutes)
     tk = np.ones(len(sig), np.bool_) if take is None else np.asarray(take, np.bool_)
-    out = _portfolio(mk.o, mk.h, mk.l, mk.c, sp, mk.day, mk.dow, mk.mod, *a, tk,
+    out = _portfolio(mk.o, mk.h, mk.l, mk.c, sp, mk.day, mk.dow, mk.mod, prm.swap_long_annual, prm.swap_short_annual, *a, tk,
                      prm.initial_balance, prm.stop_mode, prm.stop_fixed_usd, prm.stop_percent, prm.stop_atr_mult,
                      prm.lot_mode, prm.fixed_lot, prm.risk_percent, prm.tp_r, prm.p1_r, prm.p1_frac, prm.p2_r,
                      prm.p2_frac, prm.be_after_p1, prm.mgmt_on_close, prm.trail_atr, prm.max_hold_min,

@@ -5,7 +5,7 @@ All values are known at the close of the decision bar.
 import numpy as np
 import pandas as pd
 
-CELLS = ["PPK", "MSS", "MTF_M1", "OTEOF", "PO3", "UNIOF", "LS", "SILVER_BULLET", "WYCKOFF", "WYCKOFF_MTF"]
+CELLS = ["PPK", "MSS", "MTF_M1", "OTEOF", "PO3", "UNIOF", "LS", "SILVER_BULLET", "WYCKOFF", "WYCKOFF_MTF", "ASIA_BO", "EMA_PB", "SQUEEZE", "DONCHIAN", "MR_BB", "RSI2"]
 
 
 def signal_features(f: pd.DataFrame, sig: pd.DataFrame) -> pd.DataFrame:
