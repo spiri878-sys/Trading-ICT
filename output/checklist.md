@@ -63,8 +63,8 @@ Stati: **fatto** · **escluso** (con motivo) · **da fare** (fase prevista).
 
 | # | Voce | Stato | Fase |
 |---|---|---|---|
-| 48 | Silver Bullet, MSS, Judas Swing, Order Block model | da fare (solo Piano B) | 10 |
-| 49 | Market Brain, Trade Manager, Strategy Filter | da fare (solo Piano B o come riferimento) | 10 |
+| 48 | Silver Bullet, MSS, Judas Swing, Order Block model | **fatto** (Piano B); nessuna regge in validazione | 10 |
+| 49 | Market Brain, Trade Manager, Strategy Filter | **Market Brain fatto**: non regge in validazione (adattamento) | 10 |
 | 50 | Mediazioni | **escluso**: vietate dalla specifica (la PRIME è a operazioni singole) | — |
 
 ## 3.4 Video e foto
@@ -92,3 +92,4 @@ Stati: **fatto** · **escluso** (con motivo) · **da fare** (fase prevista).
 | F5 | Fase 3: etichette (big-runner, ingresso pulito, R) e baseline 2008–2021 | **fatto**: nessuna cella con vantaggio senza filtri (`report_fase3.md`) |
 | F6 | Fase 4: 105 feature causali documentate, diagnostica sull'addestramento | **fatto** (`report_fase4.md`) |
 | F7 | Fase 5: catena AI V5 + SITO, autoallenamento (congelato / soglia viva / annuale) | **fatto**: vantaggio onesto circa +0,03R (marginale) → proposta Piano B (`report_fase5.md`) |
+| F8 | Fase 10 (Piano B): 10 celle, Market Brain, portafoglio | **fatto**: regge solo la cella LS filtrata dall'AI (+0,113R in validazione, `report_fase10.md`) |
