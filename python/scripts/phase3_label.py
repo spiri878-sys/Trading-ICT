@@ -44,13 +44,16 @@ def summarize(r):
 
 
 @njit(cache=True)
-def _random_bench(o, h, l, c, sp, dow, mod, swl, swh, brk5, atr5, fi, fp, rd, sides, prof, max_hold, fri, slip,
-                  comm):
+def _random_bench(o, h, l, c, sp, dow, mod, swl, swh, brk5, atr5, fi, fp, orig_side, rd, sides, prof, max_hold,
+                  fri, slip, comm):
+    """Stesso minuto e stesso prezzo BID di riempimento del segnale reale, stessa distanza di stop; direzione
+    casuale. Il lato buy paga lo spread (ASK = BID + spread), il lato sell no: nessun vantaggio artificiale."""
     n = fi.size
     out = np.empty(n)
     for k in range(n):
         side = sides[k]
-        entry = fp[k] if side == 1 else fp[k]
+        bid = fp[k] - sp[fi[k]] if orig_side[k] == 1 else fp[k]
+        entry = bid + sp[fi[k]] if side == 1 else bid
         sl = entry - side * rd[k]
         ei, pnl, rs = manage(o, h, l, c, sp, dow, mod, swl, swh, brk5, atr5, fi[k], side, entry, sl, rd[k],
                              prof[0], prof[1], prof[2], prof[3], prof[4], prof[5] > 0, prof[6] > 0, prof[7] > 0,
@@ -119,14 +122,23 @@ def main():
         means = []
         for _ in range(N_RAND):
             sides = rng.choice(np.array([-1, 1]), size=len(g)).astype(np.int64)
-            r = _random_bench(A.o, A.h, A.l, A.c, A.sp, A.dow, A.mod, A.swl, A.swh, A.brk5, A.atr5, fi, fp, rd,
-                              sides, prof, 3 * 24 * 60, 23 * 60, COSTS_C1["slip"], COSTS_C1["comm_per_lot_side"] / 100)
+            r = _random_bench(A.o, A.h, A.l, A.c, A.sp, A.dow, A.mod, A.swl, A.swh, A.brk5, A.atr5, fi, fp,
+                              g.side.values.astype(np.int64), rd, sides, prof, 3 * 24 * 60, 23 * 60, COSTS_C1["slip"], COSTS_C1["comm_per_lot_side"] / 100)
             means.append(r.mean())
         means = np.array(means)
         bench[cell] = {"real_avg_r_foto": round(real, 4), "random_mean": round(float(means.mean()), 4),
                        "random_p95": round(float(np.percentile(means, 95)), 4),
                        "share_random_ge_real": round(float((means >= real).mean()), 3), "n": int(len(g))}
     stats["random_benchmark_foto_struct_2008_2021"] = bench
+    # ------------- gross edge: zero costs (spread, commission, slippage, swap), FOTO profile
+    Z = dict(spread=0.0, comm_per_lot_side=0.0, slip=0.0, swap_long=0.0, swap_short=0.0)
+    A0 = M1Arrays(m1, f5, spread=0.0)
+    s08 = sig[(sig.known_at >= TRAIN[0]) & (sig.known_at < VAL[1])]
+    gross = {}
+    for stop in ("struct", "atr"):
+        L0 = label_signals(s08, A0, stop=stop, costs=Z, profiles=("FOTO",))
+        gross[stop] = {c: round(float(g.r_foto.mean()), 4) for c, g in L0[L0.filled].groupby("cell")}
+    stats["gross_zero_cost_avg_r_foto_2008_2021"] = gross
     stats["notes"] = {"costs": COSTS_C1, "big_runner": "MFE >= 3R prima dello stop iniziale",
                       "clean_entry": "MAE > -0.5R prima di toccare +1R", "n_random": N_RAND,
                       "test_period": "etichettato ma escluso da ogni statistica"}
