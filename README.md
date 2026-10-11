@@ -1,4 +1,14 @@
-# Raptor Recon: ricerca ICT/SMC per XAUUSD (MT5)
+# Raptor Recon: ricerca quantitativa XAUUSD ed EA MT5
+
+## ▶ EA consigliato: `XauTrendRegime` (rapporto: `reports/FINAL_REPORT_XAU.md`)
+
+- **Regola:** breakout H4 a 55 barre, solo in regime rialzista (D1 sopra la EMA50 e struttura H4 rialzista); stop e trailing a 3 ATR, durata massima 5 giorni.
+- **Simulazione Python** (costi + swap, rischio 1%): +42% nel 2018–2026, PF 2,08, DD 7%.
+- **Robustezza:** walk-forward positivo, 36/36 varianti di parametri positive, meglio di ingressi casuali (p < 0,005).
+- **Short:** spenti, perché nessuna versione short è risultata profittevole.
+- **Stato:** non ancora compilato né testato in MT5. Guida e checklist: `docs/xau_trend_regime_guide.md`.
+
+---
 
 Ricostruzione **indipendente** del comportamento pubblicamente descritto di *ICT RAPTOR AI PRIME* (AutoTrader Forex Club), solo per **XAUUSD**. Non è affiliata al prodotto commerciale e non ne è una copia: il suo codice e i suoi modelli non sono disponibili.
 

@@ -1,0 +1,27 @@
+year,side,cfg,regime,t_in,meanR_in,n_in,n_oos,meanR_oos,sumR_oos
+2020,long,(flat: no config with t_in>=2),,,,,,,
+2020,short,(flat: no config with t_in>=2),,,,,,,
+2021,long,"DONCHIAN|4h|n=55,atr_k=2.0|trail_5d",aligned,3.88,0.414,159.0,40.0,-0.224,-8.94
+2021,long,"DONCHIAN|4h|n=55,atr_k=2.0|tp3R_48h",aligned,3.79,0.381,159.0,40.0,-0.104,-4.18
+2021,long,"DONCHIAN|4h|n=55,atr_k=3.0|trail_5d",aligned,3.75,0.274,159.0,40.0,-0.172,-6.88
+2021,short,"RSI2|1h|lo=5,atr_k=2.5|tp1.5R_8h",aligned,2.42,0.131,204.0,82.0,-0.041,-3.33
+2022,long,"DONCHIAN|4h|n=55,atr_k=2.0|tp3R_48h",aligned,3.32,0.29,198.0,33.0,-0.419,-13.83
+2022,long,"DONCHIAN|4h|n=100,atr_k=2.0|tp3R_48h",aligned,3.24,0.314,161.0,29.0,-0.472,-13.7
+2022,long,"DONCHIAN|4h|n=55,atr_k=2.0|trail_5d",aligned,3.21,0.291,198.0,33.0,-0.421,-13.9
+2022,short,(flat: no config with t_in>=2),,,,,,,
+2023,long,"DONCHIAN|4h|n=55,atr_k=3.0|trail_5d",aligned,2.35,0.13,232.0,44.0,0.175,7.72
+2023,long,"DONCHIAN|4h|n=55,atr_k=2.0|tp3R_48h",aligned,2.33,0.184,232.0,44.0,-0.077,-3.37
+2023,long,"DONCHIAN|4h|n=55,atr_k=2.0|trail_5d",aligned,2.29,0.185,232.0,44.0,0.156,6.88
+2023,short,(flat: no config with t_in>=2),,,,,,,
+2024,long,"DONCHIAN|4h|n=55,atr_k=3.0|trail_5d",aligned,2.72,0.137,276.0,84.0,0.102,8.59
+2024,long,"DONCHIAN|4h|n=55,atr_k=2.0|trail_5d",aligned,2.47,0.18,276.0,84.0,0.156,13.06
+2024,long,"SQUEEZE|1h|pct=0.1,atr_k=2.5|tp3R_48h",aligned,2.2,0.254,185.0,51.0,0.518,26.42
+2024,short,"EMA_PB|1h|touch=8,fast=50|tp2R_24h",aligned,2.03,0.125,420.0,15.0,-0.596,-8.94
+2025,long,"DONCHIAN|4h|n=55,atr_k=3.0|trail_5d",aligned,3.05,0.129,360.0,137.0,0.062,8.48
+2025,long,"SQUEEZE|1h|pct=0.1,atr_k=2.5|tp3R_48h",aligned,3.02,0.311,236.0,53.0,0.102,5.42
+2025,long,"DONCHIAN|4h|n=55,atr_k=2.0|trail_5d",aligned,2.84,0.175,360.0,137.0,0.095,12.98
+2025,short,(flat: no config with t_in>=2),,,,,,,
+2026,long,"DONCHIAN|4h|n=55,atr_k=3.0|trail_5d",aligned,3.23,0.111,497.0,35.0,0.228,7.99
+2026,long,"DONCHIAN|1h|n=20,atr_k=3.0|tp2R_24h",aligned,3.18,0.085,1468.0,105.0,0.208,21.86
+2026,long,"DONCHIAN|4h|n=55,atr_k=2.0|trail_5d",aligned,3.06,0.153,497.0,35.0,0.356,12.48
+2026,short,(flat: no config with t_in>=2),,,,,,,

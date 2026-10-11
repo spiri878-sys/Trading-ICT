@@ -1,0 +1,11 @@
+{
+ "h4_bars_checked": 11966,
+ "breakout_bars": 606,
+ "mismatches": {
+  "signal": 0,
+  "regime_d1": 0,
+  "trend_h4": 0,
+  "atr_rel_diff_gt_1pct": 0
+ },
+ "trend_mismatch_examples": []
+}
