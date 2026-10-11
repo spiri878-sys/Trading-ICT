@@ -7,12 +7,12 @@ Stati: **fatto** · **escluso** (con motivo) · **da fare** (fase prevista).
 | # | Voce | Stato | Fase |
 |---|---|---|---|
 | 1 | Riferimento PRIME (non CORE/PLUS) e priorità delle fonti | **fatto** (`regole.md`) | 1 |
-| 2 | Cella Raptor Mode (displacement, ritraccio confermato) | regole scritte (`regole.md` §2), codice da fare | 2 |
-| 3 | Cella Order Flow OTE (ritraccio 62–79%) | regole scritte (`regole.md` §2), codice da fare | 2 |
-| 4 | Cella PO3 (accumulo, manipolazione, distribuzione) | regole scritte (`regole.md` §2), codice da fare | 2 |
-| 5 | Cella Unicorn (breaker + FVG non mitigato) | regole scritte (`regole.md` §2), codice da fare | 2 |
-| 6 | Cella Liquidity Sweep | regole scritte (`regole.md` §2), codice da fare | 2 |
-| 7 | Cella Breaker Block | regole scritte (`regole.md` §2), codice da fare | 2 |
+| 2 | Cella Raptor Mode (displacement, ritraccio confermato) | **generatore fatto** (`raptor/prime/cells.py`, test di non-lookahead); varianti da scegliere in validazione | 2 → 3/5 |
+| 3 | Cella Order Flow OTE (ritraccio 62–79%) | **generatore fatto** (`raptor/prime/cells.py`, test di non-lookahead); varianti da scegliere in validazione | 2 → 3/5 |
+| 4 | Cella PO3 (accumulo, manipolazione, distribuzione) | **generatore fatto** (`raptor/prime/cells.py`, test di non-lookahead); varianti da scegliere in validazione | 2 → 3/5 |
+| 5 | Cella Unicorn (breaker + FVG non mitigato) | **generatore fatto** (`raptor/prime/cells.py`, test di non-lookahead); varianti da scegliere in validazione | 2 → 3/5 |
+| 6 | Cella Liquidity Sweep | **generatore fatto** (`raptor/prime/cells.py`, test di non-lookahead); varianti da scegliere in validazione | 2 → 3/5 |
+| 7 | Cella Breaker Block | **generatore fatto** (`raptor/prime/cells.py`, test di non-lookahead); varianti da scegliere in validazione | 2 → 3/5 |
 | 8 | Marchio della cella su ogni ordine | da fare | 8 |
 | 9 | Ogni set decide celle attive e soglie AI | da fare | 5, 8 |
 | 10 | AI livello 1 — Occhio: 8 reti a maggioranza, soglie 0,60–0,70 | da fare | 5 |
@@ -88,3 +88,4 @@ Stati: **fatto** · **escluso** (con motivo) · **da fare** (fase prevista).
 | F1 | `regole.md`, `menu_input.md`, `trade_riferimento.csv`, `numeri_dichiarati.md` | **fatto** |
 | F2 | 4 pagine guida del sito e app Lovable | **non ricevute**: lacuna dichiarata |
 | F3 | Trascrizione dell'audio dei video | **non necessaria**: i video non hanno parlato (solo musica e titoli) |
+| F4 | Fase 2: generatore delle 6 celle, frequenze 2008–2021, confronto con i riferimenti | **fatto**; corrispondenza con i segnali del venditore al livello del caso (`report_fase2.md`) |

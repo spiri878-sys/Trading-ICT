@@ -163,3 +163,11 @@ Due descrizioni dello stesso sistema in due generazioni. Si implementano **entra
 | AI | FOTO: punteggio di un gradient boosting (92 feature a soli rapporti) contro una **soglia viva** (quantile 80% degli ultimi 1.000 punteggi). Ogni rifiuto riporta i 3 motivi contro (contributi per sostituzione con la mediana) | Fase 5: modello a punteggio con soglia viva come alternativa alle soglie fisse del SITO. "Giornale dei perché" in Telegram e nel log |
 | Rischio | FOTO: base 1,92%, "respira" (pieno fino a −5% di DD, ×0,25 a −23,75%, ripristino dopo 20 trade in utile, mai aumenti) | Variante del rischio adattivo per il modo Live |
 | Orari XAU | VID XAU: picco d'ingressi all'**ora server 01** (apertura asiatica) | Nessuna killzone restrittiva nei set XAU (V5: "Filtro sessioni OFF = come da certificazione") |
+
+## 10. Dal trade di riferimento dell'8/1/2026 (Fase 2)
+
+- Ingresso sul **bordo distale** di un FVG da displacement (10:50–10:55), riempito 85 minuti dopo.
+- Stop = **2,98 × ATR(14) M15**.
+- Nessun BOS dello swing M5 precedente.
+
+Le varianti corrispondenti (`entry_edge="distal"`, `stop_mode="atr"`, `need_bos=False`) sono implementate e si scelgono in validazione.

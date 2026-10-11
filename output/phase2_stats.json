@@ -172,6 +172,18 @@
  },
  "BB_5min_mean_per_year": 1331.8,
  "BB_1h_mean_per_year": 115.6,
+ "match_chance_level": {
+  "PPK": {
+   "mean": 0.31,
+   "max": 2,
+   "offsets": 16
+  },
+  "UNIOF": {
+   "mean": 0.0,
+   "max": 0,
+   "offsets": 16
+  }
+ },
  "refs": {
   "PPK": 15,
   "UNIOF": 3
@@ -197,6 +209,7 @@
    "max_entries": 3.0,
    "entry_edge": "proximal",
    "expiry": 48,
+   "need_bos": true,
    "match_off0": 1,
    "match_off_m60": 2,
    "match_off_p60": 0,
@@ -216,6 +229,7 @@
    "max_entries": NaN,
    "entry_edge": "proximal",
    "expiry": 12,
+   "need_bos": NaN,
    "match_off0": 0,
    "match_off_m60": 0,
    "match_off_p60": 0,
@@ -402,7 +416,8 @@
   "min_fvg": 0.05,
   "max_entries": 3,
   "entry_edge": "proximal",
-  "expiry": "12"
+  "expiry": "12",
+  "need_bos": true
  },
  "ref_trade_2026_01_08": [
   {
@@ -415,5 +430,5 @@
    "risk": "21.26423180924212"
   }
  ],
- "runtime_s": 256
+ "runtime_s": 1203
 }
