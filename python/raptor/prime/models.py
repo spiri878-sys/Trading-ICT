@@ -93,7 +93,10 @@ def majority_vote(pcts, thr, k=None):
 
 def perf(r, years=None):
     """Statistiche di una selezione di R (netti)."""
-    r = pd.Series(r).dropna()
+    r = pd.Series(np.asarray(r, float))
+    if years is not None:
+        years = pd.Series(np.asarray(years))[r.notna().values].values
+    r = r.dropna()
     if r.empty:
         return dict(n=0)
     gp, gl = r[r > 0].sum(), -r[r < 0].sum()
@@ -102,7 +105,7 @@ def perf(r, years=None):
              total_r=round(float(r.sum()), 1), max_dd_r=round(float((eq.cummax() - eq).max()), 1),
              win=round(float((r > 0).mean()), 3))
     if years is not None:
-        ys = pd.Series(r.values, index=np.asarray(years)[: len(r)] if len(years) == len(r) else years)
+        ys = pd.Series(r.values, index=years)
         by = ys.groupby(level=0).sum()
         d["years_pos"] = f"{int((by > 0).sum())}/{len(by)}"
         d["r_by_year"] = {int(k): round(float(v), 1) for k, v in by.items()}
