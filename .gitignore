@@ -7,3 +7,6 @@ __pycache__/
 output/cache/
 output/video/*/frames/
 output/video/*/all/
+output/foto/crops/
+output/documenti/presentazione/p-*.png
+output/documenti/presentazione/hi-9.png

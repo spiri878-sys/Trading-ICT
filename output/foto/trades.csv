@@ -1,0 +1,8 @@
+fonte,mercato,set,data_ora,tipo,direzione,volume,prezzo,sl,tp,profitto,saldo,commento,frame
+28c5753c,XAUUSD,tester 2026,2026-01-08 12:20,PPK,BUY,illeggibile,4424.56,stop 21$ = 1R (poi pareggio),4R,+2.97R,illeggibile,"20% a +0,7R + BE; 20% a +2R; 60% al target 4R; esito +2,97R in 29 ore; a 09/01 15:09 UTC prezzo a +3.56R",28c5753c
+4ec6d52b,XAUUSD,tester 2026,2026-01-08 12:20,PPK,BUY,illeggibile,illeggibile,illeggibile,illeggibile,+2.97R,illeggibile,"stesso trade di 28c5753c; punteggio VEDE-25 0.6081 vs soglia viva -0.0932; PRESO",4ec6d52b
+cda831aa,XAUUSD,tester 2026,2026-01-08 12:20,PPK,BUY,illeggibile,illeggibile,illeggibile,illeggibile,+2.97R,illeggibile,"duplicato di 4ec6d52b (stesso trade)",cda831aa
+8ed5759d,XAUUSD,tester 2026,2026-01-12 11:15,PPK,BUY,illeggibile,illeggibile,illeggibile,illeggibile,illeggibile,illeggibile,"PRESO; punteggio -0.01 soglia -0.07; etichette grafico +2.98R e ...0.07R di attribuzione incerta",8ed5759d
+a73dd514,XAUUSD,tester 2026,illeggibile (inizio gen 2026),illeggibile,illeggibile,illeggibile,illeggibile,illeggibile,illeggibile,+0.18R,illeggibile,"trade preso (marker verde) prima del 07/01/2026 00:50; 2 presi su 27 giudicati",a73dd514
+653ae130,XAUUSD,tester 2026,illeggibile (gen 2026),illeggibile,illeggibile,illeggibile,illeggibile,illeggibile,illeggibile,-1.00R,illeggibile,"prima etichetta -1.00R sul grafico (stop pieno); 11 presi su 92 giudicati al 16/01",653ae130
+653ae130,XAUUSD,tester 2026,illeggibile (gen 2026),illeggibile,illeggibile,illeggibile,illeggibile,illeggibile,illeggibile,-1.00R,illeggibile,"seconda etichetta -1.00R sul grafico (stop pieno)",653ae130
