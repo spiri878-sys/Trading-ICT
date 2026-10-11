@@ -1,0 +1,64 @@
+{
+ "n_strategies": 20493,
+ "n_exits": 162,
+ "n_filters": 137,
+ "share_profitable_train": 0.427,
+ "share_profitable_test": 0.252,
+ "n_selected_robust_train": 1303,
+ "selected_top50_test": {
+  "share_profitable": 0.34,
+  "median_usd": -272,
+  "mean_usd": -255
+ },
+ "selected_all_test": {
+  "share_profitable": 0.342,
+  "median_usd": -204
+ },
+ "corr_train_test_usd": 0.259,
+ "best_pick": {
+  "entry": "MKT_POST1",
+  "mgmt": "ALL_TP3",
+  "hold": 120,
+  "sl_mult": 0.75,
+  "filt": "with_H1+with_H4",
+  "n_tr": 137,
+  "usd_tr": 3397.799999999753,
+  "pf_tr": 1.6281984913473746,
+  "mpos_tr": 4,
+  "n_te": 86,
+  "usd_te": -986.4000000002079,
+  "pf_te": 0.7605302129105432
+ },
+ "best_pick_random_pctile_train": 1.0,
+ "best_pick_random_pctile_test": 0.195,
+ "simple_short": {
+  "train_usd": 599,
+  "test_usd": 26,
+  "n": 345
+ },
+ "simple_with_H4": {
+  "train_usd": 501,
+  "test_usd": -1320,
+  "n": 316
+ },
+ "simple_with_D1": {
+  "train_usd": 320,
+  "test_usd": -998,
+  "n": 332
+ },
+ "simple_short+with_H4": {
+  "train_usd": 1879,
+  "test_usd": -464,
+  "n": 192
+ },
+ "simple_lowvol": {
+  "train_usd": -2606,
+  "test_usd": -1201,
+  "n": 413
+ },
+ "simple_first_in_60m": {
+  "train_usd": -2326,
+  "test_usd": -809,
+  "n": 415
+ }
+}

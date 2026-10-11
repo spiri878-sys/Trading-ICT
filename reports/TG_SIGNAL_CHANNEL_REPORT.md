@@ -109,3 +109,46 @@ Entrare peggio del canale costa molto. Anche spostare l'orario di 2 minuti cambi
    Il risultato è circa ±0, con drawdown di oltre 1.500 $ a 0,10 lotti. Non è consigliato.
 
 Limiti: 7 mesi di dati, feed del broker dei dati (non quello del canale), gestione manuale non replicabile, prezzi M1 OHLC con convenzione prudente (stop prima dei target nella stessa barra).
+
+## 6. Si può rendere profittevole? (TG-04)
+
+Test: `python/scripts/tg04_make_profitable.py`, risultati in `tg04_make_profitable.json` e `tg04_search.csv.gz`.
+
+**Cosa è stato provato:** 20.493 strategie, cioè 162 modi di uscire × 137 filtri.
+
+- **Uscite:**
+  - ingresso a mercato o limit in fondo alla zona;
+  - TP1, TP2 o TP3, con o senza BE; una posizione per TP; 50/50; terzi;
+  - durata massima 30 minuti, 2 ore o 24 ore;
+  - stop al 50%, 75% o 100% di quello del canale.
+- **Filtri** (tutti noti al momento del segnale), singoli o a coppie:
+  - solo short o solo long;
+  - a favore o contro il trend H1, H4 o D1;
+  - fade o momentum degli ultimi 15 o 60 minuti;
+  - volatilità bassa o alta;
+  - mattina o pomeriggio;
+  - solo il primo segnale dell'ora.
+- **Metodo:** regole scelte **solo su marzo–giugno**, poi verificate su luglio–9 settembre, mai viste prima. Costi standard.
+
+| | Marzo–giugno (scelta) | Luglio–settembre (verifica) |
+|---|---|---|
+| Strategie in profitto | 43% | 25% |
+| Le 1.303 "robuste" (4 mesi su 4 positivi, PF > 1,2) | 100% in profitto | **34% in profitto, mediana −204 $** |
+| Le 50 migliori robuste | +2.600 / +3.400 $ | **34% in profitto, media −255 $** |
+| La migliore in assoluto (TP3, stop 75%, solo a favore del trend H1 e H4, chiusura dopo 2 ore) | +3.398 $, PF 1,63 | **−986 $, PF 0,76** |
+
+- La migliore vale nella verifica meno dell'80% delle selezioni casuali di segnali della stessa dimensione: il suo vantaggio sul periodo di scelta era fortuna.
+- Correlazione tra i risultati della scelta e quelli della verifica: 0,26. Ciò che funziona in un periodo quasi non predice il successivo.
+
+**Idee semplici, senza ricerca** (gestione del canale, ingresso a mercato):
+
+| Idea | Mar–giu | Lug–set |
+|---|---|---|
+| Solo short | +599 $ | +26 $ |
+| Solo a favore del trend H4 | +501 $ | −1.320 $ |
+| Solo a favore del trend D1 | +320 $ | −998 $ |
+| Short + trend H4 | +1.879 $ | −464 $ |
+| Bassa volatilità | −2.606 $ | −1.201 $ |
+| Solo il primo segnale dell'ora | −2.326 $ | −809 $ |
+
+**Conclusione:** nessun filtro e nessuna gestione rende il canale stabilmente profittevole. Ogni miglioramento trovato sui primi 4 mesi sparisce nei mesi successivi. È lo stesso schema dei segnali senza vantaggio: cercando tra migliaia di varianti se ne trova sempre una bella sul passato.
