@@ -634,61 +634,47 @@
  "random_benchmark_foto_struct_2008_2021": {
   "BB": {
    "real_avg_r_foto": -0.1224,
-   "random_mean": -0.053,
-   "random_p95": -0.0295,
-   "share_random_ge_real": 1.0,
+   "random_mean": -0.0991,
+   "random_p95": -0.0758,
+   "share_random_ge_real": 0.98,
    "n": 5053
   },
   "LS": {
    "real_avg_r_foto": -0.3636,
-   "random_mean": -0.2023,
-   "random_p95": -0.1948,
+   "random_mean": -0.3253,
+   "random_p95": -0.3172,
    "share_random_ge_real": 1.0,
    "n": 37803
   },
   "OTEOF": {
    "real_avg_r_foto": -0.2597,
-   "random_mean": -0.2004,
-   "random_p95": -0.1593,
-   "share_random_ge_real": 1.0,
+   "random_mean": -0.3129,
+   "random_p95": -0.2822,
+   "share_random_ge_real": 0.02,
    "n": 1733
   },
   "PO3": {
    "real_avg_r_foto": -0.1787,
-   "random_mean": -0.0901,
-   "random_p95": 0.0132,
-   "share_random_ge_real": 0.96,
+   "random_mean": -0.1523,
+   "random_p95": -0.0594,
+   "share_random_ge_real": 0.56,
    "n": 267
   },
   "PPK": {
    "real_avg_r_foto": -0.1482,
-   "random_mean": -0.0743,
-   "random_p95": -0.0656,
+   "random_mean": -0.1257,
+   "random_p95": -0.1154,
    "share_random_ge_real": 1.0,
    "n": 25730
   },
   "UNIOF": {
    "real_avg_r_foto": -0.1368,
-   "random_mean": -0.0586,
-   "random_p95": -0.0088,
-   "share_random_ge_real": 1.0,
+   "random_mean": -0.1125,
+   "random_p95": -0.0665,
+   "share_random_ge_real": 0.8,
    "n": 1323
   }
  },
- "notes": {
-  "costs": {
-   "spread": 0.3,
-   "comm_per_lot_side": 3.5,
-   "slip": 0.05,
-   "swap_long": -0.066,
-   "swap_short": 0.029
-  },
-  "big_runner": "MFE >= 3R prima dello stop iniziale",
-  "clean_entry": "MAE > -0.5R prima di toccare +1R",
-  "n_random": 50,
-  "test_period": "etichettato ma escluso da ogni statistica"
- },
- "runtime_s": 35,
  "gross_zero_cost_avg_r_foto_2008_2021": {
   "struct": {
    "BB": -0.0058,
@@ -706,5 +692,19 @@
    "PPK": 0.0065,
    "UNIOF": -0.0066
   }
- }
+ },
+ "notes": {
+  "costs": {
+   "spread": 0.3,
+   "comm_per_lot_side": 3.5,
+   "slip": 0.05,
+   "swap_long": -0.066,
+   "swap_short": 0.029
+  },
+  "big_runner": "MFE >= 3R prima dello stop iniziale",
+  "clean_entry": "MAE > -0.5R prima di toccare +1R",
+  "n_random": 50,
+  "test_period": "etichettato ma escluso da ogni statistica"
+ },
+ "runtime_s": 37
 }

@@ -33,7 +33,7 @@ Stati: **fatto** · **escluso** (con motivo) · **da fare** (fase prevista).
 | 25 | Premium A / A+ / A++ (ingresso su Fibonacci, vaglio progressivo, A+ con filtro direzionale) | da fare | 7 |
 | 26 | Premium attivabile e disattivabile; non tocca il macro | da fare | 8 |
 | 27 | Telegram: avvio, agenda, ordini, target (+R e €), protezioni, challenge superata, obiettivo del mese | da fare | 8 |
-| 28 | Pareggio, parziali, resto lasciato correre | da fare | 3, 8 |
+| 28 | Pareggio, parziali, resto lasciato correre | **fatto in simulazione** (profilo FOTO); EA da fare | 3 → 8 |
 
 ## 3.2 Manuale PRO V5
 
@@ -53,7 +53,7 @@ Stati: **fatto** · **escluso** (con motivo) · **da fare** (fase prevista).
 | 40 | Filtro notizie (minuti prima e dopo) | da fare | 6, 8 |
 | 41 | Scudo (riduzione del rischio prima degli eventi) | da fare | 6, 8 |
 | 42 | La Voce (pannello e Telegram con contesto macro) | da fare | 8 |
-| 43 | Gestione: 1R, parziale (90%) a +1R, pareggio, trailing strutturale, uscita adattiva | da fare | 3 |
+| 43 | Gestione: 1R, parziale (90%) a +1R, pareggio, trailing strutturale, uscita adattiva | **fatto in simulazione** (`prime/label.py`, profili V5 e FOTO); EA da fare | 3 → 8 |
 | 44 | Drawdown giornaliero in % o in valuta | da fare | 8 |
 | 45 | Menu V5 (29 voci): sizing a rischio % o lotto fisso, ATR, RR, sessioni, grafica, Telegram | **documentato** (`menu_input.md` B, D); implementazione | 8 |
 | 46 | Telegram V5: screenshot, chiusure, parziali, "+2R bloccato", report settimanale, scarti AI | da fare | 8 |
@@ -89,3 +89,4 @@ Stati: **fatto** · **escluso** (con motivo) · **da fare** (fase prevista).
 | F2 | 4 pagine guida del sito e app Lovable | **non ricevute**: lacuna dichiarata |
 | F3 | Trascrizione dell'audio dei video | **non necessaria**: i video non hanno parlato (solo musica e titoli) |
 | F4 | Fase 2: generatore delle 6 celle, frequenze 2008–2021, confronto con i riferimenti | **fatto**; corrispondenza con i segnali del venditore al livello del caso (`report_fase2.md`) |
+| F5 | Fase 3: etichette (big-runner, ingresso pulito, R) e baseline 2008–2021 | **fatto**: nessuna cella con vantaggio senza filtri (`report_fase3.md`) |
