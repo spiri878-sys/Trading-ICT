@@ -77,7 +77,7 @@ Fonte: p_00008 (21 s), identico in p_00009, p_00010 e p_00011.
 | LR Correlation | 0.97 |
 | LR Standard Error | 405 400.15 |
 | Z-Score | -5.32 (99.74%) |
-| OnTester result | 54.8739709157009 7 (la riga mostra "54.87397091570097") |
+| OnTester result | 54.87397091570097 |
 | Margin Level | 172.59% |
 | Balance Drawdown Absolute | 0.00 |
 | Balance Drawdown Maximal | 79 125.00 (1.69%) |
