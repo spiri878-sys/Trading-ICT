@@ -1,0 +1,419 @@
+{
+ "signals_total": 120943,
+ "per_year_2008_2021": {
+  "BB": {
+   "2008": 490,
+   "2009": 495,
+   "2010": 436,
+   "2011": 413,
+   "2012": 438,
+   "2013": 479,
+   "2014": 461,
+   "2015": 429,
+   "2016": 438,
+   "2017": 455,
+   "2018": 454,
+   "2019": 472,
+   "2020": 424,
+   "2021": 480
+  },
+  "LS": {
+   "2008": 2526,
+   "2009": 2525,
+   "2010": 2578,
+   "2011": 2490,
+   "2012": 2552,
+   "2013": 2681,
+   "2014": 2710,
+   "2015": 2815,
+   "2016": 2732,
+   "2017": 2596,
+   "2018": 2833,
+   "2019": 2748,
+   "2020": 2935,
+   "2021": 3134
+  },
+  "OTEOF": {
+   "2008": 324,
+   "2009": 302,
+   "2010": 283,
+   "2011": 279,
+   "2012": 237,
+   "2013": 274,
+   "2014": 287,
+   "2015": 254,
+   "2016": 236,
+   "2017": 269,
+   "2018": 292,
+   "2019": 301,
+   "2020": 273,
+   "2021": 291
+  },
+  "PO3": {
+   "2008": 68,
+   "2009": 49,
+   "2010": 49,
+   "2011": 44,
+   "2012": 39,
+   "2013": 22,
+   "2014": 37,
+   "2015": 43,
+   "2016": 23,
+   "2017": 31,
+   "2018": 29,
+   "2019": 47,
+   "2020": 22,
+   "2021": 40
+  },
+  "PPK": {
+   "2008": 2940,
+   "2009": 2694,
+   "2010": 2521,
+   "2011": 2643,
+   "2012": 2290,
+   "2013": 2559,
+   "2014": 2534,
+   "2015": 2357,
+   "2016": 2332,
+   "2017": 2285,
+   "2018": 2382,
+   "2019": 2383,
+   "2020": 2079,
+   "2021": 2229
+  },
+  "UNIOF": {
+   "2008": 177,
+   "2009": 190,
+   "2010": 160,
+   "2011": 152,
+   "2012": 139,
+   "2013": 147,
+   "2014": 143,
+   "2015": 139,
+   "2016": 145,
+   "2017": 151,
+   "2018": 155,
+   "2019": 165,
+   "2020": 150,
+   "2021": 153
+  }
+ },
+ "mean_per_year_2008_2021": {
+  "BB": 454.6,
+  "LS": 2703.9,
+  "OTEOF": 278.7,
+  "PO3": 38.8,
+  "PPK": 2444.9,
+  "UNIOF": 154.7
+ },
+ "share_long": {
+  "BB": 0.488,
+  "LS": 0.506,
+  "OTEOF": 0.498,
+  "PO3": 0.505,
+  "PPK": 0.498,
+  "UNIOF": 0.5
+ },
+ "risk_usd_median": {
+  "BB": 4.11,
+  "LS": 0.98,
+  "OTEOF": 1.68,
+  "PO3": 2.49,
+  "PPK": 3.23,
+  "UNIOF": 3.34
+ },
+ "risk_atr_median": {
+  "BB": 2.61,
+  "LS": 1.52,
+  "OTEOF": 1.26,
+  "PO3": 2.78,
+  "PPK": 3.69,
+  "UNIOF": 2.17
+ },
+ "hour_server_top3": {
+  "BB": {
+   "15": 746,
+   "16": 507,
+   "9": 501
+  },
+  "LS": {
+   "15": 2604,
+   "14": 2395,
+   "8": 2066
+  },
+  "OTEOF": {
+   "15": 296,
+   "9": 274,
+   "10": 267
+  },
+  "PO3": {
+   "9": 169,
+   "10": 119,
+   "11": 63
+  },
+  "PPK": {
+   "15": 2806,
+   "9": 2393,
+   "8": 2206
+  },
+  "UNIOF": {
+   "1": 161,
+   "9": 146,
+   "16": 134
+  }
+ },
+ "otype": {
+  "BB": "limit",
+  "LS": "market",
+  "OTEOF": "limit",
+  "PO3": "limit",
+  "PPK": "limit",
+  "UNIOF": "limit"
+ },
+ "BB_5min_mean_per_year": 1331.8,
+ "BB_1h_mean_per_year": 115.6,
+ "refs": {
+  "PPK": 15,
+  "UNIOF": 3
+ },
+ "match_default": {
+  "PPK": {
+   "match_off0": 0,
+   "match_off_m60": 0,
+   "match_off_p60": 0
+  },
+  "UNIOF": {
+   "match_off0": 0,
+   "match_off_m60": 0,
+   "match_off_p60": 0
+  }
+ },
+ "match_best": {
+  "PPK": {
+   "cell": "PPK",
+   "k": 2,
+   "min_disp": 0.8,
+   "min_fvg": 0.05,
+   "max_entries": 3.0,
+   "entry_edge": "proximal",
+   "expiry": 48,
+   "match_off0": 1,
+   "match_off_m60": 2,
+   "match_off_p60": 0,
+   "match_on_signal_time": 1,
+   "n_refs": 15,
+   "signals_jan_sep_2026": 3126,
+   "is_default": false,
+   "sweep_bars": NaN,
+   "need_sweep": NaN,
+   "best": 2
+  },
+  "UNIOF": {
+   "cell": "UNIOF",
+   "k": 3,
+   "min_disp": NaN,
+   "min_fvg": 0.1,
+   "max_entries": NaN,
+   "entry_edge": "proximal",
+   "expiry": 12,
+   "match_off0": 0,
+   "match_off_m60": 0,
+   "match_off_p60": 0,
+   "match_on_signal_time": 0,
+   "n_refs": 3,
+   "signals_jan_sep_2026": 131,
+   "is_default": true,
+   "sweep_bars": 12.0,
+   "need_sweep": true,
+   "best": 0
+  }
+ },
+ "match_details_default": {
+  "PPK": [
+   {
+    "ref": "2026-01-08 12:20:00",
+    "cella": "PPK",
+    "dir": "BUY",
+    "tipo": "TRADE",
+    "trovato": false,
+    "nostro_prezzo": null,
+    "nostro_sl": null
+   },
+   {
+    "ref": "2026-01-12 11:15:00",
+    "cella": "PPK",
+    "dir": "BUY",
+    "tipo": "TRADE",
+    "trovato": false,
+    "nostro_prezzo": null,
+    "nostro_sl": null
+   },
+   {
+    "ref": "2026-01-07 00:50:00",
+    "cella": "PPK",
+    "dir": "BUY",
+    "tipo": "SCARTATO",
+    "trovato": false,
+    "nostro_prezzo": null,
+    "nostro_sl": null
+   },
+   {
+    "ref": "2026-01-16 01:50:00",
+    "cella": "PPK",
+    "dir": "SELL",
+    "tipo": "SCARTATO",
+    "trovato": false,
+    "nostro_prezzo": null,
+    "nostro_sl": null
+   },
+   {
+    "ref": "2026-09-25 01:55:00",
+    "cella": "PPK",
+    "dir": "BUY",
+    "tipo": "SCARTATO",
+    "trovato": false,
+    "nostro_prezzo": null,
+    "nostro_sl": null
+   },
+   {
+    "ref": "2026-09-25 07:30:00",
+    "cella": "PPK",
+    "dir": "BUY",
+    "tipo": "SCARTATO",
+    "trovato": false,
+    "nostro_prezzo": null,
+    "nostro_sl": null
+   },
+   {
+    "ref": "2026-09-25 11:35:00",
+    "cella": "PPK",
+    "dir": "BUY",
+    "tipo": "SCARTATO",
+    "trovato": false,
+    "nostro_prezzo": null,
+    "nostro_sl": null
+   },
+   {
+    "ref": "2026-09-25 14:45:00",
+    "cella": "PPK",
+    "dir": "SELL",
+    "tipo": "SCARTATO",
+    "trovato": false,
+    "nostro_prezzo": null,
+    "nostro_sl": null
+   },
+   {
+    "ref": "2026-09-25 16:35:00",
+    "cella": "PPK",
+    "dir": "BUY",
+    "tipo": "SCARTATO",
+    "trovato": false,
+    "nostro_prezzo": null,
+    "nostro_sl": null
+   },
+   {
+    "ref": "2026-09-25 17:40:00",
+    "cella": "PPK",
+    "dir": "BUY",
+    "tipo": "SCARTATO",
+    "trovato": false,
+    "nostro_prezzo": null,
+    "nostro_sl": null
+   },
+   {
+    "ref": "2026-09-28 00:35:00",
+    "cella": "PPK",
+    "dir": "SELL",
+    "tipo": "SCARTATO",
+    "trovato": false,
+    "nostro_prezzo": null,
+    "nostro_sl": null
+   },
+   {
+    "ref": "2026-09-28 09:55:00",
+    "cella": "PPK",
+    "dir": "SELL",
+    "tipo": "SCARTATO",
+    "trovato": false,
+    "nostro_prezzo": null,
+    "nostro_sl": null
+   },
+   {
+    "ref": "2026-09-28 11:20:00",
+    "cella": "PPK",
+    "dir": "SELL",
+    "tipo": "SCARTATO",
+    "trovato": false,
+    "nostro_prezzo": null,
+    "nostro_sl": null
+   },
+   {
+    "ref": "2026-09-28 11:30:00",
+    "cella": "PPK",
+    "dir": "SELL",
+    "tipo": "SCARTATO",
+    "trovato": false,
+    "nostro_prezzo": null,
+    "nostro_sl": null
+   },
+   {
+    "ref": "2026-09-28 13:50:00",
+    "cella": "PPK",
+    "dir": "SELL",
+    "tipo": "SCARTATO",
+    "trovato": false,
+    "nostro_prezzo": null,
+    "nostro_sl": null
+   }
+  ],
+  "UNIOF": [
+   {
+    "ref": "2026-09-25 06:30:00",
+    "cella": "UNIOF",
+    "dir": "SELL",
+    "tipo": "SCARTATO",
+    "trovato": false,
+    "nostro_prezzo": null,
+    "nostro_sl": null
+   },
+   {
+    "ref": "2026-09-25 13:15:00",
+    "cella": "UNIOF",
+    "dir": "BUY",
+    "tipo": "SCARTATO",
+    "trovato": false,
+    "nostro_prezzo": null,
+    "nostro_sl": null
+   },
+   {
+    "ref": "2026-09-28 00:30:00",
+    "cella": "UNIOF",
+    "dir": "SELL",
+    "tipo": "SCARTATO",
+    "trovato": false,
+    "nostro_prezzo": null,
+    "nostro_sl": null
+   }
+  ]
+ },
+ "ref_trade_params_best_ppk": {
+  "k": "2",
+  "min_disp": 0.8,
+  "min_fvg": 0.05,
+  "max_entries": 3,
+  "entry_edge": "proximal",
+  "expiry": "12"
+ },
+ "ref_trade_2026_01_08": [
+  {
+   "bar_time": "2026-01-08 12:35:00",
+   "known_at": "2026-01-08 12:40:00",
+   "fill_time": "2026-01-08 12:50:00",
+   "price": "4430.53",
+   "sl_struct": "4409.265768190758",
+   "entry_n": "1",
+   "risk": "21.26423180924212"
+  }
+ ],
+ "runtime_s": 256
+}
