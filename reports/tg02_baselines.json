@@ -1,0 +1,31 @@
+{
+ "ideal_zero_cost": {
+  "n": 671,
+  "tp1_reached_pct": 78.4,
+  "full_sl_pct": 21.6,
+  "chan_style_usd_lot010": -1986.0,
+  "tp1_only_usd_lot010": -1355.0,
+  "chan_style_months": {
+   "2026-03": -1943,
+   "2026-04": 813,
+   "2026-05": -2497,
+   "2026-06": -6,
+   "2026-07": 1448,
+   "2026-08": 275,
+   "2026-09": -75
+  }
+ },
+ "flipped_side_ideal_usd_lot010": -4312.0,
+ "random_ideal_usd_lot010": {
+  "mean": 860,
+  "p5": -2815,
+  "p95": 4453,
+  "share_above_channel": 0.887
+ },
+ "claims": {
+  "tp1_msgs": 468,
+  "stop_msgs": 73,
+  "sum_of_announced_pips": 112255,
+  "signals": 671
+ }
+}

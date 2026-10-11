@@ -1,0 +1,125 @@
+{
+ "n_signals_parsed": 671,
+ "offset_minutes": 60,
+ "risk_median": 12.0,
+ "tp1_dist_median": 3.0,
+ "claims": {
+  "signals": 671,
+  "tp_announcements": 1158,
+  "tp1_announcements": 468,
+  "stop_announcements": 73
+ },
+ "n_variants": 1188,
+ "share_variants_profitable_STD": 0.032,
+ "share_variants_profitable_RAW": 0.123,
+ "main": {
+  "channel_style": {
+   "config": [
+    "MKT_POST",
+    1,
+    0,
+    "CHAN_1perTP+runner_BE1",
+    1440,
+    0.3,
+    0.05
+   ],
+   "summary": {
+    "n": 666,
+    "win_pct": 61.1,
+    "full_sl_pct": 23.7,
+    "total_usd_lot010": -4320.0,
+    "avg_usd": -6.49,
+    "pf": 0.78,
+    "max_dd_usd": 4868.0,
+    "avg_R": -0.053,
+    "months_pos": "1/7",
+    "worst_month": -1218.0,
+    "best_month": 362.0
+   },
+   "monthly": {
+    "2026-03": {
+     "trades": 69,
+     "usd_lot010": -1188.0
+    },
+    "2026-04": {
+     "trades": 95,
+     "usd_lot010": 362.0
+    },
+    "2026-05": {
+     "trades": 109,
+     "usd_lot010": -1218.0
+    },
+    "2026-06": {
+     "trades": 125,
+     "usd_lot010": -294.0
+    },
+    "2026-07": {
+     "trades": 123,
+     "usd_lot010": -870.0
+    },
+    "2026-08": {
+     "trades": 105,
+     "usd_lot010": -614.0
+    },
+    "2026-09": {
+     "trades": 40,
+     "usd_lot010": -498.0
+    }
+   }
+  },
+  "best_grid_STD": {
+   "config": [
+    "LIM_Z2",
+    0,
+    60,
+    "CHAN_1perTP_BE1",
+    1440,
+    0.3,
+    0.05
+   ],
+   "summary": {
+    "n": 448,
+    "win_pct": 44.4,
+    "full_sl_pct": 55.6,
+    "total_usd_lot010": 787.0,
+    "avg_usd": 1.76,
+    "pf": 1.05,
+    "max_dd_usd": 1524.0,
+    "avg_R": 0.01,
+    "months_pos": "5/7",
+    "worst_month": -900.0,
+    "best_month": 818.0
+   },
+   "monthly": {
+    "2026-03": {
+     "trades": 54,
+     "usd_lot010": 33.0
+    },
+    "2026-04": {
+     "trades": 65,
+     "usd_lot010": 818.0
+    },
+    "2026-05": {
+     "trades": 77,
+     "usd_lot010": -900.0
+    },
+    "2026-06": {
+     "trades": 82,
+     "usd_lot010": 505.0
+    },
+    "2026-07": {
+     "trades": 70,
+     "usd_lot010": 349.0
+    },
+    "2026-08": {
+     "trades": 73,
+     "usd_lot010": -255.0
+    },
+    "2026-09": {
+     "trades": 27,
+     "usd_lot010": 237.0
+    }
+   }
+  }
+ }
+}
