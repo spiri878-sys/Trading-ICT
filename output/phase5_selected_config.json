@@ -1,0 +1,51 @@
+{
+ "V5_foto_best": {
+  "cfg": {
+   "arch": "V5",
+   "prof": "foto",
+   "regime": 0,
+   "sel": 0.9,
+   "gate": 0.7,
+   "sup": 0.6,
+   "fc": 0.55
+  },
+  "n": 1204,
+  "avg_r": 0.0456,
+  "pf": 1.099,
+  "total_r": 55.0,
+  "max_dd_r": 64.8,
+  "win": 0.552,
+  "years_pos": "3/4",
+  "r_by_year": {
+   "2018": 14.0,
+   "2019": -57.4,
+   "2020": 54.7,
+   "2021": 43.7
+  }
+ },
+ "SITO_foto_best": {
+  "cfg": {
+   "arch": "SITO",
+   "prof": "foto",
+   "eye": 0,
+   "sel": 0.92,
+   "sup": null,
+   "sem": true
+  },
+  "n": 1660,
+  "avg_r": 0.0354,
+  "pf": 1.054,
+  "total_r": 58.8,
+  "max_dd_r": 131.7,
+  "win": 0.551,
+  "years_pos": "3/4",
+  "r_by_year": {
+   "2018": 46.7,
+   "2019": -101.3,
+   "2020": 95.6,
+   "2021": 17.8
+  }
+ },
+ "V5_v5_best": null,
+ "SITO_v5_best": null
+}

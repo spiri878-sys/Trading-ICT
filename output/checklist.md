@@ -15,10 +15,10 @@ Stati: **fatto** · **escluso** (con motivo) · **da fare** (fase prevista).
 | 7 | Cella Breaker Block | **generatore fatto** (`raptor/prime/cells.py`, test di non-lookahead); varianti da scegliere in validazione | 2 → 3/5 |
 | 8 | Marchio della cella su ogni ordine | da fare | 8 |
 | 9 | Ogni set decide celle attive e soglie AI | da fare | 5, 8 |
-| 10 | AI livello 1 — Occhio: 8 reti a maggioranza, soglie 0,60–0,70 | da fare | 5 |
-| 11 | AI livello 2 — Selettori, soglie 0,78–0,92 | da fare | 5 |
-| 12 | AI livello 3 — Supervisore LiqBias, soglie 0,70–0,72 | da fare | 5 |
-| 13 | AI livello 4 — Semaforo e percorso: 2 modelli, capitale per trade | da fare | 5 |
+| 10 | AI livello 1 — Occhio: 8 reti a maggioranza, soglie 0,60–0,70 | **fatto** (4 LightGBM + 4 MLP); in validazione non migliora | 5 |
+| 11 | AI livello 2 — Selettori, soglie 0,78–0,92 | **fatto** (percentile per cella) | 5 |
+| 12 | AI livello 3 — Supervisore LiqBias, soglie 0,70–0,72 | **fatto** (M5, AUC 0,53) | 5 |
+| 13 | AI livello 4 — Semaforo e percorso: 2 modelli, capitale per trade | **fatto** (R atteso + P(+2R) → ×0,5/1/1,5) | 5 |
 | 14 | AI livello 5 — Reparto macro (reti sul calendario) | da fare | 6 |
 | 15 | Modelli ONNX in un solo file, nessuna dipendenza esterna | da fare | 8 |
 | 16 | Modo Prop Challenge: +10%, poi chiude tutto, cancella i pendenti e si ferma | da fare | 7–8 |
@@ -42,11 +42,11 @@ Stati: **fatto** · **escluso** (con motivo) · **da fare** (fase prevista).
 | 29 | Timeframe del grafico indifferente, timeframe interno per cella | da fare | 8 |
 | 30 | Tendine MERCATO e MODALITÀ; riga "Preset cella applicato"; combinazioni non certificate rifiutate | da fare | 8 |
 | 31 | Timeframe interni: Sweep M3, PO3 M5, Raptor M5, Unicorn M15, OTE M12 | **fatto (dati)**: timeframe costruiti da M1, M3 e M12 ancorati all'ora; logica da fare | 0 → 2 |
-| 32 | Catena: segnale → regimi → AI 1-2 → supervisore → macro → forecast → trade | da fare | 5 |
-| 33 | Selettore: 15 reti, una per cella, oltre 100 caratteristiche, probabilità di "big-runner" | feature **fatte** (105, `feature.md`); etichetta big-runner fatta (Fase 3); modelli da fare | 5 |
-| 34 | Gate Sì/No: 16 reti, qualità dell'ingresso, doppio consenso | da fare | 5 |
-| 35 | Supervisore di liquidità su M5 | da fare | 5 |
-| 36 | Forecaster della direzione della barra successiva (blocca, aumenta, si astiene) | da fare | 5 |
+| 32 | Catena: segnale → regimi → AI 1-2 → supervisore → macro → forecast → trade | **fatto** tranne il macro (Fase 6) | 5 |
+| 33 | Selettore: 15 reti, una per cella, oltre 100 caratteristiche, probabilità di "big-runner" | **fatto** (modello unico, soglie per cella) | 5 |
+| 34 | Gate Sì/No: 16 reti, qualità dell'ingresso, doppio consenso | **fatto** (livello più utile) | 5 |
+| 35 | Supervisore di liquidità su M5 | **fatto** | 5 |
+| 36 | Forecaster della direzione della barra successiva (blocca, aumenta, si astiene) | **fatto** | 5 |
 | 37 | Calendario USA ed Euro-area dal 2007 | da fare (serve la fonte) | 6 |
 | 38 | Scenario a tre stati con autovalutazione mensile | da fare | 6 |
 | 39 | Orientamento EURUSD a 36 ore (solo documentato, non serve per XAU) | da fare | 6 |
@@ -91,3 +91,4 @@ Stati: **fatto** · **escluso** (con motivo) · **da fare** (fase prevista).
 | F4 | Fase 2: generatore delle 6 celle, frequenze 2008–2021, confronto con i riferimenti | **fatto**; corrispondenza con i segnali del venditore al livello del caso (`report_fase2.md`) |
 | F5 | Fase 3: etichette (big-runner, ingresso pulito, R) e baseline 2008–2021 | **fatto**: nessuna cella con vantaggio senza filtri (`report_fase3.md`) |
 | F6 | Fase 4: 105 feature causali documentate, diagnostica sull'addestramento | **fatto** (`report_fase4.md`) |
+| F7 | Fase 5: catena AI V5 + SITO, autoallenamento (congelato / soglia viva / annuale) | **fatto**: vantaggio onesto circa +0,03R (marginale) → proposta Piano B (`report_fase5.md`) |
