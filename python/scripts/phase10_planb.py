@@ -36,6 +36,11 @@ def log(msg, t0=[time.time()]):
     print(f"[{time.time() - t0[0]:6.0f}s] {msg}", flush=True)
 
 
+STOP_MULT = float(sys.argv[1]) if len(sys.argv) > 1 else 3.0     # stop = STOP_MULT x ATR M15
+MAX_HOLD = int(sys.argv[2]) if len(sys.argv) > 2 else 3 * 24 * 60
+TAG = "" if STOP_MULT == 3.0 else f"_stop{int(STOP_MULT)}"
+
+
 def main():
     seed = config()["seed"]
     m1 = master_m1()
@@ -47,8 +52,9 @@ def main():
     f5 = F[("5min", 3)]
     A1 = M1Arrays(m1, f5)
     A2 = M1Arrays(m1, f5, spread=COSTS_C2["spread"])
-    L1 = label_signals(sig, A1, stop="atr", profiles=("FOTO",))
-    L2 = label_signals(sig, A2, stop="atr", profiles=("FOTO",), costs=COSTS_C2)
+    L1 = label_signals(sig, A1, stop="atr", atr_mult=STOP_MULT, profiles=("FOTO",), max_hold_min=MAX_HOLD)
+    L2 = label_signals(sig, A2, stop="atr", atr_mult=STOP_MULT, profiles=("FOTO",), costs=COSTS_C2,
+                       max_hold_min=MAX_HOLD)
     X = prime_features(sig, F, M1Context(m1), onehot=cells)
     df = pd.concat([L1.reset_index(drop=True), X.add_prefix("f_")], axis=1)
     df["r_c2"] = L2.r_foto.values
@@ -116,7 +122,7 @@ def main():
             d.update({"thr": {"sel": s_thr, "gate": g_thr}, "oof": p, "val": perf(mv), "val_c2": perf(mv, "r_c2")})
             admitted[cell] = (s_thr, g_thr)
         per_cell[cell] = d
-    pd.DataFrame(rows).to_csv(OUT / "phase10_cell_grid_oof.csv", index=False)
+    pd.DataFrame(rows).to_csv(OUT / f"phase10_cell_grid_oof{TAG}.csv", index=False)
     log(f"celle ammesse (scelte sul 2011-2017): {admitted}")
 
     def portfolio_mask(period_mask, brain=None):
@@ -180,7 +186,7 @@ def main():
                              and int(v["years_pos"].split("/")[0]) >= SOLID["years_pos"] and v2["avg_r"] > 0)
     res["solid_edge_criterion"] = SOLID
     res["verdict"] = verdict
-    (OUT / "phase10_results.json").write_text(json.dumps(res, indent=1, default=str))
+    (OUT / f"phase10_results{TAG}.json").write_text(json.dumps(res, indent=1, default=str))
     log("fatto")
     show = {k: res[k] for k in ("admitted_cells_thresholds_oof", "brain_on_portfolio", "brain_raw", "portfolios",
                                 "verdict")}

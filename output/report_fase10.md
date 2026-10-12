@@ -81,3 +81,20 @@
 3. Poi Fasi 6–9 sulla LS, e **una sola prova finale sul test 2022–2026** (Fase 9).
 
 **Fine Fase 10 (Piano B). Attendo il tuo ok.**
+
+## 5. Aggiunta: stop più larghi, come quelli del venditore
+
+Le foto del venditore mostrano stop molto più larghi dei nostri: nella "banda storica" lo stop varia fra **1,96 e 27,87 ATR M15**, e i costi pesano solo 0,019R per operazione. Ho rifatto il Piano B con stop di **6 e di 10 × ATR M15** e durata massima di 5 giorni. Script `phase10_planb.py 6 7200` e `phase10_planb.py 10 7200`; risultati in `phase10_results_stop6.json` e `phase10_results_stop10.json`.
+
+| Stop | Tutti i segnali 2018–21 (senza filtri) | Portafoglio filtrato: 2011–17 → **2018–21** | LS filtrata: 2011–17 → **2018–21** |
+|---|---|---|---|
+| 3 ATR M15 | −0,102R | +0,079 → **+0,016R** | +0,122 → **+0,113R** |
+| 6 ATR M15 | −0,042R | +0,123 → **−0,089R** | +0,121 → **−0,078R** |
+| 10 ATR M15 | −0,034R | +0,100 → **−0,080R** | +0,089 → **−0,060R** |
+
+**Lettura:**
+- **Gli stop larghi riducono davvero il peso dei costi.** Senza filtri si passa da −0,10R a −0,03 / −0,04R, come sostiene il venditore.
+- **Ma il vantaggio prima dei costi resta circa 0**, e i filtri AI che sembrano buoni sul 2011–17 **non si ripetono** sul 2018–21 (tutti negativi).
+- **Il risultato della LS con stop 3 ATR è fragile:** cambiando solo la larghezza dello stop sparisce. Va considerato con ogni probabilità **fortuna**, non un vantaggio. Non lo uso come motore.
+
+**Conclusione aggiornata:** nessuna configurazione ricostruita finora (PRIME, Piano B, portafoglio, Market Brain; stop 3, 6 e 10 ATR) mostra un vantaggio robusto sul 2018–2021. Il test 2022+ resta chiuso.
