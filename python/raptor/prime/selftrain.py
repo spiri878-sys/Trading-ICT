@@ -195,3 +195,45 @@ def adaptive_set(s: pd.DataFrame, group_cols=("cell", "side"), lookback_years=3,
                 take |= cur & (s.score.values >= best[0])
                 log.append(dict(date=d, group=g, q=best[2], thr=best[0], past_avg_r=round(best[1], 3), past_n=best[3]))
     return take, pd.DataFrame(log)
+
+
+def k_slots(fill_time, exit_time, take, r, k=5):
+    """Fino a k posizioni aperte insieme: un segnale approvato apre se c'è uno slot libero al suo riempimento."""
+    ft = np.asarray(fill_time, "datetime64[ns]")
+    et = np.asarray(exit_time, "datetime64[ns]")
+    cand = np.where(np.asarray(take) & ~np.isnat(ft) & ~np.isnat(et) & np.isfinite(np.asarray(r, float)))[0]
+    cand = cand[np.argsort(ft[cand], kind="stable")]
+    opened = np.zeros(len(ft), bool)
+    busy = []
+    for i in cand:
+        busy = [x for x in busy if x > ft[i]]
+        if len(busy) < k:
+            opened[i] = True
+            busy.append(et[i])
+    return opened
+
+
+def equity_events(r, fill_time, exit_time, risk, start=10_000.0):
+    """Capitale con posizioni sovrapposte: il rischio di ogni trade è risk x capitale al RIEMPIMENTO; il P&L
+    si realizza all'uscita. Restituisce (serie del capitale alle uscite, cagr %, max dd % sul realizzato)."""
+    r = np.asarray(r, float)
+    ft = np.asarray(fill_time, "datetime64[ns]")
+    et = np.asarray(exit_time, "datetime64[ns]")
+    ev = sorted([(ft[i], 0, i) for i in range(r.size)] + [(et[i], 1, i) for i in range(r.size)])
+    cap = start
+    stake = np.zeros(r.size)
+    times, caps = [], []
+    for tm, kind, i in ev:
+        if kind == 0:
+            stake[i] = cap * risk
+        else:
+            cap += stake[i] * r[i]
+            times.append(tm)
+            caps.append(cap)
+    s = pd.Series(caps, index=pd.DatetimeIndex(times)).sort_index()
+    if s.empty:
+        return s, 0.0, 0.0
+    yrs = max((s.index[-1] - s.index[0]).days / 365.25, 0.5)
+    cagr = 100 * ((max(s.iloc[-1], 1e-9) / start) ** (1 / yrs) - 1)
+    dd = 100 * float((1 - s / s.cummax()).max())
+    return s, round(cagr, 2), round(dd, 2)
