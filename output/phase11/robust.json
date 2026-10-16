@@ -1,0 +1,318 @@
+{
+ "candidato": {
+  "dev": {
+   "n": 93,
+   "per_year": 15.8,
+   "avg_r": 0.531,
+   "pf": 1.81,
+   "win": 0.312,
+   "years_pos": "5/6",
+   "cagr_1pct": 8.1,
+   "maxdd_1pct": 10.61
+  },
+  "chk": {
+   "n": 150,
+   "per_year": 15.0,
+   "avg_r": 0.395,
+   "pf": 1.57,
+   "win": 0.293,
+   "years_pos": "8/11",
+   "cagr_1pct": 5.48,
+   "maxdd_1pct": 13.59
+  }
+ },
+ "casuale": {
+  "dev_mean": 0.035,
+  "dev_p95": 0.126,
+  "chk_mean": 0.108,
+  "chk_p95": 0.197,
+  "p_dev": 0.0,
+  "p_chk": 0.0
+ },
+ "seme_1": {
+  "dev": {
+   "n": 96,
+   "per_year": 16.5,
+   "avg_r": 0.488,
+   "pf": 1.75,
+   "win": 0.281,
+   "years_pos": "5/6",
+   "cagr_1pct": 7.73,
+   "maxdd_1pct": 12.36
+  },
+  "chk": {
+   "n": 141,
+   "per_year": 14.1,
+   "avg_r": 0.469,
+   "pf": 1.67,
+   "win": 0.277,
+   "years_pos": "9/11",
+   "cagr_1pct": 6.15,
+   "maxdd_1pct": 15.31
+  }
+ },
+ "seme_2": {
+  "dev": {
+   "n": 94,
+   "per_year": 16.2,
+   "avg_r": 0.495,
+   "pf": 1.72,
+   "win": 0.277,
+   "years_pos": "5/6",
+   "cagr_1pct": 7.63,
+   "maxdd_1pct": 10.44
+  },
+  "chk": {
+   "n": 141,
+   "per_year": 14.1,
+   "avg_r": 0.364,
+   "pf": 1.52,
+   "win": 0.284,
+   "years_pos": "8/11",
+   "cagr_1pct": 4.7,
+   "maxdd_1pct": 22.28
+  }
+ },
+ "seme_3": {
+  "dev": {
+   "n": 91,
+   "per_year": 15.6,
+   "avg_r": 0.494,
+   "pf": 1.74,
+   "win": 0.286,
+   "years_pos": "5/6",
+   "cagr_1pct": 7.35,
+   "maxdd_1pct": 8.78
+  },
+  "chk": {
+   "n": 144,
+   "per_year": 14.4,
+   "avg_r": 0.472,
+   "pf": 1.68,
+   "win": 0.292,
+   "years_pos": "8/11",
+   "cagr_1pct": 6.36,
+   "maxdd_1pct": 13.07
+  }
+ },
+ "riaddestra_QS_finestra_4": {
+  "dev": {
+   "n": 91,
+   "per_year": 15.2,
+   "avg_r": 0.468,
+   "pf": 1.7,
+   "win": 0.286,
+   "years_pos": "4/6",
+   "cagr_1pct": 6.74,
+   "maxdd_1pct": 11.16
+  },
+  "chk": {
+   "n": 145,
+   "per_year": 14.5,
+   "avg_r": 0.304,
+   "pf": 1.44,
+   "win": 0.283,
+   "years_pos": "7/11",
+   "cagr_1pct": 3.98,
+   "maxdd_1pct": 14.29
+  }
+ },
+ "riaddestra_2QS_finestra_3": {
+  "dev": {
+   "n": 85,
+   "per_year": 14.6,
+   "avg_r": 0.393,
+   "pf": 1.62,
+   "win": 0.282,
+   "years_pos": "5/6",
+   "cagr_1pct": 5.44,
+   "maxdd_1pct": 10.46
+  },
+  "chk": {
+   "n": 176,
+   "per_year": 17.6,
+   "avg_r": 0.14,
+   "pf": 1.18,
+   "win": 0.233,
+   "years_pos": "7/11",
+   "cagr_1pct": 1.85,
+   "maxdd_1pct": 21.96
+  }
+ },
+ "riaddestra_2QS_finestra_5": {
+  "dev": {
+   "n": 86,
+   "per_year": 14.8,
+   "avg_r": 0.583,
+   "pf": 1.9,
+   "win": 0.337,
+   "years_pos": "4/6",
+   "cagr_1pct": 8.34,
+   "maxdd_1pct": 9.47
+  },
+  "chk": {
+   "n": 155,
+   "per_year": 15.5,
+   "avg_r": 0.363,
+   "pf": 1.5,
+   "win": 0.252,
+   "years_pos": "7/11",
+   "cagr_1pct": 4.89,
+   "maxdd_1pct": 18.45
+  }
+ },
+ "riaddestra_YS_finestra_4": {
+  "dev": {
+   "n": 100,
+   "per_year": 18.2,
+   "avg_r": 0.376,
+   "pf": 1.55,
+   "win": 0.27,
+   "years_pos": "5/6",
+   "cagr_1pct": 6.37,
+   "maxdd_1pct": 10.84
+  },
+  "chk": {
+   "n": 164,
+   "per_year": 16.4,
+   "avg_r": 0.153,
+   "pf": 1.21,
+   "win": 0.238,
+   "years_pos": "6/11",
+   "cagr_1pct": 1.96,
+   "maxdd_1pct": 23.57
+  }
+ },
+ "sl1.5_tr4.0_h10": {
+  "dev": {
+   "n": 129,
+   "per_year": 21.6,
+   "avg_r": 0.338,
+   "pf": 1.55,
+   "win": 0.341,
+   "years_pos": "6/6",
+   "cagr_1pct": 6.98,
+   "maxdd_1pct": 10.79
+  },
+  "chk": {
+   "n": 195,
+   "per_year": 19.4,
+   "avg_r": 0.074,
+   "pf": 1.11,
+   "win": 0.282,
+   "years_pos": "5/11",
+   "cagr_1pct": 0.97,
+   "maxdd_1pct": 28.66
+  }
+ },
+ "sl2.0_tr5.0_h10": {
+  "dev": {
+   "n": 141,
+   "per_year": 23.6,
+   "avg_r": 0.274,
+   "pf": 1.45,
+   "win": 0.355,
+   "years_pos": "5/6",
+   "cagr_1pct": 6.14,
+   "maxdd_1pct": 10.91
+  },
+  "chk": {
+   "n": 193,
+   "per_year": 19.3,
+   "avg_r": 0.182,
+   "pf": 1.28,
+   "win": 0.306,
+   "years_pos": "7/11",
+   "cagr_1pct": 3.09,
+   "maxdd_1pct": 16.29
+  }
+ },
+ "sl1.5_tr5.0_h5": {
+  "dev": {
+   "n": 162,
+   "per_year": 27.8,
+   "avg_r": 0.334,
+   "pf": 1.52,
+   "win": 0.346,
+   "years_pos": "6/6",
+   "cagr_1pct": 9.03,
+   "maxdd_1pct": 12.55
+  },
+  "chk": {
+   "n": 275,
+   "per_year": 27.5,
+   "avg_r": -0.038,
+   "pf": 0.95,
+   "win": 0.276,
+   "years_pos": "6/11",
+   "cagr_1pct": -1.53,
+   "maxdd_1pct": 27.37
+  }
+ },
+ "sl2.0_tr4.0_h10": {
+  "dev": {
+   "n": 153,
+   "per_year": 25.6,
+   "avg_r": 0.246,
+   "pf": 1.44,
+   "win": 0.379,
+   "years_pos": "4/6",
+   "cagr_1pct": 6.01,
+   "maxdd_1pct": 8.84
+  },
+  "chk": {
+   "n": 230,
+   "per_year": 23.0,
+   "avg_r": 0.056,
+   "pf": 1.09,
+   "win": 0.309,
+   "years_pos": "7/11",
+   "cagr_1pct": 0.9,
+   "maxdd_1pct": 22.02
+  }
+ },
+ "sl3.0_tr5.0_h10": {
+  "dev": {
+   "n": 147,
+   "per_year": 24.6,
+   "avg_r": 0.161,
+   "pf": 1.34,
+   "win": 0.401,
+   "years_pos": "5/6",
+   "cagr_1pct": 3.75,
+   "maxdd_1pct": 7.78
+  },
+  "chk": {
+   "n": 198,
+   "per_year": 19.8,
+   "avg_r": 0.13,
+   "pf": 1.25,
+   "win": 0.369,
+   "years_pos": "8/11",
+   "cagr_1pct": 2.34,
+   "maxdd_1pct": 12.37
+  }
+ },
+ "candidato_costi_x2": {
+  "dev": {
+   "n": 93,
+   "per_year": 15.8,
+   "avg_r": 0.505,
+   "pf": 1.77,
+   "win": 0.312,
+   "years_pos": "5/6",
+   "cagr_1pct": 7.69,
+   "maxdd_1pct": 10.68
+  },
+  "chk": {
+   "n": 150,
+   "per_year": 15.0,
+   "avg_r": 0.353,
+   "pf": 1.51,
+   "win": 0.28,
+   "years_pos": "7/11",
+   "cagr_1pct": 4.85,
+   "maxdd_1pct": 14.38
+  }
+ }
+}
