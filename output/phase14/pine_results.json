@@ -1,0 +1,98 @@
+{
+ "1 Gold Breakout 15M (Willy) | M15": {
+  "tutto": {
+   "n": 5309,
+   "per_anno": 252.0,
+   "win": 0.471,
+   "r_medio": 0.001,
+   "pf": 1.0,
+   "anni_pos": "9/22",
+   "crescita_annua_rischio1": -0.47,
+   "dd_max": 58.3
+  },
+  "2005-2015": {
+   "n": 2763,
+   "per_anno": 251.5,
+   "win": 0.457,
+   "r_medio": -0.009,
+   "pf": 0.97,
+   "anni_pos": "4/11",
+   "crescita_annua_rischio1": -3.18,
+   "dd_max": 58.3
+  },
+  "2016-2026": {
+   "n": 2546,
+   "per_anno": 252.8,
+   "win": 0.487,
+   "r_medio": 0.012,
+   "pf": 1.05,
+   "anni_pos": "5/11",
+   "crescita_annua_rischio1": 2.57,
+   "dd_max": 27.6
+  }
+ },
+ "1 Gold Breakout 15M (Willy) | M5": {
+  "tutto": {
+   "n": 5309,
+   "per_anno": 252.0,
+   "win": 0.472,
+   "r_medio": 0.002,
+   "pf": 1.01,
+   "anni_pos": "9/22",
+   "crescita_annua_rischio1": -0.33,
+   "dd_max": 58.6
+  },
+  "2005-2015": {
+   "n": 2763,
+   "per_anno": 251.5,
+   "win": 0.457,
+   "r_medio": -0.009,
+   "pf": 0.97,
+   "anni_pos": "4/11",
+   "crescita_annua_rischio1": -3.29,
+   "dd_max": 58.6
+  },
+  "2016-2026": {
+   "n": 2546,
+   "per_anno": 252.8,
+   "win": 0.488,
+   "r_medio": 0.014,
+   "pf": 1.06,
+   "anni_pos": "5/11",
+   "crescita_annua_rischio1": 2.99,
+   "dd_max": 26.5
+  }
+ },
+ "1b Gold Breakout, stop sul range | M15": {
+  "tutto": {
+   "n": 5309,
+   "per_anno": 252.0,
+   "win": 0.377,
+   "r_medio": -0.006,
+   "pf": 0.99,
+   "anni_pos": "11/22",
+   "crescita_annua_rischio1": -4.18,
+   "dd_max": 79.3
+  },
+  "2005-2015": {
+   "n": 2763,
+   "per_anno": 251.5,
+   "win": 0.354,
+   "r_medio": -0.021,
+   "pf": 0.96,
+   "anni_pos": "5/11",
+   "crescita_annua_rischio1": -7.88,
+   "dd_max": 79.3
+  },
+  "2016-2026": {
+   "n": 2546,
+   "per_anno": 252.8,
+   "win": 0.401,
+   "r_medio": 0.009,
+   "pf": 1.02,
+   "anni_pos": "6/11",
+   "crescita_annua_rischio1": 0.02,
+   "dd_max": 41.3
+  }
+ }
+}
