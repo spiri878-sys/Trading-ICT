@@ -22,7 +22,7 @@ from raptor.prime.data import config, master_m1  # noqa: E402
 from raptor.prime.selftrain import one_at_a_time, retrain_dates, walk_forward_selftrain  # noqa: E402
 from raptor.prime.trail import atr_on_m1, sim_trail  # noqa: E402
 
-CFGS = {"T1": (1.5, 5.0, 10), "T2": (3.0, 5.0, 10)}
+CFGS = {"T1": (1.5, 5.0, 10)}
 DEV = ("2010-01-01", "2016-01-01")
 CHK = ("2016-01-01", "2026-02-01")
 
@@ -70,7 +70,7 @@ def main():
         for win in (None, 4):
             for only_flt in (False, True):
                 dd = d[ok & (flt if only_flt else True)].copy()
-                s = walk_forward_selftrain(dd, feats, "y", f"exit_time_{name}", retrain_dates("2010-01-01", "2026-01-01"),
+                s = walk_forward_selftrain(dd, feats, "y", f"exit_time_{name}", retrain_dates("2010-01-01", "2026-01-01", "2QS"),
                                            window_years=win, objective="huber", params={"alpha": 1.0}, seed=seed)
                 sc = pd.Series(np.nan, index=d.index)
                 sc[dd.index] = s.values
