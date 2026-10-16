@@ -81,10 +81,11 @@ def evaluate(path):
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     rows = []
-    for p in sorted(D.glob("scores_*.parquet")):
+    pat = sys.argv[1] if len(sys.argv) > 1 else "*"
+    for p in sorted(D.glob(f"scores_{pat}.parquet")):
         rows += evaluate(p)
     R = pd.DataFrame(rows)
-    R.to_csv(OUT / "eval_grid.csv", index=False)
+    R.to_csv(OUT / f"eval_grid{'' if pat == '*' else '_' + pat.replace('*', '')}.csv", index=False)
     dev = R[R.period == "dev"].set_index(["cfg", "rule"])
     chk = R[R.period == "chk"].set_index(["cfg", "rule"])
     J = dev.join(chk, lsuffix="_dev", rsuffix="_chk")
@@ -94,7 +95,7 @@ def main():
     top = J.sort_values("one_avg_r_dev", ascending=False)[cols].head(40)
     pd.set_option("display.width", 250)
     print(top.to_string())
-    top.to_csv(OUT / "eval_top_dev.csv")
+    top.to_csv(OUT / f"eval_top_dev{'' if pat == '*' else '_' + pat.replace('*', '')}.csv")
 
 
 if __name__ == "__main__":
