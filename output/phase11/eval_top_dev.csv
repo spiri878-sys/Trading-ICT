@@ -1,0 +1,7 @@
+cfg,rule,one_n_dev,one_per_year_dev,one_avg_r_dev,one_pf_dev,one_years_pos_dev,one_c2_avg_r_dev,one_n_chk,one_avg_r_chk,one_pf_chk,one_years_pos_chk,one_c2_avg_r_chk
+a6_w0_h0_reg_mem_QS,abs0.0,505,50.6,0.029,1.077,6/10,,165,0.0508,1.154,4/7,
+a6_w0_h0_reg_mem_QS,live0.95,638,64.1,0.0085,1.023,6/10,,424,-0.0588,0.84,1/7,
+a6_w0_h0_reg_mem_QS,live0.9+mem730,604,60.6,-0.0022,0.994,5/10,,320,-0.0625,0.827,2/6,
+a6_w0_h0_reg_mem_QS,live0.8+mem730,930,93.3,-0.0072,0.981,4/10,,463,-0.0385,0.895,2/7,
+a6_w0_h0_reg_mem_QS,live0.9,975,97.7,-0.0254,0.935,4/10,,596,-0.0234,0.935,4/7,
+a6_w0_h0_reg_mem_QS,live0.8,1361,136.5,-0.0505,0.875,2/10,,797,-0.0485,0.877,3/7,
