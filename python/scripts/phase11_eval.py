@@ -14,11 +14,11 @@ import pandas as pd
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from raptor.prime.data import ROOT  # noqa: E402
 from raptor.prime.models import living_threshold  # noqa: E402
-from raptor.prime.selftrain import equity, one_at_a_time  # noqa: E402
+from raptor.prime.selftrain import adaptive_set, equity, one_at_a_time  # noqa: E402
 
 D = ROOT / "output" / "cache" / "phase11"
 OUT = ROOT / "output" / "phase11"
-DEV = ("2010-01-01", "2020-01-01")
+DEV = ("2012-01-01", "2020-01-01")
 CHK = ("2020-01-01", "2026-02-01")
 
 
@@ -50,6 +50,11 @@ def rules(s):
     for q in (0.8, 0.9, 0.95):
         thr = living_threshold(sc, s.known_at.values, window=1000, q=q)
         out[f"live{q}"] = sc > np.nan_to_num(thr, nan=np.inf)
+    for lb in (2, 3):
+        for mg in (0.0, 0.05):
+            for gc in (("cell", "side"), ("side",)):
+                tk, _ = adaptive_set(s, group_cols=gc, lookback_years=lb, margin=mg, start="2012-01-01")
+                out[f"aset_{'_'.join(gc)}_lb{lb}_m{mg}"] = tk
     if "mem_cs_d730" in s:
         for k in list(out):
             out[k + "+mem730"] = out[k] & (np.nan_to_num(s.mem_cs_d730.values, nan=-1) > 0)

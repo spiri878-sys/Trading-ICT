@@ -156,3 +156,42 @@ def equity(r, times, risk=0.01, start=10_000.0, dd_scale=None):
     cagr = (s.iloc[-1] / start) ** (1 / years) - 1 if len(s) else 0
     return s, dict(final=round(float(s.iloc[-1]), 0) if len(s) else start, cagr=round(100 * cagr, 2),
                    max_dd=round(100 * float(dd.max()), 2) if len(s) else 0.0)
+
+
+def adaptive_set(s: pd.DataFrame, group_cols=("cell", "side"), lookback_years=3, qs=(0.0, 0.5, 0.7, 0.8, 0.9),
+                 min_n=40, margin=0.03, every="QS", start=None, r_col="r"):
+    """'Set' che si ricalcola da solo: a ogni data (trimestre), per ogni gruppo (cella x lato) guarda i segnali
+    PASSATI con punteggio fuori campione ed esito già chiuso negli ultimi lookback_years; sceglie la soglia
+    (quantile del punteggio del gruppo) con il miglior R medio, purché R medio > margin e n >= min_n.
+    Se nessuna soglia supera il margine, il gruppo è spento per il trimestre. Restituisce (take, log)."""
+    s = s.reset_index(drop=True)
+    take = np.zeros(len(s), bool)
+    key = s[list(group_cols)].astype(str).agg("|".join, axis=1).values
+    t = s.known_at
+    first = pd.Timestamp(start) if start else t.min() + pd.DateOffset(years=lookback_years)
+    dates = pd.date_range(first.normalize(), t.max() + pd.Timedelta(days=92), freq=every)
+    log = []
+    for i, d in enumerate(dates[:-1]):
+        te = ((t >= d) & (t < dates[i + 1])).values
+        if not te.any():
+            continue
+        past = ((t >= d - pd.DateOffset(years=lookback_years)) & (s.exit_time < d) & s.score.notna()).values
+        for g in np.unique(key[te]):
+            pg = past & (key == g)
+            if pg.sum() < min_n:
+                continue
+            sc, rr = s.score.values[pg], s[r_col].values[pg]
+            best = None
+            for q in qs:
+                thr = np.quantile(sc, q) if q > 0 else -np.inf
+                sel = sc >= thr
+                if sel.sum() < min_n:
+                    continue
+                m = np.nanmean(rr[sel])
+                if m > margin and (best is None or m > best[1]):
+                    best = (thr, m, q, int(sel.sum()))
+            if best is not None:
+                cur = te & (key == g)
+                take |= cur & (s.score.values >= best[0])
+                log.append(dict(date=d, group=g, q=best[2], thr=best[0], past_avg_r=round(best[1], 3), past_n=best[3]))
+    return take, pd.DataFrame(log)
