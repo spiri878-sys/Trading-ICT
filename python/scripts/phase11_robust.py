@@ -58,7 +58,7 @@ class Base:
         et = np.where(ei >= 0, self.idx.values[np.maximum(ei, 0)], np.datetime64("NaT", "ns"))
         return r, et
 
-    def scores(self, r, et, seed=20261011, every="2QS", window=4):
+    def scores(self, r, et, seed=20261011, every="2QS", window=4, min_rows=2000):
         d = self.df.copy()
         d["r_foto_X"], d["exit_time_foto_X"] = r, pd.Series(et)
         d = pd.concat([d, with_memory(d, "X")], axis=1)
@@ -67,7 +67,8 @@ class Base:
         ok = np.isfinite(r) & ~np.isnat(et) & self.flt
         dd = d[ok]
         s = walk_forward_selftrain(dd, feats, "y", "exit_time_foto_X", retrain_dates("2010-01-01", "2026-01-01", every),
-                                   window_years=window, objective="huber", params={"alpha": 1.0}, seed=seed)
+                                   window_years=window, objective="huber", params={"alpha": 1.0}, seed=seed,
+                                   min_rows=min_rows)
         sc = np.full(len(d), np.nan)
         sc[np.where(ok)[0]] = s.values
         return sc
