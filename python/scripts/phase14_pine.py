@@ -22,7 +22,9 @@ OUT = ROOT / "output" / "phase14"
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     flt = sys.argv[1] if len(sys.argv) > 1 else ""
-    p = OUT / "pine_results.json"
+    import os
+    zero = bool(os.environ.get("PINE_ZERO_COST"))
+    p = OUT / ("pine_results_zero_cost.json" if zero else "pine_results.json")
     res = json.loads(p.read_text()) if p.exists() else {}
     cache = {}
     for name, (fn, tfs, kw) in STRATEGIES.items():
@@ -40,7 +42,8 @@ def main():
                   f"R {a.get('r_medio')} PF {a.get('pf')} anni+ {a.get('anni_pos')} | 05-15 R {d.get('r_medio')} "
                   f"| 16-26 R {k.get('r_medio')} | rischio1%: {a.get('crescita_annua_rischio1')}%/anno DD {a.get('dd_max')}%"
                   f"  [{time.time() - t0:.0f}s]", flush=True)
-            tr.to_csv(OUT / f"trades_{name.split()[0]}_{tf}.csv", index=False)
+            if not zero:
+                tr.to_csv(OUT / f"trades_{name.split()[0]}_{tf}.csv", index=False)
             p.write_text(json.dumps(res, indent=1, default=str))
 
 

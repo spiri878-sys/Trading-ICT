@@ -15,7 +15,8 @@ import pandas as pd
 from ..prime.data import ROOT
 
 TF_DIR = ROOT / "output" / "cache" / "tf"
-SPREAD, SLIP, COMM = 0.30, 0.05, 0.035
+import os
+SPREAD, SLIP, COMM = (0.0, 0.0, 0.0) if os.environ.get("PINE_ZERO_COST") else (0.30, 0.05, 0.035)
 
 
 def bars(tf):

@@ -94,5 +94,869 @@
    "crescita_annua_rischio1": 0.02,
    "dd_max": 41.3
   }
+ },
+ "2 ICT 10AM First FVG | M1": {
+  "tutto": {
+   "n": 4603,
+   "per_anno": 218.5,
+   "win": 0.191,
+   "r_medio": -0.592,
+   "pf": 0.27,
+   "anni_pos": "0/22",
+   "crescita_annua_rischio1": -72.93,
+   "dd_max": 100.0
+  },
+  "2005-2015": {
+   "n": 2283,
+   "per_anno": 207.8,
+   "win": 0.148,
+   "r_medio": -0.69,
+   "pf": 0.19,
+   "anni_pos": "0/11",
+   "crescita_annua_rischio1": -76.46,
+   "dd_max": 100.0
+  },
+  "2016-2026": {
+   "n": 2320,
+   "per_anno": 230.4,
+   "win": 0.234,
+   "r_medio": -0.495,
+   "pf": 0.35,
+   "anni_pos": "0/11",
+   "crescita_annua_rischio1": -68.53,
+   "dd_max": 100.0
+  }
+ },
+ "2 ICT 10AM First FVG | M5": {
+  "tutto": {
+   "n": 4481,
+   "per_anno": 212.6,
+   "win": 0.282,
+   "r_medio": -0.389,
+   "pf": 0.45,
+   "anni_pos": "0/22",
+   "crescita_annua_rischio1": -56.81,
+   "dd_max": 100.0
+  },
+  "2005-2015": {
+   "n": 2347,
+   "per_anno": 213.6,
+   "win": 0.264,
+   "r_medio": -0.445,
+   "pf": 0.39,
+   "anni_pos": "0/11",
+   "crescita_annua_rischio1": -61.84,
+   "dd_max": 100.0
+  },
+  "2016-2026": {
+   "n": 2134,
+   "per_anno": 211.9,
+   "win": 0.302,
+   "r_medio": -0.326,
+   "pf": 0.53,
+   "anni_pos": "0/11",
+   "crescita_annua_rischio1": -50.6,
+   "dd_max": 99.9
+  }
+ },
+ "3 Liquidity Sweep Reversal | M5": {
+  "tutto": {
+   "n": 3019,
+   "per_anno": 143.5,
+   "win": 0.279,
+   "r_medio": -0.126,
+   "pf": 0.73,
+   "anni_pos": "3/22",
+   "crescita_annua_rischio1": -17.13,
+   "dd_max": 98.2
+  },
+  "2005-2015": {
+   "n": 1276,
+   "per_anno": 116.4,
+   "win": 0.277,
+   "r_medio": -0.12,
+   "pf": 0.74,
+   "anni_pos": "1/11",
+   "crescita_annua_rischio1": -13.52,
+   "dd_max": 79.7
+  },
+  "2016-2026": {
+   "n": 1743,
+   "per_anno": 173.1,
+   "win": 0.281,
+   "r_medio": -0.131,
+   "pf": 0.72,
+   "anni_pos": "2/11",
+   "crescita_annua_rischio1": -20.92,
+   "dd_max": 91.8
+  }
+ },
+ "3 Liquidity Sweep Reversal | M15": {
+  "tutto": {
+   "n": 2197,
+   "per_anno": 104.3,
+   "win": 0.31,
+   "r_medio": -0.075,
+   "pf": 0.83,
+   "anni_pos": "7/22",
+   "crescita_annua_rischio1": -7.98,
+   "dd_max": 85.5
+  },
+  "2005-2015": {
+   "n": 1063,
+   "per_anno": 96.8,
+   "win": 0.281,
+   "r_medio": -0.122,
+   "pf": 0.74,
+   "anni_pos": "1/11",
+   "crescita_annua_rischio1": -11.49,
+   "dd_max": 74.2
+  },
+  "2016-2026": {
+   "n": 1134,
+   "per_anno": 112.7,
+   "win": 0.336,
+   "r_medio": -0.031,
+   "pf": 0.93,
+   "anni_pos": "6/11",
+   "crescita_annua_rischio1": -4.0,
+   "dd_max": 47.1
+  }
+ },
+ "3 Liquidity Sweep Reversal | H1": {
+  "tutto": {
+   "n": 952,
+   "per_anno": 45.3,
+   "win": 0.369,
+   "r_medio": -0.045,
+   "pf": 0.9,
+   "anni_pos": "8/22",
+   "crescita_annua_rischio1": -2.22,
+   "dd_max": 43.6
+  },
+  "2005-2015": {
+   "n": 484,
+   "per_anno": 44.5,
+   "win": 0.337,
+   "r_medio": -0.093,
+   "pf": 0.8,
+   "anni_pos": "2/11",
+   "crescita_annua_rischio1": -4.24,
+   "dd_max": 38.5
+  },
+  "2016-2026": {
+   "n": 468,
+   "per_anno": 46.6,
+   "win": 0.402,
+   "r_medio": 0.005,
+   "pf": 1.01,
+   "anni_pos": "6/11",
+   "crescita_annua_rischio1": -0.01,
+   "dd_max": 21.6
+  }
+ },
+ "4 Glow Ribbon Flip | M15": {
+  "tutto": {
+   "n": 16707,
+   "per_anno": 792.8,
+   "win": 0.297,
+   "r_medio": -0.132,
+   "pf": 0.75,
+   "anni_pos": "0/22",
+   "crescita_annua_rischio1": -66.67,
+   "dd_max": 100.0
+  },
+  "2005-2015": {
+   "n": 8837,
+   "per_anno": 804.1,
+   "win": 0.291,
+   "r_medio": -0.146,
+   "pf": 0.73,
+   "anni_pos": "0/11",
+   "crescita_annua_rischio1": -70.52,
+   "dd_max": 100.0
+  },
+  "2016-2026": {
+   "n": 7870,
+   "per_anno": 781.3,
+   "win": 0.304,
+   "r_medio": -0.116,
+   "pf": 0.78,
+   "anni_pos": "0/11",
+   "crescita_annua_rischio1": -61.93,
+   "dd_max": 100.0
+  }
+ },
+ "4 Glow Ribbon Flip | H1": {
+  "tutto": {
+   "n": 4058,
+   "per_anno": 192.7,
+   "win": 0.333,
+   "r_medio": -0.033,
+   "pf": 0.93,
+   "anni_pos": "7/22",
+   "crescita_annua_rischio1": -7.16,
+   "dd_max": 82.1
+  },
+  "2005-2015": {
+   "n": 2092,
+   "per_anno": 190.5,
+   "win": 0.348,
+   "r_medio": -0.006,
+   "pf": 0.99,
+   "anni_pos": "5/11",
+   "crescita_annua_rischio1": -2.29,
+   "dd_max": 36.8
+  },
+  "2016-2026": {
+   "n": 1966,
+   "per_anno": 195.4,
+   "win": 0.318,
+   "r_medio": -0.061,
+   "pf": 0.88,
+   "anni_pos": "2/11",
+   "crescita_annua_rischio1": -12.2,
+   "dd_max": 76.3
+  }
+ },
+ "4 Glow Ribbon Flip | H4": {
+  "tutto": {
+   "n": 1007,
+   "per_anno": 47.9,
+   "win": 0.385,
+   "r_medio": 0.086,
+   "pf": 1.21,
+   "anni_pos": "18/22",
+   "crescita_annua_rischio1": 3.9,
+   "dd_max": 18.3
+  },
+  "2005-2015": {
+   "n": 529,
+   "per_anno": 48.2,
+   "win": 0.397,
+   "r_medio": 0.119,
+   "pf": 1.3,
+   "anni_pos": "9/11",
+   "crescita_annua_rischio1": 5.57,
+   "dd_max": 10.0
+  },
+  "2016-2026": {
+   "n": 478,
+   "per_anno": 47.8,
+   "win": 0.372,
+   "r_medio": 0.049,
+   "pf": 1.11,
+   "anni_pos": "9/11",
+   "crescita_annua_rischio1": 2.09,
+   "dd_max": 18.3
+  }
+ },
+ "5 Trend Analysis Strategy | M15": {
+  "tutto": {
+   "n": 15096,
+   "per_anno": 716.5,
+   "win": 0.339,
+   "r_medio": -0.123,
+   "pf": 0.75,
+   "anni_pos": "0/22",
+   "crescita_annua_rischio1": -60.8,
+   "dd_max": 100.0
+  },
+  "2005-2015": {
+   "n": 8131,
+   "per_anno": 740.1,
+   "win": 0.332,
+   "r_medio": -0.145,
+   "pf": 0.71,
+   "anni_pos": "0/11",
+   "crescita_annua_rischio1": -67.06,
+   "dd_max": 100.0
+  },
+  "2016-2026": {
+   "n": 6965,
+   "per_anno": 691.7,
+   "win": 0.348,
+   "r_medio": -0.097,
+   "pf": 0.79,
+   "anni_pos": "0/11",
+   "crescita_annua_rischio1": -52.64,
+   "dd_max": 99.9
+  }
+ },
+ "5 Trend Analysis Strategy | H1": {
+  "tutto": {
+   "n": 3643,
+   "per_anno": 173.1,
+   "win": 0.371,
+   "r_medio": -0.006,
+   "pf": 0.98,
+   "anni_pos": "11/22",
+   "crescita_annua_rischio1": -1.99,
+   "dd_max": 61.0
+  },
+  "2005-2015": {
+   "n": 1892,
+   "per_anno": 172.5,
+   "win": 0.377,
+   "r_medio": 0.009,
+   "pf": 1.02,
+   "anni_pos": "6/11",
+   "crescita_annua_rischio1": 0.58,
+   "dd_max": 29.7
+  },
+  "2016-2026": {
+   "n": 1751,
+   "per_anno": 174.0,
+   "win": 0.364,
+   "r_medio": -0.023,
+   "pf": 0.95,
+   "anni_pos": "5/11",
+   "crescita_annua_rischio1": -4.71,
+   "dd_max": 54.9
+  }
+ },
+ "5 Trend Analysis Strategy | H4": {
+  "tutto": {
+   "n": 988,
+   "per_anno": 47.1,
+   "win": 0.384,
+   "r_medio": 0.027,
+   "pf": 1.07,
+   "anni_pos": "15/22",
+   "crescita_annua_rischio1": 1.04,
+   "dd_max": 31.7
+  },
+  "2005-2015": {
+   "n": 521,
+   "per_anno": 47.6,
+   "win": 0.397,
+   "r_medio": 0.033,
+   "pf": 1.09,
+   "anni_pos": "8/11",
+   "crescita_annua_rischio1": 1.36,
+   "dd_max": 15.9
+  },
+  "2016-2026": {
+   "n": 467,
+   "per_anno": 46.7,
+   "win": 0.368,
+   "r_medio": 0.019,
+   "pf": 1.05,
+   "anni_pos": "7/11",
+   "crescita_annua_rischio1": 0.69,
+   "dd_max": 31.7
+  }
+ },
+ "6 XGBoost Mini | H1": {
+  "tutto": {
+   "n": 1235,
+   "per_anno": 58.8,
+   "win": 0.835,
+   "r_medio": -0.001,
+   "pf": 0.97,
+   "anni_pos": "14/22",
+   "crescita_annua_rischio1": -0.08,
+   "dd_max": 10.2
+  },
+  "2005-2015": {
+   "n": 693,
+   "per_anno": 63.7,
+   "win": 0.837,
+   "r_medio": -0.005,
+   "pf": 0.87,
+   "anni_pos": "6/11",
+   "crescita_annua_rischio1": -0.36,
+   "dd_max": 7.9
+  },
+  "2016-2026": {
+   "n": 542,
+   "per_anno": 53.9,
+   "win": 0.832,
+   "r_medio": 0.004,
+   "pf": 1.16,
+   "anni_pos": "8/11",
+   "crescita_annua_rischio1": 0.22,
+   "dd_max": 3.6
+  }
+ },
+ "6 XGBoost Mini | H4": {
+  "tutto": {
+   "n": 557,
+   "per_anno": 26.7,
+   "win": 0.794,
+   "r_medio": 0.006,
+   "pf": 1.1,
+   "anni_pos": "13/22",
+   "crescita_annua_rischio1": 0.15,
+   "dd_max": 10.2
+  },
+  "2005-2015": {
+   "n": 319,
+   "per_anno": 29.7,
+   "win": 0.79,
+   "r_medio": -0.007,
+   "pf": 0.9,
+   "anni_pos": "5/11",
+   "crescita_annua_rischio1": -0.23,
+   "dd_max": 8.7
+  },
+  "2016-2026": {
+   "n": 238,
+   "per_anno": 23.6,
+   "win": 0.798,
+   "r_medio": 0.024,
+   "pf": 1.58,
+   "anni_pos": "8/11",
+   "crescita_annua_rischio1": 0.56,
+   "dd_max": 3.3
+  }
+ },
+ "7 Elliott Wave Impulse | M15": {
+  "tutto": {
+   "n": 2955,
+   "per_anno": 140.2,
+   "win": 0.254,
+   "r_medio": -0.278,
+   "pf": 0.63,
+   "anni_pos": "1/22",
+   "crescita_annua_rischio1": -33.27,
+   "dd_max": 100.0
+  },
+  "2005-2015": {
+   "n": 1458,
+   "per_anno": 132.7,
+   "win": 0.253,
+   "r_medio": -0.302,
+   "pf": 0.61,
+   "anni_pos": "0/11",
+   "crescita_annua_rischio1": -33.92,
+   "dd_max": 99.0
+  },
+  "2016-2026": {
+   "n": 1497,
+   "per_anno": 148.7,
+   "win": 0.255,
+   "r_medio": -0.255,
+   "pf": 0.66,
+   "anni_pos": "1/11",
+   "crescita_annua_rischio1": -32.61,
+   "dd_max": 98.3
+  }
+ },
+ "7 Elliott Wave Impulse | H1": {
+  "tutto": {
+   "n": 1042,
+   "per_anno": 49.5,
+   "win": 0.248,
+   "r_medio": -0.2,
+   "pf": 0.74,
+   "anni_pos": "4/22",
+   "crescita_annua_rischio1": -10.08,
+   "dd_max": 90.1
+  },
+  "2005-2015": {
+   "n": 547,
+   "per_anno": 49.8,
+   "win": 0.254,
+   "r_medio": -0.169,
+   "pf": 0.77,
+   "anni_pos": "2/11",
+   "crescita_annua_rischio1": -8.68,
+   "dd_max": 63.6
+  },
+  "2016-2026": {
+   "n": 495,
+   "per_anno": 49.2,
+   "win": 0.24,
+   "r_medio": -0.234,
+   "pf": 0.71,
+   "anni_pos": "2/11",
+   "crescita_annua_rischio1": -11.61,
+   "dd_max": 73.0
+  }
+ },
+ "7 Elliott Wave Impulse | H4": {
+  "tutto": {
+   "n": 324,
+   "per_anno": 15.4,
+   "win": 0.302,
+   "r_medio": 0.005,
+   "pf": 1.01,
+   "anni_pos": "9/22",
+   "crescita_annua_rischio1": -0.25,
+   "dd_max": 37.8
+  },
+  "2005-2015": {
+   "n": 186,
+   "per_anno": 17.4,
+   "win": 0.323,
+   "r_medio": 0.194,
+   "pf": 1.28,
+   "anni_pos": "6/11",
+   "crescita_annua_rischio1": 3.07,
+   "dd_max": 10.6
+  },
+  "2016-2026": {
+   "n": 138,
+   "per_anno": 13.7,
+   "win": 0.275,
+   "r_medio": -0.25,
+   "pf": 0.7,
+   "anni_pos": "3/11",
+   "crescita_annua_rischio1": -3.68,
+   "dd_max": 34.8
+  }
+ },
+ "8 MACD Pullback Sniper | M15": {
+  "tutto": {
+   "n": 3601,
+   "per_anno": 170.9,
+   "win": 0.286,
+   "r_medio": -0.193,
+   "pf": 0.65,
+   "anni_pos": "2/22",
+   "crescita_annua_rischio1": -28.77,
+   "dd_max": 99.9
+  },
+  "2005-2015": {
+   "n": 1864,
+   "per_anno": 169.7,
+   "win": 0.271,
+   "r_medio": -0.233,
+   "pf": 0.59,
+   "anni_pos": "0/11",
+   "crescita_annua_rischio1": -33.27,
+   "dd_max": 98.8
+  },
+  "2016-2026": {
+   "n": 1737,
+   "per_anno": 172.6,
+   "win": 0.302,
+   "r_medio": -0.15,
+   "pf": 0.72,
+   "anni_pos": "2/11",
+   "crescita_annua_rischio1": -23.56,
+   "dd_max": 93.6
+  }
+ },
+ "8 MACD Pullback Sniper | H1": {
+  "tutto": {
+   "n": 937,
+   "per_anno": 44.7,
+   "win": 0.348,
+   "r_medio": -0.035,
+   "pf": 0.93,
+   "anni_pos": "10/22",
+   "crescita_annua_rischio1": -1.83,
+   "dd_max": 38.5
+  },
+  "2005-2015": {
+   "n": 494,
+   "per_anno": 45.2,
+   "win": 0.344,
+   "r_medio": -0.041,
+   "pf": 0.92,
+   "anni_pos": "5/11",
+   "crescita_annua_rischio1": -2.11,
+   "dd_max": 27.2
+  },
+  "2016-2026": {
+   "n": 443,
+   "per_anno": 44.3,
+   "win": 0.352,
+   "r_medio": -0.029,
+   "pf": 0.94,
+   "anni_pos": "5/11",
+   "crescita_annua_rischio1": -1.53,
+   "dd_max": 32.1
+  }
+ },
+ "8 MACD Pullback Sniper | H4": {
+  "tutto": {
+   "n": 251,
+   "per_anno": 12.1,
+   "win": 0.347,
+   "r_medio": -0.057,
+   "pf": 0.89,
+   "anni_pos": "8/22",
+   "crescita_annua_rischio1": -0.75,
+   "dd_max": 28.7
+  },
+  "2005-2015": {
+   "n": 128,
+   "per_anno": 11.9,
+   "win": 0.391,
+   "r_medio": 0.08,
+   "pf": 1.18,
+   "anni_pos": "6/11",
+   "crescita_annua_rischio1": 0.88,
+   "dd_max": 6.4
+  },
+  "2016-2026": {
+   "n": 123,
+   "per_anno": 12.3,
+   "win": 0.301,
+   "r_medio": -0.2,
+   "pf": 0.63,
+   "anni_pos": "2/11",
+   "crescita_annua_rischio1": -2.5,
+   "dd_max": 24.9
+  }
+ },
+ "9 Quantum SniperFusion (long) | M5": {
+  "tutto": {
+   "n": 50904,
+   "per_anno": 2415.9,
+   "win": 0.254,
+   "r_medio": -0.389,
+   "pf": 0.37,
+   "anni_pos": "1/22",
+   "crescita_annua_rischio1": -99.99,
+   "dd_max": 100.0
+  },
+  "2005-2015": {
+   "n": 25963,
+   "per_anno": 2362.5,
+   "win": 0.233,
+   "r_medio": -0.457,
+   "pf": 0.32,
+   "anni_pos": "0/11",
+   "crescita_annua_rischio1": -100.0,
+   "dd_max": 100.0
+  },
+  "2016-2026": {
+   "n": 24941,
+   "per_anno": 2476.8,
+   "win": 0.277,
+   "r_medio": -0.318,
+   "pf": 0.43,
+   "anni_pos": "1/11",
+   "crescita_annua_rischio1": -99.97,
+   "dd_max": 100.0
+  }
+ },
+ "9 Quantum SniperFusion (long) | M15": {
+  "tutto": {
+   "n": 21793,
+   "per_anno": 1034.4,
+   "win": 0.317,
+   "r_medio": -0.208,
+   "pf": 0.58,
+   "anni_pos": "2/22",
+   "crescita_annua_rischio1": -88.89,
+   "dd_max": 100.0
+  },
+  "2005-2015": {
+   "n": 11214,
+   "per_anno": 1020.7,
+   "win": 0.294,
+   "r_medio": -0.267,
+   "pf": 0.5,
+   "anni_pos": "0/11",
+   "crescita_annua_rischio1": -93.71,
+   "dd_max": 100.0
+  },
+  "2016-2026": {
+   "n": 10579,
+   "per_anno": 1050.6,
+   "win": 0.341,
+   "r_medio": -0.146,
+   "pf": 0.68,
+   "anni_pos": "2/11",
+   "crescita_annua_rischio1": -79.37,
+   "dd_max": 100.0
+  }
+ },
+ "9 Quantum SniperFusion (long) | H1": {
+  "tutto": {
+   "n": 5689,
+   "per_anno": 270.3,
+   "win": 0.366,
+   "r_medio": -0.059,
+   "pf": 0.86,
+   "anni_pos": "3/22",
+   "crescita_annua_rischio1": -15.77,
+   "dd_max": 98.0
+  },
+  "2005-2015": {
+   "n": 2851,
+   "per_anno": 260.0,
+   "win": 0.371,
+   "r_medio": -0.067,
+   "pf": 0.84,
+   "anni_pos": "1/11",
+   "crescita_annua_rischio1": -16.97,
+   "dd_max": 87.4
+  },
+  "2016-2026": {
+   "n": 2838,
+   "per_anno": 281.9,
+   "win": 0.362,
+   "r_medio": -0.051,
+   "pf": 0.87,
+   "anni_pos": "2/11",
+   "crescita_annua_rischio1": -14.46,
+   "dd_max": 85.6
+  }
+ },
+ "10 Harmonic Patterns | M15": {
+  "tutto": {
+   "n": 2045,
+   "per_anno": 97.1,
+   "win": 0.441,
+   "r_medio": -0.209,
+   "pf": 0.62,
+   "anni_pos": "0/22",
+   "crescita_annua_rischio1": -18.74,
+   "dd_max": 98.7
+  },
+  "2005-2015": {
+   "n": 1070,
+   "per_anno": 97.4,
+   "win": 0.431,
+   "r_medio": -0.222,
+   "pf": 0.61,
+   "anni_pos": "0/11",
+   "crescita_annua_rischio1": -19.87,
+   "dd_max": 91.2
+  },
+  "2016-2026": {
+   "n": 975,
+   "per_anno": 96.8,
+   "win": 0.452,
+   "r_medio": -0.194,
+   "pf": 0.64,
+   "anni_pos": "0/11",
+   "crescita_annua_rischio1": -17.53,
+   "dd_max": 85.7
+  }
+ },
+ "10 Harmonic Patterns | H1": {
+  "tutto": {
+   "n": 590,
+   "per_anno": 28.1,
+   "win": 0.478,
+   "r_medio": -0.173,
+   "pf": 0.66,
+   "anni_pos": "4/21",
+   "crescita_annua_rischio1": -4.87,
+   "dd_max": 66.5
+  },
+  "2005-2015": {
+   "n": 306,
+   "per_anno": 28.0,
+   "win": 0.48,
+   "r_medio": -0.168,
+   "pf": 0.67,
+   "anni_pos": "3/11",
+   "crescita_annua_rischio1": -4.7,
+   "dd_max": 41.5
+  },
+  "2016-2026": {
+   "n": 284,
+   "per_anno": 28.5,
+   "win": 0.475,
+   "r_medio": -0.178,
+   "pf": 0.66,
+   "anni_pos": "1/10",
+   "crescita_annua_rischio1": -5.07,
+   "dd_max": 43.7
+  }
+ },
+ "10 Harmonic Patterns | H4": {
+  "tutto": {
+   "n": 173,
+   "per_anno": 8.3,
+   "win": 0.445,
+   "r_medio": -0.252,
+   "pf": 0.55,
+   "anni_pos": "7/21",
+   "crescita_annua_rischio1": -2.11,
+   "dd_max": 35.9
+  },
+  "2005-2015": {
+   "n": 93,
+   "per_anno": 8.5,
+   "win": 0.462,
+   "r_medio": -0.243,
+   "pf": 0.55,
+   "anni_pos": "3/11",
+   "crescita_annua_rischio1": -2.08,
+   "dd_max": 25.0
+  },
+  "2016-2026": {
+   "n": 80,
+   "per_anno": 8.1,
+   "win": 0.425,
+   "r_medio": -0.263,
+   "pf": 0.55,
+   "anni_pos": "4/10",
+   "crescita_annua_rischio1": -2.15,
+   "dd_max": 19.3
+  }
+ },
+ "11 Flow Algo Deep Flow Tap | M5": {
+  "tutto": {
+   "n": 42888,
+   "per_anno": 2035.2,
+   "win": 0.244,
+   "r_medio": -0.29,
+   "pf": 0.63,
+   "anni_pos": "0/22",
+   "crescita_annua_rischio1": -99.77,
+   "dd_max": 100.0
+  },
+  "2005-2015": {
+   "n": 24690,
+   "per_anno": 2246.6,
+   "win": 0.226,
+   "r_medio": -0.359,
+   "pf": 0.55,
+   "anni_pos": "0/11",
+   "crescita_annua_rischio1": -99.97,
+   "dd_max": 100.0
+  },
+  "2016-2026": {
+   "n": 18198,
+   "per_anno": 1806.7,
+   "win": 0.268,
+   "r_medio": -0.195,
+   "pf": 0.74,
+   "anni_pos": "0/11",
+   "crescita_annua_rischio1": -97.55,
+   "dd_max": 100.0
+  }
+ },
+ "11 Flow Algo Deep Flow Tap | M15": {
+  "tutto": {
+   "n": 24462,
+   "per_anno": 1160.8,
+   "win": 0.25,
+   "r_medio": -0.27,
+   "pf": 0.65,
+   "anni_pos": "0/22",
+   "crescita_annua_rischio1": -96.1,
+   "dd_max": 100.0
+  },
+  "2005-2015": {
+   "n": 13671,
+   "per_anno": 1244.0,
+   "win": 0.237,
+   "r_medio": -0.323,
+   "pf": 0.59,
+   "anni_pos": "0/11",
+   "crescita_annua_rischio1": -98.38,
+   "dd_max": 100.0
+  },
+  "2016-2026": {
+   "n": 10791,
+   "per_anno": 1071.3,
+   "win": 0.267,
+   "r_medio": -0.203,
+   "pf": 0.73,
+   "anni_pos": "0/11",
+   "crescita_annua_rischio1": -89.83,
+   "dd_max": 100.0
+  }
  }
 }

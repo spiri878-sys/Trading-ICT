@@ -7,7 +7,7 @@ import numpy as np
 import pandas as pd
 from sklearn.ensemble import GradientBoostingClassifier
 
-from .common import SPREAD, atr, dmi, ema, macd, pivots, rma, rsi, sma, true_range, wma
+from .common import COMM, SLIP, SPREAD, atr, dmi, ema, macd, pivots, rma, rsi, sma, true_range, wma
 from .engine import Position, fill_limit_order, fill_stop_order, mkt_entry
 
 
@@ -412,17 +412,17 @@ def xgb_mini(b, thr=0.54, n_samples=50, every=50, trail_pct=10.0):
             trail = max(trail, hw * (1 - trail_pct / 100))
             ex = None
             if l[i] <= trail:
-                ex = min(trail, o[i]) - 0.05
+                ex = min(trail, o[i]) - SLIP
             elif prob < 1 - thr and c[i] > entry and i > bar_filter:
-                ex = c[i] - 0.05
+                ex = c[i] - SLIP
             if ex is not None:
                 risk = entry * trail_pct / 100
-                pnl = ex - entry - 0.07 - 0.066 * entry * (t[i].normalize() - t[i0].normalize()).days / 365
+                pnl = ex - entry - 2 * COMM - 0.066 * entry * (t[i].normalize() - t[i0].normalize()).days / 365
                 rows.append((t[i0], 1, pnl / risk))
                 in_pos, last_exit = False, i
             continue
         if model is not None and prob > thr and c[i] > s15[i] and i - last_exit > 1:
-            entry = c[i] + SPREAD + 0.05
+            entry = c[i] + SPREAD + SLIP
             hw, trail, i0, in_pos, bar_filter = entry, entry * (1 - trail_pct / 100), i, True, i + 3
     return _rows(rows)
 
@@ -643,7 +643,7 @@ def quantum_sniper(b, hist=72, conf_thr=0.54, mom_thr=0.08, decay=0.88, mem_thr=
                 pos = None
             continue
         if raw_long and not np.isnan(a[i]):
-            e = c[i] + SPREAD + 0.05
+            e = c[i] + SPREAD + SLIP
             risk = a[i] * sl_mult
             pos = Position(1, e, e - risk, i, targets=[(e + risk * k, 0.2) for k in (1, 2, 3, 4)] + [(e + risk * 5, None)])
             pos.hw = h[i]
@@ -665,7 +665,7 @@ def harmonic(b, zig=4, tol=0.10, min_match=3, stop_buf=0.25, rr=2.0, cooldown=5)
     last_e = -10 ** 9
 
     def inr(x, lo, hi):
-        return lo - tol <= x <= hi + tol
+        return int(lo - tol <= x <= hi + tol)
 
     for i in range(n):
         if pos is not None:
@@ -734,7 +734,7 @@ def flow_tap(b, fast=20, slow=50, stop_pct=0.143, tgt_pct=0.31):
         sh = e20[i] < e50[i] and tap and c[i] < zl[i] and c[i] < o[i]
         if lg or sh:
             side = 1 if lg else -1
-            e = c[i] + SPREAD + 0.05 if side == 1 else c[i] - 0.05
+            e = c[i] + SPREAD + SLIP if side == 1 else c[i] - SLIP
             pos = Position(side, e, e * (1 - side * stop_pct / 100), i, targets=[(e * (1 + side * tgt_pct / 100), None)])
     return _rows(rows)
 
