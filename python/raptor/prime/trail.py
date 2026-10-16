@@ -89,3 +89,31 @@ def atr_on_m1(m1_index, htf: pd.DataFrame, n=14):
     dec = (m1_index + pd.Timedelta("1min")).values
     j = np.searchsorted(avail, dec, side="right") - 1
     return np.where(j >= 0, a[np.maximum(j, 0)], np.nan)
+
+
+@njit(cache=True)
+def confirm_market_entry(o, c, sp, fill_i, side, sl, conf_tf_min, mod, max_wait, slip):
+    """Ingresso A MERCATO con conferma (il venditore non usa pendenti): dal minuto in cui il prezzo tocca la zona
+    (fill_i dell'ordine limite), attende la prima barra di conf_tf_min minuti CHIUSA a favore (close > open per i
+    long), poi entra all'apertura del minuto successivo (ASK + slip per i long, BID - slip per gli short).
+    Annullato se lo stop strutturale è toccato prima o se passano max_wait minuti. Restituisce (entry_i, entry_px)."""
+    k = fill_i.size
+    n = o.size
+    ei = np.full(k, -1)
+    epx = np.full(k, np.nan)
+    for j in range(k):
+        f = fill_i[j]
+        if f < 0:
+            continue
+        sd = side[j]
+        bo = np.nan
+        for i in range(f, min(n - 1, f + max_wait)):
+            if (c[i] - sl[j]) * sd <= 0:
+                break
+            if mod[i] % conf_tf_min == 0 or i == f:
+                bo = o[i]
+            if (mod[i] + 1) % conf_tf_min == 0 and bo == bo and (c[i] - bo) * sd > 0:
+                ei[j] = i + 1
+                epx[j] = o[i + 1] + (sp[i + 1] + slip if sd == 1 else -slip)
+                break
+    return ei, epx

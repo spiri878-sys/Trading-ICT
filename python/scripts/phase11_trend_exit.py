@@ -17,11 +17,12 @@ import pandas as pd
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from raptor.prime.data import ROOT, master_m1  # noqa: E402
 from raptor.prime.selftrain import equity, one_at_a_time  # noqa: E402
-from raptor.prime.trail import atr_on_m1, sim_trail  # noqa: E402
+from raptor.prime.trail import atr_on_m1, confirm_market_entry, sim_trail  # noqa: E402
 
 CACHE = ROOT / "output" / "cache"
 OUT = ROOT / "output" / "phase11"
 DEV_END = "2016-01-01"
+ENTRY = sys.argv[1] if len(sys.argv) > 1 else "limit"
 
 
 def regime_cols(df):
@@ -79,8 +80,20 @@ def main():
     fi = np.searchsorted(idx.values, df.fill_time_a6.values.astype("datetime64[ns]")).astype(np.int64)
     fpx = df.fill_px_a6.values.astype(float)
     side = df.side.values.astype(np.int64)
+    if ENTRY == "mkt_conf":
+        # limite -> mercato dopo conferma M5; la cella LS è già a mercato e resta com'è
+        sl_st = (df.fill_px_st - df.side * df.risk_px_st).values.astype(float)
+        mod = (idx.hour * 60 + idx.minute).values.astype(np.int64)
+        ci, cpx = confirm_market_entry(o, c, np.full(len(m1), 0.30), fi, side, sl_st, 5, mod, 240, 0.05)
+        lim = (df.otype.values == "limit")
+        fi = np.where(lim, ci, fi).astype(np.int64)
+        fpx = np.where(lim, cpx, fpx)
+        okk = fi >= 0
+        df, fi, fpx, side = df[okk].reset_index(drop=True), fi[okk], fpx[okk], side[okk]
+        print(f"ingressi a mercato confermati: {okk.mean():.2f} dei segnali")
     t = df.known_at.values
     dev = t < np.datetime64(DEV_END)
+    tagname = "" if ENTRY == "limit" else f"_{ENTRY}"
     filters = {
         "all": np.ones(len(df), bool),
         "h4d20+d1ema": (df.h4don20.values == side) & (df.d1ema.values == side),
@@ -108,7 +121,7 @@ def main():
                              **{f"chk_{k}": v for k, v in sc.items() if k != "r_by_year"}))
             keep[name] = (r, et, op)
     R = pd.DataFrame(rows)
-    R.to_csv(OUT / "trend_exit_grid.csv", index=False)
+    R.to_csv(OUT / f"trend_exit_grid{tagname}.csv", index=False)
     pd.set_option("display.width", 250)
     cols = ["cfg", "dev_n", "dev_per_year", "dev_avg_r", "dev_pf", "dev_years_pos", "dev_cagr_1pct", "dev_maxdd_1pct",
             "chk_n", "chk_avg_r", "chk_pf", "chk_years_pos", "chk_cagr_1pct", "chk_maxdd_1pct"]
