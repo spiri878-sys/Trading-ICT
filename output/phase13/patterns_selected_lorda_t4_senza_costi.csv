@@ -1,0 +1,30 @@
+tf,L,h,pattern,side,n_dev,t_dev,net_atr_dev,n_chk,net_atr_chk,tested,sequenza
+M5,1,1,0,-1.0,53279.0,-7.03,0.0206,58708.0,-0.0073,,GIU-piccola-chiudebassa
+M5,1,1,3,-1.0,96849.0,-11.2,0.0267,103211.0,-0.014,,GIU-media-chiudebassa
+M5,1,1,6,-1.0,70852.0,-6.58,0.0249,62440.0,-0.0333,,GIU-grande-chiudebassa
+M5,1,1,9,-1.0,29272.0,-8.7,0.0371,20781.0,-0.0064,,SU-piccola-chiudebassa
+M5,1,1,14,1.0,96834.0,5.61,0.0131,107067.0,-0.0103,,SU-media-chiudealta
+M5,1,3,3,-1.0,96849.0,-4.0,0.0175,103211.0,-0.0289,,GIU-media-chiudebassa
+M5,1,3,9,-1.0,29272.0,-4.98,0.0399,20781.0,-0.0115,,SU-piccola-chiudebassa
+M5,1,6,11,1.0,97803.0,4.14,0.0282,62120.0,0.0207,,SU-piccola-chiudealta
+M5,1,12,11,1.0,97803.0,4.58,0.0451,62120.0,0.0443,,SU-piccola-chiudealta
+M5,1,12,14,1.0,96834.0,4.28,0.0396,107064.0,0.0276,,SU-media-chiudealta
+M5,2,1,0,-1.0,5026.0,-4.47,0.0407,5292.0,-0.0031,,GIU-piccola-chiudebassa > GIU-piccola-chiudebassa
+M5,2,1,9,-1.0,2062.0,-4.14,0.0575,1841.0,0.011,,SU-piccola-chiudebassa > GIU-piccola-chiudebassa
+M5,2,1,11,-1.0,6737.0,-5.61,0.0422,5514.0,0.001,,SU-piccola-chiudealta > GIU-piccola-chiudebassa
+M5,2,1,57,-1.0,13129.0,-4.76,0.0309,14188.0,-0.025,,GIU-media-chiudebassa > GIU-media-chiudebassa
+M5,2,1,63,-1.0,4074.0,-4.66,0.054,3037.0,-0.0277,,SU-piccola-chiudebassa > GIU-media-chiudebassa
+M5,2,1,65,-1.0,12401.0,-6.61,0.0421,9978.0,-0.0067,,SU-piccola-chiudealta > GIU-media-chiudebassa
+M5,2,1,119,-1.0,8628.0,-7.87,0.0787,4875.0,-0.0124,,SU-piccola-chiudealta > GIU-grande-chiudebassa
+M5,2,1,165,-1.0,3834.0,-4.41,0.049,3360.0,-0.0042,,GIU-media-chiudebassa > SU-piccola-chiudebassa
+M5,2,1,255,1.0,14425.0,4.39,0.0258,17285.0,-0.0126,,GIU-media-chiudebassa > SU-media-chiudealta
+M5,2,1,262,1.0,7840.0,4.05,0.0325,9596.0,-0.007,,SU-piccola-chiudemetà > SU-media-chiudealta
+M5,2,1,317,1.0,8753.0,4.55,0.0454,4888.0,-0.0016,,SU-piccola-chiudealta > SU-grande-chiudealta
+M5,2,12,140,1.0,580.0,4.15,0.5915,540.0,-0.0554,,SU-media-chiudealta > GIU-grande-chiudemetà
+M5,3,1,1037,-1.0,1804.0,-4.37,0.0728,1388.0,-0.0133,,SU-piccola-chiudealta > GIU-media-chiudebassa > GIU-media-chiudebassa
+M5,3,1,1181,-1.0,2528.0,-4.58,0.0671,964.0,-0.0321,,SU-piccola-chiudealta > SU-piccola-chiudealta > GIU-media-chiudebassa
+M5,3,1,2063,-1.0,1292.0,-4.53,0.1221,497.0,-0.0699,,SU-piccola-chiudealta > GIU-grande-chiudebassa > GIU-grande-chiudebassa
+M5,3,1,2153,-1.0,2226.0,-5.78,0.1218,388.0,-0.0009,,SU-piccola-chiudealta > SU-piccola-chiudealta > GIU-grande-chiudebassa
+M5,3,1,3773,-1.0,9116.0,-4.08,0.0318,646.0,-0.0215,,SU-piccola-chiudealta > SU-piccola-chiudealta > SU-piccola-chiudealta
+M15,2,1,65,-1.0,4084.0,-5.2,0.053,3450.0,-0.005,,SU-piccola-chiudealta > GIU-media-chiudebassa
+H1,1,12,17,1.0,4954.0,4.03,0.1707,4714.0,0.2265,,SU-grande-chiudealta

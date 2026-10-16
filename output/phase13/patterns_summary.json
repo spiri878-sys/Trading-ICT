@@ -1,0 +1,60 @@
+{
+ "severa_t4_netto": {
+  "sequenze_provate": {
+   "H1": 368,
+   "M15": 1320,
+   "M5": 4152
+  },
+  "scelte_su_2005_2015": 0
+ },
+ "larga_t3_netto": {
+  "sequenze_provate_con_almeno_300_casi": {
+   "H1": 368.0,
+   "M15": 1320.0,
+   "M5": 4152.0
+  },
+  "scelte_su_2005_2015": 2,
+  "positive_anche_2016_2026": 1,
+  "netto_medio_2016_2026_ATR": -0.0315,
+  "H1": {
+   "scelte": 1,
+   "positive_controllo": 1,
+   "netto_medio_dev": 0.2554,
+   "netto_medio_chk": 0.2169
+  },
+  "M15": {
+   "scelte": 1,
+   "positive_controllo": 0,
+   "netto_medio_dev": 0.1362,
+   "netto_medio_chk": -0.3474
+  }
+ },
+ "lorda_t4_senza_costi": {
+  "sequenze_provate_con_almeno_300_casi": {
+   "H1": 368.0,
+   "M15": 1320.0,
+   "M5": 4152.0
+  },
+  "scelte_su_2005_2015": 29,
+  "positive_anche_2016_2026": 6,
+  "netto_medio_2016_2026_ATR": -0.0017,
+  "H1": {
+   "scelte": 1,
+   "positive_controllo": 1,
+   "netto_medio_dev": 0.1707,
+   "netto_medio_chk": 0.2265
+  },
+  "M15": {
+   "scelte": 1,
+   "positive_controllo": 0,
+   "netto_medio_dev": 0.053,
+   "netto_medio_chk": -0.005
+  },
+  "M5": {
+   "scelte": 27,
+   "positive_controllo": 5,
+   "netto_medio_dev": 0.0666,
+   "netto_medio_chk": -0.0111
+  }
+ }
+}
