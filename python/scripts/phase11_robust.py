@@ -30,9 +30,11 @@ def log(msg, t0=[time.time()]):
 
 
 class Base:
-    def __init__(self):
-        df = pd.read_parquet(CACHE / "phase11" / "dataset.parquet")
+    def __init__(self, path=None, cells=None):
+        df = pd.read_parquet(path or CACHE / "phase11" / "dataset.parquet")
         df = df[df.filled_a6].reset_index(drop=True)
+        if cells is not None:
+            df = df[df.cell.isin(cells)].reset_index(drop=True)
         reg = regime_cols(df)
         df = pd.concat([df, reg.add_prefix("f_rg_")], axis=1)
         self.side = df.side.values.astype(np.int64)
