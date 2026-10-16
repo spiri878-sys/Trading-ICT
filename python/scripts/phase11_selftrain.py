@@ -45,6 +45,7 @@ def main():
     dates = retrain_dates(START, END, EVERY)
     grid = list(itertools.product(["a6", "a3", "st"], [None, 3], [None, 1.5], ["reg"], [True]))
     grid += [("a6", None, None, "cls", True), ("a6", None, None, "reg", False)]
+    grid += list(itertools.product(["a10", "sf6"], [None, 3], [None, 1.5], ["reg"], [True]))
     for tag, win, hl, tgt, mem in grid:
         name = f"{tag}_w{win or 0}_h{hl or 0}_{tgt}_{'mem' if mem else 'nomem'}_{EVERY}"
         p = D / f"scores_{name}.parquet"
