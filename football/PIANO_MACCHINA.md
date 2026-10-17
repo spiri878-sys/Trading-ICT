@@ -89,6 +89,9 @@ positive, ROI del backtest (se possibile), AMMESSO / NON AMMESSO.
   mercati ammessi e rispondi con: probabilità chiave (1X2, gol, angoli casa/ospite, cartellini, falli, tiri), la
   giocata migliore della partita (o "niente da giocare"), le 2-3 alternative, quota minima, validità live e motivi.
   Script dedicato, es. `python football/scripts/analizza.py "Inter"`.
+  Se la partita è GIÀ IN CORSO, l'analisi passa da sola alla modalità live (punto 7): minuto, punteggio e statistiche
+  attuali, probabilità sul tempo che resta, quote live o quota minima; e dice chiaramente se la giocata pre-partita
+  vale ancora o no. Se è finita, mostra il confronto previsione/risultato.
 
 ## 7. Live
 - Per le partite analizzate pre-partita e ora in corso: minuto, punteggio, angoli, cartellini, falli, tiri,
