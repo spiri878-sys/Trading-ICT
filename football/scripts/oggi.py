@@ -1,78 +1,156 @@
-"""Lista giocate del giorno, pre-partita, in automatico: partite e quote da API-Football, probabilità dal modello.
+"""Giocate del giorno (Fase M5, punti 5-6 del piano).
 
-Per ogni partita dei campionati coperti: quota migliore tra i bookmaker per 1X2 e angoli (totali, casa, ospite),
-probabilità del modello, valore = p x quota - 1. In lista solo:
-  CECCHINO  probabilità >= 70% e valore >= 5%
-  VALORE    probabilità >= 55% e valore >= 8%
-Una sola giocata per partita (la migliore), per non sommare scommesse legate tra loro.
-Salva football/output/giocate_<data>.md e .csv.
-
-usage: python football/scripts/oggi.py [YYYY-MM-DD]      (richiede la variabile d'ambiente API_FOOTBALL_KEY)
+Uso: python football/scripts/oggi.py [YYYY-MM-DD] [--solo-cache] [--max-quote N]
+Partite dei campionati coperti -> quote di tutti i bookmaker (1 richiesta per partita) -> modelli -> filtri ->
+TOP assoluta, TOP angoli, top per mercato, elenco CECCHINO e VALORE. Una giocata per partita, sempre singole.
+Scrive football/output/giocate_<data>.md e aggiunge le giocate al registro.
 """
-import datetime as dt
 import sys
+from datetime import date
 from pathlib import Path
 
-import pandas as pd
+import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from fb.apifootball import best_odds, fixtures, match_team, odds_by_date  # noqa: E402
-from fb.card import markets, predict_fixtures  # noqa: E402
-from fb.data import ROOT, matches  # noqa: E402
+from fb import apifootball as af  # noqa: E402
+from fb import registro  # noqa: E402
+from fb.data import ROOT  # noqa: E402
+from fb.picks import (GROUP, MIN_TEAM_N, confidence, describe, level, min_odds, pinnacle_fair,  # noqa: E402
+                      reasons)
+from fb.predict import evaluate_quote, predict  # noqa: E402
+from fb.teams import resolve  # noqa: E402
 
-CECCHINO = (0.70, 0.05)
-VALORE = (0.55, 0.08)
+RESERVE = 10                     # richieste lasciate per i risultati di domani
+STAT_FIRST = {"E0", "E1", "E2", "E3", "SC0", "D1", "I1", "SP1", "F1", "N1", "P1", "T1", "B1", "G1", "D2", "I2",
+              "SP2", "F2", "SC1", "SC2", "SC3", "EC"}          # campionati con angoli/falli/tiri nell'archivio
 
 
-def main():
-    date = sys.argv[1] if len(sys.argv) > 1 else dt.date.today().isoformat()
-    m = matches()
-    fx = [f for f in fixtures(date) if f["stato"] in ("NS", "TBD")]
-    odds = odds_by_date(date)
-    rows, todo, skipped = [], [], []
+def gather(day, solo_cache, max_q):
+    fx = [f for f in af.fixtures(day) if f["stato"] in ("NS", "TBD")]
+    tm = af.load_team_map()
+    ok, skipped = [], []
     for f in fx:
-        names = set(m.HomeTeam[m.Division == f["div"]]) | set(m.AwayTeam[m.Division == f["div"]])
-        h, a = match_team(f["home_api"], names), match_team(f["away_api"], names)
-        bo = best_odds(odds.get(f["id"], []))
-        if not h or not a or not any(k.startswith("Angoli") for k in bo):
-            skipped.append(f"{f['home_api']} - {f['away_api']} ({f['div']}): "
-                           f"{'squadra non trovata' if not (h and a) else 'nessuna quota angoli'}")
+        h = resolve(f["home_id"], f["home_api"], f["div"], tm)
+        a = resolve(f["away_id"], f["away_api"], f["div"], tm)
+        if h and a:
+            ok.append(dict(f, home=h, away=a))
+        else:
+            skipped.append(f"{f['home_api']} - {f['away_api']} ({f['div']}): nome squadra incerto")
+    ok.sort(key=lambda f: (f["div"] not in STAT_FIRST, f["kickoff"]))
+    left = max_q if max_q is not None else af.BUDGET - af.used_today() - RESERVE
+    priced = []
+    for f in ok:
+        cached = (af.API_CACHE / f"odds_fixture-{f['id']}.json").exists()
+        if solo_cache and not cached:
             continue
-        o = {k: bo[k][0] for k in ("1", "X", "2") if k in bo}
-        todo.append((f, h, a, bo, dict(home=h, away=a, div=f["div"], date=date, odds=o)))
-    res = predict_fixtures([t[4] for t in todo]) if todo else []
-    for (f, h, a, bo, _), r in zip(todo, res):
-        P, _ = markets(r)
-        cand = []
-        for k, (q, bm) in bo.items():
-            if k.startswith("Angoli") and k in P:
-                p = P[k]
-                cand.append(dict(data=date, ora=f["ora"], campionato=f["div"], partita=f"{h} - {a}", giocata=k,
-                                 quota=q, bookmaker=bm, prob=round(p, 3), valore=round(p * q - 1, 3),
-                                 angoli_attesi=f"{r['cor_attesi']['casa']:.1f}-{r['cor_attesi']['ospite']:.1f}"))
-        for c in cand:
-            c["livello"] = ("CECCHINO" if c["prob"] >= CECCHINO[0] and c["valore"] >= CECCHINO[1] else
-                            "VALORE" if c["prob"] >= VALORE[0] and c["valore"] >= VALORE[1] else "")
-        good = sorted((c for c in cand if c["livello"]), key=lambda c: (c["livello"] != "CECCHINO", -c["valore"]))
+        if not cached and left <= 0:
+            skipped.append(f"{f['home_api']} - {f['away_api']}: richieste API finite per oggi")
+            continue
+        try:
+            bms = af.odds(f["id"])
+        except af.BudgetError:
+            left = 0
+            continue
+        left -= 0 if cached else 1
+        if not bms:
+            skipped.append(f"{f['home_api']} - {f['away_api']}: nessuna quota")
+            continue
+        f["quotes"] = af.quotes(bms)
+        f["mk"] = af.market_inputs(f["quotes"])
+        f["nbooks"] = len(bms)
+        priced.append(f)
+    return priced, skipped
+
+
+def choose(priced, pred):
+    best, scartate = [], 0
+    for i, f in enumerate(priced):
+        cands = []
+        for q in f["quotes"]:
+            e = evaluate_quote(pred, i, q)
+            if e is None:
+                continue
+            nh, na = pred["counts"].get(e["stat"] if e["stat"] != "hh" else "ght", (np.zeros(len(priced)),) * 2)
+            counts_ok = min(nh[i], na[i]) >= MIN_TEAM_N
+            fair = pinnacle_fair(f["quotes"], q)
+            lvl, why = level(e, q, fair, counts_ok)
+            if lvl is None:
+                scartate += 1
+                continue
+            cands.append(dict(e, q=q, lvl=lvl, why=why, fair=fair))
+        good = [c for c in cands if c["lvl"] != "SOSPETTO"]
         if good:
-            rows.append(good[0])
-    out = ROOT / "output"
-    df = pd.DataFrame(rows)
-    df.to_csv(out / f"giocate_{date}.csv", index=False)
-    L = [f"# Giocate angoli del {date}", "",
-         f"Partite analizzate: {len(todo)} su {len(fx)} in programma · giocate proposte: {len(rows)}", "",
-         "| Ora | Camp. | Partita | Giocata | Quota | Bookmaker | Prob. | Valore | Livello |",
-         "|---|---|---|---|---|---|---|---|---|"]
-    for c in rows:
-        L.append(f"| {c['ora']} | {c['campionato']} | {c['partita']} | {c['giocata']} | {c['quota']} | {c['bookmaker']} | "
-                 f"{100 * c['prob']:.0f}% | {100 * c['valore']:+.0f}% | {c['livello']} |")
+            c = max(good, key=lambda c: c["valore"])                     # una sola giocata per partita
+            best.append(dict(c, f=f, i=i))
+        for c in cands:
+            if c["lvl"] == "SOSPETTO":
+                best.append(dict(c, f=f, i=i))
+    return best, scartate
+
+
+def line(c, pred):
+    f, q, e = c["f"], c["q"], c
+    x = pred["X"].iloc[c["i"]].to_dict()
+    mu = pred["mu"].get(e["stat"], pred["mu"].get("ght", (np.array([np.nan]),) * 2))
+    mu = (float(mu[0][c["i"]]), float(mu[1][c["i"]]))
+    g = describe(e["stat"], e["sel"], f["home"], f["away"])
+    mot = "; ".join(reasons(e["stat"], e["sel"], x, f["home"], f["away"], mu))
+    fiducia = confidence(c["lvl"], e["famiglia"], f["nbooks"])
+    pin = f" (Pinnacle {q['pin']:.2f})" if q.get("pin") else ""
+    prov = "" if e["famiglia"] in ("g|1x2|H", "g|1x2|D", "g|1x2|A", "g|ou_tot|over", "g|ou_tot|under") \
+        else " · profitto non ancora provato"
+    return (f"**{f['ora']} {f['div']} {f['home_api']} - {f['away_api']}**: {g} → quota **{q['best']:.2f}** "
+            f"({q['bm']}){pin}, probabilità {e['p']:.0%}, valore {e['valore']:+.0%}, quota minima {min_odds(e['p']):.2f}. "
+            f"Livello {c['lvl']}, fiducia {fiducia}{prov}. Valida pre-partita (in corso: usa live.py). Motivi: {mot}."), g
+
+
+def main(argv):
+    day = next((a for a in argv if a[:2] == "20"), str(date.today()))
+    solo_cache = "--solo-cache" in argv
+    max_q = int(argv[argv.index("--max-quote") + 1]) if "--max-quote" in argv else None
+    priced, skipped = gather(day, solo_cache, max_q)
+    out = [f"# Giocate del {day}", "", "Importi piccoli e fissi (1 unità), solo singole. Nessuna giocata è sicura.", ""]
+    picks = []
+    if priced:
+        pred = predict([dict(div=f["div"], date=day, home=f["home"], away=f["away"], arbitro=f["arbitro"],
+                             mk=f["mk"]) for f in priced])
+        picks, scartate = choose(priced, pred)
+    good = sorted([c for c in picks if c["lvl"] != "SOSPETTO"], key=lambda c: -c["valore"])
+    if not good:
+        out.append("**Oggi nessuna giocata con valore.** Non forzare.")
+    else:
+        txt = {id(c): line(c, pred) for c in good}
+        out += ["## 1. TOP ASSOLUTA", "", txt[id(good[0])][0], ""]
+        ang = [c for c in good if c["stat"] == "cor"]
+        out += ["## 2. TOP ANGOLI", "", txt[id(ang[0])][0] if ang else "Nessuna giocata angoli con valore oggi.", ""]
+        out += ["## 3. Migliore per mercato", ""]
+        for grp in ("GOL / 1X2", "CARTELLINI", "FALLI", "TIRI"):
+            g = [c for c in good if GROUP[c["stat"]] == grp]
+            out.append(f"- {grp}: " + (txt[id(g[0])][0] if g else "niente con valore"))
+        for lvl in ("CECCHINO", "VALORE"):
+            out += ["", f"## 4. {lvl}", ""]
+            g = [c for c in good if c["lvl"] == lvl]
+            out += [f"- {txt[id(c)][0]}" for c in g] or ["- nessuna"]
+        registro.add([dict(data=day, ora=c["f"]["ora"], campionato=c["f"]["div"], fixture_id=c["f"]["id"],
+                           partita=f"{c['f']['home_api']} - {c['f']['away_api']}", mercato=c["famiglia"],
+                           giocata=txt[id(c)][1], tipo="pre-partita", livello=c["lvl"], quota=c["q"]["best"],
+                           bookmaker=c["q"]["bm"], quota_pinnacle=c["q"].get("pin") or "",
+                           prob_modello=round(c["p"], 3), valore=round(c["valore"], 3), bet_id=c["q"]["bet_id"],
+                           valore_api=c["q"]["value"], esito="", utile="", quota_chiusura_pin="", note="")
+                      for c in good])
+    sus = [c for c in picks if c["lvl"] == "SOSPETTO"]
+    if sus:
+        out += ["", "## Sospetti (NON giocare: troppo belli per essere veri)", ""]
+        out += [f"- {c['f']['home_api']} - {c['f']['away_api']}: "
+                f"{describe(c['stat'], c['sel'], c['f']['home'], c['f']['away'])} @{c['q']['best']:.2f}, "
+                f"modello {c['p']:.0%}: {c['why']}" for c in sus[:15]]
+    out += ["", f"Partite analizzate: {len(priced)}. Richieste API usate oggi: {af.used_today()}."]
     if skipped:
-        L += ["", "Non analizzate: " + "; ".join(skipped)]
-    last = m.date.max().date()
-    L += ["", f"Archivio dati fino al {last}. Una giocata per partita, singole (non multiple). Importo fisso e piccolo."]
-    (out / f"giocate_{date}.md").write_text("\n".join(L))
-    print("\n".join(L))
+        out += ["", "Saltate: " + "; ".join(skipped[:30])]
+    fn = ROOT / "output" / f"giocate_{day}.md"
+    fn.write_text("\n".join(out) + "\n")
+    print("\n".join(out))
 
 
 if __name__ == "__main__":
-    main()
+    main(sys.argv[1:])

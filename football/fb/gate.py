@@ -59,7 +59,9 @@ def selections(stat):
         S += [{"kind": "1x2", "o": o} for o in "HDA"] + [{"kind": "dc", "o": o} for o in ("HD", "HA", "DA")]
         S += [{"kind": "btts", "yes": y} for y in (True, False)] + [{"kind": "oe_tot", "odd": o} for o in (True, False)]
         S += [{"kind": "exact_tot", "n": n, "plus": False} for n in range(0, top + 1)]
+        S += [{"kind": "dnb", "o": o} for o in "HA"]
         if stat == "g":
+            S += [{"kind": "eh", "o": o, "h": h} for o in "HDA" for h in (-2, -1, 1)]
             S += [{"kind": "range_tot", "lo": lo, "hi": hi} for lo, hi in ((1, 2), (1, 3), (2, 3), (2, 4), (3, 4),
                                                                            (1, 4), (2, 5), (3, 5), (4, 6))]
             S += [{"kind": "ah", "o": o, "h": h} for o in "HA" for h in (-1.5, -0.5, 0.5, 1.5)]
@@ -83,6 +85,8 @@ def selections(stat):
     S += [{"kind": "1x2", "o": o} for o in "HDA"] + [{"kind": "dc", "o": o} for o in ("HD", "HA", "DA")]
     S += [{"kind": "ah", "o": o, "h": h} for o in "HA" for h in (-2.5, -1.5, -0.5, 0.5, 1.5, 2.5)]
     S += [{"kind": "oe_tot", "odd": o} for o in (True, False)]
+    S += [{"kind": "dnb", "o": o} for o in "HA"]
+    S += [{"kind": "eh", "o": o, "h": h} for o in "HDA" for h in (-2, -1, 1, 2)]
     if stat == "cor":
         S += [{"kind": "range_tot", "lo": lo, "hi": hi} for lo, hi in ((0, 5), (6, 8), (9, 11), (12, 14), (15, 99))]
     return S
