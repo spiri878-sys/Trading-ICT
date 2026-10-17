@@ -172,3 +172,6 @@ Ogni aggiunta entra solo se nella verifica walk-forward migliora davvero i risul
    apertura e di chiusura di football-data (Pinnacle e Bet365) per misurare se il movimento (quota che scende = soldi su
    quell'esito) migliora le previsioni e i filtri trappola; mostra nella giocata da dove è partita la quota e dove è
    ora ("aperta 1.95, ora 1.78: il mercato va nella nostra direzione" oppure "contro di noi: attenzione").
+12. CALENDARIO E CONTESTO (ultimi dettagli): rientro dalla pausa per le nazionali (giocatori stanchi/infortunati),
+   orario e giorno della partita, altitudine e viaggi lunghi (Sudamerica, coppe), prime e ultime giornate di stagione,
+   partite dopo una sconfitta pesante o un derby. Stessa regola di sempre: entrano solo se migliorano la verifica.
