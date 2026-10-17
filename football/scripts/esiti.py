@@ -12,7 +12,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from fb import apifootball as af  # noqa: E402
 from fb import registro  # noqa: E402
-from fb.data import ROOT  # noqa: E402
+from fb.data import ROOT, matches  # noqa: E402
 from fb.dist import KMAX  # noqa: E402
 from fb.markets import API_BETS, masks, masks_hh, parse  # noqa: E402
 from fb.predict import norm_sel  # noqa: E402
@@ -36,6 +36,27 @@ def counts(fx):
     if "yel" in c:
         r = c.get("red", (0, 0))
         c["crd"] = (c["yel"][0] + 2 * r[0], c["yel"][1] + 2 * r[1])
+    return c
+
+
+def counts_archive(day, home, away):
+    """Conteggi dall'archivio football-data (dopo f0_update): per le giocate prese da odds-api.io."""
+    m = matches()
+    r = m[(m.MatchDate == day) & (m.HomeTeam == home) & (m.AwayTeam == away)]
+    if r.empty:
+        return None
+    r = r.iloc[0]
+    c = {"g": (r.hg, r.ag)}
+    pairs = {"ght": ("HTHome", "HTAway"), "cor": ("HomeCorners", "AwayCorners"), "fou": ("HomeFouls", "AwayFouls"),
+             "sh": ("HomeShots", "AwayShots"), "sot": ("HomeTarget", "AwayTarget"), "yel": ("HomeYellow", "AwayYellow"),
+             "red": ("HomeRed", "AwayRed")}
+    for k, (h, a) in pairs.items():
+        if r[h] == r[h] and r[a] == r[a]:
+            c[k] = (r[h], r[a])
+    if "ght" in c:
+        c["g2h"] = (r.hg - c["ght"][0], r.ag - c["ght"][1])
+    if "yel" in c and "red" in c:
+        c["crd"] = (c["yel"][0] + 2 * c["red"][0], c["yel"][1] + 2 * c["red"][1])
     return c
 
 
@@ -73,6 +94,21 @@ def main(argv):
     r = registro.load()
     open_ = r[(r.esito == "") & (r.fixture_id != "") & (r.tipo == "pre-partita")]
     done = 0
+    for i in open_.index[open_.fixture_id.str.startswith("oa")]:       # giocate odds-api.io: esito dall'archivio
+        note = r.at[i, "note"]
+        if not note.startswith("arch:"):
+            continue
+        home, away = note[5:].split("|")[:2]
+        c = counts_archive(r.at[i, "data"], home, away)
+        o = outcome(r.at[i, "bet_id"], r.at[i, "valore_api"], c) if c else None
+        if o is None:
+            continue
+        w, p = float(o[0]), float(o[1])
+        q = float(r.at[i, "quota"])
+        r.at[i, "esito"] = "VINTA" if w == 1 else "RIMBORSO" if p == 1 else "PERSA" if w == 0 and p == 0 else "MEZZA"
+        r.at[i, "utile"] = f"{w * q + p - 1:+.2f}"
+        done += 1
+    open_ = open_[~open_.fixture_id.str.startswith("oa")]
     for fid in sorted(set(open_.fixture_id)):
         try:
             res = af.get("fixtures", max_age=6 * 3600, id=int(fid))["response"]

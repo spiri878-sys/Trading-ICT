@@ -19,6 +19,12 @@ Branch di lavoro: `claude/gifted-cannon-3ud35m` (commit e push lì, niente PR se
   L'utente deve sistemarlo. Prova: `curl https://v3.football.api-sports.io/status`. Piano gratuito: partite solo
   ieri/oggi/domani, stagioni storiche 2022-2024, quote 1 richiesta per partita, 100 richieste/giorno (tetto 95 nel
   codice, contatore in data/cache/api/contatore.json). MAI scrivere la chiave nel repository o nei log.
+- **Fonte quote alternativa odds-api.io** (`fb/oddsapiio.py`): gratis, 100 richieste/ora (500/giorno), 2 bookmaker
+  (Bet365 + Betfair Exchange come riferimento al posto di Pinnacle), 138 mercati calcio (angoli, cartellini, più
+  tiri/falli...), solo pre-partita. Chiave nella variabile d'ambiente `ODDS_API_IO_KEY` (ambiente "Calcio"): se c'è,
+  `oggi.py` la usa da sola. Al primo uso: `python -c "import sys; sys.path.insert(0,'football'); from fb import
+  oddsapiio as o; print(o.select_books())"` e verifica i nomi delle leghe (`league_div`) e dei mercati sulla risposta
+  vera (DA COLLAUDARE). Esiti delle sue giocate: dall'archivio football-data (dopo `f0_update.py`).
 - Archivio aggiornato al 16/10/2026: 248.059 partite, 38 campionati (22 europei con angoli/tiri/falli/cartellini, 16
   extra solo gol). Pinnacle/media/arbitro da football-data (`data/raw/extra_odds.csv`).
 - `data/raw`, `data/cache`, `models` NON sono nel repository: si ricreano con `bash football/scripts/rebuild_all.sh`

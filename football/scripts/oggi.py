@@ -13,6 +13,7 @@ import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from fb import apifootball as af  # noqa: E402
+from fb import oddsapiio as oa  # noqa: E402
 from fb import registro  # noqa: E402
 from fb.data import ROOT  # noqa: E402
 from fb.picks import (GROUP, MIN_TEAM_N, confidence, describe, level, min_odds, pinnacle_fair,  # noqa: E402
@@ -25,7 +26,41 @@ STAT_FIRST = {"E0", "E1", "E2", "E3", "SC0", "D1", "I1", "SP1", "F1", "N1", "P1"
               "SP2", "F2", "SC1", "SC2", "SC3", "EC"}          # campionati con angoli/falli/tiri nell'archivio
 
 
+def gather_oddsapiio(day):
+    """Fonte odds-api.io: partite del giorno dei campionati coperti e quote (10 partite per richiesta)."""
+    tm = af.load_team_map()
+    ok, skipped = [], []
+    for e in oa.events(day):
+        div = oa.league_div(e.get("league") or {})
+        if div is None:
+            continue
+        h = resolve(f"oa:{e.get('homeId')}", e["home"], div, tm)
+        a = resolve(f"oa:{e.get('awayId')}", e["away"], div, tm)
+        f = {"id": f"oa{e['id']}", "eid": e["id"], "div": div, "date": day, "ora": e["date"][11:16],
+             "kickoff": e["date"], "arbitro": "", "home_api": e["home"], "away_api": e["away"]}
+        if h and a:
+            ok.append(dict(f, home=h, away=a))
+        else:
+            skipped.append(f"{e['home']} - {e['away']} ({div}): nome squadra incerto")
+    odds = oa.odds_multi([f["eid"] for f in ok])
+    priced = []
+    for f in ok:
+        ev = odds.get(f["eid"])
+        bms = oa.to_api_football(ev) if ev else []
+        if not any(b["bets"] for b in bms):
+            skipped.append(f"{f['home_api']} - {f['away_api']}: nessuna quota")
+            continue
+        f["quotes"] = af.quotes(bms)
+        af.snapshot(f["id"], f["quotes"])
+        f["mk"] = af.market_inputs(f["quotes"])
+        f["nbooks"] = len(bms)
+        priced.append(f)
+    return priced, skipped
+
+
 def gather(day, solo_cache, max_q):
+    if oa.available() and not solo_cache:
+        return gather_oddsapiio(day)
     fx = [f for f in af.fixtures(day) if f["stato"] in ("NS", "TBD")]
     tm = af.load_team_map()
     ok, skipped = [], []
@@ -158,7 +193,8 @@ def main(argv):
                            giocata=txt[id(c)][1], tipo="pre-partita", livello=c["lvl"], quota=c["q"]["best"],
                            bookmaker=c["q"]["bm"], quota_pinnacle=c["q"].get("pin") or "",
                            prob_modello=round(c["p"], 3), valore=round(c["valore"], 3), bet_id=c["q"]["bet_id"],
-                           valore_api=c["q"]["value"], esito="", utile="", quota_chiusura_pin="", note="")
+                           valore_api=c["q"]["value"], esito="", utile="", quota_chiusura_pin="",
+                           note=f"arch:{c['f']['home']}|{c['f']['away']}")
                       for c in good])
     sus = [c for c in picks if c["lvl"] == "SOSPETTO"]
     if sus:
@@ -166,7 +202,8 @@ def main(argv):
         out += [f"- {c['f']['home_api']} - {c['f']['away_api']}: "
                 f"{describe(c['stat'], c['sel'], c['f']['home'], c['f']['away'])} @{c['q']['best']:.2f}, "
                 f"modello {c['p']:.0%}: {c['why']}" for c in sus[:15]]
-    out += ["", f"Partite analizzate: {len(priced)}. Richieste API usate oggi: {af.used_today()}."]
+    out += ["", f"Partite analizzate: {len(priced)}. Richieste usate oggi: API-Football {af.used_today()}, "
+            f"odds-api.io {oa.used_today()}."]
     if skipped:
         out += ["", "Saltate: " + "; ".join(skipped[:30])]
     fn = ROOT / "output" / f"giocate_{day}.md"
