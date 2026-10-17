@@ -154,3 +154,10 @@ Ogni aggiunta entra solo se nella verifica walk-forward migliora davvero i risul
    dati mancanti) il messaggio lo dice chiaramente invece di dare giocate incomplete.
 6. MERCATI CON REGOLE DIVERSE: verifica come ogni bookmaker conta angoli/cartellini/falli (tempi supplementari
    esclusi, rosso = 2 gialli o 25 punti, ecc.) e usa la stessa regola nel modello.
+7. TUTTO QUELLO CHE L'API OFFRE, usato come informazione (entra solo se migliora la verifica): scontri diretti (H2H),
+   classifica e distanze (motivazione: titolo, Europa, salvezza, niente da giocarsi), cambio allenatore recente,
+   statistiche di stile (possesso, precisione passaggi, pressing/attacchi), distanza della trasferta, statistiche dei
+   giocatori (marcatori, tiratori, ammoniti abituali, portiere), predizioni e confronto squadre dell'endpoint
+   "predictions" dell'API (solo come informazione in più, mai come risposta).
+8. MERCATI SUI GIOCATORI (marcatore, tiri/tiri in porta del giocatore, ammonizione del giocatore) se l'API ha le
+   quote: modello per giocatore (minuti attesi x ritmo per 90'), stesso cancello di qualità degli altri mercati.
