@@ -21,6 +21,7 @@ from fb.predict import evaluate_quote, predict  # noqa: E402
 from fb.teams import resolve  # noqa: E402
 
 RESERVE = 10                     # richieste lasciate per i risultati di domani
+MAX_DAY, STOP_LOSS, STOP_DAYS = 5, -10.0, 7   # limiti di sicurezza (punto 14.3)
 STAT_FIRST = {"E0", "E1", "E2", "E3", "SC0", "D1", "I1", "SP1", "F1", "N1", "P1", "T1", "B1", "G1", "D2", "I2",
               "SP2", "F2", "SC1", "SC2", "SC3", "EC"}          # campionati con angoli/falli/tiri nell'archivio
 
@@ -104,18 +105,48 @@ def line(c, pred):
             f"Livello {c['lvl']}, fiducia {fiducia}{prov}. Valida pre-partita (in corso: usa live.py). Motivi: {mot}."), g
 
 
+def recent_loss(day):
+    r = registro.load()
+    r = r[r.utile != ""]
+    d = (np.datetime64(day) - r.data.astype("datetime64[D]")).astype(int)
+    return float(r.utile[(d >= 0) & (d < STOP_DAYS)].astype(float).sum())
+
+
 def main(argv):
     day = next((a for a in argv if a[:2] == "20"), str(date.today()))
     solo_cache = "--solo-cache" in argv
     max_q = int(argv[argv.index("--max-quote") + 1]) if "--max-quote" in argv else None
-    priced, skipped = gather(day, solo_cache, max_q)
-    out = [f"# Giocate del {day}", "", "Importi piccoli e fissi (1 unità), solo singole. Nessuna giocata è sicura.", ""]
+    out = [f"# Giocate del {day}", "", "Importi piccoli e fissi (1 unità), solo singole, mai raddoppiare per recuperare. "
+           "Nessuna giocata è sicura.", ""]
+    loss = recent_loss(day)
+    if loss <= STOP_LOSS:
+        out += [f"**PAUSA**: ultimi {STOP_DAYS} giorni {loss:+.1f} unità (limite {STOP_LOSS:+.0f}). "
+                "Oggi nessuna giocata: si riparte quando il bilancio della settimana risale."]
+        print("\n".join(out))
+        (ROOT / "output" / f"giocate_{day}.md").write_text("\n".join(out) + "\n")
+        return
+    try:
+        priced, skipped = gather(day, solo_cache, max_q)
+    except Exception as e:  # noqa: BLE001
+        out += [f"**ERRORE: non riesco a leggere partite/quote dall'API** ({e}). Nessuna giocata oggi: non sono "
+                "in grado di darle complete."]
+        print("\n".join(out))
+        return
+    if any("nome squadra incerto" in x for x in skipped):
+        out += [f"Attenzione: {sum('nome squadra incerto' in x for x in skipped)} partite saltate per nome squadra "
+                "non riconosciuto (elenco in fondo).", ""]
+    if any("richieste API finite" in x for x in skipped):
+        out += ["Attenzione: richieste API del giorno finite, alcune partite non sono state analizzate.", ""]
     picks = []
     if priced:
         pred = predict([dict(div=f["div"], date=day, home=f["home"], away=f["away"], arbitro=f["arbitro"],
                              mk=f["mk"]) for f in priced])
         picks, scartate = choose(priced, pred)
     good = sorted([c for c in picks if c["lvl"] != "SOSPETTO"], key=lambda c: -c["valore"])
+    if len(good) > MAX_DAY:                       # al massimo 5: prima i CECCHINO, poi per valore
+        keep = sorted(good, key=lambda c: (c["lvl"] != "CECCHINO", -c["valore"]))[:MAX_DAY]
+        good = [c for c in good if any(c is k for k in keep)]
+        out += [f"(Limite di sicurezza: mostrate le migliori {MAX_DAY} giocate.)", ""]
     if not good:
         out.append("**Oggi nessuna giocata con valore.** Non forzare.")
     else:
