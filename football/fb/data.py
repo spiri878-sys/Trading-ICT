@@ -36,6 +36,10 @@ def matches() -> pd.DataFrame:
         m = pd.concat([m, r], ignore_index=True)
     m["HomeTeam"] = m.HomeTeam.replace(ALIAS)
     m["AwayTeam"] = m.AwayTeam.replace(ALIAS)
+    extra = RAW / "extra_odds.csv"              # Pinnacle, media mercato, arbitro (scripts/f0_odds.py)
+    if extra.exists():
+        e = pd.read_csv(extra, low_memory=False)
+        m = m.merge(e, how="left", on=["Division", "MatchDate", "HomeTeam", "AwayTeam"])
     m["date"] = pd.to_datetime(m.MatchDate)
     m = m[[c for c in m.columns if not c.startswith("C_")]]
     m = m.dropna(subset=["FTHome", "FTAway"]).copy()
