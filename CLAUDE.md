@@ -16,6 +16,13 @@ Branch di lavoro: `claude/gifted-cannon-3ud35m` (commit e push lì, niente PR se
   costruire modelli come per gli angoli, validati walk-forward e calibrati, PRIMA di proporli). Una classifica unica per
   valore, con livelli CECCHINO/VALORE; per ogni mercato nuovo misurare prima calibrazione e frequenze sul passato.
 
+## Filtro "trappole" (richiesto dall'utente)
+- Valore troppo alto (> ~25%) = di solito il modello non sa qualcosa (infortuni, turnover, motivazioni, dati vecchi):
+  segnalarlo come SOSPETTO, non come top. Verificare sul passato se le giocate con valore molto alto rendono davvero.
+- Escludere partite con dati della squadra scarsi (poche partite recenti, neopromosse, squadre nuove nell'archivio).
+- Se possibile controllare formazioni/infortuni dall'API (endpoint injuries/lineups) prima di confermare la top.
+- Misurare sul registro la resa per fascia di valore e per mercato, e restringere i filtri dove si perde.
+
 ## Stato attuale (17/10/2026)
 - Archivio partite: `football/data/raw/Matches.csv` (fonte e hash in `football/data/manifest.json`), FINISCE il
   2026-09-03. Da aggiornare con football-data.co.uk (CSV stagione 2627, es. mmz4281/2627/I1.csv) o con API-Football.
