@@ -1,0 +1,7 @@
+data,partita,giocata,tipo,quota,prob_modello,esito,note
+2026-10-17,Man City - Ipswich,Ipswich Over 2.5 angoli,live ~17',2.10,0.55,VINTA,"proposta a 0-0 angoli; al 30' senza angoli Ipswich era diventata senza valore"
+2026-10-17,Fulham - Hull,Fulham Over 8.5 angoli,live ~17' (Fulham 4),1.90,0.61,,
+2026-10-17,Brentford - Liverpool,Brentford Over 6.5 angoli,live ~17' (Brentford 3),2.05,0.55,,
+2026-10-17,Villarreal - Elche,Elche Over 2.5 angoli,live ~15' (0-0),1.65,0.67,,
+2026-10-17,Villarreal - Elche,Villarreal Under 5.5 angoli,live ~15' (0-0),1.70,0.69,,
+2026-10-17,Bologna - Inter,Inter Under 5.5 angoli,pre-partita,1.72,0.658,,
