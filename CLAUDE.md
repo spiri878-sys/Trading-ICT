@@ -16,6 +16,12 @@ Branch di lavoro: `claude/gifted-cannon-3ud35m` (commit e push lì, niente PR se
   costruire modelli come per gli angoli, validati walk-forward e calibrati, PRIMA di proporli). Una classifica unica per
   valore, con livelli CECCHINO/VALORE; per ogni mercato nuovo misurare prima calibrazione e frequenze sul passato.
 
+## Live (richiesto dall'utente)
+- Per partite già analizzate pre-partita e ora in corso: aggiornare le probabilità col minuto e le statistiche live
+  (angoli, cartellini, gol, espulsioni) da API-Football (fixtures?live=all, fixtures/statistics) e confrontarle con le
+  quote live (odds/live, se il piano lo consente). Metodo usato a mano il 17/10: media pre-partita x frazione di tempo
+  restante (+ ritmo osservato con peso moderato), binomiale negativa per i conteggi rimanenti.
+
 ## Filtro "trappole" (richiesto dall'utente)
 - Valore troppo alto (> ~25%) = di solito il modello non sa qualcosa (infortuni, turnover, motivazioni, dati vecchi):
   segnalarlo come SOSPETTO, non come top. Verificare sul passato se le giocate con valore molto alto rendono davvero.
