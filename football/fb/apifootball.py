@@ -1,6 +1,6 @@
 """Client minimo per API-Football (api-sports.io, v3): partite del giorno e quote angoli.
 
-La chiave si legge SOLO dalla variabile d'ambiente API_FOOTBALL_KEY (mai scritta nel codice o nel repository).
+La chiave si legge dalla variabile d'ambiente API_FOOTBALL_KEY oppure la inserisce il proxy come segreto di rete (mai scritta nel codice o nel repository).
 Le risposte vengono salvate in football/data/cache/api/ per non sprecare richieste (piano gratuito: ~100 al giorno).
 """
 import difflib
@@ -22,15 +22,13 @@ DIV_OF = {v: k for k, v in LEAGUES.items()}
 
 
 def get(path, **params):
-    key = os.environ.get("API_FOOTBALL_KEY")
-    if not key:
-        raise RuntimeError("manca la variabile d'ambiente API_FOOTBALL_KEY")
+    key = os.environ.get("API_FOOTBALL_KEY")   # se assente, la chiave la aggiunge il proxy (segreto di rete)
     API_CACHE.mkdir(parents=True, exist_ok=True)
     qs = urllib.parse.urlencode(sorted(params.items()))
     fn = API_CACHE / (path.strip("/").replace("/", "_") + ("_" + qs.replace("&", "_").replace("=", "-") if qs else "") + ".json")
     if fn.exists() and time.time() - fn.stat().st_mtime < 3 * 3600:
         return json.loads(fn.read_text())
-    req = urllib.request.Request(f"{BASE}/{path.strip('/')}?{qs}", headers={"x-apisports-key": key})
+    req = urllib.request.Request(f"{BASE}/{path.strip('/')}?{qs}", headers={"x-apisports-key": key} if key else {})
     with urllib.request.urlopen(req, timeout=30) as r:
         data = json.loads(r.read())
     if data.get("errors"):
