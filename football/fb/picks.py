@@ -50,7 +50,8 @@ def level(e, q, fair, counts_ok):
         return None, "quota < 1.30"
     if e["valore"] > MAXV:
         return "SOSPETTO", "valore > 25%"
-    if fair is not None and abs(e["p"] - fair) > MAX_PIN_GAP:
+    p_cmp = e["p"] / max(1 - e["p_push"], 1e-6)          # come Pinnacle: probabilità escluso il rimborso
+    if fair is not None and abs(p_cmp - fair) > MAX_PIN_GAP:
         return "SOSPETTO", f"lontano da Pinnacle ({fair:.0%})"
     extra = 0 if e["famiglia"] in PROVEN else STRICT
     for lvl, (pmin, vmin) in RULES.items():

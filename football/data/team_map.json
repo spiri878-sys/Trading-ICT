@@ -1,4 +1,452 @@
 {
+ "1028": {
+  "api": "Ried",
+  "auto": false,
+  "div": "AUT",
+  "name": "Ried",
+  "score": 1.0
+ },
+ "104": {
+  "api": "RED Star FC 93",
+  "auto": true,
+  "div": "F2",
+  "name": "Red Star",
+  "score": 0.95
+ },
+ "106": {
+  "api": "Stade Brestois 29",
+  "auto": false,
+  "div": "F1",
+  "name": "Brest",
+  "score": 1.0
+ },
+ "1062": {
+  "api": "Atletico-MG",
+  "auto": false,
+  "div": "BRA",
+  "name": "Atletico-MG",
+  "score": 1.0
+ },
+ "1063": {
+  "api": "Saint Etienne",
+  "auto": false,
+  "div": "F2",
+  "name": "St Etienne",
+  "score": 1.0
+ },
+ "1064": {
+  "api": "Platense",
+  "auto": false,
+  "div": "ARG",
+  "name": "Platense",
+  "score": 1.0
+ },
+ "1066": {
+  "api": "Gimnasia M.",
+  "auto": true,
+  "div": "ARG",
+  "name": "Gimnasia Mendoza",
+  "score": 0.95
+ },
+ "110": {
+  "api": "Estac Troyes",
+  "auto": false,
+  "div": "F1",
+  "name": "Troyes",
+  "score": 1.0
+ },
+ "116": {
+  "api": "Lens",
+  "auto": false,
+  "div": "F1",
+  "name": "Lens",
+  "score": 1.0
+ },
+ "120": {
+  "api": "Botafogo",
+  "auto": true,
+  "div": "BRA",
+  "name": "Botafogo RJ",
+  "score": 0.95
+ },
+ "121": {
+  "api": "Palmeiras",
+  "auto": false,
+  "div": "BRA",
+  "name": "Palmeiras",
+  "score": 1.0
+ },
+ "132": {
+  "api": "Chapecoense-sc",
+  "auto": true,
+  "div": "BRA",
+  "name": "Chapecoense-SC",
+  "score": 0.99
+ },
+ "134": {
+  "api": "Atletico Paranaense",
+  "auto": false,
+  "div": "BRA",
+  "name": "Athletico-PR",
+  "score": 1.0
+ },
+ "147": {
+  "api": "Coritiba",
+  "auto": false,
+  "div": "BRA",
+  "name": "Coritiba",
+  "score": 1.0
+ },
+ "157": {
+  "api": "Bayern München",
+  "auto": false,
+  "div": "D1",
+  "name": "Bayern Munich",
+  "score": 1.0
+ },
+ "1598": {
+  "api": "Orlando City SC",
+  "auto": true,
+  "div": "USA",
+  "name": "Orlando City",
+  "score": 0.99
+ },
+ "1599": {
+  "api": "Philadelphia Union",
+  "auto": false,
+  "div": "USA",
+  "name": "Philadelphia Union",
+  "score": 1.0
+ },
+ "1601": {
+  "api": "Toronto FC",
+  "auto": false,
+  "div": "USA",
+  "name": "Toronto FC",
+  "score": 1.0
+ },
+ "1602": {
+  "api": "New York Red Bulls",
+  "auto": false,
+  "div": "USA",
+  "name": "New York Red Bulls",
+  "score": 1.0
+ },
+ "1604": {
+  "api": "New York City FC",
+  "auto": true,
+  "div": "USA",
+  "name": "New York City",
+  "score": 0.99
+ },
+ "1607": {
+  "api": "Chicago Fire",
+  "auto": false,
+  "div": "USA",
+  "name": "Chicago Fire",
+  "score": 1.0
+ },
+ "1608": {
+  "api": "Atlanta United FC",
+  "auto": true,
+  "div": "USA",
+  "name": "Atlanta Utd",
+  "score": 0.95
+ },
+ "1609": {
+  "api": "New England Revolution",
+  "auto": false,
+  "div": "USA",
+  "name": "New England Revolution",
+  "score": 1.0
+ },
+ "1612": {
+  "api": "Minnesota United FC",
+  "auto": true,
+  "div": "USA",
+  "name": "Minnesota United",
+  "score": 0.99
+ },
+ "1615": {
+  "api": "DC United",
+  "auto": false,
+  "div": "USA",
+  "name": "DC United",
+  "score": 1.0
+ },
+ "1616": {
+  "api": "Los Angeles FC",
+  "auto": false,
+  "div": "USA",
+  "name": "Los Angeles FC",
+  "score": 1.0
+ },
+ "166": {
+  "api": "Hannover 96",
+  "auto": true,
+  "div": "D2",
+  "name": "Hannover",
+  "score": 0.95
+ },
+ "1693": {
+  "api": "Mantova",
+  "auto": false,
+  "div": "I2",
+  "name": "Mantova",
+  "score": 1.0
+ },
+ "173": {
+  "api": "RB Leipzig",
+  "auto": false,
+  "div": "D1",
+  "name": "RB Leipzig",
+  "score": 1.0
+ },
+ "18310": {
+  "api": "Charlotte",
+  "auto": false,
+  "div": "USA",
+  "name": "Charlotte",
+  "score": 1.0
+ },
+ "186": {
+  "api": "FC St. Pauli",
+  "auto": true,
+  "div": "D2",
+  "name": "St Pauli",
+  "score": 0.99
+ },
+ "195": {
+  "api": "Willem II",
+  "auto": false,
+  "div": "N1",
+  "name": "Willem II",
+  "score": 1.0
+ },
+ "20034": {
+  "api": "Corvinul Hunedoara",
+  "auto": true,
+  "div": "ROM",
+  "name": "Corvinul",
+  "score": 0.95
+ },
+ "20787": {
+  "api": "St. Louis City",
+  "auto": false,
+  "div": "USA",
+  "name": "St. Louis City",
+  "score": 1.0
+ },
+ "209": {
+  "api": "Feyenoord",
+  "auto": false,
+  "div": "N1",
+  "name": "Feyenoord",
+  "score": 1.0
+ },
+ "2149": {
+  "api": "Fredrikstad",
+  "auto": false,
+  "div": "NOR",
+  "name": "Fredrikstad",
+  "score": 1.0
+ },
+ "2278": {
+  "api": "Guadalajara Chivas",
+  "auto": false,
+  "div": "MEX",
+  "name": "Guadalajara Chivas",
+  "score": 1.0
+ },
+ "2279": {
+  "api": "Tigres UANL",
+  "auto": false,
+  "div": "MEX",
+  "name": "Tigres UANL",
+  "score": 1.0
+ },
+ "2285": {
+  "api": "Santos Laguna",
+  "auto": false,
+  "div": "MEX",
+  "name": "Santos Laguna",
+  "score": 1.0
+ },
+ "2290": {
+  "api": "Club Queretaro",
+  "auto": true,
+  "div": "MEX",
+  "name": "Queretaro",
+  "score": 0.99
+ },
+ "248": {
+  "api": "Hamilton Academical",
+  "auto": true,
+  "div": "SC2",
+  "name": "Hamilton",
+  "score": 0.95
+ },
+ "253": {
+  "api": "Dundee",
+  "auto": false,
+  "div": "SC0",
+  "name": "Dundee",
+  "score": 1.0
+ },
+ "257": {
+  "api": "Rangers",
+  "auto": false,
+  "div": "SC0",
+  "name": "Rangers",
+  "score": 1.0
+ },
+ "339": {
+  "api": "Legia Warszawa",
+  "auto": true,
+  "div": "POL",
+  "name": "Legia",
+  "score": 0.95
+ },
+ "34": {
+  "api": "Newcastle",
+  "auto": false,
+  "div": "E0",
+  "name": "Newcastle",
+  "score": 1.0
+ },
+ "348": {
+  "api": "Pogon Szczecin",
+  "auto": false,
+  "div": "POL",
+  "name": "Pogon Szczecin",
+  "score": 1.0
+ },
+ "3484": {
+  "api": "GKS Katowice",
+  "auto": false,
+  "div": "POL",
+  "name": "GKS Katowice",
+  "score": 1.0
+ },
+ "350": {
+  "api": "Cracovia Krakow",
+  "auto": true,
+  "div": "POL",
+  "name": "Cracovia",
+  "score": 0.95
+ },
+ "366": {
+  "api": "IFK Goteborg",
+  "auto": true,
+  "div": "SWE",
+  "name": "Goteborg",
+  "score": 0.95
+ },
+ "377": {
+  "api": "AIK Stockholm",
+  "auto": true,
+  "div": "SWE",
+  "name": "AIK",
+  "score": 0.95
+ },
+ "3842": {
+  "api": "Sligo Rovers",
+  "auto": false,
+  "div": "IRL",
+  "name": "Sligo Rovers",
+  "score": 1.0
+ },
+ "426": {
+  "api": "Sparta Rotterdam",
+  "auto": false,
+  "div": "N1",
+  "name": "Sparta Rotterdam",
+  "score": 1.0
+ },
+ "427": {
+  "api": "Telstar",
+  "auto": false,
+  "div": "N1",
+  "name": "Telstar",
+  "score": 1.0
+ },
+ "437": {
+  "api": "Rosario Central",
+  "auto": false,
+  "div": "ARG",
+  "name": "Rosario Central",
+  "score": 1.0
+ },
+ "438": {
+  "api": "Velez Sarsfield",
+  "auto": false,
+  "div": "ARG",
+  "name": "Velez Sarsfield",
+  "score": 1.0
+ },
+ "446": {
+  "api": "Lanus",
+  "auto": false,
+  "div": "ARG",
+  "name": "Lanus",
+  "score": 1.0
+ },
+ "449": {
+  "api": "Banfield",
+  "auto": false,
+  "div": "ARG",
+  "name": "Banfield",
+  "score": 1.0
+ },
+ "452": {
+  "api": "Tigre",
+  "auto": false,
+  "div": "ARG",
+  "name": "Tigre",
+  "score": 1.0
+ },
+ "455": {
+  "api": "Atletico Tucuman",
+  "auto": true,
+  "div": "ARG",
+  "name": "Atl. Tucuman",
+  "score": 0.95
+ },
+ "458": {
+  "api": "Argentinos JRS",
+  "auto": true,
+  "div": "ARG",
+  "name": "Argentinos Jrs",
+  "score": 0.99
+ },
+ "4668": {
+  "api": "Airdrie United",
+  "auto": true,
+  "div": "SC2",
+  "name": "Airdrie Utd",
+  "score": 0.95
+ },
+ "473": {
+  "api": "Independ. Rivadavia",
+  "auto": false,
+  "div": "ARG",
+  "name": "Ind. Rivadavia",
+  "score": 1.0
+ },
+ "495": {
+  "api": "Genoa",
+  "auto": false,
+  "div": "I1",
+  "name": "Genoa",
+  "score": 1.0
+ },
+ "497": {
+  "api": "AS Roma",
+  "auto": false,
+  "div": "I1",
+  "name": "Roma",
+  "score": 1.0
+ },
  "500": {
   "api": "Bologna",
   "auto": false,
@@ -11,6 +459,174 @@
   "auto": false,
   "div": "I1",
   "name": "Inter",
+  "score": 1.0
+ },
+ "520": {
+  "api": "Cremonese",
+  "auto": false,
+  "div": "I2",
+  "name": "Cremonese",
+  "score": 1.0
+ },
+ "522": {
+  "api": "Palermo",
+  "auto": false,
+  "div": "I2",
+  "name": "Palermo",
+  "score": 1.0
+ },
+ "5254": {
+  "api": "Castellón",
+  "auto": true,
+  "div": "SP2",
+  "name": "Castellon",
+  "score": 0.99
+ },
+ "529": {
+  "api": "Barcelona",
+  "auto": false,
+  "div": "SP1",
+  "name": "Barcelona",
+  "score": 1.0
+ },
+ "531": {
+  "api": "Athletic Club",
+  "auto": false,
+  "div": "SP1",
+  "name": "Ath Bilbao",
+  "score": 1.0
+ },
+ "532": {
+  "api": "Valencia",
+  "auto": false,
+  "div": "SP1",
+  "name": "Valencia",
+  "score": 1.0
+ },
+ "534": {
+  "api": "Las Palmas",
+  "auto": false,
+  "div": "SP2",
+  "name": "Las Palmas",
+  "score": 1.0
+ },
+ "543": {
+  "api": "Real Betis",
+  "auto": false,
+  "div": "SP1",
+  "name": "Betis",
+  "score": 1.0
+ },
+ "584": {
+  "api": "Dundalk",
+  "auto": false,
+  "div": "IRL",
+  "name": "Dundalk",
+  "score": 1.0
+ },
+ "597": {
+  "api": "Lokomotiv",
+  "auto": true,
+  "div": "RUS",
+  "name": "Lokomotiv Moscow",
+  "score": 0.95
+ },
+ "601": {
+  "api": "Austria Vienna",
+  "auto": false,
+  "div": "AUT",
+  "name": "Austria Vienna",
+  "score": 1.0
+ },
+ "611": {
+  "api": "Fenerbahçe",
+  "auto": true,
+  "div": "T1",
+  "name": "Fenerbahce",
+  "score": 0.99
+ },
+ "621": {
+  "api": "FC Krasnodar",
+  "auto": true,
+  "div": "RUS",
+  "name": "Krasnodar",
+  "score": 0.99
+ },
+ "6231": {
+  "api": "Rapid",
+  "auto": true,
+  "div": "ROM",
+  "name": "FC Rapid Bucuresti",
+  "score": 0.95
+ },
+ "66": {
+  "api": "Aston Villa",
+  "auto": false,
+  "div": "E0",
+  "name": "Aston Villa",
+  "score": 1.0
+ },
+ "722": {
+  "api": "Albacete",
+  "auto": false,
+  "div": "SP2",
+  "name": "Albacete",
+  "score": 1.0
+ },
+ "731": {
+  "api": "Sporting Gijon",
+  "auto": true,
+  "div": "SP2",
+  "name": "Sp Gijon",
+  "score": 0.95
+ },
+ "759": {
+  "api": "Viking",
+  "auto": false,
+  "div": "NOR",
+  "name": "Viking",
+  "score": 1.0
+ },
+ "79": {
+  "api": "Lille",
+  "auto": false,
+  "div": "F1",
+  "name": "Lille",
+  "score": 1.0
+ },
+ "801": {
+  "api": "Pisa",
+  "auto": false,
+  "div": "I2",
+  "name": "Pisa",
+  "score": 1.0
+ },
+ "85": {
+  "api": "Paris Saint Germain",
+  "auto": false,
+  "div": "F1",
+  "name": "Paris SG",
+  "score": 1.0
+ },
+ "95": {
+  "api": "Strasbourg",
+  "auto": false,
+  "div": "F1",
+  "name": "Strasbourg",
+  "score": 1.0
+ },
+ "9568": {
+  "api": "Inter Miami",
+  "auto": false,
+  "div": "USA",
+  "name": "Inter Miami",
+  "score": 1.0
+ },
+ "996": {
+  "api": "Alanyaspor",
+  "auto": false,
+  "div": "T1",
+  "name": "Alanyaspor",
   "score": 1.0
  }
 }

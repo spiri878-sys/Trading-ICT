@@ -2,6 +2,7 @@
 
 Colonne: chiave unica = fixture_id + giocata. esito: VINTA / PERSA / RIMBORSO / MEZZA (linee a quarti; vuoto = da verificare).
 """
+import numpy as np
 import pandas as pd
 
 from .data import ROOT
@@ -49,7 +50,9 @@ def summary(r=None):
     s = r[r.esito.isin(["VINTA", "PERSA", "RIMBORSO", "MEZZA"])].copy()
     if s.empty:
         return "Nessuna giocata chiusa nel registro."
-    s["utile"] = s.utile.astype(float)
+    q = pd.to_numeric(s.quota, errors="coerce")
+    calc = np.where(s.esito == "VINTA", q - 1, np.where(s.esito == "PERSA", -1.0, 0.0))
+    s["utile"] = pd.to_numeric(s.utile, errors="coerce").fillna(pd.Series(calc, index=s.index))
     for c in ("mercato", "livello", "campionato", "tipo"):
         s[c] = s[c].replace("", "n.d.")
     s["v"] = pd.to_numeric(s.valore, errors="coerce")
