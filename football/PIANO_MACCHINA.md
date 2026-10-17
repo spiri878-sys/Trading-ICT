@@ -175,3 +175,7 @@ Ogni aggiunta entra solo se nella verifica walk-forward migliora davvero i risul
 12. CALENDARIO E CONTESTO (ultimi dettagli): rientro dalla pausa per le nazionali (giocatori stanchi/infortunati),
    orario e giorno della partita, altitudine e viaggi lunghi (Sudamerica, coppe), prime e ultime giornate di stagione,
    partite dopo una sconfitta pesante o un derby. Stessa regola di sempre: entrano solo se migliorano la verifica.
+13. FORMAZIONI UFFICIALI E ASSENZE (ricontrollo obbligatorio): quando escono le formazioni (~60 min prima), ricontrolla
+   ogni giocata proposta: titolari attesi vs reali (quanti cambi = turnover), giocatori chiave assenti pesati per
+   importanza (punto 13), modulo cambiato (es. difesa a 3 invece di 4, attaccante in meno), portiere di riserva.
+   Ricalcola le probabilità e manda un AGGIORNAMENTO: "confermata", "valore sceso: salta" o "nuova giocata migliore".
