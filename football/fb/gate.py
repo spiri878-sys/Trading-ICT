@@ -113,10 +113,33 @@ def label(stat, sel):
     return f"{stat} {sel['kind']} " + " ".join(keys)
 
 
+class Calibrator:
+    """Calibrazione robusta: fasce per quantili (>= min_n casi ciascuna), media prevista vs frequenza, resa monotona
+    (isotonica sulle fasce) e interpolata. Fuori dalle fasce estreme: solo lo spostamento della fascia estrema."""
+
+    def __init__(self, p, y, min_n=1000, max_bins=60):
+        p, y = np.asarray(p, float), np.asarray(y, float)
+        nb = int(np.clip(len(p) // min_n, 2, max_bins))
+        q = np.quantile(p, np.linspace(0, 1, nb + 1))
+        idx = np.clip(np.searchsorted(q, p, side="right") - 1, 0, nb - 1)
+        cnt = np.bincount(idx, minlength=nb)
+        ok = cnt > 0
+        xp = (np.bincount(idx, p, nb)[ok] / cnt[ok])
+        yp = (np.bincount(idx, y, nb)[ok] / cnt[ok])
+        ir = IsotonicRegression(out_of_bounds="clip").fit(xp, yp, sample_weight=cnt[ok])
+        self.x, self.y = xp, ir.predict(xp)
+
+    def predict(self, p):
+        p = np.asarray(p, float)
+        out = np.interp(p, self.x, self.y)
+        lo, hi = p < self.x[0], p > self.x[-1]
+        out[lo] = p[lo] + (self.y[0] - self.x[0])
+        out[hi] = p[hi] + (self.y[-1] - self.x[-1])
+        return np.clip(out, 1e-3, 1 - 1e-3)
+
+
 def calibrator(p, y):
-    ir = IsotonicRegression(out_of_bounds="clip", y_min=1e-3, y_max=1 - 1e-3)
-    ir.fit(p, y)
-    return ir
+    return Calibrator(p, y)
 
 
 def ece(p, y, bins=10):

@@ -114,7 +114,9 @@ def evaluate(stat, m):
                    brier_media=brier(b, o), ece=ece(p, o), ece_grezza=ece(praw, o), stab=float(np.mean(wins)),
                    n70=int(top.sum()), p70=float(p[top].mean()) if top.any() else np.nan,
                    f70=float(o[top].mean()) if top.any() else np.nan)
-        ok_top = row["n70"] < 200 or row["f70"] >= row["p70"] - GATE["top_gap"]
+        # fascia alta (>= 70%): la frequenza reale non deve stare sotto la prevista oltre il caso (2 errori standard)
+        se = np.sqrt(row["p70"] * (1 - row["p70"]) / max(row["n70"], 1)) if top.any() else 0
+        ok_top = row["n70"] < 30 or row["f70"] >= row["p70"] - max(GATE["top_gap"], 2 * se)
         row["skill"] = 1 - row["ll"] / row["ll_media"]
         row["ammesso"] = bool(row["ece"] <= GATE["ece"] and ok_top and row["skill"] >= GATE["skill"]
                               and row["brier"] < row["brier_media"] and row["stab"] >= GATE["stab"])
