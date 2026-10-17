@@ -75,6 +75,10 @@ def predict_fixtures(fixtures):
     f1 = pd.DataFrame({"lh": lh, "la": la})
     X = build(allm, f1)
     X["div_code"] = pd.Categorical(allm.Division, categories=meta["div_categories"]).codes
+    XC = None
+    if "cor6" in meta:   # modelli angoli F6
+        from .corners import corner_feats, market_feats
+        XC = pd.concat([X, corner_feats(allm), market_feats(allm, X)], axis=1)
     out = []
     for i in idx:
         has_mk = np.isfinite(X.loc[i, "mk_1"])
@@ -103,6 +107,12 @@ def predict_fixtures(fixtures):
             mh = float(lgb.Booster(model_file=str(MODELS / f"{fam}_h.txt")).predict(xc)[0])
             ma = float(lgb.Booster(model_file=str(MODELS / f"{fam}_a.txt")).predict(xc)[0])
             res[f"{fam}_attesi"] = {"casa": mh, "ospite": ma, "k": meta["dispersion"][fam]}
+        if XC is not None:
+            xa = XC.loc[[i], meta["cor6"]["features"]]
+            mh, ma, mt = (float(lgb.Booster(model_file=str(MODELS / f"cor6_{k}.txt")).predict(xa)[0])
+                          for k in ("h", "a", "tot"))
+            tot = (mh + ma + mt) / 2
+            res["cor_attesi"] = {"casa": tot * mh / (mh + ma), "ospite": tot * ma / (mh + ma), "k": meta["cor6"]["k"]}
         res["contesto"] = {k: (None if not np.isfinite(X.loc[i, k]) else round(float(X.loc[i, k]), 2)) for k in
                            ("elo_h", "elo_a", "h_g_f_m5", "h_g_a_m5", "a_g_f_m5", "a_g_a_m5", "h_sot_f_m5", "a_sot_f_m5",
                             "h_cor_f_m5", "a_cor_f_m5", "h_pts_m5", "a_pts_m5", "h_rest_days", "a_rest_days",
