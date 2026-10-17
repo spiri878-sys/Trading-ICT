@@ -68,7 +68,7 @@ def build_state(m: pd.DataFrame) -> pd.DataFrame:
             first = ok & (lgn[d] == 0)                    # primo dato del campionato per questa statistica
             lgh[d][first], lga[d][first] = xh[first], xa[first]
             lmu[d][first] = np.log(np.maximum((xh[first] + xa[first]) / 2, 0.1))
-            lmu[d] += LR_LG * (rh + ra) / 2
+            lmu[d] = np.clip(lmu[d] + LR_LG * (rh + ra) / 2, -3, 4)
             lhome[d] += LR_LG * (rh - ra) / 2
             lgn[d][ok] += 1
             a_lg = np.maximum(A_LG, 1 / (lgn[d] + 1))[ok]   # all'inizio media semplice, poi esponenziale
@@ -152,11 +152,13 @@ def build_state(m: pd.DataFrame) -> pd.DataFrame:
             tt.n += 1
             tt.last = t
             tt.dates.append(t)
-        rh = np.where(ok, (np.nan_to_num(xh) - eh) / np.maximum(eh, 1e-6), 0)
-        ra = np.where(ok, (np.nan_to_num(xa) - ea) / np.maximum(ea, 1e-6), 0)
-        th.att += LR * rh
-        ta.dif -= LR * rh
-        ta.att += LR * ra
-        th.dif -= LR * ra
+        # errore in unità della media del campionato (stabile anche per eventi rari come i rossi)
+        scale = np.maximum((lgh[d] + lga[d]) / 2, 0.3)
+        rh = np.where(ok, (np.nan_to_num(xh) - eh) / scale, 0)
+        ra = np.where(ok, (np.nan_to_num(xa) - ea) / scale, 0)
+        for tt_, arr, sgn, r_ in ((th, "att", 1, rh), (ta, "dif", -1, rh), (ta, "att", 1, ra), (th, "dif", -1, ra)):
+            v = getattr(tt_, arr)
+            v += sgn * LR * r_
+            np.clip(v, -1.5, 1.5, out=v)
         pending.append((d, ssn, H[k], A[k], xh, xa, ok, rh, ra))
     return pd.DataFrame(out, columns=cols, index=m.index)
