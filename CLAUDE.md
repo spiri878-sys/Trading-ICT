@@ -3,6 +3,7 @@
 L'utente scrive in italiano, dal telefono. Vuole risposte dirette e pratiche, senza farlo lavorare: le cose le fai tu.
 Il lavoro attivo è il progetto **calcio** (`football/`). Il progetto trading (oro, `python/`, `mql5/`) è in pausa.
 Branch di lavoro: `claude/gifted-cannon-3ud35m` (commit e push lì, niente PR se non chiesta).
+Piano completo da eseguire: `football/PIANO_MACCHINA.md` (vale più delle note sotto se in conflitto).
 
 ## Cosa vuole l'utente (calcio)
 - Ogni giorno, PRE-PARTITA, **la giocata top**: in primo luogo sugli **angoli** (totali, casa, ospite, Over/Under),
