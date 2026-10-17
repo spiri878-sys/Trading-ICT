@@ -120,6 +120,11 @@ def finish(stat, sels, P, O, B, yrs, index):
                    brier_media=brier(b, o), ece=ece(p, o), ece_grezza=ece(praw, o), stab=float(np.mean(wins)),
                    n70=int(top.sum()), p70=float(p[top].mean()) if top.any() else np.nan,
                    f70=float(o[top].mean()) if top.any() else np.nan)
+        for a, b in ((0.70, 0.75), (0.75, 0.80), (0.80, 1.01)):          # fasce per la soglia migliore (14.9)
+            bnd = (p >= a) & (p < b)
+            row[f"n{a * 100:.0f}"] = int(bnd.sum())
+            row[f"pv{a * 100:.0f}"] = float(p[bnd].mean()) if bnd.any() else np.nan
+            row[f"fv{a * 100:.0f}"] = float(o[bnd].mean()) if bnd.any() else np.nan
         # fascia alta (>= 70%): la frequenza reale non deve stare sotto la prevista oltre il caso (2 errori standard)
         se = np.sqrt(row["p70"] * (1 - row["p70"]) / max(row["n70"], 1)) if top.any() else 0
         ok_top = row["n70"] < 30 or row["f70"] >= row["p70"] - max(GATE["top_gap"], 2 * se)

@@ -139,7 +139,7 @@ def main(argv):
         for grp in ("GOL / 1X2", "CARTELLINI", "FALLI", "TIRI"):
             g = [c for c in good if GROUP[c["stat"]] == grp]
             out.append(f"- {grp}: " + (txt[id(g[0])][0] if g else "niente con valore"))
-        for lvl in ("CECCHINO", "VALORE"):
+        for lvl in ("SUPER CECCHINO", "CECCHINO", "VALORE"):
             out += ["", f"## 4. {lvl}", ""]
             g = [c for c in good if c["lvl"] == lvl]
             out += [f"- {txt[id(c)][0]}" for c in g] or ["- nessuna"]

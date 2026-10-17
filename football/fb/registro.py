@@ -54,13 +54,19 @@ def summary(r=None):
         s[c] = s[c].replace("", "n.d.")
     s["v"] = pd.to_numeric(s.valore, errors="coerce")
     s["fascia"] = pd.cut(s.v, [-1, 0.05, 0.08, 0.15, 1], labels=["<5%", "5-8%", "8-15%", ">15%"])
+    s["fascia_p"] = pd.cut(pd.to_numeric(s.prob_modello, errors="coerce"), [0, 0.70, 0.75, 0.80, 1.01],
+                           labels=["<70%", "70-75%", "75-80%", ">=80%"], right=False)
     lines = [f"**Totale**: {len(s)} giocate, vinte {(s.esito == 'VINTA').mean():.0%}, "
              f"utile {s.utile.sum():+.2f} u, ROI {s.utile.mean():+.1%}"]
     for col, name in (("mercato", "mercato"), ("livello", "livello"), ("campionato", "campionato"),
-                      ("fascia", "fascia di valore"), ("tipo", "tipo")):
-        g = s.groupby(col, observed=True).utile.agg(["size", "sum", "mean"])
-        g = g[g["size"] > 0]
+                      ("fascia", "fascia di valore"), ("fascia_p", "fascia di probabilità"), ("tipo", "tipo")):
+        s["vinta"] = (s.esito == "VINTA").astype(float)
+        s["q"] = pd.to_numeric(s.quota, errors="coerce")
+        g = s.groupby(col, observed=True).agg(n=("utile", "size"), u=("utile", "sum"), roi=("utile", "mean"),
+                                              vinte=("vinta", "mean"), qm=("q", "mean"))
+        g = g[g["n"] > 0]
         if len(g):
-            lines.append(f"\nPer {name}: " + "; ".join(f"{k} {int(v['size'])} giocate {v['sum']:+.2f} u"
-                                                      for k, v in g.iterrows()))
+            lines.append(f"\nPer {name}: " + "; ".join(
+                f"{k}: {int(v['n'])} giocate, vinte {v['vinte']:.0%}, ROI {v['roi']:+.0%}, quota media {v['qm']:.2f}"
+                for k, v in g.iterrows()))
     return "\n".join(lines)

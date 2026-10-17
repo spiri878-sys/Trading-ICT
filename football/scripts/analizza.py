@@ -75,7 +75,7 @@ def pre_match(f):
             continue
         lvl, why = level(e, q, pinnacle_fair(qs, q), True)
         cands.append(dict(e, q=q, lvl=lvl, why=why))
-    good = sorted([c for c in cands if c["lvl"] in ("CECCHINO", "VALORE")], key=lambda c: -c["valore"])
+    good = sorted([c for c in cands if c["lvl"] in ("SUPER CECCHINO", "CECCHINO", "VALORE")], key=lambda c: -c["valore"])
     alt = sorted([c for c in cands if c["lvl"] is None and c["p"] >= 0.55], key=lambda c: -c["valore"])[:3]
     x = pred["X"].iloc[0].to_dict()
 

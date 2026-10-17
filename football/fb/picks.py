@@ -5,7 +5,7 @@ import numpy as np
 
 from .data import ROOT
 
-RULES = {"CECCHINO": (0.70, 0.05), "VALORE": (0.55, 0.08)}
+RULES = {"SUPER CECCHINO": (0.80, 0.05), "CECCHINO": (0.70, 0.05), "VALORE": (0.55, 0.08)}   # in ordine
 STRICT = 0.02                 # mercati senza quote storiche ("profitto non provato"): soglie più severe
 PROVEN = {"g|1x2|H", "g|1x2|D", "g|1x2|A", "g|ou_tot|over", "g|ou_tot|under"}
 MINQ, MAXV, MAX_PIN_GAP, MIN_TEAM_N = 1.30, 0.25, 0.10, 15
@@ -112,9 +112,9 @@ def reasons(stat, sel, x, home, away, mu):
 
 
 def confidence(lvl, fam, nbooks):
-    if lvl == "CECCHINO" and fam in PROVEN and nbooks >= 4:
+    if "CECCHINO" in lvl and fam in PROVEN and nbooks >= 4:
         return "alta"
-    if lvl == "CECCHINO" or (fam in PROVEN and nbooks >= 4):
+    if "CECCHINO" in lvl or (fam in PROVEN and nbooks >= 4):
         return "media"
     return "bassa"
 

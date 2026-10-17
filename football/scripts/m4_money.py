@@ -18,8 +18,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from fb.data import CACHE, ROOT, matches  # noqa: E402
 from fb.gate import VER_YEARS, logloss  # noqa: E402
 
-RULES = {"CECCHINO": (0.70, 0.05), "VALORE": (0.55, 0.08)}
+RULES = {"SUPER CECCHINO": (0.80, 0.05), "CECCHINO": (0.70, 0.05), "VALORE": (0.55, 0.08)}
 MINQ, MAXV = 1.30, 0.25
+BANDS = ((0.55, 0.70), (0.70, 0.75), (0.75, 0.80), (0.80, 1.01))
 BOOKS = {"massima": (["MaxHome", "MaxDraw", "MaxAway"], ["MaxOver25", "MaxUnder25"]),
          "Pinnacle": (["PinH", "PinD", "PinA"], ["PinO25", "PinU25"]),
          "Bet365": (["OddHome", "OddDraw", "OddAway"], ["Over25", "Under25"])}
@@ -86,11 +87,14 @@ def main():
         odds = odds.apply(pd.to_numeric, errors="coerce")
         g = backtest(P, O, odds)
         roi[book] = {"giocate": int(len(g)), "roi": float(g.pl.mean()) if len(g) else 0.0}
-        rep += [f"### Quota {book}", "", "| gruppo | giocate | vinte | ROI | utile (u) |", "|---|---|---|---|---|"]
+        rep += [f"### Quota {book}", "", "| gruppo | giocate | vinte | ROI | utile (u) | quota media |",
+                "|---|---|---|---|---|---|"]
         for name, s in [("TOTALE", g)] + [(f"anno {y}", g[g.year == y]) for y in VER_YEARS] + \
-                [(lv, g[g.lvl == lv]) for lv in RULES] + [(f"mercato {k}", g[g.sel == k]) for k in "1X2OU"]:
+                [(lv, g[g.lvl == lv]) for lv in RULES] + [(f"mercato {k}", g[g.sel == k]) for k in "1X2OU"] + \
+                [(f"fascia {a:.0%}-{b:.0%}", g[(g.p >= a) & (g.p < b)]) for a, b in BANDS]:
             if len(s):
-                rep.append(f"| {name} | {len(s)} | {s.win.mean():.1%} | {s.pl.mean():+.1%} | {s.pl.sum():+.1f} |")
+                rep.append(f"| {name} | {len(s)} | {s.win.mean():.1%} | {s.pl.mean():+.1%} | {s.pl.sum():+.1f} | "
+                           f"{s.q.mean():.2f} |")
         rep.append("")
     (ROOT / "output" / "m4_soldi.md").write_text("\n".join(rep) + "\n")
     (ROOT / "models" / "m4_money.json").write_text(json.dumps(roi, indent=1))
