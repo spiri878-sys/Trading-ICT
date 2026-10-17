@@ -84,7 +84,7 @@ def selections(stat):
     ou("ou_away", e, f)
     S += [{"kind": "1x2", "o": o} for o in "HDA"] + [{"kind": "dc", "o": o} for o in ("HD", "HA", "DA")]
     S += [{"kind": "ah", "o": o, "h": h} for o in "HA" for h in (-2.5, -1.5, -0.5, 0.5, 1.5, 2.5)]
-    S += [{"kind": "oe_tot", "odd": o} for o in (True, False)]
+    S += [{"kind": k, "odd": o} for k in ("oe_tot", "oe_home", "oe_away") for o in (True, False)]
     S += [{"kind": "dnb", "o": o} for o in "HA"]
     S += [{"kind": "eh", "o": o, "h": h} for o in "HDA" for h in (-2, -1, 1, 2)]
     if stat == "cor":
