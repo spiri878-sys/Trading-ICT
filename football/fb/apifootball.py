@@ -102,10 +102,15 @@ def statistics(fixture_id):
     return out
 
 
-def quotes(bookmakers, stale=1.12):
-    """Per ogni (mercato, valore): quota migliore, bookmaker, quota Pinnacle, mediana e numero di bookmaker.
-    Una quota più alta della mediana degli altri di oltre il 12% è considerata fuori mercato (vecchia o errata) e
-    scartata per la 'migliore'."""
+def user_books():
+    return json.loads((ROOT / "data" / "bookmakers.json").read_text())["utente"]
+
+
+def quotes(bookmakers, stale=1.12, mine=None):
+    """Per ogni (mercato, valore): quota migliore tra i bookmaker dell'UTENTE ('best', 'bm'; None se nessuno dei suoi
+    la offre), migliore in assoluto ('best_all'), quota Pinnacle, mediana e numero di bookmaker.
+    Una quota più alta della mediana di oltre il 12% è considerata fuori mercato (vecchia o errata) e scartata."""
+    mine = user_books() if mine is None else mine
     allq = {}
     for b in bookmakers:
         for bet in b["bets"]:
@@ -120,10 +125,12 @@ def quotes(bookmakers, stale=1.12):
         qs = [q for q, _ in lst]
         med = median(qs)
         good = [(q, bm) for q, bm in lst if len(lst) < 3 or q <= med * stale]
-        best, bm = max(good)
+        best_all, bm_all = max(good)
+        own = [(q, bm) for q, bm in good if bm in mine]
+        best, bm = max(own) if own else (None, None)
         pin = next((q for q, n in lst if n == "Pinnacle"), None)
-        out.append({"bet_id": bid, "bet": name, "value": val, "best": best, "bm": bm, "pin": pin, "med": med,
-                    "n": len(lst), "scartate": len(lst) - len(good)})
+        out.append({"bet_id": bid, "bet": name, "value": val, "best": best, "bm": bm, "best_all": best_all,
+                    "bm_all": bm_all, "pin": pin, "med": med, "n": len(lst), "scartate": len(lst) - len(good)})
     return out
 
 

@@ -6,6 +6,7 @@ quota >= 1.30; valore > 0.25 = sospetto (escluso); una sola giocata per partita 
 Quote: massima di mercato (football-data 'Max'), Pinnacle pre-partita, Bet365.
 Scrive output/m4_soldi.md.
 """
+import json
 import pickle
 import sys
 from pathlib import Path
@@ -66,6 +67,7 @@ def main():
     P, O = load()
     m = matches().loc[P.index]
     rep = ["# Confronto con Pinnacle e backtest dei soldi (verifica 2022-2026, mai vista)", ""]
+    roi = {}
     pin = devig(m[["PinH", "PinD", "PinA"]].apply(pd.to_numeric, errors="coerce"))
     ok = pin.notna().all(axis=1)
     y1 = O.loc[ok, ["1", "X", "2"]].to_numpy()
@@ -83,6 +85,7 @@ def main():
         odds = pd.DataFrame({"1": m[c1[0]], "X": m[c1[1]], "2": m[c1[2]], "O": m[c2[0]], "U": m[c2[1]]})
         odds = odds.apply(pd.to_numeric, errors="coerce")
         g = backtest(P, O, odds)
+        roi[book] = {"giocate": int(len(g)), "roi": float(g.pl.mean()) if len(g) else 0.0}
         rep += [f"### Quota {book}", "", "| gruppo | giocate | vinte | ROI | utile (u) |", "|---|---|---|---|---|"]
         for name, s in [("TOTALE", g)] + [(f"anno {y}", g[g.year == y]) for y in VER_YEARS] + \
                 [(lv, g[g.lvl == lv]) for lv in RULES] + [(f"mercato {k}", g[g.sel == k]) for k in "1X2OU"]:
@@ -90,6 +93,7 @@ def main():
                 rep.append(f"| {name} | {len(s)} | {s.win.mean():.1%} | {s.pl.mean():+.1%} | {s.pl.sum():+.1f} |")
         rep.append("")
     (ROOT / "output" / "m4_soldi.md").write_text("\n".join(rep) + "\n")
+    (ROOT / "models" / "m4_money.json").write_text(json.dumps(roi, indent=1))
     print("\n".join(rep))
 
 

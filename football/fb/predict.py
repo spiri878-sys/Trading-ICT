@@ -108,7 +108,7 @@ def norm_sel(kind, sel):
 
 def evaluate_quote(pred, i, q):
     """Probabilità calibrata e valore di una quota API per la partita i. None se il mercato non è gestito."""
-    if q["bet_id"] not in API_BETS:
+    if q["bet_id"] not in API_BETS or q.get("best") is None:      # mercato ignoto o non offerto dai suoi siti
         return None
     stat, kind = API_BETS[q["bet_id"]]
     if stat not in pred["grid"]:

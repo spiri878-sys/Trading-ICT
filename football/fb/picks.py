@@ -1,5 +1,9 @@
 """Regole di scelta delle giocate e testo in italiano (Fase M5, punto 5 del piano)."""
+import json
+
 import numpy as np
+
+from .data import ROOT
 
 RULES = {"CECCHINO": (0.70, 0.05), "VALORE": (0.55, 0.08)}
 STRICT = 0.02                 # mercati senza quote storiche ("profitto non provato"): soglie più severe
@@ -24,10 +28,20 @@ def pinnacle_fair(quotes, q):
     return (1 / q["pin"]) / s if s > 1.0 else None
 
 
+def money_ok(bookmaker):
+    """Mercati con quote storiche (1X2, O/U 2.5): ammessi solo se il backtest al bookmaker dell'utente è in utile."""
+    fn = ROOT / "models" / "m4_money.json"
+    if not fn.exists():
+        return False
+    return json.loads(fn.read_text()).get(bookmaker, {}).get("roi", -1) > 0
+
+
 def level(e, q, fair, counts_ok):
     """Livello della giocata o motivo dello scarto."""
     if not e["ammesso"]:
         return None, "mercato non ammesso"
+    if e["famiglia"] in PROVEN and not money_ok(q["bm"]):
+        return None, f"backtest in perdita alle quote {q['bm']}"
     if not counts_ok:
         return None, "pochi dati sulla squadra"
     if q["best"] < MINQ:
