@@ -2,70 +2,59 @@
 
 L'utente scrive in italiano, dal telefono. Vuole risposte dirette e pratiche, senza farlo lavorare: le cose le fai tu.
 Il lavoro attivo è il progetto **calcio** (`football/`). Il progetto trading (oro, `python/`, `mql5/`) è in pausa.
-Branch di lavoro: `claude/gifted-cannon-3ud35m` (commit e push lì, niente PR se non chiesta).
-Piano completo da eseguire: `football/PIANO_MACCHINA.md` (vale più delle note sotto se in conflitto).
+Branch di lavoro: `claude/gifted-cannon-3ud35m` (commit e push lì, niente PR se non chiesta). Piano completo:
+`football/PIANO_MACCHINA.md` (punti 0-14): seguilo, piccoli passi, aggiornamento in chat dopo ogni passo.
 
-## Cosa vuole l'utente (calcio)
-- Ogni giorno, PRE-PARTITA, **la giocata top**: in primo luogo sugli **angoli** (totali, casa, ospite, Over/Under),
-  se serve anche altri mercati. Deve trovare tu partite e quote (API-Football), lui va e gioca.
-- Stile "cecchino": poche giocate, solo quando probabilità alta E quota con valore. Una giocata per partita,
-  singole (mai multiple di giocate legate). Importi piccoli e fissi: ricordaglielo, ha già perso soldi nel trading.
-- Onestà: nessun modello "non sbaglia mai". Dai sempre probabilità e valore (p x quota - 1).
-- Obiettivo esteso (17/10 sera): la **giocata top della giornata su TUTTI i mercati** con quote dall'API, non solo
-  angoli: 1X2/doppia chance, gol O/U, Gol/NoGol, angoli (totali, casa, ospite), cartellini (già modellati in
-  `fb/card.py`), e se l'API ha le quote anche **falli** e tiri (l'archivio ha HomeFouls/AwayFouls/HomeShots/HomeTarget:
-  costruire modelli come per gli angoli, validati walk-forward e calibrati, PRIMA di proporli). Una classifica unica per
-  valore, con livelli CECCHINO/VALORE; per ogni mercato nuovo misurare prima calibrazione e frequenze sul passato.
+## Cosa vuole l'utente
+- Ogni giorno la giocata statisticamente migliore su TUTTI i mercati (angoli in primo piano), pre-partita, con valore
+  (p x quota - 1) e probabilità; livelli SUPER CECCHINO (p>=80%, v>=5%), CECCHINO (p>=70%, v>=5%), VALORE (p>=55%,
+  v>=8%); mercati senza quote storiche: soglie +2 punti. Una giocata per partita, singole. Importo fisso (1 unità).
+  Limiti di sicurezza (max giocate/stop) RIMOSSI su sua richiesta.
+- Gioca SOLO su **Bet365** (`football/data/bookmakers.json`): il valore si calcola sulla quota Bet365; Pinnacle e gli
+  altri servono come riferimento e filtro trappole.
+- Onestà: risultati veri anche se negativi.
 
-## Live (richiesto dall'utente)
-- Per partite già analizzate pre-partita e ora in corso: aggiornare le probabilità col minuto e le statistiche live
-  (angoli, cartellini, gol, espulsioni) da API-Football (fixtures?live=all, fixtures/statistics) e confrontarle con le
-  quote live (odds/live, se il piano lo consente). Metodo usato a mano il 17/10: media pre-partita x frazione di tempo
-  restante (+ ritmo osservato con peso moderato), binomiale negativa per i conteggi rimanenti.
+## Stato (17/10/2026 sera)
+- **API-Football: account SOSPESO** dalle ~15:40 del 17/10 ("Your account is suspended", dashboard.api-football.com).
+  L'utente deve sistemarlo. Prova: `curl https://v3.football.api-sports.io/status`. Piano gratuito: partite solo
+  ieri/oggi/domani, stagioni storiche 2022-2024, quote 1 richiesta per partita, 100 richieste/giorno (tetto 95 nel
+  codice, contatore in data/cache/api/contatore.json). MAI scrivere la chiave nel repository o nei log.
+- Archivio aggiornato al 16/10/2026: 248.059 partite, 38 campionati (22 europei con angoli/tiri/falli/cartellini, 16
+  extra solo gol). Pinnacle/media/arbitro da football-data (`data/raw/extra_odds.csv`).
+- `data/raw`, `data/cache`, `models` NON sono nel repository: si ricreano con `bash football/scripts/rebuild_all.sh`
+  (~2 ore, log in football/output/rebuild.log).
 
-## Filtro "trappole" (richiesto dall'utente)
-- Valore troppo alto (> ~25%) = di solito il modello non sa qualcosa (infortuni, turnover, motivazioni, dati vecchi):
-  segnalarlo come SOSPETTO, non come top. Verificare sul passato se le giocate con valore molto alto rendono davvero.
-- Escludere partite con dati della squadra scarsi (poche partite recenti, neopromosse, squadre nuove nell'archivio).
-- Se possibile controllare formazioni/infortuni dall'API (endpoint injuries/lineups) prima di confermare la top.
-- Misurare sul registro la resa per fascia di valore e per mercato, e restringere i filtri dove si perde.
+## Sistema (nuovo, fasi M2-M7)
+- `fb/state.py` feature di squadra in un passaggio (solo passato, test in tests/test_noleak.py); `fb/feats.py`
+  tabella completa (arbitro, Pinnacle, Elo, motore gol).
+- `fb/models.py` approcci A classico / B LightGBM / C media / D mercato / E LightGBM+mercato; `scripts/m3_walkforward.py`
+  walk-forward 2019-2026 per finestre luglio-giugno.
+- `fb/dist.py` distribuzioni (Poisson / binomiale negativa / binomiale); `fb/markets.py` traduttore di ~90 mercati
+  API (ATTENZIONE: handicap asiatico API lato ospite = linea della casa, già corretto e testato).
+- `fb/gate.py` + `scripts/m4_gate.py` cancello: scelta 2019-21, verifica 2022-26, calibrazione per fasce pesata sugli
+  anni recenti, confronto con la media del campionato, stabilità >= 70% stagioni, miglioramento minimo 0,2%.
+  `scripts/m4_money.py` backtest soldi 1X2/OU2.5 (ROI per bookmaker in models/m4_money.json);
+  `scripts/m4_movement.py` andamento quote; `scripts/m4_report.py` -> output/m4_mercati.md (tabella dei mercati).
+- `scripts/m5_train_final.py` modelli finali; `fb/predict.py`, `fb/picks.py`, `fb/teams.py` (nomi, data/team_map.json).
 
-## Stato attuale (17/10/2026)
-- Archivio partite: `football/data/raw/Matches.csv` (fonte e hash in `football/data/manifest.json`), FINISCE il
-  2026-09-03. Da aggiornare con football-data.co.uk (CSV stagione 2627, es. mmz4281/2627/I1.csv) o con API-Football.
-- `football/data/raw`, `football/data/cache`, `football/models` NON sono nel repository: in una sessione nuova vanno
-  ricreati (vedi sotto).
-- Ambiente cloud **"Calcio"**: rete aperta + segreto di rete per `v3.football.api-sports.io` (header
-  `x-apisports-key`, il proxy lo inserisce). Prima prova: `curl https://v3.football.api-sports.io/status`. Se risponde
-  errore di autenticazione, il segreto è stato salvato con prefisso "Bearer": dillo all'utente (prefisso va vuoto).
-  MAI scrivere la chiave nel repository o nei log.
+## Comandi giornalieri
+- `python football/scripts/oggi.py [data]` giocate del giorno -> output/giocate_<data>.md + registro.
+- `python football/scripts/analizza.py "Inter"` una partita (pre-partita / live / finita).
+- `python football/scripts/ricontrollo.py` ~60' prima: formazioni ufficiali, turnover, valore ricalcolato.
+- `python football/scripts/live.py` partite del registro in corso (live NON verificato sul passato).
+- `python football/scripts/esiti.py` esiti, CLV, bilancio -> output/bilancio.md.
+- Mai collaudati con l'API attiva: oggi.py completo, ricontrollo.py, live.py, esiti.py.
 
-## Ricostruire tutto in una sessione nuova (ordine)
-1. Scarica `Matches.csv` (e `EloRatings.csv`) dall'URL in `football/data/manifest.json` in `football/data/raw/`.
-2. (Se possibile) aggiungi le partite dal 2026-09-03 a oggi da football-data.co.uk o API-Football.
-3. `python football/scripts/f1_goals_eval.py` → cache motore gol
-4. `python football/scripts/f2_features.py` → feature
-5. `python football/scripts/f2_model.py` → previsioni walk-forward (servono alla calibrazione)
-6. `python football/scripts/f3_corners_cards.py` → angoli/gialli base
-7. `python football/scripts/f5_train_final.py` → modelli finali + calibratori in `football/models/`
-8. `python football/scripts/f6_corners.py` → feature angoli + valutazione (lungo, ~15 min; in background)
-9. `python football/scripts/f6_train_final.py` → modelli angoli F6 (casa, ospite, totale)
-10. `python football/scripts/f7_team_corners.py` → dispersioni e correzione di scala per angoli casa/ospite
+## Risultati chiave (onesti, verifica 2022-2026)
+- 1X2/gol: il modello è alla pari con Pinnacle (log-loss 0,9990 vs 0,9993). Backtest: +6% solo alla quota massima del
+  mercato (e in calo: 2025-26 negativi), -10% a Bet365 -> per l'utente 1X2 e O/U 2,5 NON ammessi.
+- Angoli, falli, gialli, cartellini, tiri: calibrati e migliori della media in tutte le stagioni, ma "profitto non
+  ancora provato" (nessuna quota storica): li giudica il registro reale.
+- Pari/dispari: quasi sempre NON ammesso (non batte la media).
+- Movimento quote Pinnacle a favore: ROI +9% contro ~0% (campione piccolo): usato come avviso.
 
-## Strumenti pronti
-- `football/scripts/oggi.py [data]`: partite del giorno + quote migliori (API-Football) → modello → lista giocate
-  (CECCHINO p>=70% e valore>=5%; VALORE p>=55% e valore>=8%), una per partita. Salva `football/output/giocate_<data>.md`.
-  Mai testato con l'API vera: verifica i nomi dei mercati angoli restituiti da /odds (funzione `best_odds` in
-  `football/fb/apifootball.py`) e il collegamento nomi squadre (`match_team`).
-- `football/scripts/scheda.py "Casa" "Ospite" DIV data [1=.. X=.. 2=.. ang_o9.5=.. casa_u4.5=.. osp_o3.5=..]`: scheda
-  completa di una partita con valore delle quote inserite.
-- `football/scripts/listino.py data "DIV:Casa:Ospite" ...`: quote minime angoli senza quote (fallback).
-- Registro previsioni vs risultati: `football/output/registro_partite.csv` (aggiornalo con i risultati che manda).
-
-## Risultati chiave (onesti)
-- 1X2/gol: il modello è quasi al livello di Bet365 ma non lo batte da solo; il valore c'era solo con la quota
-  migliore tra molti bookmaker.
-- Angoli: per squadra (corr ~0.31-0.32) molto più prevedibili del totale (~0.19). Probabilità ben calibrate
-  (`football/output/f7_team_corners_eval.json`). Con p>=70% le giocate escono ~75-78% storicamente.
-- Giocate dal vivo del 17/10 da verificare: Ipswich O2.5, Fulham O8.5, Brentford O6.5, Elche O2.5,
-  Villarreal U5.5 angoli; pre-partita Bologna-Inter: Inter Under 5.5 angoli @1.72.
+## Da fare
+- Riattivare l'API e collaudare tutta la catena giornaliera; attività pianificate mattina/sera con notifica (chiedere
+  conferma all'utente prima di crearle).
+- Coppe (manca storico per verificarle), xG (solo da questa stagione), extra API (H2H, allenatore, giocatori,
+  infortuni pesati), mercati sui giocatori, calendario/contesto (14.12): entrano solo se migliorano la verifica.
