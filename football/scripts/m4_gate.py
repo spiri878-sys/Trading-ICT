@@ -16,7 +16,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from fb.data import CACHE, ROOT, matches  # noqa: E402
 from fb.dist import fit_phi  # noqa: E402
 from fb.gate import (RHOS, SEL_YEARS, VER_YEARS, brier, calibrator, ece, family, grid, kmax, logloss,  # noqa: E402
-                     outcome, selections)
+                     outcome, outcome_hh, selections, selections_hh)
 from fb.markets import prob  # noqa: E402
 from fb.models import TARGETS, add_targets, poisson_dev  # noqa: E402
 
@@ -91,10 +91,15 @@ def evaluate(stat, m):
         s = (r.year == y).to_numpy()
         bt = base[y].reindex(div[s])
         B[s] = bt.fillna(glob).to_numpy(np.float32) if len(bt) else glob.to_numpy()
+    tab, calib = finish(stat, sels, P, O, B, r.year.to_numpy(), r.index)
+    return cfg, tab, calib
+
+
+def finish(stat, sels, P, O, B, yrs, index):
+    """Calibrazione anno per anno (solo anni precedenti), metriche per famiglia e decisione."""
     fams = {}
     for j, sl in enumerate(sels):
         fams.setdefault(family(stat, sl), []).append(j)
-    yrs = r.year.to_numpy()
     PC = P.copy()
     rows, calib = [], {}
     for fam, js in fams.items():
@@ -123,8 +128,42 @@ def evaluate(stat, m):
         rows.append(row)
     out = CACHE / "m4"
     out.mkdir(parents=True, exist_ok=True)
-    pickle.dump(dict(index=r.index, year=yrs, sels=sels, P=P, PC=PC, O=O), open(out / f"{stat}.pkl", "wb"))
-    return cfg, pd.DataFrame(rows), calib
+    pickle.dump(dict(index=index, year=yrs, sels=sels, P=P, PC=PC, O=O), open(out / f"{stat}.pkl", "wb"))
+    return pd.DataFrame(rows), calib
+
+
+def evaluate_hh(m, conf, K=6, chunk=8000):
+    """Mercati sui due tempi: griglia 4D dal modello del 1° tempo e da quello del 2° (indipendenti)."""
+    r1 = pickle.load(open(CACHE / "m3" / "ght.pkl", "rb"))
+    r2 = pickle.load(open(CACHE / "m3" / "g2h.pkl", "rb"))
+    r = r1.join(r2, rsuffix="_2", how="inner")
+    r = r[r.year.isin(SEL_YEARS + VER_YEARS)]
+    c1, c2 = conf["stats"]["ght"], conf["stats"]["g2h"]
+    a1, a2 = c1["approach"], c2["approach"]
+    sels = selections_hh()
+    P = np.zeros((len(r), len(sels)), np.float32)
+    for i in range(0, len(r), chunk):
+        s = slice(i, i + chunk)
+        M1 = grid(r[f"{a1}_h"].to_numpy()[s], r[f"{a1}_a"].to_numpy()[s], c1["phi_h"], c1["phi_a"], K, c1["rho"])
+        M2 = grid(r[f"{a2}_h_2"].to_numpy()[s], r[f"{a2}_a_2"].to_numpy()[s], c2["phi_h"], c2["phi_a"], K, c2["rho"])
+        M4 = M1[:, :, :, None, None] * M2[:, None, None, :, :]
+        for j, sl in enumerate(sels):
+            P[s, j] = prob(M4, sl)[0]
+    O = np.column_stack([outcome_hh(sl, r.yh, r.ya, r.yh_2, r.ya_2, K) for sl in sels]).astype(np.float32)
+    mm = m[m.HTHome.notna() & m.HTAway.notna()]
+    ob = np.column_stack([outcome_hh(sl, mm.HTHome, mm.HTAway, mm.H2H, mm.A2H, K) for sl in sels])
+    df = pd.DataFrame(ob)
+    df["div"] = mm.Division.to_numpy()
+    df["yr"] = np.where(mm.date.dt.month >= 7, mm.date.dt.year, mm.date.dt.year - 1)
+    div = m.loc[r.index, "Division"].to_numpy()
+    yrs = r.year.to_numpy()
+    B = np.zeros_like(P)
+    glob = df[list(range(len(sels)))].mean()
+    for y in VER_YEARS:
+        s = yrs == y
+        w = df[(df.yr >= y - 3) & (df.yr <= y - 1)].groupby("div")[list(range(len(sels)))].mean()
+        B[s] = w.reindex(div[s]).fillna(glob).to_numpy(np.float32)
+    return finish("hh", sels, P, O, B, yrs, r.index)
 
 
 def main(stats):
@@ -135,8 +174,11 @@ def main(stats):
     cal = pickle.load(open(cal_path, "rb")) if cal_path.exists() else {}
     tabs = []
     for s in stats:
-        cfg, tab, c = evaluate(s, m)
-        conf["stats"][s] = cfg
+        if s == "hh":
+            tab, c = evaluate_hh(m, conf)
+        else:
+            cfg, tab, c = evaluate(s, m)
+            conf["stats"][s] = cfg
         for _, row in tab.iterrows():
             conf["families"][row.famiglia] = {k: (round(v, 5) if isinstance(v, float) else v) for k, v in row.items()}
         cal.update(c)

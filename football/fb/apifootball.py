@@ -1,115 +1,153 @@
-"""Client minimo per API-Football (api-sports.io, v3): partite del giorno e quote angoli.
+"""Client API-Football (v3) con cache e contatore delle richieste (piano gratuito: 100 al giorno).
 
-La chiave si legge dalla variabile d'ambiente API_FOOTBALL_KEY oppure la inserisce il proxy come segreto di rete (mai scritta nel codice o nel repository).
-Le risposte vengono salvate in football/data/cache/api/ per non sprecare richieste (piano gratuito: ~100 al giorno).
+La chiave la inserisce il proxy (segreto di rete dell'ambiente) oppure la variabile API_FOOTBALL_KEY: mai nel codice.
+Risposte in data/cache/api/ (valide 3 ore per quote e partite di oggi, per sempre per le partite finite).
 """
-import difflib
 import json
 import os
 import time
 import urllib.parse
 import urllib.request
+from datetime import date as _date
+from statistics import median
 
-from .data import CACHE
+from .data import CACHE, ROOT
 
 BASE = "https://v3.football.api-sports.io"
 API_CACHE = CACHE / "api"
+BUDGET = 95                                   # tetto giornaliero (lascia margine sul limite di 100)
+TEAM_MAP = ROOT / "data" / "team_map.json"
 
-# campionati dell'archivio -> id lega API-Football
-LEAGUES = {"E0": 39, "E1": 40, "E2": 41, "E3": 42, "SC0": 179, "D1": 78, "D2": 79, "I1": 135, "I2": 136,
-           "SP1": 140, "SP2": 141, "F1": 61, "F2": 62, "N1": 88, "B1": 144, "P1": 94, "T1": 203, "G1": 197}
+LEAGUES = {"E0": 39, "E1": 40, "E2": 41, "E3": 42, "EC": 43, "SC0": 179, "SC1": 180, "SC2": 183, "SC3": 184,
+           "D1": 78, "D2": 79, "I1": 135, "I2": 136, "SP1": 140, "SP2": 141, "F1": 61, "F2": 62, "N1": 88,
+           "B1": 144, "P1": 94, "T1": 203, "G1": 197, "ARG": 128, "AUT": 218, "BRA": 71, "CHN": 169, "DEN": 119,
+           "FIN": 244, "IRL": 357, "JAP": 98, "MEX": 262, "NOR": 103, "POL": 106, "ROM": 283, "RUS": 235,
+           "SUI": 207, "SWE": 113, "USA": 253}
 DIV_OF = {v: k for k, v in LEAGUES.items()}
 
 
-def get(path, **params):
-    key = os.environ.get("API_FOOTBALL_KEY")   # se assente, la chiave la aggiunge il proxy (segreto di rete)
+class BudgetError(RuntimeError):
+    pass
+
+
+def _counter():
+    fn = API_CACHE / "contatore.json"
+    c = json.loads(fn.read_text()) if fn.exists() else {}
+    return fn, c
+
+
+def used_today():
+    return _counter()[1].get(str(_date.today()), 0)
+
+
+def get(path, max_age=3 * 3600, **params):
     API_CACHE.mkdir(parents=True, exist_ok=True)
     qs = urllib.parse.urlencode(sorted(params.items()))
-    fn = API_CACHE / (path.strip("/").replace("/", "_") + ("_" + qs.replace("&", "_").replace("=", "-") if qs else "") + ".json")
-    if fn.exists() and time.time() - fn.stat().st_mtime < 3 * 3600:
+    fn = API_CACHE / (path.strip("/").replace("/", "_") + ("_" + qs.replace("&", "_").replace("=", "-") if qs else "")
+                      + ".json")
+    if fn.exists() and (max_age is None or time.time() - fn.stat().st_mtime < max_age):
         return json.loads(fn.read_text())
+    cfn, c = _counter()
+    today = str(_date.today())
+    if c.get(today, 0) >= BUDGET:
+        raise BudgetError(f"tetto giornaliero di {BUDGET} richieste raggiunto")
+    key = os.environ.get("API_FOOTBALL_KEY")
     req = urllib.request.Request(f"{BASE}/{path.strip('/')}?{qs}", headers={"x-apisports-key": key} if key else {})
     with urllib.request.urlopen(req, timeout=30) as r:
         data = json.loads(r.read())
+    c[today] = c.get(today, 0) + 1
+    cfn.write_text(json.dumps(c))
     if data.get("errors"):
         raise RuntimeError(f"API-Football: {data['errors']}")
     fn.write_text(json.dumps(data))
     return data
 
 
-def fixtures(date):
-    """Partite del giorno (YYYY-MM-DD) nei campionati coperti dal modello."""
+def fixtures(day):
+    """Partite del giorno (YYYY-MM-DD) nei campionati coperti."""
     out = []
-    for f in get("fixtures", date=date)["response"]:
+    for f in get("fixtures", date=day)["response"]:
         lid = f["league"]["id"]
-        if lid in DIV_OF:
-            out.append({"id": f["fixture"]["id"], "div": DIV_OF[lid], "date": date, "ora": f["fixture"]["date"][11:16],
-                        "home_api": f["teams"]["home"]["name"], "away_api": f["teams"]["away"]["name"],
-                        "stato": f["fixture"]["status"]["short"]})
+        if lid not in DIV_OF:
+            continue
+        out.append({"id": f["fixture"]["id"], "div": DIV_OF[lid], "date": day, "ora": f["fixture"]["date"][11:16],
+                    "kickoff": f["fixture"]["date"], "stato": f["fixture"]["status"]["short"],
+                    "arbitro": (f["fixture"].get("referee") or "").split(",")[0].strip(),
+                    "home_id": f["teams"]["home"]["id"], "away_id": f["teams"]["away"]["id"],
+                    "home_api": f["teams"]["home"]["name"], "away_api": f["teams"]["away"]["name"],
+                    "gol": (f["goals"]["home"], f["goals"]["away"]),
+                    "pt": (f["score"]["halftime"]["home"], f["score"]["halftime"]["away"])})
     return out
 
 
-def odds_by_date(date):
-    """Tutte le quote pre-partita del giorno, paginate: {fixture_id: [bookmaker, ...]}."""
-    res, page = {}, 1
-    while True:
-        d = get("odds", date=date, page=page)
-        for r in d["response"]:
-            res[r["fixture"]["id"]] = r["bookmakers"]
-        if page >= d.get("paging", {}).get("total", 1):
-            return res
-        page += 1
+def odds(fixture_id):
+    r = get("odds", fixture=fixture_id)["response"]
+    return r[0]["bookmakers"] if r else []
 
 
-def _side(name):
-    n = name.lower()
-    if "home" in n:
-        return "casa"
-    if "away" in n:
-        return "ospite"
-    return "totale"
+def statistics(fixture_id):
+    """Statistiche finali per squadra: {'home': {...}, 'away': {...}} con angoli, falli, tiri, tiri in porta, cartellini."""
+    keys = {"Corner Kicks": "cor", "Fouls": "fou", "Total Shots": "sh", "Shots on Goal": "sot",
+            "Yellow Cards": "yel", "Red Cards": "red", "Offsides": "off", "Ball Possession": "pos"}
+    res = get("fixtures/statistics", max_age=None, fixture=fixture_id)["response"]
+    out = {}
+    for side, t in zip(("home", "away"), res):
+        d = {}
+        for s in t["statistics"]:
+            if s["type"] in keys:
+                v = s["value"]
+                v = float(str(v).rstrip("%")) if v not in (None, "") else 0.0
+                d[keys[s["type"]]] = v
+        out[side] = d
+    return out
 
 
-def best_odds(bookmakers):
-    """Quota migliore tra i bookmaker per ogni mercato: 1X2 e angoli (totale / casa / ospite, Over/Under linea).
-    Restituisce {nome_mercato: (quota, bookmaker)} con i nomi usati dalla scheda (es. 'Angoli Casa Over 4.5')."""
-    best = {}
-
-    def put(k, odd, bm):
-        if odd > best.get(k, (0, ""))[0]:
-            best[k] = (odd, bm)
-
+def quotes(bookmakers, stale=1.12):
+    """Per ogni (mercato, valore): quota migliore, bookmaker, quota Pinnacle, mediana e numero di bookmaker.
+    Una quota più alta della mediana degli altri di oltre il 12% è considerata fuori mercato (vecchia o errata) e
+    scartata per la 'migliore'."""
+    allq = {}
     for b in bookmakers:
-        bm = b["name"]
         for bet in b["bets"]:
-            name = bet["name"].lower()
-            if name == "match winner":
-                for v in bet["values"]:
-                    put({"Home": "1", "Draw": "X", "Away": "2"}.get(v["value"], v["value"]), float(v["odd"]), bm)
-            elif "corner" in name and ("over" in name or "under" in name) and "half" not in name \
-                    and "1st" not in name and "2nd" not in name:
-                pref = {"totale": "Angoli", "casa": "Angoli Casa", "ospite": "Angoli Ospite"}[_side(name)]
-                for v in bet["values"]:
-                    parts = str(v["value"]).split()
-                    if len(parts) == 2 and parts[0] in ("Over", "Under"):
-                        put(f"{pref} {parts[0]} {float(parts[1]):g}", float(v["odd"]), bm)
-    return best
+            for v in bet["values"]:
+                try:
+                    q = float(v["odd"])
+                except (TypeError, ValueError):
+                    continue
+                allq.setdefault((bet["id"], bet["name"], str(v["value"])), []).append((q, b["name"]))
+    out = []
+    for (bid, name, val), lst in allq.items():
+        qs = [q for q, _ in lst]
+        med = median(qs)
+        good = [(q, bm) for q, bm in lst if len(lst) < 3 or q <= med * stale]
+        best, bm = max(good)
+        pin = next((q for q, n in lst if n == "Pinnacle"), None)
+        out.append({"bet_id": bid, "bet": name, "value": val, "best": best, "bm": bm, "pin": pin, "med": med,
+                    "n": len(lst), "scartate": len(lst) - len(good)})
+    return out
 
 
-def match_team(api_name, names):
-    """Nome squadra API -> nome dell'archivio (stesso campionato)."""
-    alias = {"Manchester City": "Man City", "Manchester United": "Man United", "Nottingham Forest": "Nott'm Forest",
-             "Wolverhampton Wanderers": "Wolves", "Newcastle": "Newcastle", "Sheffield Utd": "Sheffield United",
-             "Inter": "Inter", "AC Milan": "Milan", "AS Roma": "Roma", "Hellas Verona": "Verona",
-             "Atletico Madrid": "Ath Madrid", "Athletic Club": "Ath Bilbao", "Real Betis": "Betis",
-             "Celta Vigo": "Celta", "Espanyol": "Espanol", "Deportivo La Coruna": "La Coruna",
-             "Bayern München": "Bayern Munich", "Borussia Mönchengladbach": "M'gladbach", "1. FC Köln": "FC Koln",
-             "Eintracht Frankfurt": "Ein Frankfurt", "Bayer Leverkusen": "Leverkusen", "Paris Saint Germain": "Paris SG",
-             "Saint Etienne": "St Etienne", "PSV Eindhoven": "PSV Eindhoven", "Sporting CP": "Sp Lisbon",
-             "FC Porto": "Porto", "SL Benfica": "Benfica"}
-    if alias.get(api_name) in names:
-        return alias[api_name]
-    if api_name in names:
-        return api_name
-    m = difflib.get_close_matches(api_name, list(names), n=1, cutoff=0.6)
-    return m[0] if m else None
+def market_inputs(qs):
+    """Colonne di mercato del modello dalle quote del giorno (Pinnacle se c'è, altrimenti mediana)."""
+    def q(bid, val, pin=True):
+        r = next((x for x in qs if x["bet_id"] == bid and x["value"] == val), None)
+        if r is None:
+            return float("nan")
+        return r["pin"] if pin and r["pin"] else r["med"]
+    o = {"PinH": q(1, "Home"), "PinD": q(1, "Draw"), "PinA": q(1, "Away"),
+         "PinO25": q(5, "Over 2.5"), "PinU25": q(5, "Under 2.5"),
+         "OddHome": q(1, "Home", False), "OddDraw": q(1, "Draw", False), "OddAway": q(1, "Away", False),
+         "Over25": q(5, "Over 2.5", False), "Under25": q(5, "Under 2.5", False)}
+    ah = [x for x in qs if x["bet_id"] == 4 and x["value"].startswith("Home")]
+    if ah:                                       # linea asiatica più vicina alla parità
+        pair = min(ah, key=lambda x: abs(x["med"] - 1.95))
+        o["HandiSize"] = float(pair["value"].split()[1])
+    return o
+
+
+def load_team_map():
+    return json.loads(TEAM_MAP.read_text()) if TEAM_MAP.exists() else {}
+
+
+def save_team_map(tm):
+    TEAM_MAP.write_text(json.dumps(tm, indent=1, ensure_ascii=False, sort_keys=True))

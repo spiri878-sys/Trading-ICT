@@ -35,7 +35,7 @@ def outcome(sel, yh, ya, K):
 
 def outcome_hh(sel, h1, a1, h2, a2, K):
     W, _ = masks_hh(sel, K)
-    c = [np.minimum(v.astype(int), K) for v in (h1, a1, h2, a2)]
+    c = [np.minimum(np.asarray(v, float).astype(int), K) for v in (h1, a1, h2, a2)]
     return W[c[0], c[1], c[2], c[3]]
 
 
