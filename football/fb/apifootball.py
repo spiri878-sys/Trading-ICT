@@ -158,3 +158,18 @@ def load_team_map():
 
 def save_team_map(tm):
     TEAM_MAP.write_text(json.dumps(tm, indent=1, ensure_ascii=False, sort_keys=True))
+
+
+def snapshot(fixture_id, qs):
+    """Istantanea delle quote (migliore dell'utente e Pinnacle per ogni giocata) con ora: per l'andamento."""
+    d = API_CACHE / "snap" / str(fixture_id)
+    d.mkdir(parents=True, exist_ok=True)
+    ts = time.strftime("%Y%m%d-%H%M", time.gmtime())
+    (d / f"{ts}.json").write_text(json.dumps({f"{q['bet_id']}|{q['value']}": [q["best"], q["pin"]] for q in qs}))
+
+
+def first_snapshot(fixture_id):
+    """(ora, quote) della prima istantanea salvata, o None."""
+    d = API_CACHE / "snap" / str(fixture_id)
+    files = sorted(d.glob("*.json")) if d.exists() else []
+    return (files[0].stem, json.loads(files[0].read_text())) if files else None

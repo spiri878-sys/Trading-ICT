@@ -56,6 +56,8 @@ def gather(day, solo_cache, max_q):
             skipped.append(f"{f['home_api']} - {f['away_api']}: nessuna quota")
             continue
         f["quotes"] = af.quotes(bms)
+        if not cached:
+            af.snapshot(f["id"], f["quotes"])            # andamento delle quote (punto 14.11)
         f["mk"] = af.market_inputs(f["quotes"])
         f["nbooks"] = len(bms)
         priced.append(f)
@@ -97,11 +99,19 @@ def line(c, pred):
     mot = "; ".join(reasons(e["stat"], e["sel"], x, f["home"], f["away"], mu))
     fiducia = confidence(c["lvl"], e["famiglia"], f["nbooks"])
     pin = f" (Pinnacle {q['pin']:.2f})" if q.get("pin") else ""
+    snap = af.first_snapshot(f["id"])
+    mov = ""
+    if snap and f"{q['bet_id']}|{q['value']}" in snap[1]:
+        b0, p0 = snap[1][f"{q['bet_id']}|{q['value']}"]
+        ref0, ref1 = (p0, q.get("pin")) if p0 and q.get("pin") else (b0, q["best"])
+        if ref0 and ref1 and abs(ref1 / ref0 - 1) >= 0.02:
+            mov = (f" Quota alle {snap[0][-4:-2]}:{snap[0][-2:]} UTC {b0:.2f} → ora {q['best']:.2f}: mercato "
+                   f"{'A FAVORE' if ref1 < ref0 else 'CONTRO (attenzione)'}.")
     prov = "" if e["famiglia"] in ("g|1x2|H", "g|1x2|D", "g|1x2|A", "g|ou_tot|over", "g|ou_tot|under") \
         else " · profitto non ancora provato"
     return (f"**{f['ora']} {f['div']} {f['home_api']} - {f['away_api']}**: {g} → quota **{q['best']:.2f}** "
             f"({q['bm']}){pin}, probabilità {e['p']:.0%}, valore {e['valore']:+.0%}, quota minima {min_odds(e['p']):.2f}. "
-            f"Livello {c['lvl']}, fiducia {fiducia}{prov}. Valida pre-partita (in corso: usa live.py). Motivi: {mot}."), g
+            f"Livello {c['lvl']}, fiducia {fiducia}{prov}.{mov} Valida pre-partita (in corso: usa live.py). Motivi: {mot}."), g
 
 
 def main(argv):
