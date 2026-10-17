@@ -16,7 +16,7 @@ from fb import apifootball as af  # noqa: E402
 from fb import oddsapiio as oa  # noqa: E402
 from fb import registro  # noqa: E402
 from fb.data import ROOT  # noqa: E402
-from fb.picks import (GROUP, MIN_TEAM_N, confidence, describe, level, min_odds, pinnacle_fair,  # noqa: E402
+from fb.picks import (GROUP, MAIN_LEVELS, MIN_TEAM_N, confidence, describe, level, min_odds, pinnacle_fair,  # noqa: E402
                       reasons)
 from fb.predict import evaluate_quote, predict  # noqa: E402
 from fb.teams import resolve  # noqa: E402
@@ -115,10 +115,11 @@ def choose(priced, pred):
                 scartate += 1
                 continue
             cands.append(dict(e, q=q, lvl=lvl, why=why, fair=fair))
-        good = [c for c in cands if c["lvl"] != "SOSPETTO"]
-        if good:
-            c = max(good, key=lambda c: c["valore"])                     # una sola giocata per partita
-            best.append(dict(c, f=f, i=i))
+        for lv in (MAIN_LEVELS, ("CONTROPRONOSTICO",)):     # una sola per partita, il contropronostico a parte
+            good = [c for c in cands if c["lvl"] in lv]
+            if good:
+                c = max(good, key=lambda c: c["valore"])
+                best.append(dict(c, f=f, i=i))
         for c in cands:
             if c["lvl"] == "SOSPETTO":
                 best.append(dict(c, f=f, i=i))
@@ -172,7 +173,8 @@ def main(argv):
         pred = predict([dict(div=f["div"], date=day, home=f["home"], away=f["away"], arbitro=f["arbitro"],
                              mk=f["mk"]) for f in priced])
         picks, scartate = choose(priced, pred)
-    good = sorted([c for c in picks if c["lvl"] != "SOSPETTO"], key=lambda c: -c["valore"])
+    good = sorted([c for c in picks if c["lvl"] in MAIN_LEVELS], key=lambda c: -c["valore"])
+    contro = sorted([c for c in picks if c["lvl"] == "CONTROPRONOSTICO"], key=lambda c: -c["valore"])
     if not good:
         out.append("**Oggi nessuna giocata con valore.** Non forzare.")
     else:
@@ -196,6 +198,18 @@ def main(argv):
                            valore_api=c["q"]["value"], esito="", utile="", quota_chiusura_pin="",
                            note=f"arch:{c['f']['home']}|{c['f']['away']}")
                       for c in good])
+    if contro:
+        ctxt = {id(c): line(c, pred) for c in contro}
+        out += ["", "## 5. CONTROPRONOSTICI (sperimentale: vincono circa 1 volta su 3, quota alta; normali serie di "
+                "perse)", ""]
+        out += [f"- {ctxt[id(c)][0]}" for c in contro]
+        registro.add([dict(data=day, ora=c["f"]["ora"], campionato=c["f"]["div"], fixture_id=c["f"]["id"],
+                           partita=f"{c['f']['home_api']} - {c['f']['away_api']}", mercato=c["famiglia"],
+                           giocata=ctxt[id(c)][1], tipo="pre-partita", livello=c["lvl"], quota=c["q"]["best"],
+                           bookmaker=c["q"]["bm"], quota_pinnacle=c["q"].get("pin") or "",
+                           prob_modello=round(c["p"], 3), valore=round(c["valore"], 3), bet_id=c["q"]["bet_id"],
+                           valore_api=c["q"]["value"], esito="", utile="", quota_chiusura_pin="",
+                           note=f"arch:{c['f']['home']}|{c['f']['away']}") for c in contro])
     sus = [c for c in picks if c["lvl"] == "SOSPETTO"]
     if sus:
         out += ["", "## Sospetti (NON giocare: troppo belli per essere veri)", ""]

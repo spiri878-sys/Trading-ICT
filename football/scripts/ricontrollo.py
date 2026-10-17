@@ -85,7 +85,7 @@ def main():
             else:
                 lvl, why = level(e, q, pinnacle_fair(qs, q), True)
                 verdict = (f"CONFERMATA ({lvl}, quota {q['best']:.2f}, prob {e['p']:.0%}, valore {e['valore']:+.0%})"
-                           if lvl in ("SUPER CECCHINO", "CECCHINO", "VALORE") else
+                           if lvl in ("SUPER CECCHINO", "CECCHINO", "VALORE", "CONTROPRONOSTICO") else
                            f"VALORE SCESO: SALTA (quota {q['best']:.2f}, prob {e['p']:.0%}, valore {e['valore']:+.0%}, {why})")
             if warn and verdict.startswith("CONFERMATA"):
                 verdict = "ATTENZIONE TURNOVER: " + verdict

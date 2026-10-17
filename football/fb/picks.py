@@ -9,6 +9,10 @@ RULES = {"SUPER CECCHINO": (0.80, 0.05), "CECCHINO": (0.70, 0.05), "VALORE": (0.
 STRICT = 0.02                 # mercati senza quote storiche ("profitto non provato"): soglie più severe
 PROVEN = {"g|1x2|H", "g|1x2|D", "g|1x2|A", "g|ou_tot|over", "g|ou_tot|under"}
 MINQ, MAXV, MAX_PIN_GAP, MIN_TEAM_N = 1.30, 0.25, 0.10, 15
+# CONTROPRONOSTICO (sperimentale): lato sfavorito con quota alta e valore grande. Verifica 2022-26 su 1X2/OU2.5 a quote
+# Bet365 con valore >= 10%: 64 giocate, vinte 33%, quota media 3.30, ROI +7.9% (campione piccolo, anni molto variabili).
+CONTRO = dict(pmin=0.30, pmax=0.55, vmin=0.10, qmin=1.80)
+MAIN_LEVELS = tuple(RULES)
 STAT_IT = {"g": "gol", "ght": "gol 1° tempo", "g2h": "gol 2° tempo", "cor": "angoli", "crd": "cartellini",
            "yel": "gialli", "fou": "falli", "sh": "tiri", "sot": "tiri in porta", "hh": "gol (due tempi)"}
 GROUP = {"cor": "ANGOLI", "g": "GOL / 1X2", "ght": "GOL / 1X2", "g2h": "GOL / 1X2", "hh": "GOL / 1X2",
@@ -42,7 +46,8 @@ def level(e, q, fair, counts_ok):
     """Livello della giocata o motivo dello scarto."""
     if not e["ammesso"]:
         return None, "mercato non ammesso"
-    if e["famiglia"] in PROVEN and not money_ok(q["bm"]):
+    contro = CONTRO["pmin"] <= e["p"] < CONTRO["pmax"]
+    if e["famiglia"] in PROVEN and not money_ok(q["bm"]) and not contro:
         return None, f"backtest in perdita alle quote {q['bm']}"
     if not counts_ok:
         return None, "pochi dati sulla squadra"
@@ -54,6 +59,10 @@ def level(e, q, fair, counts_ok):
     if fair is not None and abs(p_cmp - fair) > MAX_PIN_GAP:
         return "SOSPETTO", f"lontano da Pinnacle ({fair:.0%})"
     extra = 0 if e["famiglia"] in PROVEN else STRICT
+    if contro:
+        if q["best"] >= CONTRO["qmin"] and e["valore"] >= CONTRO["vmin"] + extra:
+            return "CONTROPRONOSTICO", ""
+        return None, "senza valore"
     for lvl, (pmin, vmin) in RULES.items():
         if e["p"] >= pmin + extra and e["valore"] >= vmin + extra:
             return lvl, ""
@@ -115,6 +124,8 @@ def reasons(stat, sel, x, home, away, mu):
 
 
 def confidence(lvl, fam, nbooks):
+    if lvl == "CONTROPRONOSTICO":
+        return "bassa (sperimentale)"
     if "CECCHINO" in lvl and fam in PROVEN and nbooks >= 4:
         return "alta"
     if "CECCHINO" in lvl or (fam in PROVEN and nbooks >= 4):

@@ -90,6 +90,7 @@ def pre_match(f):
         lvl, why = level(e, q, pinnacle_fair(qs, q), True)
         cands.append(dict(e, q=q, lvl=lvl, why=why))
     good = sorted([c for c in cands if c["lvl"] in ("SUPER CECCHINO", "CECCHINO", "VALORE")], key=lambda c: -c["valore"])
+    contro = sorted([c for c in cands if c["lvl"] == "CONTROPRONOSTICO"], key=lambda c: -c["valore"])
     alt = sorted([c for c in cands if c["lvl"] is None and c["p"] >= 0.55], key=lambda c: -c["valore"])[:3]
     x = pred["X"].iloc[0].to_dict()
 
@@ -99,6 +100,8 @@ def pre_match(f):
         return (f"{describe(c['stat'], c['sel'], f['home'], f['away'])} @{c['q']['best']:.2f} ({c['q']['bm']}), "
                 f"prob {c['p']:.0%}, valore {c['valore']:+.0%}, quota minima {min_odds(c['p'], c['p_push']):.2f}. {r}")
     print("\nGIOCATA: " + (f"{good[0]['lvl']} — {txt(good[0])}" if good else "niente da giocare (nessun valore)"))
+    if contro:
+        print("CONTROPRONOSTICO (sperimentale, vince ~1 volta su 3): " + txt(contro[0]))
     if alt or good[1:]:
         print("Alternative (sotto soglia o seconde scelte):")
         for c in (good[1:3] + alt)[:3]:
