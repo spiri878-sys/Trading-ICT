@@ -1,6 +1,6 @@
 """Registro delle giocate e bilancio reale (Fase M6, punto 8 del piano). 1 unità a giocata.
 
-Colonne: chiave unica = fixture_id + giocata. esito: VINTA / PERSA / RIMBORSO (vuoto = da verificare).
+Colonne: chiave unica = fixture_id + giocata. esito: VINTA / PERSA / RIMBORSO / MEZZA (linee a quarti; vuoto = da verificare).
 """
 import pandas as pd
 
@@ -46,7 +46,7 @@ def settle(r, i, esito):
 def summary(r=None):
     """Bilancio a 1 unità: totale e per mercato, livello, campionato, fascia di valore."""
     r = load() if r is None else r
-    s = r[r.esito.isin(["VINTA", "PERSA", "RIMBORSO"])].copy()
+    s = r[r.esito.isin(["VINTA", "PERSA", "RIMBORSO", "MEZZA"])].copy()
     if s.empty:
         return "Nessuna giocata chiusa nel registro."
     s["utile"] = s.utile.astype(float)

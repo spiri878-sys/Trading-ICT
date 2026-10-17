@@ -75,3 +75,13 @@ def test_halves_coherent():
     assert abs(tot - 1) < 1e-9
     hi = sum(prob(M4, {"kind": "hh_highest", "o": o})[0][0] for o in (0, 1, 2))
     assert abs(hi - 1) < 1e-9
+
+
+def test_asian_handicap_quarters():
+    from fb.markets import masks
+    W, P = masks({"kind": "ah", "o": "A", "h": 0.75}, 10)
+    assert W[2, 1] == 0 and P[2, 1] == 0.5           # casa vince 2-1: ospite +0.75 = mezza persa, mezza rimborso
+    W, P = masks({"kind": "ah", "o": "H", "h": -0.25}, 10)
+    assert W[1, 1] == 0 and P[1, 1] == 0.5 and W[2, 1] == 1
+    W, P = masks({"kind": "ah", "o": "H", "h": -1}, 10)
+    assert P[2, 1] == 1 and W[3, 1] == 1

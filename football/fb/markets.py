@@ -139,7 +139,7 @@ def masks(sel, K):
         return (res == sel["o"]).astype(float), (res == "D").astype(float)
     if k == "ah":
         diff = (x - y) if sel["o"] == "H" else (y - x)
-        return _line(diff + sel["h"], 0.0, "over")
+        return _line(diff, -sel["h"], "over")             # vince se diff + h > 0 (linee a quarti divise)
     if k == "eh":                                         # handicap europeo sul totale della squadra di casa
         d = x + sel["h"] - y
         r = np.where(d > 0, "H", np.where(d == 0, "D", "A"))
