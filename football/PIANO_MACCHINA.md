@@ -124,3 +124,15 @@ positive, ROI del backtest (se possibile), AMMESSO / NON AMMESSO.
 ## 12. Rapporto finale (quando tutto è pronto)
 - Tabella dei mercati (punto 4), risultati del backtest, prima lista giornaliera reale, cosa manca e perché.
 - Promemoria all'utente: importi piccoli e fissi, singole, nessuna giocata è sicura.
+
+## 13. Informazioni extra da aggiungere (se disponibili e se migliorano la verifica)
+- xG (gol attesi) per partita e per squadra dalle statistiche API: forza "vera" di attacco/difesa, meno legata alla
+  fortuna dei gol segnati.
+- Peso dei giocatori assenti: per infortuni/squalifiche, quanto conta il giocatore (minuti giocati, gol, assist,
+  tiri, presenze da titolare) e correzione delle probabilità della squadra.
+- Movimento delle quote: confronta la quota del mattino con quella vicino al calcio d'inizio; se il mercato si muove
+  forte CONTRO la nostra giocata è un segnale di trappola (soldi informati), se si muove a favore conferma il valore.
+- Live: oltre a minuto/punteggio/angoli/cartellini/tiri, usa anche possesso, attacchi pericolosi e tiri recenti
+  (pressione degli ultimi 10-15 minuti) per stimare il ritmo che resta; considera espulsioni e cambi.
+- Meteo e campo (pioggia forte, vento): solo se si trova una fonte affidabile e se migliora la verifica.
+Ogni aggiunta entra solo se nella verifica walk-forward migliora davvero i risultati.
