@@ -10,6 +10,11 @@ Branch di lavoro: `claude/gifted-cannon-3ud35m` (commit e push lì, niente PR se
 - Stile "cecchino": poche giocate, solo quando probabilità alta E quota con valore. Una giocata per partita,
   singole (mai multiple di giocate legate). Importi piccoli e fissi: ricordaglielo, ha già perso soldi nel trading.
 - Onestà: nessun modello "non sbaglia mai". Dai sempre probabilità e valore (p x quota - 1).
+- Obiettivo esteso (17/10 sera): la **giocata top della giornata su TUTTI i mercati** con quote dall'API, non solo
+  angoli: 1X2/doppia chance, gol O/U, Gol/NoGol, angoli (totali, casa, ospite), cartellini (già modellati in
+  `fb/card.py`), e se l'API ha le quote anche **falli** e tiri (l'archivio ha HomeFouls/AwayFouls/HomeShots/HomeTarget:
+  costruire modelli come per gli angoli, validati walk-forward e calibrati, PRIMA di proporli). Una classifica unica per
+  valore, con livelli CECCHINO/VALORE; per ogni mercato nuovo misurare prima calibrazione e frequenze sul passato.
 
 ## Stato attuale (17/10/2026)
 - Archivio partite: `football/data/raw/Matches.csv` (fonte e hash in `football/data/manifest.json`), FINISCE il
