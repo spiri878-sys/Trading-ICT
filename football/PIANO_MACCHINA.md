@@ -164,3 +164,6 @@ Ogni aggiunta entra solo se nella verifica walk-forward migliora davvero i risul
 9. LIVELLO "SUPER CECCHINO" (richiesta utente): oltre a CECCHINO (p >= 70%) mostra a parte le giocate con
    probabilità >= 80% e valore >= 5%. Nel backtest/registro misura separatamente le fasce 70-75%, 75-80%, >=80%
    (percentuale vinte, ROI, quota media) e proponi all'utente la soglia migliore con i numeri.
+10. PARI/DISPARI SU TUTTO: non solo gol, anche angoli, cartellini, falli, tiri (totali, per squadra, primo tempo) se
+   l'API ha le quote. Si ricava dalle stesse distribuzioni dei conteggi; stesso cancello di qualità (sono mercati
+   vicini al 50%, il valore sarà raro: proponili solo se la verifica lo regge).
