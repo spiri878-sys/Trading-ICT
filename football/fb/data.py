@@ -5,6 +5,7 @@ Regole anti-futuro:
 * Elo e Form sono valori PRIMA della partita (dichiarato dalla fonte) -> utilizzabili;
 * le quote sono quelle pre-partita (Bet365 e massimo di mercato) -> utilizzabili solo come prezzo di mercato.
 """
+import json
 from functools import lru_cache
 from pathlib import Path
 
@@ -20,9 +21,21 @@ COUNTRY = {"E0": "ENG", "E1": "ENG", "E2": "ENG", "E3": "ENG", "EC": "ENG", "SC0
            "SP2": "ESP", "F1": "FRA", "F2": "FRA", "N1": "NED", "B1": "BEL", "P1": "POR", "T1": "TUR", "G1": "GRE"}
 
 
+# stessa squadra con nomi diversi nella fonte (vecchio -> nuovo), tabella nel repository
+ALIAS = {k: v for k, v in json.loads((ROOT / "data" / "team_alias.json").read_text()).items() if not k.startswith("_")}
+
+
 @lru_cache(maxsize=1)
 def matches() -> pd.DataFrame:
     m = pd.read_csv(RAW / "Matches.csv", low_memory=False)
+    recent = RAW / "api_recent.csv"            # partite recenti da API-Football (solo gol), se non già nell'archivio
+    if recent.exists():
+        r = pd.read_csv(recent)
+        key = set(zip(m.Division, m.MatchDate, m.HomeTeam))
+        r = r[[k not in key for k in zip(r.Division, r.MatchDate, r.HomeTeam)]]
+        m = pd.concat([m, r], ignore_index=True)
+    m["HomeTeam"] = m.HomeTeam.replace(ALIAS)
+    m["AwayTeam"] = m.AwayTeam.replace(ALIAS)
     m["date"] = pd.to_datetime(m.MatchDate)
     m = m[[c for c in m.columns if not c.startswith("C_")]]
     m = m.dropna(subset=["FTHome", "FTAway"]).copy()
