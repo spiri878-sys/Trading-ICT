@@ -146,8 +146,8 @@ Ogni aggiunta entra solo se nella verifica walk-forward migliora davvero i risul
 2. COPPE: Champions, Europa League, Conference, Libertadores e coppe nazionali. Usa i dati delle squadre dai loro
    campionati (con correzione per il livello dei campionati), verifica sul passato le partite tra squadre di
    campionati diversi; se la verifica non regge, segnala "fiducia bassa" o escludi.
-3. LIMITI DI SICUREZZA: massimo di giocate al giorno (es. 5) e stop dopo una serie negativa (es. -10 unità in 7
-   giorni: avviso e pausa); importo sempre fisso, mai raddoppi per recuperare. Ricordalo nel messaggio giornaliero.
+3. LIMITI DI SICUREZZA: RIMOSSI su richiesta dell'utente (17/10). Nessun massimo di giocate al giorno e nessuno
+   stop automatico. Il bilancio resta visibile come sempre.
 4. NOTIFICHE: la lista del mattino e il bilancio della sera devono arrivare sul telefono dell'utente (attività
    pianificate con notifica push), senza che debba aprire niente.
 5. CONTROLLO DI FUNZIONAMENTO: se un passaggio fallisce (API giù, richieste finite, nomi squadre non riconosciuti,
