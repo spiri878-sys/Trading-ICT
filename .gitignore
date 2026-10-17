@@ -13,3 +13,7 @@ output/documenti/presentazione/hi-9.png
 output/video/*/crops/
 output/video/*/zoom*/
 output/video/*/tmp*/
+
+# football: dati grezzi scaricati (vedi football/data/manifest.json)
+football/data/raw/
+football/data/cache/
