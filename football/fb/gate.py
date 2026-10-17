@@ -121,15 +121,16 @@ class Calibrator:
     """Calibrazione robusta: fasce per quantili (>= min_n casi ciascuna), media prevista vs frequenza, resa monotona
     (isotonica sulle fasce) e interpolata. Fuori dalle fasce estreme: solo lo spostamento della fascia estrema."""
 
-    def __init__(self, p, y, min_n=1000, max_bins=60):
+    def __init__(self, p, y, w=None, min_n=1000, max_bins=60):
         p, y = np.asarray(p, float), np.asarray(y, float)
+        w = np.ones(len(p)) if w is None else np.asarray(w, float)
         nb = int(np.clip(len(p) // min_n, 2, max_bins))
         q = np.quantile(p, np.linspace(0, 1, nb + 1))
         idx = np.clip(np.searchsorted(q, p, side="right") - 1, 0, nb - 1)
-        cnt = np.bincount(idx, minlength=nb)
+        cnt = np.bincount(idx, w, minlength=nb)
         ok = cnt > 0
-        xp = (np.bincount(idx, p, nb)[ok] / cnt[ok])
-        yp = (np.bincount(idx, y, nb)[ok] / cnt[ok])
+        xp = (np.bincount(idx, w * p, nb)[ok] / cnt[ok])
+        yp = (np.bincount(idx, w * y, nb)[ok] / cnt[ok])
         ir = IsotonicRegression(out_of_bounds="clip").fit(xp, yp, sample_weight=cnt[ok])
         self.x, self.y = xp, ir.predict(xp)
 
@@ -142,8 +143,11 @@ class Calibrator:
         return np.clip(out, 1e-3, 1 - 1e-3)
 
 
-def calibrator(p, y):
-    return Calibrator(p, y)
+def calibrator(p, y, years=None, ref=None):
+    """Anni più recenti pesano di più (peso dimezzato per ogni anno indietro rispetto a ref): segue la deriva
+    (es. meno falli fischiati negli anni)."""
+    w = None if years is None else 0.5 ** (ref - 1 - np.asarray(years))
+    return Calibrator(p, y, w)
 
 
 def ece(p, y, bins=10):

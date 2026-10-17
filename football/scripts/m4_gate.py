@@ -107,9 +107,10 @@ def finish(stat, sels, P, O, B, yrs, index):
             tr, te = yrs < y, yrs == y
             if te.sum() == 0:
                 continue
-            ir = calibrator(P[tr][:, js].ravel(), O[tr][:, js].ravel())
+            ir = calibrator(P[tr][:, js].ravel(), O[tr][:, js].ravel(), np.repeat(yrs[tr], len(js)), y)
             PC[np.ix_(te, js)] = ir.predict(P[te][:, js].ravel()).reshape(te.sum(), len(js))
-        calib[fam] = calibrator(P[:, js].ravel(), O[:, js].ravel())     # per l'uso giornaliero: tutti gli anni
+        calib[fam] = calibrator(P[:, js].ravel(), O[:, js].ravel(), np.repeat(yrs, len(js)),
+                                yrs.max() + 1)                         # per l'uso giornaliero: tutti gli anni
         v = np.isin(yrs, VER_YEARS)
         p, o, b, praw = PC[v][:, js].ravel(), O[v][:, js].ravel(), B[v][:, js].ravel(), P[v][:, js].ravel()
         yy = np.repeat(yrs[v], len(js))
