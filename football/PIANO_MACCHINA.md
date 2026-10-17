@@ -167,3 +167,8 @@ Ogni aggiunta entra solo se nella verifica walk-forward migliora davvero i risul
 10. PARI/DISPARI SU TUTTO: non solo gol, anche angoli, cartellini, falli, tiri (totali, per squadra, primo tempo) se
    l'API ha le quote. Si ricava dalle stesse distribuzioni dei conteggi; stesso cancello di qualità (sono mercati
    vicini al 50%, il valore sarà raro: proponili solo se la verifica lo regge).
+11. ANDAMENTO DELLE QUOTE: salva le quote di ogni partita più volte (prima uscita/apertura, giorno prima, mattino,
+   1-2 ore prima del calcio d'inizio, chiusura) per tutti i mercati e bookmaker disponibili. Usa sul passato le quote di
+   apertura e di chiusura di football-data (Pinnacle e Bet365) per misurare se il movimento (quota che scende = soldi su
+   quell'esito) migliora le previsioni e i filtri trappola; mostra nella giocata da dove è partita la quota e dove è
+   ora ("aperta 1.95, ora 1.78: il mercato va nella nostra direzione" oppure "contro di noi: attenzione").
