@@ -4,9 +4,9 @@ Quota usata: la migliore pre-partita. 'a favore' = la probabilità di Pinnacle s
 
 | movimento | giocate | vinte | ROI |
 |---|---|---|---|
-| a favore | 113 | 69.9% | +9.2% |
-| fermo | 74 | 62.2% | -1.0% |
-| contro | 65 | 61.5% | -0.1% |
-| (SUPER CECCHINO) contro | 0 | nan% | +nan% |
-| (CECCHINO) contro | 27 | 70.4% | +2.2% |
-| (VALORE) contro | 38 | 55.3% | -1.8% |
+| a favore | 217 | 71.0% | +9.1% |
+| fermo | 143 | 60.1% | -4.7% |
+| contro | 136 | 66.2% | +4.8% |
+| (SUPER CECCHINO) contro | 1 | 100.0% | +31.0% |
+| (CECCHINO) contro | 70 | 70.0% | +0.9% |
+| (VALORE) contro | 65 | 61.5% | +8.6% |
