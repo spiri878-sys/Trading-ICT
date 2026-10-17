@@ -66,7 +66,8 @@ def pre_match(f):
                          mk=af.market_inputs(qs) if qs else {})])
     print("\n".join(f"- {x}" for x in key_probs(pred, f)))
     if not qs:
-        print("Nessuna quota disponibile: solo probabilità.")
+        print("Nessuna quota disponibile: solo probabilità, MENO PRECISE (il modello usa le quote 1X2 e O/U 2.5 come "
+              "informazione; senza, gli angoli attesi si spostano anche di 1).")
         return
     cands = []
     for q in qs:
