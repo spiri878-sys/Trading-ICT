@@ -136,3 +136,21 @@ positive, ROI del backtest (se possibile), AMMESSO / NON AMMESSO.
   (pressione degli ultimi 10-15 minuti) per stimare il ritmo che resta; considera espulsioni e cambi.
 - Meteo e campo (pioggia forte, vento): solo se si trova una fonte affidabile e se migliora la verifica.
 Ogni aggiunta entra solo se nella verifica walk-forward migliora davvero i risultati.
+
+## 14. Revisione finale: punti aggiunti dopo il controllo completo
+1. BOOKMAKER DELL'UTENTE (importante): l'utente gioca su siti italiani (Bet365, eplay24, Sisal...). Molti bookmaker
+   dell'API (Pinnacle, 1xBet, Marathonbet) in Italia non sono utilizzabili. Il valore va calcolato sulla quota migliore
+   tra i bookmaker che l'utente può usare (chiedigli una volta quali, salva l'elenco); Pinnacle e gli altri restano
+   solo come riferimento della probabilità "giusta" e come filtro trappole. Mostra sempre la QUOTA MINIMA, così
+   l'utente controlla in 5 secondi sul suo sito (eplay24 non è nell'API).
+2. COPPE: Champions, Europa League, Conference, Libertadores e coppe nazionali. Usa i dati delle squadre dai loro
+   campionati (con correzione per il livello dei campionati), verifica sul passato le partite tra squadre di
+   campionati diversi; se la verifica non regge, segnala "fiducia bassa" o escludi.
+3. LIMITI DI SICUREZZA: massimo di giocate al giorno (es. 5) e stop dopo una serie negativa (es. -10 unità in 7
+   giorni: avviso e pausa); importo sempre fisso, mai raddoppi per recuperare. Ricordalo nel messaggio giornaliero.
+4. NOTIFICHE: la lista del mattino e il bilancio della sera devono arrivare sul telefono dell'utente (attività
+   pianificate con notifica push), senza che debba aprire niente.
+5. CONTROLLO DI FUNZIONAMENTO: se un passaggio fallisce (API giù, richieste finite, nomi squadre non riconosciuti,
+   dati mancanti) il messaggio lo dice chiaramente invece di dare giocate incomplete.
+6. MERCATI CON REGOLE DIVERSE: verifica come ogni bookmaker conta angoli/cartellini/falli (tempi supplementari
+   esclusi, rosso = 2 gialli o 25 punti, ecc.) e usa la stessa regola nel modello.
