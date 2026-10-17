@@ -161,3 +161,6 @@ Ogni aggiunta entra solo se nella verifica walk-forward migliora davvero i risul
    "predictions" dell'API (solo come informazione in più, mai come risposta).
 8. MERCATI SUI GIOCATORI (marcatore, tiri/tiri in porta del giocatore, ammonizione del giocatore) se l'API ha le
    quote: modello per giocatore (minuti attesi x ritmo per 90'), stesso cancello di qualità degli altri mercati.
+9. LIVELLO "SUPER CECCHINO" (richiesta utente): oltre a CECCHINO (p >= 70%) mostra a parte le giocate con
+   probabilità >= 80% e valore >= 5%. Nel backtest/registro misura separatamente le fasce 70-75%, 75-80%, >=80%
+   (percentuale vinte, ROI, quota media) e proponi all'utente la soglia migliore con i numeri.
