@@ -85,3 +85,15 @@ def test_asian_handicap_quarters():
     assert W[1, 1] == 0 and P[1, 1] == 0.5 and W[2, 1] == 1
     W, P = masks({"kind": "ah", "o": "H", "h": -1}, 10)
     assert P[2, 1] == 1 and W[3, 1] == 1
+
+
+def test_api_asian_handicap_sign():
+    """Nell'API 'Away +0.5' deve valere come ospite -0.5: stessa quota dell'ospite vincente (Bologna-Inter)."""
+    from fb.apifootball import quotes
+    qs = quotes(json.loads(FIX.read_text())["response"][0]["bookmakers"], mine=["Bet365"])
+    q = {(x["bet_id"], x["value"]): x["best"] for x in qs}
+    assert q[(4, "Away +0.5")] == q[(1, "Away")]
+    sel = parse("ah", "Away +0.5")
+    assert sel == {"o": "A", "h": -0.5}
+    M = grid()
+    assert abs(prob(M, dict(sel, kind="ah"))[0][0] - prob(M, {"kind": "1x2", "o": "A"})[0][0]) < 1e-9

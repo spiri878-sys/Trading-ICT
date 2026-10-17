@@ -19,10 +19,12 @@ def pinnacle_fair(quotes, q):
     """Probabilità senza margine di Pinnacle per la stessa giocata (stesso mercato e stessa linea)."""
     if not q.get("pin"):
         return None
-    line = q["value"].split()[-1] if q["value"].split()[0] in ("Over", "Under") else None
+    w = q["value"].split()
+    hcp = q["bet_id"] in (4, 19, 56, 81, 152, 174, 177, 104, 9, 239, 79, 18, 181)   # handicap: gruppo = stesso numero
+    line = w[-1] if w[0] in ("Over", "Under") or (hcp and len(w) == 2) else None
     same = [x for x in quotes if x["bet_id"] == q["bet_id"] and x.get("pin")
             and (line is None or x["value"].split()[-1] == line)]
-    if line is None and q["bet_id"] not in (1, 12, 8, 21, 55, 158, 175, 176, 340):
+    if line is None and q["bet_id"] not in (1, 8, 21, 55, 158, 175, 176, 340):
         return None                            # mercati dove non si sa ricostruire il gruppo completo
     s = sum(1 / x["pin"] for x in same)
     return (1 / q["pin"]) / s if s > 1.0 else None
@@ -119,8 +121,9 @@ def confidence(lvl, fam, nbooks):
     return "bassa"
 
 
-def min_odds(p):
-    return 1.05 / max(p, 1e-6)
+def min_odds(p, push=0.0):
+    """Quota sotto la quale non c'è almeno il 5% di valore (con il rimborso delle linee intere / a quarti)."""
+    return (1.05 - push) / max(p, 1e-6)
 
 
 def fmt_pct(x):

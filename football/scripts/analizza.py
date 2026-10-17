@@ -83,7 +83,7 @@ def pre_match(f):
         mu = pred["mu"].get(c["stat"], pred["mu"]["g"])
         r = "; ".join(reasons(c["stat"], c["sel"], x, f["home"], f["away"], (mu[0][0], mu[1][0])))
         return (f"{describe(c['stat'], c['sel'], f['home'], f['away'])} @{c['q']['best']:.2f} ({c['q']['bm']}), "
-                f"prob {c['p']:.0%}, valore {c['valore']:+.0%}, quota minima {min_odds(c['p']):.2f}. {r}")
+                f"prob {c['p']:.0%}, valore {c['valore']:+.0%}, quota minima {min_odds(c['p'], c['p_push']):.2f}. {r}")
     print("\nGIOCATA: " + (f"{good[0]['lvl']} — {txt(good[0])}" if good else "niente da giocare (nessun valore)"))
     if alt or good[1:]:
         print("Alternative (sotto soglia o seconde scelte):")

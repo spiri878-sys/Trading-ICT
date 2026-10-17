@@ -1,0 +1,16 @@
+{
+ "500": {
+  "api": "Bologna",
+  "auto": false,
+  "div": "I1",
+  "name": "Bologna",
+  "score": 1.0
+ },
+ "505": {
+  "api": "Inter",
+  "auto": false,
+  "div": "I1",
+  "name": "Inter",
+  "score": 1.0
+ }
+}

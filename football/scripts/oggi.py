@@ -110,7 +110,7 @@ def line(c, pred):
     prov = "" if e["famiglia"] in ("g|1x2|H", "g|1x2|D", "g|1x2|A", "g|ou_tot|over", "g|ou_tot|under") \
         else " · profitto non ancora provato"
     return (f"**{f['ora']} {f['div']} {f['home_api']} - {f['away_api']}**: {g} → quota **{q['best']:.2f}** "
-            f"({q['bm']}){pin}, probabilità {e['p']:.0%}, valore {e['valore']:+.0%}, quota minima {min_odds(e['p']):.2f}. "
+            f"({q['bm']}){pin}, probabilità {e['p']:.0%}, valore {e['valore']:+.0%}, quota minima {min_odds(e['p'], e['p_push']):.2f}. "
             f"Livello {c['lvl']}, fiducia {fiducia}{prov}.{mov} Valida pre-partita (in corso: usa live.py). Motivi: {mot}."), g
 
 

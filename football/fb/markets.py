@@ -60,7 +60,12 @@ def parse(kind, value):
             return {"o": OUT3[a] + OUT3[b]}
         if kind in ("ah", "eh"):
             who, h = v.split()
-            return {"o": OUT3[who], "h": _num(h)}
+            h = _num(h)
+            # handicap asiatico API: sul lato ospite il numero è la linea della CASA ('Away +0.5' = ospite -0.5;
+            # verificato: ha la stessa quota dell'ospite vincente in 1X2). L'europeo è sempre riferito alla casa.
+            if kind == "ah" and who == "Away":
+                h = -h
+            return {"o": OUT3[who], "h": h}
         if kind in ("btts", "scoring_draw") or kind.startswith(("clean_", "nil_", "scores_")) or \
                 kind in ("hh_winboth_home", "hh_winboth_away", "hh_teamboth_home", "hh_teamboth_away",
                          "hh_bttsboth", "hh_anyboth"):
