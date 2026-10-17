@@ -1,0 +1,64 @@
+{
+ "angoli_totali": {
+  "n": 80495,
+  "dispersione_k": 64.48,
+  "media_prevista": 10.1,
+  "media_reale": 9.97,
+  "correlazione_prevista_reale": 0.184,
+  "over8.5": {
+   "freq_reale": 0.645,
+   "prob_media_modello": 0.658,
+   "logloss_modello": 0.6402,
+   "logloss_frequenza_campionato": 0.6612
+  },
+  "over9.5": {
+   "freq_reale": 0.527,
+   "prob_media_modello": 0.543,
+   "logloss_modello": 0.682,
+   "logloss_frequenza_campionato": 0.7045
+  },
+  "over10.5": {
+   "freq_reale": 0.413,
+   "prob_media_modello": 0.428,
+   "logloss_modello": 0.6677,
+   "logloss_frequenza_campionato": 0.6905
+  },
+  "over11.5": {
+   "freq_reale": 0.31,
+   "prob_media_modello": 0.324,
+   "logloss_modello": 0.6086,
+   "logloss_frequenza_campionato": 0.6312
+  }
+ },
+ "gialli_totali": {
+  "n": 85422,
+  "dispersione_k": 110.89,
+  "media_prevista": 3.8,
+  "media_reale": 3.87,
+  "correlazione_prevista_reale": 0.383,
+  "over2.5": {
+   "freq_reale": 0.722,
+   "prob_media_modello": 0.703,
+   "logloss_modello": 0.5524,
+   "logloss_frequenza_campionato": 0.5965
+  },
+  "over3.5": {
+   "freq_reale": 0.538,
+   "prob_media_modello": 0.51,
+   "logloss_modello": 0.6429,
+   "logloss_frequenza_campionato": 0.6959
+  },
+  "over4.5": {
+   "freq_reale": 0.357,
+   "prob_media_modello": 0.335,
+   "logloss_modello": 0.6026,
+   "logloss_frequenza_campionato": 0.6568
+  },
+  "over5.5": {
+   "freq_reale": 0.212,
+   "prob_media_modello": 0.2,
+   "logloss_modello": 0.4723,
+   "logloss_frequenza_campionato": 0.5186
+  }
+ }
+}

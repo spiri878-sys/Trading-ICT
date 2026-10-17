@@ -76,6 +76,8 @@ def run_ratings(m: pd.DataFrame, lr=0.05, lr_glob=0.005, decay=1.0, promo_pen=0.
         lh = np.exp(mu[d] + home[d] + att[h] - dif[a])
         la = np.exp(mu[d] + att[a] - dif[h])
         lh_out[k], la_out[k] = lh, la
+        if hg[k] != hg[k] or ag[k] != ag[k]:          # partita futura (risultato ignoto): niente aggiornamento
+            continue
         eh, ea = hg[k] - lh, ag[k] - la
         att[h] += lr * eh
         dif[a] -= lr * eh

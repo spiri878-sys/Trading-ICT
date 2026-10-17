@@ -64,7 +64,7 @@ def team_rolling(m):
             d[f"{s}_f"] = m[hc] if side == "h" else m[ac]
             d[f"{s}_a"] = m[ac] if side == "h" else m[hc]
         res = np.sign(m.hg - m.ag) * (1 if side == "h" else -1)
-        d["pts"] = np.where(res > 0, 3, np.where(res == 0, 1, 0))
+        d["pts"] = np.where(res.isna(), np.nan, np.where(res > 0, 3, np.where(res == 0, 1, 0)))
         rows.append(d)
     L = pd.concat(rows).sort_values(["date", "mid"]).reset_index(drop=True)
     g = L.groupby(["country", "team"], sort=False)
