@@ -6,3 +6,4 @@ data,campionato,casa,ospite,quota_1,quota_X,quota_2,p1,pX,p2,p_over25,p_gg,gol_a
 2026-10-17,E0,Coventry,Newcastle,,,,,,,,,,,5.4,4.5,,,4,1,2,6,,,"solo angoli (modello F6), senza quote; data approssimata"
 2026-10-17,I1,Torino,Udinese,,,,,,,,,,,5.0,4.2,,,2,1,4,3,,,"solo angoli (modello F6), senza quote; data approssimata"
 2026-10-17,I1,Atalanta,Venezia,,,,,,,,,,,5.7,3.9,,,3,1,8,7,,,"solo angoli (modello F6), senza quote; data approssimata"
+2026-10-17,I1,Bologna,Inter,6.00,4.10,1.57,0.169,0.209,0.622,,,0.88,1.79,3.8,4.7,1.6,1.9,,,,,,,"PRE-PARTITA (registrata prima del risultato). Giocata modello: Inter Under 5.5 angoli @1.72 (p 65.8%); anche Under 9.5 @1.72 (p 62.2%)"
