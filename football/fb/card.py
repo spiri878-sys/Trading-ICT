@@ -111,8 +111,11 @@ def predict_fixtures(fixtures):
             xa = XC.loc[[i], meta["cor6"]["features"]]
             mh, ma, mt = (float(lgb.Booster(model_file=str(MODELS / f"cor6_{k}.txt")).predict(xa)[0])
                           for k in ("h", "a", "tot"))
-            tot = (mh + ma + mt) / 2
-            res["cor_attesi"] = {"casa": tot * mh / (mh + ma), "ospite": tot * ma / (mh + ma), "k": meta["cor6"]["k"]}
+            c6 = meta["cor6"]
+            sc = c6.get("scala", {"totale": 1.0, "casa": 1.0, "ospite": 1.0})
+            res["cor_attesi"] = {"casa": mh * sc["casa"], "ospite": ma * sc["ospite"],
+                                 "totale": (mh + ma + mt) / 2 * sc["totale"], "k": c6["k"],
+                                 "k_casa": c6.get("k_casa"), "k_ospite": c6.get("k_ospite")}
         res["contesto"] = {k: (None if not np.isfinite(X.loc[i, k]) else round(float(X.loc[i, k]), 2)) for k in
                            ("elo_h", "elo_a", "h_g_f_m5", "h_g_a_m5", "a_g_f_m5", "a_g_a_m5", "h_sot_f_m5", "a_sot_f_m5",
                             "h_cor_f_m5", "a_cor_f_m5", "h_pts_m5", "a_pts_m5", "h_rest_days", "a_rest_days",
@@ -154,20 +157,42 @@ def markets(res):
     P["X2 + Under 3.5"] = float(M[(dif <= 0) & (tot < 3.5)].sum())
     P["Gol + Over 2.5"] = float(M[1:, 1:][(tot[1:, 1:] > 2.5)].sum())
     P["NoGol + Under 2.5"] = float(M[(tot < 2.5) & ~((g[:, None] > 0) & (g[None, :] > 0))].sum())
-    for fam, lines, name in (("cor", (7.5, 8.5, 9.5, 10.5, 11.5), "Angoli"), ("yel", (2.5, 3.5, 4.5, 5.5), "Gialli")):
+    for fam, lines, name in (("cor", (6.5, 7.5, 8.5, 9.5, 10.5, 11.5, 12.5, 13.5), "Angoli"),
+                             ("yel", (2.5, 3.5, 4.5, 5.5), "Gialli")):
         e = res[f"{fam}_attesi"]
-        mu, k = e["casa"] + e["ospite"], e["k"]
+        mu, k = e.get("totale", e["casa"] + e["ospite"]), e["k"]
         for line in lines:
             P[f"{name} Over {line}"] = float(1 - nbinom.cdf(np.floor(line), k, k / (k + mu)))
             P[f"{name} Under {line}"] = 1 - P[f"{name} Over {line}"]
+    e = res["cor_attesi"]
+    for side, lines, name in (("casa", (2.5, 3.5, 4.5, 5.5, 6.5, 7.5), "Angoli Casa"),
+                              ("ospite", (1.5, 2.5, 3.5, 4.5, 5.5, 6.5), "Angoli Ospite")):
+        k = e.get(f"k_{side}")
+        if not k:
+            continue
+        for line in lines:
+            P[f"{name} Over {line}"] = float(1 - nbinom.cdf(np.floor(line), k, k / (k + e[side])))
+            P[f"{name} Under {line}"] = 1 - P[f"{name} Over {line}"]
     exact = sorted(((float(M[i, j]), f"{i}-{j}") for i in range(6) for j in range(6)), reverse=True)[:8]
     return P, exact
+
+
+def odds_names(q):
+    """Codici brevi da riga di comando -> nomi dei mercati: ang_o9.5, ang_u9.5, casa_o4.5, osp_u3.5, gialli_o4.5."""
+    pref = {"ang": "Angoli", "casa": "Angoli Casa", "osp": "Angoli Ospite", "gialli": "Gialli"}
+    out = {}
+    for key, v in q.items():
+        head, _, tail = key.rpartition("_")
+        if head in pref and tail[:1] in "ou" and tail[1:].replace(".", "", 1).isdigit():
+            out[f"{pref[head]} {'Over' if tail[0] == 'o' else 'Under'} {tail[1:]}"] = v
+    return out
 
 
 def render(res):
     P, exact = markets(res)
     q = res["quote_bookmaker"]
     qmap = {"1": q.get("1"), "X": q.get("X"), "2": q.get("2"), "Over 2.5": q.get("over25"), "Under 2.5": q.get("under25")}
+    qmap.update(odds_names(q))
     h, a = res["match"]["HomeTeam"], res["match"]["AwayTeam"]
     L = [f"## {h} - {a} ({res['match']['Division']}, {res['data']})", "",
          f"Gol attesi: **{res['gol_attesi']['casa']:.2f} - {res['gol_attesi']['ospite']:.2f}** · angoli attesi "
@@ -178,6 +203,14 @@ def render(res):
         qb = qmap.get(k)
         val = f"{100 * (p * qb - 1):+.1f}%" if qb else ""
         L.append(f"| {k} | {100 * p:.1f}% | {1 / max(p, 1e-6):.2f} | {qb or ''} | {val} |")
+    vb = sorted(((P[k] * qb - 1, k, P[k], qb) for k, qb in qmap.items() if qb and k in P), reverse=True)
+    if vb:
+        L += ["", "### Quote inserite: dalla più conveniente", "", "| Mercato | Probabilità | Quota | Valore | Giudizio |",
+              "|---|---|---|---|---|"]
+        for v, k, p, qb in vb:
+            g = ("GIOCABILE (cecchino)" if v >= 0.05 and p >= 0.70 else "valore" if v >= 0.05 else
+                 "quota giusta" if v > -0.03 else "no")
+            L.append(f"| {k} | {100 * p:.1f}% | {qb} | {100 * v:+.1f}% | {g} |")
     last = matches().date.max().date()
     L += ["", f"Attenzione: l'archivio arriva al {last}; forma e forze non includono le partite successive. "
           "Il Valore è (probabilità x quota - 1): positivo = quota più alta del giusto secondo il modello.",

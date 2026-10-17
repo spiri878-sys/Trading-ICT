@@ -2,6 +2,7 @@
 
 usage:
   python football/scripts/scheda.py "Inter" "Milan" I1 2026-10-20 [1=2.10 X=3.40 2=3.60 over25=1.85 under25=1.95]
+      [ang_o9.5=1.85 ang_u9.5=1.95 casa_o4.5=1.80 casa_u4.5=2.00 osp_o3.5=1.90 osp_u3.5=1.90 gialli_o4.5=2.0]
   python football/scripts/scheda.py --squadre I1        (elenco dei nomi delle squadre del campionato)
 """
 import sys
