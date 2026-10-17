@@ -11,6 +11,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from fb import apifootball as af  # noqa: E402
+from fb import espn  # noqa: E402
 from fb.live import final_grid  # noqa: E402
 from fb.markets import prob  # noqa: E402
 from fb.picks import MINQ, describe, level, min_odds, pinnacle_fair, reasons  # noqa: E402
@@ -27,9 +28,17 @@ def find(query, start):
         day = str(start + timedelta(days=d))
         try:
             fx = af.fixtures(day)
-        except (af.BudgetError, RuntimeError) as e:
-            print(f"API non disponibile: {e}")
-            return None
+        except Exception:  # noqa: BLE001  API-Football giù: partite da ESPN (gratis)
+            fx = []
+            for div in espn.LEAGUES:
+                try:
+                    for e in espn.scoreboard(div, day):
+                        st = {"STATUS_SCHEDULED": "NS", "STATUS_FULL_TIME": "FT", "STATUS_FINAL": "FT"}.get(e["stato"], "LIVE")
+                        fx.append({"id": None, "espn": e["id"], "div": div, "date": day, "ora": "", "stato": st,
+                                   "arbitro": "", "home_id": f"espn:{e['home']}", "away_id": f"espn:{e['away']}",
+                                   "home_api": e["home"], "away_api": e["away"], "gol": (None, None)})
+                except Exception:  # noqa: BLE001
+                    continue
         scored = []
         for f in fx:
             h, a = norm(f["home_api"]), norm(f["away_api"])
@@ -60,7 +69,11 @@ def key_probs(pred, f):
 
 
 def pre_match(f):
-    bms = af.odds(f["id"])
+    try:
+        bms = af.odds(f["id"]) if f.get("id") else []
+    except Exception as e:  # noqa: BLE001
+        print(f"Quote non disponibili ({e}).")
+        bms = []
     qs = af.quotes(bms) if bms else []
     pred = predict([dict(div=f["div"], date=f["date"], home=f["home"], away=f["away"], arbitro=f["arbitro"],
                          mk=af.market_inputs(qs) if qs else {})])
@@ -92,14 +105,28 @@ def pre_match(f):
             print(f"- {txt(c)}")
 
 
+def live_stats(f):
+    """Minuto, punteggio e statistiche live: API-Football, oppure ESPN se l'API non risponde."""
+    try:
+        d = af.get("fixtures", max_age=60, id=f["id"])["response"][0]
+        minute = d["fixture"]["status"]["elapsed"] or 0
+        score = (d["goals"]["home"] or 0, d["goals"]["away"] or 0)
+        st = {}
+        for side, t in enumerate(d.get("statistics") or []):
+            for s in t["statistics"]:
+                st.setdefault(s["type"], [0, 0])[side] = float(str(s["value"] or 0).rstrip("%"))
+        return minute, score, st
+    except Exception:  # noqa: BLE001
+        eid = f.get("espn") or (espn.find(f["div"], f["date"], f["home_api"], f["away_api"]) or {}).get("id")
+        c = espn.counts(f["div"], eid, max_age=60)
+        clock = str(c.get("_minuto") or "0").replace("'", "").split("+")
+        minute = 45 if c["_stato"] == "STATUS_HALFTIME" else sum(int(x) for x in clock if x.strip().isdigit())
+        names = {"cor": "Corner Kicks", "sh": "Total Shots", "yel": "Yellow Cards", "red": "Red Cards", "sot": "Shots on Goal"}
+        return minute, tuple(int(x) for x in c["g"]), {names[k]: list(v) for k, v in c.items() if k in names}
+
+
 def live_mode(f):
-    d = af.get("fixtures", max_age=60, id=f["id"])["response"][0]
-    minute = d["fixture"]["status"]["elapsed"] or 0
-    score = (d["goals"]["home"] or 0, d["goals"]["away"] or 0)
-    st = {}
-    for side, t in enumerate(d.get("statistics") or []):
-        for s in t["statistics"]:
-            st.setdefault(s["type"], [0, 0])[side] = float(str(s["value"] or 0).rstrip("%"))
+    minute, score, st = live_stats(f)
     reds = tuple(int(v) for v in st.get("Red Cards", [0, 0]))
     print(f"IN CORSO: {minute}' {score[0]}-{score[1]} · angoli {st.get('Corner Kicks', ['?', '?'])} · "
           f"tiri {st.get('Total Shots', ['?', '?'])} · gialli {st.get('Yellow Cards', ['?', '?'])} · rossi {reds}")
@@ -130,6 +157,13 @@ def main(argv):
     tm = af.load_team_map()
     f["home"] = resolve(f["home_id"], f["home_api"], f["div"], tm)
     f["away"] = resolve(f["away_id"], f["away_api"], f["div"], tm)
+    try:                                               # stato aggiornato in tempo reale da ESPN
+        ev = espn.find(f["div"], f["date"], f["home_api"], f["away_api"])
+        if ev:
+            f["espn"] = ev["id"]
+            f["stato"] = {"STATUS_SCHEDULED": "NS", "STATUS_FULL_TIME": "FT", "STATUS_FINAL": "FT"}.get(ev["stato"], "LIVE")
+    except Exception:  # noqa: BLE001
+        pass
     print(f"# {f['home_api']} - {f['away_api']} ({f['div']}, {f['date']} {f['ora']} UTC, stato {f['stato']})")
     if not (f["home"] and f["away"]):
         print("Nome squadra incerto nell'archivio: analisi non affidabile, salto.")

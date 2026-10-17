@@ -25,6 +25,9 @@ Branch di lavoro: `claude/gifted-cannon-3ud35m` (commit e push lì, niente PR se
   `oggi.py` la usa da sola. Al primo uso: `python -c "import sys; sys.path.insert(0,'football'); from fb import
   oddsapiio as o; print(o.select_books())"` e verifica i nomi delle leghe (`league_div`) e dei mercati sulla risposta
   vera (DA COLLAUDARE). Esiti delle sue giocate: dall'archivio football-data (dopo `f0_update.py`).
+- **Risultati e statistiche (anche live) gratis da ESPN** (`fb/espn.py`, nessuna chiave): `esiti.py` lo usa per
+  primo; `analizza.py` lo usa per stato/minuto/angoli live e per trovare la partita se API-Football non risponde.
+  Fonte non ufficiale: statistiche ESPN possono differire di poco da quelle dei bookmaker.
 - Archivio aggiornato al 16/10/2026: 248.059 partite, 38 campionati (22 europei con angoli/tiri/falli/cartellini, 16
   extra solo gol). Pinnacle/media/arbitro da football-data (`data/raw/extra_odds.csv`).
 - `data/raw`, `data/cache`, `models` NON sono nel repository: si ricreano con `bash football/scripts/rebuild_all.sh`

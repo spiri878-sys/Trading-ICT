@@ -11,7 +11,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from fb import apifootball as af  # noqa: E402
-from fb import registro  # noqa: E402
+from fb import espn, registro  # noqa: E402
 from fb.data import ROOT, matches  # noqa: E402
 from fb.dist import KMAX  # noqa: E402
 from fb.markets import API_BETS, masks, masks_hh, parse  # noqa: E402
@@ -94,6 +94,28 @@ def main(argv):
     r = registro.load()
     open_ = r[(r.esito == "") & (r.fixture_id != "") & (r.tipo == "pre-partita")]
     done = 0
+    for i in list(open_.index):                       # 1) ESPN, gratis e senza chiave: vale per ogni giocata
+        div, home_away = r.at[i, "campionato"], r.at[i, "partita"].split(" - ")
+        if div not in espn.LEAGUES or len(home_away) != 2:
+            continue
+        try:
+            ev = espn.find(div, r.at[i, "data"], *home_away)
+            c = espn.counts(div, ev["id"]) if ev else None
+        except Exception as e:  # noqa: BLE001
+            print(f"ESPN non disponibile: {e}")
+            break
+        if not c or c["_stato"] not in ("STATUS_FULL_TIME", "STATUS_FINAL", "STATUS_FULL_PEN", "STATUS_AET"):
+            continue
+        o = outcome(r.at[i, "bet_id"], r.at[i, "valore_api"], c)
+        if o is None:
+            continue
+        w, p = float(o[0]), float(o[1])
+        q = float(r.at[i, "quota"])
+        r.at[i, "esito"] = "VINTA" if w == 1 else "RIMBORSO" if p == 1 else "PERSA" if w == 0 and p == 0 else "MEZZA"
+        r.at[i, "utile"] = f"{w * q + p - 1:+.2f}"
+        r.at[i, "note"] = (r.at[i, "note"] + " | esito ESPN").strip(" |")
+        done += 1
+    open_ = open_[r.loc[open_.index, "esito"] == ""]
     for i in open_.index[open_.fixture_id.str.startswith("oa")]:       # giocate odds-api.io: esito dall'archivio
         note = r.at[i, "note"]
         if not note.startswith("arch:"):
