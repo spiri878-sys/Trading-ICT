@@ -2,11 +2,13 @@
 (guest.api.arcadia.pinnacle.com: nessuna chiave, nessun login; robots.txt di pinnacle.com vieta solo account/ricerca).
 L'apertura non c'è: la registriamo noi. La prima volta che vediamo una partita salviamo le sue quote in
 output/pinnacle_apertura.json (nel repository, così l'allerta oraria la ritrova); il movimento è prima vista -> adesso.
-Uso con moderazione: 2 richieste per campionato a ogni controllo.
+Uso con moderazione: 2 richieste per campionato a ogni controllo (al massimo una volta all'ora).
 """
 import json
+import re
 import time
 import urllib.request
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timedelta, timezone
 
 from .data import ROOT
@@ -18,6 +20,8 @@ LEAGUES = {"E0": 1980, "E1": 1977, "E2": 1957, "E3": 1958, "EC": 1978, "SC0": 24
            "DEN": 1913, "FIN": 2024, "IRL": 2120, "JAP": 2157, "MEX": 2242, "NOR": 2333, "POL": 2374, "ROM": 2395,
            "RUS": 2406, "SUI": 2517, "SWE": 1728, "USA": 2663}
 STORE = ROOT / "output" / "pinnacle_apertura.json"
+SKIP = re.compile(r"Corners|Bookings|Women|Femin|Damallsvenskan|U\d\d|Youth|Reserve|Specials|Friendl|Esports|"
+                  r"Regional|Amateur|Eccellenza|Landesliga|Derde|Isthmian|Tercera|Segunda Federacion")
 
 
 def _get(path):
@@ -36,10 +40,22 @@ def dec(us):
     return 1 + us / 100 if us > 0 else 1 + 100 / -us
 
 
-def games(div):
+def all_leagues():
+    """Tutti i campionati di calcio principali quotati ora da Pinnacle: {codice: id}. I nostri hanno il codice
+    dell'archivio (E0, I1, ...), gli altri 'PIN:<nome>' (senza verifica storica)."""
+    ours = {v: k for k, v in LEAGUES.items()}
+    out = dict(LEAGUES)
+    for lg in _get("sports/29/leagues?all=false"):
+        if lg.get("matchupCount") and lg["id"] not in ours and not SKIP.search(lg["name"]):
+            out[f"PIN:{lg['name']}"] = lg["id"]
+    return out
+
+
+def games(div, lid=None):
     """Partite non iniziate di un campionato con quote 1X2 e linea asiatica principale attuali."""
-    mus = _get(f"leagues/{LEAGUES[div]}/matchups")
-    mk = _get(f"leagues/{LEAGUES[div]}/markets/straight")
+    lid = lid or LEAGUES[div]
+    mus = _get(f"leagues/{lid}/matchups")
+    mk = _get(f"leagues/{lid}/markets/straight")
     main = {m["id"]: m for m in mus if m.get("type") == "matchup" and not m.get("parentId") and not m.get("isLive")}
     out = {}
     for x in mk:
@@ -56,22 +72,26 @@ def games(div):
     return [g for g in out.values() if "q" in g and "home" in g and "away" in g]
 
 
-def snapshot(divs=None):
+def snapshot(divs=None, tutti=True):
     """Legge tutti i campionati, registra l'apertura delle partite nuove e restituisce le partite con
     apertura e quote attuali. Le partite iniziate da più di 2 giorni escono dall'archivio."""
     store = json.loads(STORE.read_text()) if STORE.exists() else {}
     now = datetime.now(timezone.utc)
     rows = []
-    for div in divs or LEAGUES:
+    leagues = {d: LEAGUES[d] for d in divs} if divs else (all_leagues() if tutti else LEAGUES)
+
+    def one(item):
         try:
-            gs = games(div)
+            return games(*item)
         except Exception:  # noqa: BLE001  un campionato che non risponde non ferma gli altri
-            continue
-        for g in gs:
-            first = store.setdefault(g["id"], {"visto": now.isoformat(timespec="minutes"), "q": g["q"],
-                                               "ah": g.get("ah"), "div": div, "home": g["home"],
-                                               "away": g["away"], "start": g["start"]})
-            rows.append(dict(g, q_open=first["q"], ah_open=first.get("ah"), visto=first["visto"]))
+            return []
+    with ThreadPoolExecutor(4) as ex:
+        found = [g for gs in ex.map(one, leagues.items()) for g in gs]
+    for g in found:
+        first = store.setdefault(g["id"], {"visto": now.isoformat(timespec="minutes"), "q": g["q"],
+                                           "ah": g.get("ah"), "div": g["div"], "home": g["home"],
+                                           "away": g["away"], "start": g["start"]})
+        rows.append(dict(g, q_open=first["q"], ah_open=first.get("ah"), visto=first["visto"]))
     limit = now - timedelta(days=2)
     store = {k: v for k, v in store.items()
              if datetime.fromisoformat(v["start"].replace("Z", "+00:00")) > limit}

@@ -139,7 +139,7 @@ def allerta():
     for r in sorted(rows, key=lambda r: r["ora"]):
         key = f"{r['home']} - {r['away']}"
         done = [dict(zip(("home", "away"), k.split(" - ", 1))) for k in seen]
-        if (r["up"] >= SALITA and r["div"] in VERIFICATI and key not in seen
+        if (r["up"] >= SALITA and key not in seen
                 and not any(same_match(r, d) for d in done if "away" in d)):
             seen.append(key)
             new.append(r)
@@ -149,7 +149,8 @@ def allerta():
         return
     for r in new:
         dc, who = ("1X", r["home"]) if r["dog"] == 0 else ("X2", r["away"])
-        print(f"{r['ora']} {r['home']}-{r['away']}: {dc} ({who} o pareggio). Gioca su Bet365 SOLO se la doppia chance "
+        tag = "" if r["div"] in VERIFICATI else f"[SPERIMENTALE, {r['div'].replace('PIN:', '')}: campionato senza verifica storica] "
+        print(f"{tag}{r['ora']} {r['home']}-{r['away']}: {dc} ({who} o pareggio). Gioca su Bet365 SOLO se la doppia chance "
               f"paga almeno {r['minq']:.2f} ({r['fonte']} {r['dk_open']:.2f} -> {r['dk']:.2f}"
               + (f", linea asiatica {r['linea']}" if r.get("linea") else "") + "). Singola, importo fisso.")
 

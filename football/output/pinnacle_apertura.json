@@ -3716,5 +3716,7532 @@
 "home": "Philadelphia Union",
 "away": "New England Revolution",
 "start": "2026-10-24T23:30:00Z"
+},
+"1638424137": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.96,
+"D": 3.17,
+"A": 1.84
+},
+"ah": 0.5,
+"div": "PIN:Iraq - Stars League",
+"home": "Gaz Al Shamal",
+"away": "Al Zawraa",
+"start": "2026-10-18T15:00:00Z"
+},
+"1638357252": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.481,
+"D": 3.73,
+"A": 5.46
+},
+"ah": -1.0,
+"div": "PIN:Iraq - Stars League",
+"home": "Erbil",
+"away": "Al Mosul",
+"start": "2026-10-18T16:45:00Z"
+},
+"1638352525": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.311,
+"D": 4.38,
+"A": 7.44
+},
+"ah": -1.25,
+"div": "PIN:Iraq - Stars League",
+"home": "Al-Shorta",
+"away": "Al Karkh",
+"start": "2026-10-18T17:30:00Z"
+},
+"1638293022": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.46,
+"D": 3.53,
+"A": 2.03
+},
+"ah": 0.5,
+"div": "PIN:Portugal - Liga 2",
+"home": "Porto II",
+"away": "UD Leiria",
+"start": "2026-10-25T15:30:00Z"
+},
+"1638289909": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.96,
+"D": 3.31,
+"A": 2.38
+},
+"ah": 0.25,
+"div": "PIN:Portugal - Liga 2",
+"home": "Academica",
+"away": "Leixoes",
+"start": "2026-10-24T10:00:00Z"
+},
+"1638305846": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.781,
+"D": 3.5,
+"A": 4.54
+},
+"ah": -0.5,
+"div": "PIN:Portugal - Liga 2",
+"home": "Torreense",
+"away": "Amarante",
+"start": "2026-10-26T20:45:00Z"
+},
+"1638289908": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.61,
+"D": 3.3,
+"A": 2.68
+},
+"ah": 0.0,
+"div": "PIN:Portugal - Liga 2",
+"home": "Feirense",
+"away": "Benfica II",
+"start": "2026-10-24T13:00:00Z"
+},
+"1638293016": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.63,
+"D": 3.21,
+"A": 2.71
+},
+"ah": 0.0,
+"div": "PIN:Portugal - Liga 2",
+"home": "Chaves",
+"away": "Vizela",
+"start": "2026-10-23T17:45:00Z"
+},
+"1638290719": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.01,
+"D": 3.33,
+"A": 3.79
+},
+"ah": -0.5,
+"div": "PIN:Portugal - Liga 2",
+"home": "Sporting Lisbon II",
+"away": "Portimonense",
+"start": "2026-10-24T10:00:00Z"
+},
+"1638290720": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.971,
+"D": 3.39,
+"A": 3.79
+},
+"ah": -0.5,
+"div": "PIN:Portugal - Liga 2",
+"home": "Farense",
+"away": "Penafiel",
+"start": "2026-10-24T17:00:00Z"
+},
+"1638293021": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.48,
+"D": 3.3,
+"A": 2.12
+},
+"ah": 0.25,
+"div": "PIN:Portugal - Liga 2",
+"home": "AVS",
+"away": "Tondela",
+"start": "2026-10-25T11:00:00Z"
+},
+"1638293020": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.5,
+"D": 2.96,
+"A": 3.09
+},
+"ah": -0.25,
+"div": "PIN:Portugal - Liga 2",
+"home": "Felgueiras",
+"away": "Lusitania Lourosa",
+"start": "2026-10-25T14:00:00Z"
+},
+"1638278471": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.518,
+"D": 4.39,
+"A": 5.61
+},
+"ah": -1.0,
+"div": "PIN:Belgium - Cup",
+"home": "Sint Truidense",
+"away": "Lommel",
+"start": "2026-10-18T16:30:00Z"
+},
+"1638230633": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.07,
+"D": 3.55,
+"A": 2.07
+},
+"ah": 0.25,
+"div": "PIN:Belgium - Cup",
+"home": "Beerschot",
+"away": "Anderlecht",
+"start": "2026-10-18T16:00:00Z"
+},
+"1638713702": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.725,
+"D": 3.0,
+"A": 5.01
+},
+"ah": -0.75,
+"div": "PIN:Algeria - Ligue 2",
+"home": "AS Khroub",
+"away": "JSM Skikda",
+"start": "2026-10-18T14:00:00Z"
+},
+"1638424143": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.498,
+"D": 3.55,
+"A": 6.15
+},
+"ah": -1.0,
+"div": "PIN:Algeria - Ligue 2",
+"home": "RC Kouba",
+"away": "ASM Oran",
+"start": "2026-10-18T14:00:00Z"
+},
+"1637218353": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.59,
+"D": 3.16,
+"A": 2.84
+},
+"ah": 0.0,
+"div": "PIN:CONMEBOL - Copa Sudamericana",
+"home": "Vasco da Gama",
+"away": "Boca Juniors",
+"start": "2026-10-21T00:30:00Z"
+},
+"1637262814": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.88,
+"D": 3.25,
+"A": 2.5
+},
+"ah": 0.0,
+"div": "PIN:CONMEBOL - Copa Sudamericana",
+"home": "Montevideo City Torque",
+"away": "Atletico Mineiro",
+"start": "2026-10-21T22:00:00Z"
+},
+"1638241155": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.13,
+"D": 2.34,
+"A": 3.14
+},
+"ah": 0.0,
+"div": "PIN:Argentina - Primera B Nacional",
+"home": "San Telmo",
+"away": "Defensores de Belgrano",
+"start": "2026-10-19T18:30:00Z"
+},
+"1638241266": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.485,
+"D": 4.06,
+"A": 7.28
+},
+"ah": -1.0,
+"div": "PIN:Argentina - Primera B Nacional",
+"home": "Ferro Carril Oeste",
+"away": "Racing de Cordoba",
+"start": "2026-10-18T19:00:00Z"
+},
+"1638263248": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.699,
+"D": 3.42,
+"A": 5.72
+},
+"ah": -0.75,
+"div": "PIN:Argentina - Primera B Nacional",
+"home": "Godoy Cruz",
+"away": "Estudiantes de Caseros",
+"start": "2026-10-18T21:00:00Z"
+},
+"1638241263": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 7.03,
+"D": 3.84,
+"A": 1.422
+},
+"ah": 1.0,
+"div": "PIN:Argentina - Primera B Nacional",
+"home": "Guemes",
+"away": "Almagro",
+"start": "2026-10-18T20:00:00Z"
+},
+"1638241193": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.1,
+"D": 2.84,
+"A": 4.51
+},
+"ah": -0.5,
+"div": "PIN:Argentina - Primera B Nacional",
+"home": "Los Andes",
+"away": "All Boys",
+"start": "2026-10-18T18:30:00Z"
+},
+"1638241158": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.3,
+"D": 3.14,
+"A": 3.39
+},
+"ah": -0.25,
+"div": "PIN:Argentina - Primera B Nacional",
+"home": "Nueva Chicago",
+"away": "Gimnasia Jujuy",
+"start": "2026-10-18T18:30:00Z"
+},
+"1638241150": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.08,
+"D": 2.9,
+"A": 4.45
+},
+"ah": -0.5,
+"div": "PIN:Argentina - Primera B Nacional",
+"home": "Chaco For Ever",
+"away": "Central Norte",
+"start": "2026-10-18T20:00:00Z"
+},
+"1638241045": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.18,
+"D": 2.91,
+"A": 4.05
+},
+"ah": -0.25,
+"div": "PIN:Argentina - Primera B Nacional",
+"home": "San Martin de Tucuman",
+"away": "Ferrocarril Midland",
+"start": "2026-10-18T21:30:00Z"
+},
+"1638241159": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.901,
+"D": 3.12,
+"A": 4.84
+},
+"ah": -0.5,
+"div": "PIN:Argentina - Primera B Nacional",
+"home": "San Martin de San Juan",
+"away": "Temperley",
+"start": "2026-10-18T21:00:00Z"
+},
+"1638241264": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.704,
+"D": 3.33,
+"A": 5.96
+},
+"ah": -0.75,
+"div": "PIN:Argentina - Primera B Nacional",
+"home": "Deportivo Moron",
+"away": "Club Atletico Mitre",
+"start": "2026-10-18T18:00:00Z"
+},
+"1638235406": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.77,
+"D": 3.23,
+"A": 1.935
+},
+"ah": 0.5,
+"div": "PIN:El Salvador - Primera Division",
+"home": "Atletico Balboa",
+"away": "Aguila",
+"start": "2026-10-18T21:00:00Z"
+},
+"1638241280": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.395,
+"D": 4.36,
+"A": 6.89
+},
+"ah": -1.25,
+"div": "PIN:El Salvador - Primera Division",
+"home": "FAS",
+"away": "CD Platense",
+"start": "2026-10-18T23:30:00Z"
+},
+"1638666872": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 13.05,
+"D": 5.64,
+"A": 1.166
+},
+"ah": 1.75,
+"div": "PIN:Lebanon - Premier League",
+"home": "Al Riyadi Abassiya",
+"away": "Jwaya",
+"start": "2026-10-18T12:00:00Z"
+},
+"1638667002": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 4.1,
+"D": 3.33,
+"A": 1.758
+},
+"ah": 0.5,
+"div": "PIN:Lebanon - Premier League",
+"home": "Al Mabarrah",
+"away": "Tripoli",
+"start": "2026-10-18T12:00:00Z"
+},
+"1638350153": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.505,
+"D": 4.14,
+"A": 4.83
+},
+"ah": -1.0,
+"div": "PIN:Latvia - 1st Liga",
+"home": "Leevon PPK",
+"away": "JDFS Alberts",
+"start": "2026-10-18T15:00:00Z"
+},
+"1638215172": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.171,
+"D": 7.14,
+"A": 8.26
+},
+"ah": -2.25,
+"div": "PIN:Latvia - 1st Liga",
+"home": "Valmiera",
+"away": "Tukums 2000 II",
+"start": "2026-10-18T11:00:00Z"
+},
+"1638220454": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.79,
+"D": 3.6,
+"A": 2.1
+},
+"ah": 0.25,
+"div": "PIN:Latvia - 1st Liga",
+"home": "Ventspils",
+"away": "Marupe",
+"start": "2026-10-18T14:00:00Z"
+},
+"1638277048": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.694,
+"D": 3.17,
+"A": 5.39
+},
+"ah": -0.75,
+"div": "PIN:Venezuela - Primera Division",
+"home": "Estudiantes de Merida",
+"away": "Metropolitanos",
+"start": "2026-10-18T19:30:00Z"
+},
+"1638305816": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 6.19,
+"D": 4.13,
+"A": 1.452
+},
+"ah": 1.25,
+"div": "PIN:Venezuela - Primera Division",
+"home": "Rayo Zuliano",
+"away": "Caracas",
+"start": "2026-10-18T19:30:00Z"
+},
+"1638278463": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.07,
+"D": 3.11,
+"A": 3.47
+},
+"ah": -0.25,
+"div": "PIN:Venezuela - Primera Division",
+"home": "UCV",
+"away": "Portuguesa",
+"start": "2026-10-18T19:30:00Z"
+},
+"1638293030": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.617,
+"D": 3.57,
+"A": 4.26
+},
+"ah": -0.75,
+"div": "PIN:Venezuela - Primera Division",
+"home": "Academia Puerto Cabello",
+"away": "Monagas",
+"start": "2026-10-18T19:30:00Z"
+},
+"1638703164": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.521,
+"D": 4.15,
+"A": 5.5
+},
+"ah": -1.0,
+"div": "PIN:USA - USL Championship",
+"home": "Sacramento Republic",
+"away": "Oakland Roots",
+"start": "2026-10-25T02:00:00Z"
+},
+"1638709109": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.38,
+"D": 3.74,
+"A": 2.61
+},
+"ah": 0.0,
+"div": "PIN:USA - USL Championship",
+"home": "Phoenix Rising",
+"away": "Lexington SC",
+"start": "2026-10-25T02:00:00Z"
+},
+"1638693781": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.538,
+"D": 4.03,
+"A": 5.5
+},
+"ah": -1.0,
+"div": "PIN:USA - USL Championship",
+"home": "Colorado Springs Switchbacks",
+"away": "FC Tulsa",
+"start": "2026-10-25T00:00:00Z"
+},
+"1638407389": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 6.39,
+"D": 5.2,
+"A": 1.376
+},
+"ah": 1.25,
+"div": "PIN:USA - USL Championship",
+"home": "Sporting Club Jacksonville",
+"away": "Louisville City",
+"start": "2026-10-21T21:00:00Z"
+},
+"1638694299": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.709,
+"D": 4.03,
+"A": 4.09
+},
+"ah": -0.75,
+"div": "PIN:USA - USL Championship",
+"home": "El Paso Locomotive",
+"away": "New Mexico United",
+"start": "2026-10-25T00:00:00Z"
+},
+"1638709106": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.585,
+"D": 4.12,
+"A": 4.88
+},
+"ah": -1.0,
+"div": "PIN:USA - USL Championship",
+"home": "San Antonio",
+"away": "Orange County",
+"start": "2026-10-25T00:30:00Z"
+},
+"1638713632": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.56,
+"D": 3.57,
+"A": 2.5
+},
+"ah": 0.0,
+"div": "PIN:USA - USL Championship",
+"home": "Monterey Bay",
+"away": "Las Vegas Lights",
+"start": "2026-10-25T02:00:00Z"
+},
+"1638698307": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.592,
+"D": 4.14,
+"A": 4.78
+},
+"ah": -1.0,
+"div": "PIN:USA - USL Championship",
+"home": "Charleston Battery",
+"away": "Indy Eleven",
+"start": "2026-10-24T22:00:00Z"
+},
+"1638694333": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.63,
+"D": 3.22,
+"A": 2.64
+},
+"ah": 0.0,
+"div": "PIN:USA - USL Championship",
+"home": "Hartford Athletic",
+"away": "Rhode Island",
+"start": "2026-10-24T23:00:00Z"
+},
+"1638235506": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.99,
+"D": 4.04,
+"A": 3.32
+},
+"ah": -0.5,
+"div": "PIN:USA - USL Championship",
+"home": "Birmingham Legion",
+"away": "Loudoun United",
+"start": "2026-10-18T21:00:00Z"
+},
+"1638449798": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.97,
+"D": 3.2,
+"A": 2.26
+},
+"ah": 0.25,
+"div": "PIN:Turkey - 2nd League",
+"home": "Kirklarelispor",
+"away": "Ankara Demirspor",
+"start": "2026-10-18T12:00:00Z"
+},
+"1638436073": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.417,
+"D": 4.26,
+"A": 6.06
+},
+"ah": -1.25,
+"div": "PIN:Turkey - 2nd League",
+"home": "Mus Spor",
+"away": "Ankaraspor",
+"start": "2026-10-18T16:00:00Z"
+},
+"1638440096": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.204,
+"D": 5.75,
+"A": 11.11
+},
+"ah": -1.75,
+"div": "PIN:Turkey - 2nd League",
+"home": "68 Aksaray Belediyespor",
+"away": "Adana Demirspor",
+"start": "2026-10-18T11:30:00Z"
+},
+"1638449797": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.543,
+"D": 4.11,
+"A": 4.96
+},
+"ah": -1.0,
+"div": "PIN:Turkey - 2nd League",
+"home": "Belediye Kutahyaspor",
+"away": "12 Bingol Spor",
+"start": "2026-10-18T12:00:00Z"
+},
+"1638436075": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.24,
+"D": 3.32,
+"A": 2.07
+},
+"ah": 0.25,
+"div": "PIN:Turkey - 2nd League",
+"home": "Inegol Kafkasspor",
+"away": "Sebat Genclikspor",
+"start": "2026-10-18T12:00:00Z"
+},
+"1638440130": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.775,
+"D": 3.08,
+"A": 4.88
+},
+"ah": -0.75,
+"div": "PIN:Turkey - 2nd League",
+"home": "Adana 01",
+"away": "Karacabey Belediyespor",
+"start": "2026-10-18T11:30:00Z"
+},
+"1638449782": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.24,
+"D": 3.62,
+"A": 1.971
+},
+"ah": 0.5,
+"div": "PIN:Turkey - 2nd League",
+"home": "Erbaaspor",
+"away": "Corluspor 1947",
+"start": "2026-10-18T11:30:00Z"
+},
+"1638436092": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 6.91,
+"D": 4.71,
+"A": 1.362
+},
+"ah": 1.5,
+"div": "PIN:Turkey - 2nd League",
+"home": "Iskenderunspor",
+"away": "52 Orduspor",
+"start": "2026-10-18T11:30:00Z"
+},
+"1638357253": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 5.87,
+"D": 4.51,
+"A": 1.4
+},
+"ah": 1.25,
+"div": "PIN:Turkey - 2nd League",
+"home": "Somaspor",
+"away": "Aliaga",
+"start": "2026-10-18T16:00:00Z"
+},
+"1638436074": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.64,
+"D": 3.47,
+"A": 1.893
+},
+"ah": 0.5,
+"div": "PIN:Turkey - 2nd League",
+"home": "Kastamonuspor",
+"away": "Isparta 32 Spor",
+"start": "2026-10-18T11:30:00Z"
+},
+"1638350183": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.34,
+"D": 3.01,
+"A": 2.17
+},
+"ah": 0.25,
+"div": "PIN:Turkey - 2nd League",
+"home": "Beyoglu Yeni Carsi",
+"away": "Sakaryaspor",
+"start": "2026-10-18T12:00:00Z"
+},
+"1638279134": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.51,
+"D": 2.87,
+"A": 2.12
+},
+"ah": 0.25,
+"div": "PIN:Oman - Pro League",
+"home": "Al-Nasr",
+"away": "Al-Seeb",
+"start": "2026-10-18T15:30:00Z"
+},
+"1638277057": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.53,
+"D": 2.91,
+"A": 2.83
+},
+"ah": 0.0,
+"div": "PIN:Oman - Pro League",
+"home": "Oman Club",
+"away": "Bahla",
+"start": "2026-10-18T14:05:00Z"
+},
+"1638436084": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.337,
+"D": 4.45,
+"A": 7.57
+},
+"ah": -1.25,
+"div": "PIN:Oman - Pro League",
+"home": "Al-Nahda",
+"away": "Sur",
+"start": "2026-10-19T13:00:00Z"
+},
+"1638596236": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.05,
+"D": 3.52,
+"A": 3.52
+},
+"ah": -0.5,
+"div": "PIN:Korea Republic - K League 1",
+"home": "Bucheon FC 1995",
+"away": "Gwangju FC",
+"start": "2026-10-24T05:00:00Z"
+},
+"1638612801": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.98,
+"D": 3.6,
+"A": 1.893
+},
+"ah": 0.5,
+"div": "PIN:Korea Republic - K League 1",
+"home": "Anyang",
+"away": "Jeonbuk Motors",
+"start": "2026-10-24T05:00:00Z"
+},
+"1638612797": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.43,
+"D": 3.44,
+"A": 2.11
+},
+"ah": 0.25,
+"div": "PIN:Korea Republic - K League 1",
+"home": "Gimcheon Sangmu",
+"away": "Daejeon Citizen",
+"start": "2026-10-24T05:00:00Z"
+},
+"1638612891": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.36,
+"D": 3.15,
+"A": 3.24
+},
+"ah": -0.25,
+"div": "PIN:Korea Republic - K League 1",
+"home": "Incheon United",
+"away": "Jeju SK",
+"start": "2026-10-24T05:00:00Z"
+},
+"1638596232": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.0,
+"D": 3.62,
+"A": 3.57
+},
+"ah": -0.5,
+"div": "PIN:Korea Republic - K League 1",
+"home": "Ulsan HD",
+"away": "Pohang Steelers",
+"start": "2026-10-24T05:00:00Z"
+},
+"1638612894": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.847,
+"D": 3.5,
+"A": 4.3
+},
+"ah": -0.5,
+"div": "PIN:Korea Republic - K League 1",
+"home": "FC Seoul",
+"away": "Gangwon FC",
+"start": "2026-10-24T05:00:00Z"
+},
+"1638516645": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.543,
+"D": 4.09,
+"A": 5.38
+},
+"ah": -1.0,
+"div": "PIN:Colombia - Primera B",
+"home": "Envigado",
+"away": "Barranquilla FC",
+"start": "2026-10-18T20:30:00Z"
+},
+"1638241279": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.42,
+"D": 3.48,
+"A": 2.47
+},
+"ah": 0.0,
+"div": "PIN:Bolivia - Primera Division",
+"home": "Guabira",
+"away": "Oriente Petrolero",
+"start": "2026-10-18T23:30:00Z"
+},
+"1638235377": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 4.0,
+"D": 3.96,
+"A": 1.658
+},
+"ah": 0.75,
+"div": "PIN:Bolivia - Primera Division",
+"home": "Nacional Potosi",
+"away": "Club Bolivar",
+"start": "2026-10-18T19:00:00Z"
+},
+"1638241126": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.57,
+"D": 3.32,
+"A": 2.41
+},
+"ah": 0.0,
+"div": "PIN:Bolivia - Primera Division",
+"home": "The Strongest",
+"away": "Always Ready",
+"start": "2026-10-18T21:15:00Z"
+},
+"1638235399": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.3,
+"D": 3.48,
+"A": 3.05
+},
+"ah": -0.25,
+"div": "PIN:Ecuador - Serie A",
+"home": "Barcelona SC",
+"away": "Universidad Catolica del Ecuador",
+"start": "2026-10-18T21:30:00Z"
+},
+"1638235504": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.27,
+"D": 3.09,
+"A": 3.51
+},
+"ah": -0.25,
+"div": "PIN:Ecuador - Serie A",
+"home": "Delfin",
+"away": "Manta",
+"start": "2026-10-18T16:30:00Z"
+},
+"1638694339": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.746,
+"D": 3.59,
+"A": 4.55
+},
+"ah": -0.75,
+"div": "PIN:Ecuador - Serie A",
+"home": "LDU Quito",
+"away": "Macara",
+"start": "2026-10-24T21:30:00Z"
+},
+"1638241141": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.943,
+"D": 3.26,
+"A": 4.04
+},
+"ah": -0.5,
+"div": "PIN:Ecuador - Serie A",
+"home": "Mushuc Runa",
+"away": "Orense",
+"start": "2026-10-19T20:30:00Z"
+},
+"1638235505": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.909,
+"D": 3.22,
+"A": 4.58
+},
+"ah": -0.5,
+"div": "PIN:Ecuador - Serie A",
+"home": "Leones del Norte",
+"away": "Emelec",
+"start": "2026-10-18T19:00:00Z"
+},
+"1638654800": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.38,
+"D": 3.28,
+"A": 2.93
+},
+"ah": -0.25,
+"div": "PIN:Croatia - HNL",
+"home": "HNK Gorica",
+"away": "Lokomotiva Zagreb",
+"start": "2026-10-24T13:00:00Z"
+},
+"1638190001": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 6.64,
+"D": 5.33,
+"A": 1.391
+},
+"ah": 1.25,
+"div": "PIN:Croatia - HNL",
+"home": "Slaven Belupo",
+"away": "Dinamo Zagreb",
+"start": "2026-10-18T16:00:00Z"
+},
+"1638273275": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.05,
+"D": 3.46,
+"A": 3.33
+},
+"ah": -0.25,
+"div": "PIN:Saudi Arabia - Division 1",
+"home": "Al-Raed",
+"away": "Al-Saqer",
+"start": "2026-10-19T16:50:00Z"
+},
+"1638263328": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.73,
+"D": 3.67,
+"A": 4.4
+},
+"ah": -0.75,
+"div": "PIN:Saudi Arabia - Division 1",
+"home": "Damac",
+"away": "Al-Tai",
+"start": "2026-10-19T15:20:00Z"
+},
+"1638258936": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 4.21,
+"D": 3.37,
+"A": 1.84
+},
+"ah": 0.5,
+"div": "PIN:Saudi Arabia - Division 1",
+"home": "Al-Zulfi",
+"away": "Al-Ula",
+"start": "2026-10-19T15:05:00Z"
+},
+"1638388835": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.304,
+"D": 4.59,
+"A": 7.07
+},
+"ah": -1.5,
+"div": "PIN:Guatemala - Primera Division de Ascenso",
+"home": "Huehuetecos",
+"away": "Amatitlan",
+"start": "2026-10-19T01:00:00Z"
+},
+"1638357236": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.149,
+"D": 6.31,
+"A": 10.23
+},
+"ah": -2.0,
+"div": "PIN:Guatemala - Primera Division de Ascenso",
+"home": "Mictlan",
+"away": "AFF Guatemala",
+"start": "2026-10-18T17:00:00Z"
+},
+"1638357232": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.8,
+"D": 2.54,
+"A": 5.66
+},
+"ah": -0.5,
+"div": "PIN:Guatemala - Primera Division de Ascenso",
+"home": "Sacachispas",
+"away": "Nueva Santa Rosa",
+"start": "2026-10-19T00:00:00Z"
+},
+"1638230166": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.16,
+"D": 2.85,
+"A": 3.35
+},
+"ah": -0.25,
+"div": "PIN:Morocco - Botola 2",
+"home": "Wydad Fes",
+"away": "USM Oujda",
+"start": "2026-10-18T15:00:00Z"
+},
+"1638230675": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.97,
+"D": 2.76,
+"A": 2.42
+},
+"ah": 0.25,
+"div": "PIN:Morocco - Botola 2",
+"home": "JS Soualem",
+"away": "Olympique Dcheira",
+"start": "2026-10-18T15:00:00Z"
+},
+"1638235229": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.667,
+"D": 3.23,
+"A": 4.61
+},
+"ah": -0.75,
+"div": "PIN:Morocco - Botola 2",
+"home": "Olympic Safi",
+"away": "Ittihad Khemisset",
+"start": "2026-10-18T17:00:00Z"
+},
+"1638230585": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.7,
+"D": 2.85,
+"A": 2.57
+},
+"ah": 0.0,
+"div": "PIN:Morocco - Botola 2",
+"home": "Chabab Mohammedia",
+"away": "Olympique Khouribga",
+"start": "2026-10-18T15:00:00Z"
+},
+"1638352501": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.398,
+"D": 4.39,
+"A": 8.28
+},
+"ah": -1.25,
+"div": "PIN:CONMEBOL - Copa Libertadores",
+"home": "Flamengo",
+"away": "Estudiantes de La Plata",
+"start": "2026-10-23T00:30:00Z"
+},
+"1638350154": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.885,
+"D": 3.5,
+"A": 4.12
+},
+"ah": -0.5,
+"div": "PIN:CONMEBOL - Copa Libertadores",
+"home": "Palmeiras",
+"away": "Fluminense",
+"start": "2026-10-22T00:30:00Z"
+},
+"1638612846": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.99,
+"D": 2.88,
+"A": 2.26
+},
+"ah": 0.25,
+"div": "PIN:Burkina Faso - Premier League",
+"home": "Salitas FC",
+"away": "Douanes Ouagadougou",
+"start": "2026-10-18T15:30:00Z"
+},
+"1638612942": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.98,
+"D": 2.83,
+"A": 3.74
+},
+"ah": -0.5,
+"div": "PIN:Burkina Faso - Premier League",
+"home": "ASFA Yennenga",
+"away": "Real du Faso",
+"start": "2026-10-18T15:30:00Z"
+},
+"1638612850": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.71,
+"D": 2.12,
+"A": 3.52
+},
+"ah": 0.0,
+"div": "PIN:Burkina Faso - Premier League",
+"home": "AS Sonabel",
+"away": "Vitesse",
+"start": "2026-10-18T15:30:00Z"
+},
+"1638235283": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.68,
+"D": 4.08,
+"A": 3.97
+},
+"ah": -0.75,
+"div": "PIN:USA - MLS Next Pro League",
+"home": "Chattanooga",
+"away": "New York City II",
+"start": "2026-10-18T21:00:00Z"
+},
+"1638241166": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.17,
+"D": 3.74,
+"A": 2.76
+},
+"ah": -0.25,
+"div": "PIN:USA - MLS Next Pro League",
+"home": "Crown Legacy",
+"away": "New York Red Bulls II",
+"start": "2026-10-18T23:00:00Z"
+},
+"1638241275": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.84,
+"D": 3.6,
+"A": 3.69
+},
+"ah": -0.5,
+"div": "PIN:USA - MLS Next Pro League",
+"home": "Houston Dynamo II",
+"away": "Los Angeles FC II",
+"start": "2026-10-18T23:00:00Z"
+},
+"1638241300": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.847,
+"D": 3.47,
+"A": 3.82
+},
+"ah": -0.5,
+"div": "PIN:USA - MLS Next Pro League",
+"home": "Austin FC II",
+"away": "San Jose Earthquakes II",
+"start": "2026-10-19T00:30:00Z"
+},
+"1638230550": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.377,
+"D": 4.6,
+"A": 6.42
+},
+"ah": -1.25,
+"div": "PIN:Kazakhstan - Premier League",
+"home": "Astana",
+"away": "Kaspyi Aktau",
+"start": "2026-10-18T14:00:00Z"
+},
+"1638230192": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.606,
+"D": 3.84,
+"A": 5.12
+},
+"ah": -1.0,
+"div": "PIN:Italy - Serie C Group B",
+"home": "Pescara",
+"away": "Ostiamare",
+"start": "2026-10-18T15:30:00Z"
+},
+"1638339274": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.17,
+"D": 3.08,
+"A": 3.14
+},
+"ah": -0.25,
+"div": "PIN:Jamaica - Premier League",
+"home": "Chapelton",
+"away": "Treasure Beach",
+"start": "2026-10-18T20:00:00Z"
+},
+"1638676576": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.515,
+"D": 4.01,
+"A": 5.09
+},
+"ah": -1.0,
+"div": "PIN:Jamaica - Premier League",
+"home": "Tru-Juice",
+"away": "Humble Lions",
+"start": "2026-10-18T20:00:00Z"
+},
+"1638481890": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.8,
+"D": 3.5,
+"A": 3.78
+},
+"ah": -0.5,
+"div": "PIN:Jamaica - Premier League",
+"home": "Tivoli Gardens",
+"away": "Dunbeholden",
+"start": "2026-10-18T20:00:00Z"
+},
+"1638279125": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.562,
+"D": 3.89,
+"A": 4.8
+},
+"ah": -1.0,
+"div": "PIN:Jamaica - Premier League",
+"home": "Montego Bay United",
+"away": "Arnett Gardens",
+"start": "2026-10-18T20:00:00Z"
+},
+"1638204465": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.787,
+"D": 3.43,
+"A": 4.15
+},
+"ah": -0.5,
+"div": "PIN:Chinese Taipei - Premier League",
+"home": "Hang Yuan",
+"away": "Taipower",
+"start": "2026-10-18T08:00:00Z"
+},
+"1638257048": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.524,
+"D": 3.94,
+"A": 5.51
+},
+"ah": -1.0,
+"div": "PIN:Belarus - Premier League",
+"home": "Torpedo Zhodino",
+"away": "Naftan Novopolotsk",
+"start": "2026-10-19T15:00:00Z"
+},
+"1638247933": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.24,
+"D": 3.19,
+"A": 2.13
+},
+"ah": 0.25,
+"div": "PIN:Belarus - Premier League",
+"home": "Belshina Bobruisk",
+"away": "Slavia Mozyr",
+"start": "2026-10-19T12:30:00Z"
+},
+"1638235447": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.513,
+"D": 3.74,
+"A": 6.15
+},
+"ah": -1.0,
+"div": "PIN:Belarus - Premier League",
+"home": "Maxline Vitebsk",
+"away": "Neman Grodno",
+"start": "2026-10-18T17:00:00Z"
+},
+"1638273600": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.216,
+"D": 5.78,
+"A": 10.07
+},
+"ah": -1.75,
+"div": "PIN:Belarus - Premier League",
+"home": "Dinamo Minsk",
+"away": "Arsenal Dzyarzhynsk",
+"start": "2026-10-19T17:00:00Z"
+},
+"1638676579": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.943,
+"D": 3.91,
+"A": 3.42
+},
+"ah": -0.5,
+"div": "PIN:Sweden - Superettan",
+"home": "Brage",
+"away": "Osters",
+"start": "2026-10-24T15:00:00Z"
+},
+"1638273611": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.82,
+"D": 3.71,
+"A": 4.07
+},
+"ah": -0.5,
+"div": "PIN:Sweden - Superettan",
+"home": "Varbergs BoIS",
+"away": "Helsingborgs",
+"start": "2026-10-19T17:05:00Z"
+},
+"1638644152": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.495,
+"D": 4.25,
+"A": 6.06
+},
+"ah": -1.0,
+"div": "PIN:Sweden - Superettan",
+"home": "Ostersunds FK",
+"away": "Nordic United",
+"start": "2026-10-24T11:00:00Z"
+},
+"1638307829": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.775,
+"D": 3.87,
+"A": 4.07
+},
+"ah": -0.75,
+"div": "PIN:Sweden - Superettan",
+"home": "Norrkoping",
+"away": "Orebro SK",
+"start": "2026-10-20T17:00:00Z"
+},
+"1638582040": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.34,
+"D": 4.99,
+"A": 7.32
+},
+"ah": -1.5,
+"div": "PIN:Sweden - Superettan",
+"home": "Oddevold",
+"away": "Sundsvall",
+"start": "2026-10-23T17:00:00Z"
+},
+"1638643240": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.962,
+"D": 3.74,
+"A": 3.35
+},
+"ah": -0.5,
+"div": "PIN:Sweden - Superettan",
+"home": "Varnamo",
+"away": "Sandvikens IF",
+"start": "2026-10-24T11:00:00Z"
+},
+"1638162047": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 6.12,
+"D": 3.82,
+"A": 1.5
+},
+"ah": 1.0,
+"div": "PIN:Bosnia and Herzegovina - Premier Liga",
+"home": "NK Celik Zenika",
+"away": "Zrinjski Mostar",
+"start": "2026-10-18T18:00:00Z"
+},
+"1638162046": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 6.1,
+"D": 3.77,
+"A": 1.51
+},
+"ah": 1.0,
+"div": "PIN:Bosnia and Herzegovina - Premier Liga",
+"home": "Velez Mostar",
+"away": "Borac Banja Luka",
+"start": "2026-10-18T15:30:00Z"
+},
+"1638224553": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.11,
+"D": 3.57,
+"A": 2.04
+},
+"ah": 0.25,
+"div": "PIN:Czech Republic - 3. Liga",
+"home": "Caslav",
+"away": "Jablonec II",
+"start": "2026-10-18T13:30:00Z"
+},
+"1638220419": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.709,
+"D": 3.79,
+"A": 4.11
+},
+"ah": -0.75,
+"div": "PIN:Czech Republic - 3. Liga",
+"home": "Benatky Nad Jizerou",
+"away": "Neratovice-Byskovice",
+"start": "2026-10-18T13:30:00Z"
+},
+"1638277047": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.53,
+"D": 3.76,
+"A": 1.99
+},
+"ah": 0.5,
+"div": "PIN:UAE - Pro League",
+"home": "Ajman",
+"away": "Sharjah FC",
+"start": "2026-10-18T15:45:00Z"
+},
+"1638642440": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.31,
+"D": 2.72,
+"A": 3.09
+},
+"ah": -0.25,
+"div": "PIN:Sierra Leone - Premier League",
+"home": "Ports Authority",
+"away": "Kallon",
+"start": "2026-10-18T16:30:00Z"
+},
+"1638666896": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.3,
+"D": 3.81,
+"A": 2.71
+},
+"ah": -0.25,
+"div": "PIN:Hungary - NB 1",
+"home": "Gyori ETO",
+"away": "Ujpest",
+"start": "2026-10-24T15:00:00Z"
+},
+"1638230624": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 5.98,
+"D": 4.6,
+"A": 1.488
+},
+"ah": 1.25,
+"div": "PIN:Hungary - NB 1",
+"home": "Kisvarda",
+"away": "Ferencvaros",
+"start": "2026-10-18T16:00:00Z"
+},
+"1638730437": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.25,
+"D": 3.89,
+"A": 2.66
+},
+"ah": -0.25,
+"div": "PIN:Hungary - NB 1",
+"home": "Vasas",
+"away": "Paksi",
+"start": "2026-10-25T12:15:00Z"
+},
+"1638224560": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.952,
+"D": 3.65,
+"A": 3.78
+},
+"ah": -0.5,
+"div": "PIN:Hungary - NB 1",
+"home": "Debreceni VSC",
+"away": "Zalaegerszegi",
+"start": "2026-10-18T13:30:00Z"
+},
+"1637627667": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 11.47,
+"D": 7.47,
+"A": 1.182
+},
+"ah": 2.0,
+"div": "PIN:Germany - Cup",
+"home": "Rot-Weiss Essen",
+"away": "RB Leipzig",
+"start": "2026-10-27T17:00:00Z"
+},
+"1637623807": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 5.58,
+"D": 4.94,
+"A": 1.467
+},
+"ah": 1.25,
+"div": "PIN:Germany - Cup",
+"home": "Holstein Kiel",
+"away": "Hoffenheim",
+"start": "2026-10-28T19:45:00Z"
+},
+"1637624835": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 5.02,
+"D": 4.26,
+"A": 1.592
+},
+"ah": 1.0,
+"div": "PIN:Germany - Cup",
+"home": "Bochum",
+"away": "Mainz 05",
+"start": "2026-10-27T17:00:00Z"
+},
+"1637624834": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 6.32,
+"D": 5.64,
+"A": 1.373
+},
+"ah": 1.5,
+"div": "PIN:Germany - Cup",
+"home": "Sonnenhof Grossaspach",
+"away": "Augsburg",
+"start": "2026-10-27T17:00:00Z"
+},
+"1637627663": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.15,
+"D": 8.06,
+"A": 14.07
+},
+"ah": -2.25,
+"div": "PIN:Germany - Cup",
+"home": "Bayer Leverkusen",
+"away": "Nurnberg",
+"start": "2026-10-28T19:45:00Z"
+},
+"1637623804": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.36,
+"D": 5.31,
+"A": 7.14
+},
+"ah": -1.5,
+"div": "PIN:Germany - Cup",
+"home": "Borussia Dortmund",
+"away": "Werder Bremen",
+"start": "2026-10-27T19:45:00Z"
+},
+"1637623803": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.746,
+"D": 4.02,
+"A": 4.21
+},
+"ah": -0.75,
+"div": "PIN:Germany - Cup",
+"home": "FC Koln",
+"away": "Union Berlin",
+"start": "2026-10-27T19:45:00Z"
+},
+"1637623805": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.297,
+"D": 5.76,
+"A": 8.4
+},
+"ah": -1.5,
+"div": "PIN:Germany - Cup",
+"home": "Borussia Monchengladbach",
+"away": "Karlsruher",
+"start": "2026-10-27T19:45:00Z"
+},
+"1637623808": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.505,
+"D": 4.77,
+"A": 5.31
+},
+"ah": -1.0,
+"div": "PIN:Germany - Cup",
+"home": "Elversberg",
+"away": "Darmstadt",
+"start": "2026-10-27T19:45:00Z"
+},
+"1637624832": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.84,
+"D": 3.63,
+"A": 2.34
+},
+"ah": 0.25,
+"div": "PIN:Germany - Cup",
+"home": "Hamburger SV",
+"away": "Eintracht Frankfurt",
+"start": "2026-10-27T17:00:00Z"
+},
+"1637623806": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.64,
+"D": 3.85,
+"A": 1.909
+},
+"ah": 0.5,
+"div": "PIN:Germany - Cup",
+"home": "Dynamo Dresden",
+"away": "Schalke 04",
+"start": "2026-10-28T17:00:00Z"
+},
+"1637627666": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 5.63,
+"D": 4.55,
+"A": 1.503
+},
+"ah": 1.0,
+"div": "PIN:Germany - Cup",
+"home": "Paderborn",
+"away": "Stuttgart",
+"start": "2026-10-28T17:00:00Z"
+},
+"1637624836": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 24.73,
+"D": 17.67,
+"A": 1.038
+},
+"ah": 3.5,
+"div": "PIN:Germany - Cup",
+"home": "Jeddeloh",
+"away": "Hertha BSC",
+"start": "2026-10-28T17:00:00Z"
+},
+"1637627665": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.442,
+"D": 4.9,
+"A": 6.01
+},
+"ah": -1.25,
+"div": "PIN:Germany - Cup",
+"home": "Freiburg",
+"away": "Wolfsburg",
+"start": "2026-10-28T17:00:00Z"
+},
+"1637624833": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.952,
+"D": 3.87,
+"A": 3.48
+},
+"ah": -0.5,
+"div": "PIN:Germany - Cup",
+"home": "Hannover 96",
+"away": "Kaiserslautern",
+"start": "2026-10-28T19:45:00Z"
+},
+"1638352498": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 4.37,
+"D": 3.72,
+"A": 1.641
+},
+"ah": 0.75,
+"div": "PIN:Nicaragua - Primera Division",
+"home": "Walter Ferretti",
+"away": "Real Esteli",
+"start": "2026-10-18T23:00:00Z"
+},
+"1638350156": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.06,
+"D": 3.27,
+"A": 3.18
+},
+"ah": -0.25,
+"div": "PIN:Nicaragua - Primera Division",
+"home": "Club Sport Sebaco",
+"away": "ART Municipal Jalapa",
+"start": "2026-10-18T21:00:00Z"
+},
+"1638595667": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 4.44,
+"D": 3.78,
+"A": 1.719
+},
+"ah": 0.75,
+"div": "PIN:Slovakia - Super Liga",
+"home": "Skalica",
+"away": "Spartak Trnava",
+"start": "2026-10-24T16:00:00Z"
+},
+"1638183258": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.1,
+"D": 3.96,
+"A": 2.11
+},
+"ah": 0.25,
+"div": "PIN:Slovakia - Super Liga",
+"home": "Zilina",
+"away": "DAC 1904",
+"start": "2026-10-18T16:00:00Z"
+},
+"1638183220": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.39,
+"D": 3.85,
+"A": 2.01
+},
+"ah": 0.5,
+"div": "PIN:Slovakia - Super Liga",
+"home": "Zemplin Michalovce",
+"away": "FC Kosice",
+"start": "2026-10-18T13:30:00Z"
+},
+"1638183219": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.14,
+"D": 3.75,
+"A": 2.15
+},
+"ah": 0.25,
+"div": "PIN:Slovakia - Super Liga",
+"home": "Dukla Banska Bystrica",
+"away": "Podbrezova",
+"start": "2026-10-18T13:30:00Z"
+},
+"1637183936": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.07,
+"D": 3.49,
+"A": 2.29
+},
+"ah": 0.25,
+"div": "PIN:England - EFL Cup",
+"home": "Sunderland",
+"away": "Brentford",
+"start": "2026-10-28T19:45:00Z"
+},
+"1637183934": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.09,
+"D": 3.68,
+"A": 3.32
+},
+"ah": -0.25,
+"div": "PIN:England - EFL Cup",
+"home": "Fulham",
+"away": "Crystal Palace",
+"start": "2026-10-28T19:45:00Z"
+},
+"1637183935": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.16,
+"D": 3.6,
+"A": 3.24
+},
+"ah": -0.25,
+"div": "PIN:England - EFL Cup",
+"home": "Bournemouth",
+"away": "Aston Villa",
+"start": "2026-10-28T19:45:00Z"
+},
+"1637181763": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.68,
+"D": 4.12,
+"A": 4.63
+},
+"ah": -0.75,
+"div": "PIN:England - EFL Cup",
+"home": "Manchester City",
+"away": "Brighton",
+"start": "2026-10-28T19:30:00Z"
+},
+"1637183933": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.39,
+"D": 3.37,
+"A": 3.0
+},
+"ah": -0.25,
+"div": "PIN:England - EFL Cup",
+"home": "Everton",
+"away": "Newcastle United",
+"start": "2026-10-29T19:45:00Z"
+},
+"1637181762": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.84,
+"D": 3.68,
+"A": 2.35
+},
+"ah": 0.25,
+"div": "PIN:England - EFL Cup",
+"home": "Liverpool",
+"away": "Chelsea",
+"start": "2026-10-28T20:00:00Z"
+},
+"1637185124": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.676,
+"D": 3.77,
+"A": 4.77
+},
+"ah": -0.75,
+"div": "PIN:England - EFL Cup",
+"home": "Bradford City",
+"away": "Peterborough United",
+"start": "2026-10-27T19:45:00Z"
+},
+"1637185123": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 24.83,
+"D": 12.98,
+"A": 1.078
+},
+"ah": 2.5,
+"div": "PIN:England - EFL Cup",
+"home": "Fleetwood Town",
+"away": "Arsenal",
+"start": "2026-10-27T20:00:00Z"
+},
+"1637918208": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.515,
+"D": 4.93,
+"A": 5.69
+},
+"ah": -1.0,
+"div": "PIN:UEFA - Champions League",
+"home": "Real Betis",
+"away": "Feyenoord",
+"start": "2026-10-21T19:00:00Z"
+},
+"1638247898": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.637,
+"D": 4.71,
+"A": 4.67
+},
+"ah": -0.75,
+"div": "PIN:UEFA - Champions League",
+"home": "Porto",
+"away": "PSV",
+"start": "2026-10-20T19:00:00Z"
+},
+"1637835422": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.171,
+"D": 8.28,
+"A": 14.97
+},
+"ah": -2.25,
+"div": "PIN:UEFA - Champions League",
+"home": "Roma",
+"away": "Slovan Bratislava",
+"start": "2026-10-20T19:00:00Z"
+},
+"1638008172": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.32,
+"D": 3.86,
+"A": 2.11
+},
+"ah": 0.25,
+"div": "PIN:UEFA - Champions League",
+"home": "Stuttgart",
+"away": "Atletico Madrid",
+"start": "2026-10-20T19:00:00Z"
+},
+"1637918210": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.16,
+"D": 3.99,
+"A": 3.12
+},
+"ah": -0.25,
+"div": "PIN:UEFA - Champions League",
+"home": "Bayern Munich",
+"away": "Arsenal",
+"start": "2026-10-21T19:00:00Z"
+},
+"1637900253": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.34,
+"D": 3.89,
+"A": 2.86
+},
+"ah": -0.25,
+"div": "PIN:UEFA - Champions League",
+"home": "Como",
+"away": "Manchester United",
+"start": "2026-10-21T16:45:00Z"
+},
+"1638305862": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.49,
+"D": 4.93,
+"A": 6.09
+},
+"ah": -1.0,
+"div": "PIN:UEFA - Champions League",
+"home": "Liverpool",
+"away": "Villarreal",
+"start": "2026-10-20T19:00:00Z"
+},
+"1638305772": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.095,
+"D": 12.02,
+"A": 21.94
+},
+"ah": -2.75,
+"div": "PIN:UEFA - Champions League",
+"home": "Manchester City",
+"away": "AEK Athens",
+"start": "2026-10-20T19:00:00Z"
+},
+"1637921969": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.25,
+"D": 6.43,
+"A": 11.31
+},
+"ah": -2.0,
+"div": "PIN:UEFA - Champions League",
+"home": "Aston Villa",
+"away": "Viking",
+"start": "2026-10-21T19:00:00Z"
+},
+"1637921970": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.214,
+"D": 7.41,
+"A": 11.87
+},
+"ah": -2.0,
+"div": "PIN:UEFA - Champions League",
+"home": "Internazionale",
+"away": "Shakhtar Donetsk",
+"start": "2026-10-21T19:00:00Z"
+},
+"1638289867": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.19,
+"D": 3.79,
+"A": 3.2
+},
+"ah": -0.25,
+"div": "PIN:UEFA - Champions League",
+"home": "Lille",
+"away": "Galatasaray",
+"start": "2026-10-21T16:45:00Z"
+},
+"1638290682": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.39,
+"D": 4.67,
+"A": 2.49
+},
+"ah": 0.0,
+"div": "PIN:UEFA - Champions League",
+"home": "Paris Saint-Germain",
+"away": "Barcelona",
+"start": "2026-10-20T19:00:00Z"
+},
+"1638127658": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.699,
+"D": 4.23,
+"A": 4.73
+},
+"ah": -0.75,
+"div": "PIN:UEFA - Champions League",
+"home": "Fenerbahce",
+"away": "Slavia Prague",
+"start": "2026-10-20T16:45:00Z"
+},
+"1637918209": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.267,
+"D": 6.83,
+"A": 9.19
+},
+"ah": -1.75,
+"div": "PIN:UEFA - Champions League",
+"home": "Real Madrid",
+"away": "RB Leipzig",
+"start": "2026-10-21T19:00:00Z"
+},
+"1638289872": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 9.07,
+"D": 6.19,
+"A": 1.305
+},
+"ah": 1.5,
+"div": "PIN:UEFA - Champions League",
+"home": "Sabah FK",
+"away": "Borussia Dortmund",
+"start": "2026-10-20T16:45:00Z"
+},
+"1638247902": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.223,
+"D": 7.51,
+"A": 10.79
+},
+"ah": -2.0,
+"div": "PIN:UEFA - Champions League",
+"home": "Sporting CP",
+"away": "LASK Linz",
+"start": "2026-10-21T19:00:00Z"
+},
+"1637835014": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.633,
+"D": 4.51,
+"A": 4.91
+},
+"ah": -1.0,
+"div": "PIN:UEFA - Champions League",
+"home": "Napoli",
+"away": "Bodo Glimt",
+"start": "2026-10-20T19:00:00Z"
+},
+"1637921971": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.07,
+"D": 3.95,
+"A": 3.35
+},
+"ah": -0.25,
+"div": "PIN:UEFA - Champions League",
+"home": "Club Brugge",
+"away": "Lens",
+"start": "2026-10-21T19:00:00Z"
+},
+"1638241186": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.455,
+"D": 4.02,
+"A": 6.42
+},
+"ah": -1.25,
+"div": "PIN:Guatemala - Liga Nacional",
+"home": "Marquense",
+"away": "Suchitepequez",
+"start": "2026-10-19T02:00:00Z"
+},
+"1638241190": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.637,
+"D": 3.91,
+"A": 4.44
+},
+"ah": -0.75,
+"div": "PIN:Guatemala - Liga Nacional",
+"home": "Deportivo Mixco",
+"away": "Coban Imperial",
+"start": "2026-10-18T21:00:00Z"
+},
+"1638235231": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.962,
+"D": 2.63,
+"A": 4.95
+},
+"ah": -0.5,
+"div": "PIN:Guatemala - Liga Nacional",
+"home": "Aurora FC",
+"away": "Deportivo San Pedro",
+"start": "2026-10-18T17:30:00Z"
+},
+"1638576339": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.43,
+"D": 3.59,
+"A": 2.66
+},
+"ah": 0.0,
+"div": "PIN:Netherlands - Eerste Divisie",
+"home": "Vitesse Arnhem",
+"away": "Emmen",
+"start": "2026-10-23T18:00:00Z"
+},
+"1638247915": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.54,
+"D": 4.34,
+"A": 2.26
+},
+"ah": 0.0,
+"div": "PIN:Netherlands - Eerste Divisie",
+"home": "Jong Ajax",
+"away": "De Graafschap",
+"start": "2026-10-19T18:00:00Z"
+},
+"1638582082": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.641,
+"D": 4.37,
+"A": 4.27
+},
+"ah": -0.75,
+"div": "PIN:Netherlands - Eerste Divisie",
+"home": "Jong AZ Alkmaar",
+"away": "Helmond Sport",
+"start": "2026-10-23T18:00:00Z"
+},
+"1638249179": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.67,
+"D": 3.79,
+"A": 1.877
+},
+"ah": 0.5,
+"div": "PIN:Netherlands - Eerste Divisie",
+"home": "Jong Utrecht",
+"away": "Roda JC",
+"start": "2026-10-19T18:00:00Z"
+},
+"1638230145": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 6.41,
+"D": 5.35,
+"A": 1.4
+},
+"ah": 1.25,
+"div": "PIN:Netherlands - Eerste Divisie",
+"home": "Maastricht",
+"away": "Heracles Almelo",
+"start": "2026-10-18T14:45:00Z"
+},
+"1638247914": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.11,
+"D": 3.87,
+"A": 2.99
+},
+"ah": -0.25,
+"div": "PIN:Netherlands - Eerste Divisie",
+"home": "Jong PSV",
+"away": "Dordrecht",
+"start": "2026-10-19T18:00:00Z"
+},
+"1638235375": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.3,
+"D": 3.1,
+"A": 3.56
+},
+"ah": -0.25,
+"div": "PIN:Brazil - Serie B",
+"home": "Avai",
+"away": "Athletic Club",
+"start": "2026-10-18T19:00:00Z"
+},
+"1638339249": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.71,
+"D": 3.13,
+"A": 2.73
+},
+"ah": 0.0,
+"div": "PIN:Brazil - Serie B",
+"home": "Londrina",
+"away": "Cuiaba",
+"start": "2026-10-20T22:30:00Z"
+},
+"1638235378": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.43,
+"D": 3.23,
+"A": 2.28
+},
+"ah": 0.25,
+"div": "PIN:Brazil - Serie B",
+"home": "Sao Bernardo",
+"away": "Criciuma",
+"start": "2026-10-18T19:00:00Z"
+},
+"1638278393": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.735,
+"D": 3.68,
+"A": 4.72
+},
+"ah": -0.75,
+"div": "PIN:Brazil - Serie B",
+"home": "Goias",
+"away": "Nautico",
+"start": "2026-10-19T22:30:00Z"
+},
+"1638694338": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 11.5,
+"D": 5.57,
+"A": 1.256
+},
+"ah": 1.5,
+"div": "PIN:Brazil - Serie B",
+"home": "Ponte Preta",
+"away": "Fortaleza",
+"start": "2026-10-24T21:30:00Z"
+},
+"1638235376": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.575,
+"D": 4.15,
+"A": 5.95
+},
+"ah": -1.0,
+"div": "PIN:Brazil - Serie B",
+"home": "CRB",
+"away": "Botafogo SP",
+"start": "2026-10-18T19:00:00Z"
+},
+"1638235282": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.89,
+"D": 2.99,
+"A": 2.8
+},
+"ah": 0.0,
+"div": "PIN:Brazil - Serie B",
+"home": "Vila Nova",
+"away": "Gremio Novorizontino",
+"start": "2026-10-18T21:00:00Z"
+},
+"1638230706": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.599,
+"D": 3.72,
+"A": 4.29
+},
+"ah": -0.75,
+"div": "PIN:Slovenia - 2. SNL",
+"home": "Brezice",
+"away": "Krsko",
+"start": "2026-10-18T15:30:00Z"
+},
+"1638224554": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 4.69,
+"D": 3.9,
+"A": 1.552
+},
+"ah": 1.0,
+"div": "PIN:Slovenia - 2. SNL",
+"home": "NK Vrhnika",
+"away": "Beltinci",
+"start": "2026-10-18T13:30:00Z"
+},
+"1638235393": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.532,
+"D": 3.62,
+"A": 6.13
+},
+"ah": -1.0,
+"div": "PIN:Morocco - Botola Pro",
+"home": "Wydad AC",
+"away": "Amal Tiznit",
+"start": "2026-10-18T20:00:00Z"
+},
+"1638235493": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.45,
+"D": 2.77,
+"A": 3.11
+},
+"ah": -0.25,
+"div": "PIN:Morocco - Botola Pro",
+"home": "Wydad Temara",
+"away": "KAC Marrakech",
+"start": "2026-10-18T18:00:00Z"
+},
+"1638258964": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.249,
+"D": 5.69,
+"A": 10.12
+},
+"ah": -1.75,
+"div": "PIN:Cyprus - 1st Division",
+"home": "Omonia Nicosia",
+"away": "Olympiakos Nicosia",
+"start": "2026-10-19T16:00:00Z"
+},
+"1638263315": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.926,
+"D": 3.38,
+"A": 3.8
+},
+"ah": -0.5,
+"div": "PIN:Cyprus - 1st Division",
+"home": "Pafos",
+"away": "APOEL Nicosia",
+"start": "2026-10-19T15:00:00Z"
+},
+"1638230732": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.59,
+"D": 3.22,
+"A": 2.62
+},
+"ah": 0.0,
+"div": "PIN:Cyprus - 1st Division",
+"home": "Aris Limassol",
+"away": "AEK Larnaca",
+"start": "2026-10-18T16:00:00Z"
+},
+"1638230626": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 4.05,
+"D": 3.72,
+"A": 1.775
+},
+"ah": 0.75,
+"div": "PIN:Cyprus - 1st Division",
+"home": "Omonia 29is Maiou",
+"away": "Anorthosis Famagusta",
+"start": "2026-10-18T16:00:00Z"
+},
+"1638230586": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.68,
+"D": 3.42,
+"A": 2.51
+},
+"ah": 0.0,
+"div": "PIN:Cyprus - 1st Division",
+"home": "Omonia Aradippou",
+"away": "AEL Limassol",
+"start": "2026-10-18T15:00:00Z"
+},
+"1638230206": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.37,
+"D": 3.52,
+"A": 2.13
+},
+"ah": 0.25,
+"div": "PIN:Turkey - 1st League",
+"home": "Istanbulspor",
+"away": "Antalyaspor",
+"start": "2026-10-18T16:00:00Z"
+},
+"1638263267": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.33,
+"D": 3.52,
+"A": 2.85
+},
+"ah": -0.25,
+"div": "PIN:Turkey - 1st League",
+"home": "Manisa",
+"away": "Muglaspor",
+"start": "2026-10-19T14:00:00Z"
+},
+"1638644111": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.17,
+"D": 3.34,
+"A": 3.16
+},
+"ah": -0.25,
+"div": "PIN:Turkey - 1st League",
+"home": "Umraniyespor",
+"away": "Sivasspor",
+"start": "2026-10-24T10:30:00Z"
+},
+"1638263266": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.43,
+"D": 3.56,
+"A": 2.68
+},
+"ah": 0.0,
+"div": "PIN:Turkey - 1st League",
+"home": "Karagumruk",
+"away": "Keciorengucu",
+"start": "2026-10-19T14:00:00Z"
+},
+"1638642469": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.31,
+"D": 3.23,
+"A": 3.09
+},
+"ah": -0.25,
+"div": "PIN:Turkey - 1st League",
+"home": "Bandirmaspor",
+"away": "Igdir Belediyespor",
+"start": "2026-10-24T10:30:00Z"
+},
+"1638290653": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.382,
+"D": 4.93,
+"A": 6.71
+},
+"ah": -1.25,
+"div": "PIN:Turkey - 1st League",
+"home": "Bursaspor",
+"away": "Pendikspor",
+"start": "2026-10-19T17:00:00Z"
+},
+"1638273602": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.0,
+"D": 3.31,
+"A": 3.75
+},
+"ah": -0.5,
+"div": "PIN:Turkey - 1st League",
+"home": "Esenler Erokspor",
+"away": "Mardin 1969",
+"start": "2026-10-19T17:00:00Z"
+},
+"1638582048": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 4.25,
+"D": 3.61,
+"A": 1.758
+},
+"ah": 0.75,
+"div": "PIN:Turkey - 1st League",
+"home": "Boluspor",
+"away": "Vanspor",
+"start": "2026-10-23T17:00:00Z"
+},
+"1638189996": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.66,
+"D": 3.95,
+"A": 2.39
+},
+"ah": 0.0,
+"div": "PIN:Norway - 1st Division",
+"home": "Ranheim",
+"away": "Bryne",
+"start": "2026-10-18T15:00:00Z"
+},
+"1638200202": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 6.62,
+"D": 5.69,
+"A": 1.379
+},
+"ah": 1.5,
+"div": "PIN:Norway - 1st Division",
+"home": "Asane",
+"away": "Stabaek",
+"start": "2026-10-18T15:00:00Z"
+},
+"1638200260": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.317,
+"D": 6.13,
+"A": 7.7
+},
+"ah": -1.75,
+"div": "PIN:Norway - 1st Division",
+"home": "Kongsvinger",
+"away": "Sandnes Ulf",
+"start": "2026-10-18T15:00:00Z"
+},
+"1638190000": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.22,
+"D": 3.77,
+"A": 3.01
+},
+"ah": -0.25,
+"div": "PIN:Norway - 1st Division",
+"home": "Lyn",
+"away": "Moss",
+"start": "2026-10-18T15:00:00Z"
+},
+"1638200256": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.741,
+"D": 4.21,
+"A": 4.2
+},
+"ah": -0.75,
+"div": "PIN:Norway - 1st Division",
+"home": "Hodd",
+"away": "Raufoss",
+"start": "2026-10-18T15:00:00Z"
+},
+"1638200208": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.469,
+"D": 5.13,
+"A": 5.65
+},
+"ah": -1.25,
+"div": "PIN:Norway - 1st Division",
+"home": "Odd BK",
+"away": "Strommen",
+"start": "2026-10-18T15:00:00Z"
+},
+"1638461197": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.676,
+"D": 4.2,
+"A": 4.54
+},
+"ah": -0.75,
+"div": "PIN:UEFA - Europa League",
+"home": "Dinamo Zagreb",
+"away": "NEC Nijmegen",
+"start": "2026-10-22T16:45:00Z"
+},
+"1638470458": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.588,
+"D": 4.2,
+"A": 5.34
+},
+"ah": -1.0,
+"div": "PIN:UEFA - Europa League",
+"home": "Juventus",
+"away": "Rennes",
+"start": "2026-10-22T16:45:00Z"
+},
+"1638470496": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.92,
+"D": 3.56,
+"A": 2.34
+},
+"ah": 0.25,
+"div": "PIN:UEFA - Europa League",
+"home": "Celtic",
+"away": "Celta Vigo",
+"start": "2026-10-22T19:00:00Z"
+},
+"1638461242": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.69,
+"D": 4.01,
+"A": 4.69
+},
+"ah": -0.75,
+"div": "PIN:UEFA - Europa League",
+"home": "Viktoria Plzen",
+"away": "Levski Sofia",
+"start": "2026-10-22T19:00:00Z"
+},
+"1638461243": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.17,
+"D": 3.82,
+"A": 3.06
+},
+"ah": -0.25,
+"div": "PIN:UEFA - Europa League",
+"home": "Besiktas",
+"away": "Crystal Palace",
+"start": "2026-10-22T19:00:00Z"
+},
+"1638466660": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 4.19,
+"D": 3.94,
+"A": 1.781
+},
+"ah": 0.75,
+"div": "PIN:UEFA - Europa League",
+"home": "Celje",
+"away": "Salzburg",
+"start": "2026-10-22T19:00:00Z"
+},
+"1638461195": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.5,
+"D": 3.66,
+"A": 2.03
+},
+"ah": 0.5,
+"div": "PIN:UEFA - Europa League",
+"home": "Sturm Graz",
+"away": "Marseille",
+"start": "2026-10-22T16:45:00Z"
+},
+"1638461194": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.372,
+"D": 5.04,
+"A": 7.72
+},
+"ah": -1.5,
+"div": "PIN:UEFA - Europa League",
+"home": "Ferencvaros",
+"away": "Torreense",
+"start": "2026-10-22T16:45:00Z"
+},
+"1638466619": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 5.71,
+"D": 4.53,
+"A": 1.513
+},
+"ah": 1.0,
+"div": "PIN:UEFA - Europa League",
+"home": "Ararat-Armenia",
+"away": "AZ Alkmaar",
+"start": "2026-10-22T16:45:00Z"
+},
+"1638470498": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.02,
+"D": 3.57,
+"A": 2.28
+},
+"ah": 0.25,
+"div": "PIN:UEFA - Europa League",
+"home": "Jagiellonia Bialystok",
+"away": "Anderlecht",
+"start": "2026-10-22T19:00:00Z"
+},
+"1638466659": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.549,
+"D": 4.26,
+"A": 5.7
+},
+"ah": -1.0,
+"div": "PIN:UEFA - Europa League",
+"home": "Olympiakos",
+"away": "Sparta Prague",
+"start": "2026-10-22T19:00:00Z"
+},
+"1638461196": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.316,
+"D": 5.64,
+"A": 8.31
+},
+"ah": -1.5,
+"div": "PIN:UEFA - Europa League",
+"home": "Union Saint-Gilloise",
+"away": "Hapoel Beer Sheva",
+"start": "2026-10-22T16:45:00Z"
+},
+"1638470497": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.21,
+"D": 3.63,
+"A": 3.1
+},
+"ah": -0.25,
+"div": "PIN:UEFA - Europa League",
+"home": "Bournemouth",
+"away": "AC Milan",
+"start": "2026-10-22T19:00:00Z"
+},
+"1638466618": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 4.97,
+"D": 4.24,
+"A": 1.617
+},
+"ah": 0.75,
+"div": "PIN:UEFA - Europa League",
+"home": "Lech Poznan",
+"away": "Sunderland",
+"start": "2026-10-22T16:45:00Z"
+},
+"1638461245": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 5.37,
+"D": 4.62,
+"A": 1.529
+},
+"ah": 1.0,
+"div": "PIN:UEFA - Europa League",
+"home": "Lillestrom",
+"away": "Real Sociedad",
+"start": "2026-10-22T19:00:00Z"
+},
+"1638461244": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 7.42,
+"D": 5.03,
+"A": 1.382
+},
+"ah": 1.25,
+"div": "PIN:UEFA - Europa League",
+"home": "Omonia Nicosia",
+"away": "Benfica",
+"start": "2026-10-22T19:00:00Z"
+},
+"1638470459": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 10.1,
+"D": 6.64,
+"A": 1.239
+},
+"ah": 1.75,
+"div": "PIN:UEFA - Europa League",
+"home": "OFI Crete",
+"away": "Bayer Leverkusen",
+"start": "2026-10-22T16:45:00Z"
+},
+"1638466658": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.01,
+"D": 3.99,
+"A": 3.3
+},
+"ah": -0.5,
+"div": "PIN:UEFA - Europa League",
+"home": "Hoffenheim",
+"away": "Lyon",
+"start": "2026-10-22T19:00:00Z"
+},
+"1638713728": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.63,
+"D": 3.3,
+"A": 2.06
+},
+"ah": 0.25,
+"div": "PIN:Korea Republic - K League 2",
+"home": "Paju Frontier",
+"away": "Hwaseong",
+"start": "2026-10-25T07:30:00Z"
+},
+"1638717569": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.36,
+"D": 3.34,
+"A": 2.96
+},
+"ah": -0.25,
+"div": "PIN:Korea Republic - K League 2",
+"home": "Chungbuk Cheongju",
+"away": "Yongin",
+"start": "2026-10-25T07:30:00Z"
+},
+"1638717540": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 4.67,
+"D": 4.02,
+"A": 1.654
+},
+"ah": 0.75,
+"div": "PIN:Korea Republic - K League 2",
+"home": "Seongnam FC",
+"away": "Suwon Bluewings",
+"start": "2026-10-25T05:00:00Z"
+},
+"1638612973": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 4.38,
+"D": 4.33,
+"A": 1.645
+},
+"ah": 0.75,
+"div": "PIN:Korea Republic - K League 2",
+"home": "Jeonnam Dragons",
+"away": "Daegu FC",
+"start": "2026-10-24T05:00:00Z"
+},
+"1638713682": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.826,
+"D": 3.88,
+"A": 3.82
+},
+"ah": -0.5,
+"div": "PIN:Korea Republic - K League 2",
+"home": "Suwon FC",
+"away": "Chungnam Asan",
+"start": "2026-10-25T05:00:00Z"
+},
+"1638715548": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.806,
+"D": 3.74,
+"A": 4.05
+},
+"ah": -0.5,
+"div": "PIN:Korea Republic - K League 2",
+"home": "Cheonan City",
+"away": "Ansan Greeners",
+"start": "2026-10-25T07:30:00Z"
+},
+"1638621873": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.725,
+"D": 3.79,
+"A": 4.48
+},
+"ah": -0.75,
+"div": "PIN:Korea Republic - K League 2",
+"home": "Gimpo",
+"away": "Gimhae",
+"start": "2026-10-24T07:30:00Z"
+},
+"1638717545": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.901,
+"D": 3.52,
+"A": 3.93
+},
+"ah": -0.5,
+"div": "PIN:Korea Republic - K League 2",
+"home": "Busan IPark",
+"away": "Gyeongnam",
+"start": "2026-10-25T05:00:00Z"
+},
+"1638224478": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.952,
+"D": 4.39,
+"A": 2.95
+},
+"ah": -0.5,
+"div": "PIN:Luxembourg - National Division",
+"home": "Residence Walferdange",
+"away": "Rumelange",
+"start": "2026-10-18T14:00:00Z"
+},
+"1638224568": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 12.06,
+"D": 7.08,
+"A": 1.17
+},
+"ah": 2.0,
+"div": "PIN:Luxembourg - National Division",
+"home": "Victoria Rosport",
+"away": "Differdange",
+"start": "2026-10-18T14:00:00Z"
+},
+"1638220436": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.088,
+"D": 9.6,
+"A": 19.13
+},
+"ah": -2.75,
+"div": "PIN:Luxembourg - National Division",
+"home": "F91 Dudelange",
+"away": "Swift Hesperange",
+"start": "2026-10-18T14:00:00Z"
+},
+"1638224482": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.926,
+"D": 3.54,
+"A": 3.61
+},
+"ah": -0.5,
+"div": "PIN:Luxembourg - National Division",
+"home": "Jeunesse Esch",
+"away": "Etzella Ettelbruck",
+"start": "2026-10-18T14:00:00Z"
+},
+"1638224480": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.38,
+"D": 4.94,
+"A": 6.64
+},
+"ah": -1.5,
+"div": "PIN:Luxembourg - National Division",
+"home": "Atert Bissen",
+"away": "Hostert",
+"start": "2026-10-18T14:00:00Z"
+},
+"1638224479": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.246,
+"D": 5.94,
+"A": 8.96
+},
+"ah": -1.75,
+"div": "PIN:Luxembourg - National Division",
+"home": "Mondorf-Les-Bains",
+"away": "Wiltz 71",
+"start": "2026-10-18T14:00:00Z"
+},
+"1638224481": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.578,
+"D": 3.94,
+"A": 5.23
+},
+"ah": -1.0,
+"div": "PIN:Luxembourg - National Division",
+"home": "UNA Strassen",
+"away": "Racing Union",
+"start": "2026-10-18T14:00:00Z"
+},
+"1638235237": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.685,
+"D": 2.99,
+"A": 5.04
+},
+"ah": -0.75,
+"div": "PIN:Argentina - Torneo Federal A",
+"home": "Club Villa Mitre",
+"away": "Costa Brava",
+"start": "2026-10-18T19:00:00Z"
+},
+"1638352483": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.649,
+"D": 3.2,
+"A": 4.82
+},
+"ah": -0.75,
+"div": "PIN:Argentina - Torneo Federal A",
+"home": "9 de Julio Rafaela",
+"away": "Gimnasia y Esgrima de Concepcion",
+"start": "2026-10-18T19:00:00Z"
+},
+"1638235236": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.417,
+"D": 3.57,
+"A": 7.18
+},
+"ah": -1.0,
+"div": "PIN:Argentina - Torneo Federal A",
+"home": "Douglas Haig",
+"away": "El Linqueno",
+"start": "2026-10-18T19:00:00Z"
+},
+"1638235235": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.99,
+"D": 2.72,
+"A": 3.9
+},
+"ah": -0.5,
+"div": "PIN:Argentina - Torneo Federal A",
+"home": "Alvarado",
+"away": "Club Cipolletti",
+"start": "2026-10-18T18:30:00Z"
+},
+"1638277054": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.11,
+"D": 2.68,
+"A": 3.6
+},
+"ah": -0.25,
+"div": "PIN:Argentina - Torneo Federal A",
+"home": "San Martin Formosa",
+"away": "Olimpo Bahia Blanca",
+"start": "2026-10-18T18:30:00Z"
+},
+"1638323757": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.8,
+"D": 2.92,
+"A": 4.4
+},
+"ah": -0.5,
+"div": "PIN:Argentina - Torneo Federal A",
+"home": "Sarmiento de la Banda",
+"away": "Sportivo Belgrano",
+"start": "2026-10-18T21:30:00Z"
+},
+"1638235444": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.769,
+"D": 2.92,
+"A": 4.6
+},
+"ah": -0.5,
+"div": "PIN:Argentina - Torneo Federal A",
+"home": "Argentino Monte Maiz",
+"away": "San Martin de Mendoza",
+"start": "2026-10-18T19:15:00Z"
+},
+"1638613060": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.3,
+"D": 3.41,
+"A": 3.01
+},
+"ah": -0.25,
+"div": "PIN:Russia - First League",
+"home": "SKA-Khabarovsk",
+"away": "Yenisey Krasnoyarsk",
+"start": "2026-10-24T05:00:00Z"
+},
+"1638726753": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 4.9,
+"D": 3.6,
+"A": 1.68
+},
+"ah": 0.75,
+"div": "PIN:Russia - First League",
+"home": "Ufa",
+"away": "Nizhny Novgorod",
+"start": "2026-10-24T11:00:00Z"
+},
+"1638730447": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 4.66,
+"D": 3.6,
+"A": 1.709
+},
+"ah": 0.75,
+"div": "PIN:Russia - First League",
+"home": "Tekstilshchik",
+"away": "Sochi",
+"start": "2026-10-24T13:00:00Z"
+},
+"1638224467": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.43,
+"D": 3.02,
+"A": 3.31
+},
+"ah": -0.25,
+"div": "PIN:Russia - First League",
+"home": "Veles Moscow",
+"away": "Shinnik Yaroslavl",
+"start": "2026-10-18T14:00:00Z"
+},
+"1638666966": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.09,
+"D": 3.51,
+"A": 3.35
+},
+"ah": -0.25,
+"div": "PIN:Russia - First League",
+"home": "Arsenal Tula",
+"away": "FC Kamaz",
+"start": "2026-10-24T14:00:00Z"
+},
+"1638717609": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 4.3,
+"D": 3.45,
+"A": 1.847
+},
+"ah": 0.5,
+"div": "PIN:Russia - First League",
+"home": "Chelyabinsk",
+"away": "Ural Yekaterinburg",
+"start": "2026-10-25T10:00:00Z"
+},
+"1638536518": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.893,
+"D": 3.36,
+"A": 4.22
+},
+"ah": -0.5,
+"div": "PIN:Russia - First League",
+"home": "Torpedo Moscow",
+"away": "Rotor Volgograd",
+"start": "2026-10-23T15:00:00Z"
+},
+"1638279112": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.32,
+"D": 2.65,
+"A": 3.53
+},
+"ah": -0.25,
+"div": "PIN:Ethiopia - Premier League",
+"home": "Mekelakeya",
+"away": "Ethiopia Nigd Bank",
+"start": "2026-10-18T12:00:00Z"
+},
+"1638405827": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.75,
+"D": 2.54,
+"A": 2.32
+},
+"ah": 0.25,
+"div": "PIN:Ethiopia - Premier League",
+"home": "Hadiya Hossana",
+"away": "Wolaita Dicha",
+"start": "2026-10-18T12:00:00Z"
+},
+"1638224559": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.44,
+"D": 2.82,
+"A": 3.33
+},
+"ah": -0.25,
+"div": "PIN:South Africa - PSL",
+"home": "Siwelele",
+"away": "Polokwane City",
+"start": "2026-10-18T13:30:00Z"
+},
+"1637707656": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.1,
+"D": 3.64,
+"A": 3.35
+},
+"ah": -0.25,
+"div": "PIN:Australia - A League",
+"home": "Sydney FC",
+"away": "Adelaide United",
+"start": "2026-10-25T04:00:00Z"
+},
+"1637706533": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.752,
+"D": 3.96,
+"A": 4.34
+},
+"ah": -0.75,
+"div": "PIN:Australia - A League",
+"home": "Wellington Phoenix",
+"away": "Central Coast Mariners",
+"start": "2026-10-25T02:00:00Z"
+},
+"1637590277": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.15,
+"D": 3.5,
+"A": 3.35
+},
+"ah": -0.25,
+"div": "PIN:Australia - A League",
+"home": "Brisbane Roar",
+"away": "Perth Glory",
+"start": "2026-10-23T09:00:00Z"
+},
+"1637639550": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.07,
+"D": 3.91,
+"A": 3.22
+},
+"ah": -0.25,
+"div": "PIN:Australia - A League",
+"home": "Newcastle Jets",
+"away": "Macarthur FC",
+"start": "2026-10-24T04:00:00Z"
+},
+"1637650764": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.4,
+"D": 3.57,
+"A": 2.83
+},
+"ah": -0.25,
+"div": "PIN:Australia - A League",
+"home": "Western Sydney Wanderers",
+"away": "Auckland FC",
+"start": "2026-10-24T06:00:00Z"
+},
+"1637656894": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.43,
+"D": 3.52,
+"A": 2.82
+},
+"ah": 0.0,
+"div": "PIN:Australia - A League",
+"home": "Melbourne Victory",
+"away": "Melbourne City",
+"start": "2026-10-24T08:40:00Z"
+},
+"1638596184": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 4.01,
+"D": 3.53,
+"A": 1.877
+},
+"ah": 0.5,
+"div": "PIN:Czech Republic - First Liga",
+"home": "Zlin",
+"away": "Sigma Olomouc",
+"start": "2026-10-24T13:00:00Z"
+},
+"1638595736": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.758,
+"D": 3.74,
+"A": 4.37
+},
+"ah": -0.75,
+"div": "PIN:Czech Republic - First Liga",
+"home": "Teplice",
+"away": "Artis Brno",
+"start": "2026-10-24T13:00:00Z"
+},
+"1638595766": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.637,
+"D": 4.05,
+"A": 4.5
+},
+"ah": -0.75,
+"div": "PIN:Czech Republic - First Liga",
+"home": "Slovan Liberec",
+"away": "Banik Ostrava",
+"start": "2026-10-24T13:00:00Z"
+},
+"1638200250": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.37,
+"D": 3.5,
+"A": 2.93
+},
+"ah": -0.25,
+"div": "PIN:Czech Republic - First Liga",
+"home": "Jablonec",
+"away": "Viktoria Plzen",
+"start": "2026-10-18T16:00:00Z"
+},
+"1638595731": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.24,
+"D": 2.97,
+"A": 3.59
+},
+"ah": -0.25,
+"div": "PIN:Czech Republic - First Liga",
+"home": "Zbrojovka Brno",
+"away": "Bohemians 1905",
+"start": "2026-10-24T13:00:00Z"
+},
+"1638595663": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.245,
+"D": 6.23,
+"A": 8.9
+},
+"ah": -1.75,
+"div": "PIN:Czech Republic - First Liga",
+"home": "Slavia Prague",
+"away": "Mlada Boleslav",
+"start": "2026-10-24T16:00:00Z"
+},
+"1638292998": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 6.15,
+"D": 4.11,
+"A": 1.361
+},
+"ah": 1.25,
+"div": "PIN:Portugal - Cup",
+"home": "Alcochetense",
+"away": "Maritimo",
+"start": "2026-10-18T14:00:00Z"
+},
+"1638289883": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 8.51,
+"D": 4.09,
+"A": 1.336
+},
+"ah": 1.25,
+"div": "PIN:Portugal - Cup",
+"home": "Alpendorada",
+"away": "Casa Pia",
+"start": "2026-10-18T14:00:00Z"
+},
+"1638293000": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 5.04,
+"D": 4.08,
+"A": 1.575
+},
+"ah": 1.0,
+"div": "PIN:Portugal - Cup",
+"home": "Mafra",
+"away": "Santa Clara",
+"start": "2026-10-18T14:00:00Z"
+},
+"1638292999": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.15,
+"D": 3.02,
+"A": 2.4
+},
+"ah": 0.25,
+"div": "PIN:Portugal - Cup",
+"home": "Tondela",
+"away": "Alverca",
+"start": "2026-10-18T14:00:00Z"
+},
+"1638290697": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 4.23,
+"D": 4.39,
+"A": 1.592
+},
+"ah": 1.0,
+"div": "PIN:Portugal - Cup",
+"home": "Os Belenenses",
+"away": "Arouca",
+"start": "2026-10-18T18:45:00Z"
+},
+"1638289885": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.171,
+"D": 5.15,
+"A": 10.79
+},
+"ah": -1.75,
+"div": "PIN:Portugal - Cup",
+"home": "Lusitania Lourosa",
+"away": "AD Limianos",
+"start": "2026-10-18T14:00:00Z"
+},
+"1638289886": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.0,
+"D": 2.99,
+"A": 2.26
+},
+"ah": 0.25,
+"div": "PIN:Portugal - Cup",
+"home": "Brito",
+"away": "Vitoria Sernache",
+"start": "2026-10-18T14:00:00Z"
+},
+"1638293001": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.06,
+"D": 3.27,
+"A": 3.5
+},
+"ah": -0.25,
+"div": "PIN:Portugal - Cup",
+"home": "Felgueiras",
+"away": "Fafe",
+"start": "2026-10-18T14:00:00Z"
+},
+"1638357220": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.11,
+"D": 3.13,
+"A": 3.07
+},
+"ah": -0.25,
+"div": "PIN:Portugal - Cup",
+"home": "Vitoria Setubal",
+"away": "Uniao da Serra",
+"start": "2026-10-18T14:00:00Z"
+},
+"1638516683": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 4.24,
+"D": 3.3,
+"A": 1.746
+},
+"ah": 0.75,
+"div": "PIN:Portugal - Cup",
+"home": "Olhanense",
+"away": "Oliveira do Hospital",
+"start": "2026-10-18T14:00:00Z"
+},
+"1638290695": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 8.25,
+"D": 4.28,
+"A": 1.323
+},
+"ah": 1.25,
+"div": "PIN:Portugal - Cup",
+"home": "Salgueiros",
+"away": "Estoril",
+"start": "2026-10-18T14:00:00Z"
+},
+"1638289884": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 4.85,
+"D": 4.66,
+"A": 1.389
+},
+"ah": 1.25,
+"div": "PIN:Portugal - Cup",
+"home": "Fatima",
+"away": "Academico de Viseu",
+"start": "2026-10-18T14:00:00Z"
+},
+"1638292997": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 7.7,
+"D": 4.24,
+"A": 1.379
+},
+"ah": 1.25,
+"div": "PIN:Portugal - Cup",
+"home": "USC Paredes",
+"away": "Famalicao",
+"start": "2026-10-18T18:30:00Z"
+},
+"1638405826": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.43,
+"D": 2.63,
+"A": 3.0
+},
+"ah": -0.25,
+"div": "PIN:CAF - Champions League Qualifiers",
+"home": "Teungueth",
+"away": "Colombe",
+"start": "2026-10-18T17:00:00Z"
+},
+"1638290690": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.41,
+"D": 3.27,
+"A": 7.32
+},
+"ah": -1.0,
+"div": "PIN:CAF - Champions League Qualifiers",
+"home": "Maghreb Fes",
+"away": "ASEC Mimosas",
+"start": "2026-10-18T18:00:00Z"
+},
+"1638263313": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.353,
+"D": 4.93,
+"A": 6.69
+},
+"ah": -1.25,
+"div": "PIN:Slovakia - 2. Liga",
+"home": "Tatran Presov",
+"away": "Zilina II",
+"start": "2026-10-19T15:00:00Z"
+},
+"1638273208": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.24,
+"D": 3.35,
+"A": 2.26
+},
+"ah": 0.25,
+"div": "PIN:Paraguay - Division Profesional",
+"home": "Sportivo Trinidense",
+"away": "Libertad Asuncion",
+"start": "2026-10-18T22:20:00Z"
+},
+"1638273632": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.862,
+"D": 3.54,
+"A": 4.28
+},
+"ah": -0.5,
+"div": "PIN:Paraguay - Division Profesional",
+"home": "Sportivo Luqueno",
+"away": "Sportivo San Lorenzo",
+"start": "2026-10-18T22:20:00Z"
+},
+"1638273207": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.685,
+"D": 3.88,
+"A": 4.93
+},
+"ah": -0.75,
+"div": "PIN:Paraguay - Division Profesional",
+"home": "Cerro Porteno",
+"away": "Sportivo Ameliano",
+"start": "2026-10-18T20:00:00Z"
+},
+"1638595771": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.885,
+"D": 3.91,
+"A": 3.54
+},
+"ah": -0.5,
+"div": "PIN:Germany - 3. Liga",
+"home": "Wehen Wiesbaden",
+"away": "Sonnenhof Grossaspach",
+"start": "2026-10-24T12:00:00Z"
+},
+"1638184882": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.09,
+"D": 3.87,
+"A": 3.18
+},
+"ah": -0.25,
+"div": "PIN:Germany - 3. Liga",
+"home": "Duisburg",
+"away": "Viktoria Koln",
+"start": "2026-10-18T14:30:00Z"
+},
+"1638470510": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.633,
+"D": 4.36,
+"A": 4.32
+},
+"ah": -0.75,
+"div": "PIN:Germany - 3. Liga",
+"home": "Rot-Weiss Essen",
+"away": "Jahn Regensburg",
+"start": "2026-10-23T17:00:00Z"
+},
+"1638596185": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.21,
+"D": 3.77,
+"A": 2.03
+},
+"ah": 0.25,
+"div": "PIN:Germany - 3. Liga",
+"home": "Stuttgart II",
+"away": "Alemannia Aachen",
+"start": "2026-10-24T14:30:00Z"
+},
+"1638596179": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.06,
+"D": 3.73,
+"A": 3.2
+},
+"ah": -0.25,
+"div": "PIN:Germany - 3. Liga",
+"home": "Hansa Rostock",
+"away": "Fortuna Dusseldorf",
+"start": "2026-10-24T12:00:00Z"
+},
+"1638183216": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.671,
+"D": 4.52,
+"A": 4.26
+},
+"ah": -0.75,
+"div": "PIN:Germany - 3. Liga",
+"home": "Meppen",
+"away": "Havelse",
+"start": "2026-10-18T17:30:00Z"
+},
+"1638278473": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.18,
+"D": 3.24,
+"A": 1.99
+},
+"ah": 0.25,
+"div": "PIN:Peru - Liga 2",
+"home": "Ayacucho",
+"away": "Union Comercio",
+"start": "2026-10-18T18:00:00Z"
+},
+"1638173898": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.794,
+"D": 3.56,
+"A": 3.65
+},
+"ah": -0.5,
+"div": "PIN:Peru - Liga 2",
+"home": "Santos FC",
+"away": "AD Cantolao",
+"start": "2026-10-17T20:15:00Z"
+},
+"1638420775": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.42,
+"D": 4.49,
+"A": 6.07
+},
+"ah": -1.25,
+"div": "PIN:Israel - Ligat Leumit",
+"home": "Hapoel Kfar Shalem",
+"away": "Hapoel Acre",
+"start": "2026-10-19T16:00:00Z"
+},
+"1638273261": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.51,
+"D": 3.57,
+"A": 2.42
+},
+"ah": 0.0,
+"div": "PIN:Israel - Ligat Leumit",
+"home": "Maccabi Bnei Reineh",
+"away": "Hapoel Rishon Lezion",
+"start": "2026-10-19T16:00:00Z"
+},
+"1638415375": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 4.51,
+"D": 3.76,
+"A": 1.654
+},
+"ah": 0.75,
+"div": "PIN:Israel - Ligat Leumit",
+"home": "Hapoel Raanana",
+"away": "Bnei Yehuda Tel Aviv",
+"start": "2026-10-19T16:00:00Z"
+},
+"1638249001": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.44,
+"D": 3.08,
+"A": 3.03
+},
+"ah": -0.25,
+"div": "PIN:Bulgaria - First League",
+"home": "Dunav Ruse",
+"away": "Spartak Varna",
+"start": "2026-10-24T11:00:00Z"
+},
+"1638273614": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.15,
+"D": 3.19,
+"A": 3.48
+},
+"ah": -0.25,
+"div": "PIN:Bulgaria - First League",
+"home": "CSKA Sofia",
+"away": "Ludogorets Razgrad",
+"start": "2026-10-26T17:30:00Z"
+},
+"1638324019": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 5.18,
+"D": 3.38,
+"A": 1.714
+},
+"ah": 0.75,
+"div": "PIN:Bulgaria - First League",
+"home": "Arda",
+"away": "Levski Sofia",
+"start": "2026-10-27T17:30:00Z"
+},
+"1638248998": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.05,
+"D": 3.27,
+"A": 3.65
+},
+"ah": -0.25,
+"div": "PIN:Bulgaria - First League",
+"home": "CSKA 1948",
+"away": "Botev Plovdiv",
+"start": "2026-10-23T16:00:00Z"
+},
+"1638257049": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.25,
+"D": 3.17,
+"A": 3.28
+},
+"ah": -0.25,
+"div": "PIN:Bulgaria - First League",
+"home": "Lokomotiv Plovdiv",
+"away": "Slavia Sofia",
+"start": "2026-10-26T15:00:00Z"
+},
+"1638307887": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.654,
+"D": 3.78,
+"A": 4.91
+},
+"ah": -0.75,
+"div": "PIN:Bulgaria - First League",
+"home": "Cherno More",
+"away": "Septemvri Sofia",
+"start": "2026-10-27T15:00:00Z"
+},
+"1638247908": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.84,
+"D": 3.59,
+"A": 4.05
+},
+"ah": -0.5,
+"div": "PIN:Bulgaria - First League",
+"home": "Lokomotiv Sofia",
+"away": "Botev Vratsa",
+"start": "2026-10-24T13:30:00Z"
+},
+"1638713640": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.58,
+"D": 3.67,
+"A": 2.47
+},
+"ah": 0.0,
+"div": "PIN:Mexico - Liga de Expansión MX",
+"home": "Jaiba Brava",
+"away": "Atletico La Paz",
+"start": "2026-10-25T01:00:00Z"
+},
+"1638712743": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 4.34,
+"D": 4.01,
+"A": 1.69
+},
+"ah": 0.75,
+"div": "PIN:Mexico - Liga de Expansión MX",
+"home": "Dorados",
+"away": "Piratas",
+"start": "2026-10-25T02:00:00Z"
+},
+"1638709073": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.15,
+"D": 3.5,
+"A": 3.17
+},
+"ah": -0.25,
+"div": "PIN:Mexico - Liga de Expansión MX",
+"home": "Venados",
+"away": "Alacranes de Durango",
+"start": "2026-10-24T23:00:00Z"
+},
+"1638612914": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.74,
+"D": 4.13,
+"A": 1.781
+},
+"ah": 0.75,
+"div": "PIN:Mexico - Liga de Expansión MX",
+"home": "Tepatitlan",
+"away": "Cancun",
+"start": "2026-10-24T01:00:00Z"
+},
+"1638709072": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.99,
+"D": 3.47,
+"A": 2.26
+},
+"ah": 0.25,
+"div": "PIN:Mexico - Liga de Expansión MX",
+"home": "Tapatio",
+"away": "Atletico Morelia",
+"start": "2026-10-24T23:00:00Z"
+},
+"1638235356": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.403,
+"D": 5.02,
+"A": 6.86
+},
+"ah": -1.25,
+"div": "PIN:Mexico - Liga de Expansión MX",
+"home": "Leones Negros UDeG",
+"away": "Alebrijes de Oaxaca",
+"start": "2026-10-18T18:00:00Z"
+},
+"1638388810": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.76,
+"D": 2.84,
+"A": 2.4
+},
+"ah": 0.0,
+"div": "PIN:Israel - Liga Alef",
+"home": "Maccabi Ironi Ashdod",
+"away": "Shimshon Tel Aviv",
+"start": "2026-10-18T17:45:00Z"
+},
+"1638247921": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.31,
+"D": 3.21,
+"A": 2.72
+},
+"ah": -0.25,
+"div": "PIN:Israel - Liga Alef",
+"home": "Hapoel Umm Al Fahm",
+"away": "Tira",
+"start": "2026-10-18T14:55:00Z"
+},
+"1638293031": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.671,
+"D": 3.38,
+"A": 4.56
+},
+"ah": -0.75,
+"div": "PIN:Israel - Liga Alef",
+"home": "Maccabi Ironi Kiryat Malakhi",
+"away": "Ironi Beit Shemesh",
+"start": "2026-10-18T15:05:00Z"
+},
+"1638247876": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.54,
+"D": 3.28,
+"A": 2.55
+},
+"ah": 0.0,
+"div": "PIN:Hong Kong - Premier League",
+"home": "Lee Man",
+"away": "Kitchee",
+"start": "2026-10-19T10:30:00Z"
+},
+"1638241331": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.885,
+"D": 4.28,
+"A": 3.05
+},
+"ah": -0.5,
+"div": "PIN:Hong Kong - Premier League",
+"home": "Tai Po",
+"away": "Southern District",
+"start": "2026-10-19T08:00:00Z"
+},
+"1638230730": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.16,
+"D": 3.82,
+"A": 3.08
+},
+"ah": -0.25,
+"div": "PIN:Slovenia - Prva Liga",
+"home": "Maribor",
+"away": "Celje",
+"start": "2026-10-18T16:00:00Z"
+},
+"1638215045": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.4,
+"D": 3.47,
+"A": 2.46
+},
+"ah": 0.0,
+"div": "PIN:Poland - 3rd Liga",
+"home": "Lech Poznan II",
+"away": "Polonia Sroda Wielkopolska",
+"start": "2026-10-18T10:00:00Z"
+},
+"1638230133": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.18,
+"D": 3.51,
+"A": 3.27
+},
+"ah": -0.25,
+"div": "PIN:India - Super League",
+"home": "NorthEast United",
+"away": "Kerala Blasters",
+"start": "2026-10-18T14:00:00Z"
+},
+"1638481900": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 7.0,
+"D": 4.64,
+"A": 1.394
+},
+"ah": 1.25,
+"div": "PIN:India - Super League",
+"home": "Inter Kashi",
+"away": "East Bengal",
+"start": "2026-10-23T11:30:00Z"
+},
+"1638481873": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.41,
+"D": 3.26,
+"A": 2.91
+},
+"ah": -0.25,
+"div": "PIN:India - Super League",
+"home": "Punjab",
+"away": "Mumbai City",
+"start": "2026-10-19T14:00:00Z"
+},
+"1638388693": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.943,
+"D": 3.25,
+"A": 4.04
+},
+"ah": -0.5,
+"div": "PIN:Japan - J2 League",
+"home": "Tokushima Vortis",
+"away": "Vanraure Hachinohe",
+"start": "2026-10-21T10:00:00Z"
+},
+"1638388692": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 4.18,
+"D": 3.84,
+"A": 1.752
+},
+"ah": 0.75,
+"div": "PIN:Japan - J2 League",
+"home": "Ventforet Kofu",
+"away": "Yokohama FC",
+"start": "2026-10-21T10:00:00Z"
+},
+"1638388793": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.08,
+"D": 3.16,
+"A": 3.71
+},
+"ah": -0.25,
+"div": "PIN:Japan - J2 League",
+"home": "Tegevajaro Miyazaki",
+"away": "Blaublitz Akita",
+"start": "2026-10-21T10:00:00Z"
+},
+"1638388788": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.49,
+"D": 3.35,
+"A": 2.07
+},
+"ah": 0.25,
+"div": "PIN:Japan - J2 League",
+"home": "Albirex Niigata",
+"away": "Sagan Tosu",
+"start": "2026-10-21T10:00:00Z"
+},
+"1638388787": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.24,
+"D": 3.39,
+"A": 3.07
+},
+"ah": -0.25,
+"div": "PIN:Japan - J2 League",
+"home": "Shonan Bellmare",
+"away": "Iwaki FC",
+"start": "2026-10-21T10:00:00Z"
+},
+"1638388690": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.429,
+"D": 4.48,
+"A": 6.57
+},
+"ah": -1.25,
+"div": "PIN:Japan - J2 League",
+"home": "Vegalta Sendai",
+"away": "Imabari",
+"start": "2026-10-21T10:00:00Z"
+},
+"1638385554": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.1,
+"D": 3.67,
+"A": 3.13
+},
+"ah": -0.25,
+"div": "PIN:Japan - J2 League",
+"home": "Tochigi City",
+"away": "Fujieda MYFC",
+"start": "2026-10-21T10:00:00Z"
+},
+"1638385555": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.87,
+"D": 3.38,
+"A": 4.18
+},
+"ah": -0.5,
+"div": "PIN:Japan - J2 League",
+"home": "Jubilo Iwata",
+"away": "Oita Trinita",
+"start": "2026-10-21T10:00:00Z"
+},
+"1638388691": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.15,
+"D": 3.86,
+"A": 2.91
+},
+"ah": -0.25,
+"div": "PIN:Japan - J2 League",
+"home": "Omiya Ardija",
+"away": "Kataller Toyama",
+"start": "2026-10-21T10:00:00Z"
+},
+"1638339093": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.32,
+"D": 3.49,
+"A": 2.87
+},
+"ah": -0.25,
+"div": "PIN:Japan - J2 League",
+"home": "Montedio Yamagata",
+"away": "Consadole Sapporo",
+"start": "2026-10-21T04:00:00Z"
+},
+"1638279123": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.17,
+"D": 2.69,
+"A": 4.09
+},
+"ah": -0.25,
+"div": "PIN:Tunisia - League 1",
+"home": "CS Hammam-Lif",
+"away": "JS El Omrane",
+"start": "2026-10-18T13:30:00Z"
+},
+"1638278465": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.943,
+"D": 2.88,
+"A": 4.64
+},
+"ah": -0.5,
+"div": "PIN:Tunisia - League 1",
+"home": "US Monastir",
+"away": "Progres Sakiet Eddaier",
+"start": "2026-10-18T13:30:00Z"
+},
+"1638249168": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.03,
+"D": 2.93,
+"A": 4.07
+},
+"ah": -0.5,
+"div": "PIN:Tunisia - League 1",
+"home": "AS Marsa",
+"away": "ES Metlaoui",
+"start": "2026-10-18T13:30:00Z"
+},
+"1638277051": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.97,
+"D": 2.88,
+"A": 2.54
+},
+"ah": 0.0,
+"div": "PIN:Tunisia - League 1",
+"home": "Olympique de Beja",
+"away": "Etoile Sahel",
+"start": "2026-10-18T13:30:00Z"
+},
+"1638357241": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.67,
+"D": 2.41,
+"A": 2.98
+},
+"ah": 0.0,
+"div": "PIN:Brazil - Gaucho Serie A2",
+"home": "Uniao Frederiquense",
+"away": "Brasil de Pelotas",
+"start": "2026-10-18T19:00:00Z"
+},
+"1638276968": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.17,
+"D": 3.44,
+"A": 2.94
+},
+"ah": -0.25,
+"div": "PIN:Chile - Primera B",
+"home": "Union Espanola",
+"away": "Deportes Copiapo",
+"start": "2026-10-19T22:00:00Z"
+},
+"1638235275": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.45,
+"D": 3.33,
+"A": 1.99
+},
+"ah": 0.5,
+"div": "PIN:Chile - Primera B",
+"home": "Deportes Santa Cruz",
+"away": "Antofagasta",
+"start": "2026-10-18T20:00:00Z"
+},
+"1638235460": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.592,
+"D": 3.63,
+"A": 5.32
+},
+"ah": -0.75,
+"div": "PIN:Chile - Primera B",
+"home": "San Marcos de Arica",
+"away": "Puerto Montt",
+"start": "2026-10-18T18:00:00Z"
+},
+"1638230601": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.89,
+"D": 3.18,
+"A": 2.32
+},
+"ah": 0.25,
+"div": "PIN:Chile - Primera B",
+"home": "Union San Felipe",
+"away": "Deportes Temuco",
+"start": "2026-10-18T15:30:00Z"
+},
+"1638230603": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.44,
+"D": 3.38,
+"A": 2.6
+},
+"ah": 0.0,
+"div": "PIN:Chile - Primera B",
+"home": "Curico Unido",
+"away": "Deportes Iquique",
+"start": "2026-10-18T15:30:00Z"
+},
+"1638248987": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.49,
+"D": 3.1,
+"A": 2.72
+},
+"ah": 0.0,
+"div": "PIN:Vietnam - V League",
+"home": "Cong An Ho Chi Minh",
+"away": "Viettel",
+"start": "2026-10-19T11:00:00Z"
+},
+"1638621787": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.54,
+"D": 2.93,
+"A": 2.05
+},
+"ah": 0.25,
+"div": "PIN:Botswana - Premier League",
+"home": "Matebele",
+"away": "Township Rollers",
+"start": "2026-10-18T14:00:00Z"
+},
+"1638715518": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.813,
+"D": 3.38,
+"A": 3.6
+},
+"ah": -0.5,
+"div": "PIN:Mexico - Liga TDP",
+"home": "CDC Dominguez Osos",
+"away": "Club de Futbol RX",
+"start": "2026-10-18T22:00:00Z"
+},
+"1638230582": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.51,
+"D": 3.28,
+"A": 2.58
+},
+"ah": 0.0,
+"div": "PIN:Hungary - NB 2",
+"home": "Soroksar",
+"away": "Fehervar",
+"start": "2026-10-18T15:00:00Z"
+},
+"1638279067": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.91,
+"D": 3.13,
+"A": 2.5
+},
+"ah": 0.0,
+"div": "PIN:Egypt - Premier League",
+"home": "Wadi Degla",
+"away": "National Bank of Egypt",
+"start": "2026-10-20T15:00:00Z"
+},
+"1638279068": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 6.5,
+"D": 3.64,
+"A": 1.562
+},
+"ah": 1.0,
+"div": "PIN:Egypt - Premier League",
+"home": "Talaea El Gaish",
+"away": "Pyramids FC",
+"start": "2026-10-20T17:00:00Z"
+},
+"1638279066": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.42,
+"D": 2.82,
+"A": 3.41
+},
+"ah": -0.25,
+"div": "PIN:Egypt - Premier League",
+"home": "ZED",
+"away": "Modern Sport",
+"start": "2026-10-20T14:00:00Z"
+},
+"1638241055": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.49,
+"D": 3.87,
+"A": 7.13
+},
+"ah": -1.0,
+"div": "PIN:Egypt - Premier League",
+"home": "Al Masry",
+"away": "Abu Qair Semad",
+"start": "2026-10-19T17:00:00Z"
+},
+"1638339176": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.13,
+"D": 2.71,
+"A": 4.48
+},
+"ah": -0.25,
+"div": "PIN:Egypt - Premier League",
+"home": "Ceramica Cleopatra",
+"away": "Petrojet",
+"start": "2026-10-21T17:00:00Z"
+},
+"1638339175": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.222,
+"D": 5.73,
+"A": 12.25
+},
+"ah": -1.75,
+"div": "PIN:Egypt - Premier League",
+"home": "Al Ahly",
+"away": "El Qanah",
+"start": "2026-10-21T17:00:00Z"
+},
+"1638241173": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.73,
+"D": 2.81,
+"A": 2.96
+},
+"ah": 0.0,
+"div": "PIN:Egypt - Premier League",
+"home": "ENPPI",
+"away": "Al Mokawloon Al Arab",
+"start": "2026-10-19T17:00:00Z"
+},
+"1638279069": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 8.9,
+"D": 4.11,
+"A": 1.4
+},
+"ah": 1.25,
+"div": "PIN:Egypt - Premier League",
+"home": "Asyut Petroleum",
+"away": "Zamalek",
+"start": "2026-10-20T14:00:00Z"
+},
+"1638324007": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.0,
+"D": 2.52,
+"A": 3.04
+},
+"ah": 0.0,
+"div": "PIN:Egypt - Premier League",
+"home": "Ghazl El Mahallah",
+"away": "Al Ittihad Al Sakandary",
+"start": "2026-10-20T17:00:00Z"
+},
+"1638241054": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.91,
+"D": 2.69,
+"A": 2.28
+},
+"ah": 0.25,
+"div": "PIN:Egypt - Premier League",
+"home": "El Gounah",
+"away": "Smouha",
+"start": "2026-10-19T14:00:00Z"
+},
+"1638481871": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.685,
+"D": 3.69,
+"A": 4.91
+},
+"ah": -0.75,
+"div": "PIN:Colombia - Primera A",
+"home": "Millonarios",
+"away": "Once Caldas",
+"start": "2026-10-21T01:30:00Z"
+},
+"1637991779": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.83,
+"D": 3.17,
+"A": 2.64
+},
+"ah": 0.0,
+"div": "PIN:Colombia - Primera A",
+"home": "Llaneros",
+"away": "Independiente Santa Fe",
+"start": "2026-10-18T23:05:00Z"
+},
+"1637987951": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.85,
+"D": 3.0,
+"A": 2.76
+},
+"ah": 0.0,
+"div": "PIN:Colombia - Primera A",
+"home": "Atletico Bucaramanga",
+"away": "America de Cali",
+"start": "2026-10-18T21:00:00Z"
+},
+"1638183270": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.19,
+"D": 3.14,
+"A": 3.48
+},
+"ah": -0.25,
+"div": "PIN:Colombia - Primera A",
+"home": "Deportivo Pereira",
+"away": "Boyaca Chico",
+"start": "2026-10-20T21:30:00Z"
+},
+"1638184954": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.18,
+"D": 3.48,
+"A": 3.17
+},
+"ah": -0.25,
+"div": "PIN:Colombia - Primera A",
+"home": "Inter Bogota",
+"away": "Fortaleza CEIF",
+"start": "2026-10-20T23:15:00Z"
+},
+"1638111646": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.752,
+"D": 3.46,
+"A": 4.85
+},
+"ah": -0.75,
+"div": "PIN:Colombia - Primera A",
+"home": "Deportivo Pasto",
+"away": "Alianza Valledupar",
+"start": "2026-10-20T01:05:00Z"
+},
+"1638184963": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 5.68,
+"D": 4.05,
+"A": 1.549
+},
+"ah": 1.0,
+"div": "PIN:Colombia - Primera A",
+"home": "Cucuta Deportivo",
+"away": "Atletico Nacional",
+"start": "2026-10-20T23:30:00Z"
+},
+"1637999425": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.901,
+"D": 3.52,
+"A": 4.16
+},
+"ah": -0.5,
+"div": "PIN:Colombia - Primera A",
+"home": "Deportivo Cali",
+"away": "Junior de Barranquilla",
+"start": "2026-10-19T01:10:00Z"
+},
+"1637973647": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.87,
+"D": 3.08,
+"A": 2.67
+},
+"ah": 0.0,
+"div": "PIN:Colombia - Primera A",
+"home": "Aguilas Doradas",
+"away": "Deportes Tolima",
+"start": "2026-10-18T19:00:00Z"
+},
+"1638397801": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 4.12,
+"D": 3.28,
+"A": 1.73
+},
+"ah": 0.75,
+"div": "PIN:Brazil - Copa Santa Catarina",
+"home": "Nacao",
+"away": "Blumenau",
+"start": "2026-10-18T18:00:00Z"
+},
+"1638224570": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.541,
+"D": 4.32,
+"A": 5.45
+},
+"ah": -1.0,
+"div": "PIN:Estonia - Meistriliiga",
+"home": "Paide Linnameeskond",
+"away": "Narva Trans",
+"start": "2026-10-18T14:00:00Z"
+},
+"1638230621": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.556,
+"D": 4.46,
+"A": 4.72
+},
+"ah": -1.0,
+"div": "PIN:Estonia - Meistriliiga",
+"home": "Flora Tallinn",
+"away": "Tartu JK Tammeka",
+"start": "2026-10-18T16:00:00Z"
+},
+"1638256998": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.649,
+"D": 4.0,
+"A": 3.89
+},
+"ah": -0.75,
+"div": "PIN:Sweden - Division 2",
+"home": "Astorps",
+"away": "Galtabäcks BK",
+"start": "2026-10-18T12:00:00Z"
+},
+"1638263271": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 4.74,
+"D": 4.14,
+"A": 1.513
+},
+"ah": 1.0,
+"div": "PIN:Sweden - Division 2",
+"home": "Fittja",
+"away": "Nykopings BIS",
+"start": "2026-10-18T12:00:00Z"
+},
+"1638263272": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.12,
+"D": 3.64,
+"A": 2.74
+},
+"ah": -0.25,
+"div": "PIN:Sweden - Division 2",
+"home": "Torslanda",
+"away": "Onsala",
+"start": "2026-10-18T12:00:00Z"
+},
+"1638293049": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 6.24,
+"D": 5.22,
+"A": 1.314
+},
+"ah": 1.5,
+"div": "PIN:Sweden - Division 2",
+"home": "Astrio",
+"away": "Dalstorps",
+"start": "2026-10-18T12:00:00Z"
+},
+"1638235475": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.06,
+"D": 3.06,
+"A": 3.57
+},
+"ah": -0.25,
+"div": "PIN:Spain - Primera Federacion",
+"home": "UD Logrones",
+"away": "Cultural Leonesa",
+"start": "2026-10-18T18:30:00Z"
+},
+"1638230634": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.63,
+"D": 3.21,
+"A": 2.51
+},
+"ah": 0.0,
+"div": "PIN:Spain - Primera Federacion",
+"home": "Real Murcia",
+"away": "Real Zaragoza",
+"start": "2026-10-18T16:15:00Z"
+},
+"1638224567": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.29,
+"D": 3.13,
+"A": 2.87
+},
+"ah": -0.25,
+"div": "PIN:Spain - Primera Federacion",
+"home": "Gimnastic",
+"away": "Atletico Madrid II",
+"start": "2026-10-18T14:00:00Z"
+},
+"1638230739": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.84,
+"D": 3.46,
+"A": 3.84
+},
+"ah": -0.5,
+"div": "PIN:Spain - Primera Federacion",
+"home": "Real Aviles",
+"away": "UD Ourense",
+"start": "2026-10-18T16:15:00Z"
+},
+"1638224476": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.645,
+"D": 3.54,
+"A": 5.3
+},
+"ah": -0.75,
+"div": "PIN:Spain - Primera Federacion",
+"home": "Sant Andreu",
+"away": "Juventud Torremolinos",
+"start": "2026-10-18T14:00:00Z"
+},
+"1638388710": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.03,
+"D": 3.17,
+"A": 3.51
+},
+"ah": -0.25,
+"div": "PIN:Spain - Primera Federacion",
+"home": "Real Jaen",
+"away": "Rayo Majadahonda",
+"start": "2026-10-18T16:15:00Z"
+},
+"1638224483": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.2,
+"D": 3.25,
+"A": 3.16
+},
+"ah": -0.25,
+"div": "PIN:Spain - Primera Federacion",
+"home": "Pontevedra",
+"away": "Cacereno",
+"start": "2026-10-18T14:00:00Z"
+},
+"1638643271": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 5.43,
+"D": 4.68,
+"A": 1.488
+},
+"ah": 1.0,
+"div": "PIN:Denmark - Division 1",
+"home": "Esbjerg fB",
+"away": "Fredericia",
+"start": "2026-10-24T11:30:00Z"
+},
+"1638676662": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.51,
+"D": 4.68,
+"A": 5.14
+},
+"ah": -1.0,
+"div": "PIN:Denmark - Division 1",
+"home": "Vejle",
+"away": "Aarhus Fremad",
+"start": "2026-10-24T16:30:00Z"
+},
+"1638546933": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.32,
+"D": 3.52,
+"A": 2.89
+},
+"ah": -0.25,
+"div": "PIN:Denmark - Division 1",
+"home": "Hobro",
+"away": "Vendsyssel",
+"start": "2026-10-23T16:00:00Z"
+},
+"1638581155": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.943,
+"D": 3.94,
+"A": 3.37
+},
+"ah": -0.5,
+"div": "PIN:Denmark - Division 1",
+"home": "Hvidovre",
+"away": "HB Koge",
+"start": "2026-10-23T17:00:00Z"
+},
+"1638642489": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.45,
+"D": 3.64,
+"A": 2.01
+},
+"ah": 0.5,
+"div": "PIN:Denmark - Division 1",
+"home": "Hillerod Fodbold",
+"away": "AaB",
+"start": "2026-10-24T11:00:00Z"
+},
+"1638653598": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.25,
+"D": 3.59,
+"A": 2.96
+},
+"ah": -0.25,
+"div": "PIN:Denmark - Division 1",
+"home": "Akademisk Boldklub",
+"away": "Kolding",
+"start": "2026-10-24T12:00:00Z"
+},
+"1638249210": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.84,
+"D": 3.61,
+"A": 4.07
+},
+"ah": -0.5,
+"div": "PIN:Uruguay - Primera Division",
+"home": "Nacional de Football",
+"away": "Deportivo Maldonado",
+"start": "2026-10-19T23:00:00Z"
+},
+"1638241260": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.28,
+"D": 3.25,
+"A": 2.29
+},
+"ah": 0.25,
+"div": "PIN:Uruguay - Primera Division",
+"home": "Liverpool Montevideo",
+"away": "Penarol",
+"start": "2026-10-18T21:30:00Z"
+},
+"1638235258": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.99,
+"D": 3.46,
+"A": 3.86
+},
+"ah": -0.5,
+"div": "PIN:Uruguay - Primera Division",
+"home": "Danubio",
+"away": "Central Espanol",
+"start": "2026-10-18T18:00:00Z"
+},
+"1638596208": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.69,
+"D": 3.05,
+"A": 2.76
+},
+"ah": 0.0,
+"div": "PIN:Uruguay - Primera Division",
+"home": "Defensor Sporting",
+"away": "Racing Club de Montevideo",
+"start": "2026-10-23T23:00:00Z"
+},
+"1638230589": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.1,
+"D": 2.87,
+"A": 3.73
+},
+"ah": -0.25,
+"div": "PIN:Montenegro - Prva Liga",
+"home": "Decic Tuzi",
+"away": "Buducnost Podgorica",
+"start": "2026-10-18T16:00:00Z"
+},
+"1638230689": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.787,
+"D": 3.13,
+"A": 4.71
+},
+"ah": -0.5,
+"div": "PIN:Montenegro - Prva Liga",
+"home": "Sutjeska Niksic",
+"away": "Bokelj Kotor",
+"start": "2026-10-19T16:00:00Z"
+},
+"1638230591": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.32,
+"D": 2.89,
+"A": 3.17
+},
+"ah": -0.25,
+"div": "PIN:Montenegro - Prva Liga",
+"home": "Petrovac",
+"away": "Otrant Olympic",
+"start": "2026-10-19T13:00:00Z"
+},
+"1638481926": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.758,
+"D": 3.52,
+"A": 4.17
+},
+"ah": -0.75,
+"div": "PIN:Panama - Primera Division",
+"home": "Union Cocle",
+"away": "Herrera",
+"start": "2026-10-18T21:00:00Z"
+},
+"1638484918": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.54,
+"D": 2.86,
+"A": 2.88
+},
+"ah": 0.0,
+"div": "PIN:Panama - Primera Division",
+"home": "UMECIT",
+"away": "Alianza Panama",
+"start": "2026-10-18T23:15:00Z"
+},
+"1638277004": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.63,
+"D": 3.09,
+"A": 2.57
+},
+"ah": 0.0,
+"div": "PIN:Panama - Primera Division",
+"home": "Sporting San Miguelito",
+"away": "Tauro",
+"start": "2026-10-20T01:00:00Z"
+},
+"1638235239": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.31,
+"D": 2.95,
+"A": 2.45
+},
+"ah": 0.25,
+"div": "PIN:Costa Rica - Primera Division",
+"home": "Cartagines",
+"away": "Deportivo Saprissa",
+"start": "2026-10-18T17:00:00Z"
+},
+"1638241153": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 4.0,
+"D": 3.67,
+"A": 1.885
+},
+"ah": 0.5,
+"div": "PIN:Costa Rica - Primera Division",
+"home": "Municipal Perez Zeledon",
+"away": "Herediano",
+"start": "2026-10-18T22:00:00Z"
+},
+"1638276992": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.667,
+"D": 3.67,
+"A": 4.98
+},
+"ah": -0.75,
+"div": "PIN:Costa Rica - Primera Division",
+"home": "Sporting San Jose",
+"away": "AD San Carlos",
+"start": "2026-10-20T00:00:00Z"
+},
+"1638277007": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.67,
+"D": 3.48,
+"A": 2.48
+},
+"ah": 0.0,
+"div": "PIN:Costa Rica - Primera Division",
+"home": "Escorpiones Belen",
+"away": "Puntarenas",
+"start": "2026-10-20T02:00:00Z"
+},
+"1638215121": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.532,
+"D": 3.92,
+"A": 4.42
+},
+"ah": -1.0,
+"div": "PIN:Andorra - Premier Division",
+"home": "Inter Club d'Escaldes",
+"away": "Atletic Club d'Escaldes",
+"start": "2026-10-18T18:00:00Z"
+},
+"1638230583": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.725,
+"D": 3.44,
+"A": 3.72
+},
+"ah": -0.75,
+"div": "PIN:Andorra - Premier Division",
+"home": "Casa de Portugal",
+"away": "Penya Encarnada d`Andorra",
+"start": "2026-10-18T15:00:00Z"
+},
+"1638235508": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.794,
+"D": 3.86,
+"A": 3.95
+},
+"ah": -0.5,
+"div": "PIN:Poland - 1st Liga",
+"home": "Nieciecza",
+"away": "Puszcza Niepolomice",
+"start": "2026-10-19T16:00:00Z"
+},
+"1638595655": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.34,
+"D": 3.46,
+"A": 2.86
+},
+"ah": -0.25,
+"div": "PIN:Poland - 1st Liga",
+"home": "Stal Mielec",
+"away": "Chrobry Glogow",
+"start": "2026-10-24T13:30:00Z"
+},
+"1638596186": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.58,
+"D": 3.74,
+"A": 2.43
+},
+"ah": 0.0,
+"div": "PIN:Poland - 1st Liga",
+"home": "Unia Skierniewice",
+"away": "Polonia Bytom",
+"start": "2026-10-24T13:30:00Z"
+},
+"1638484844": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.952,
+"D": 3.69,
+"A": 3.52
+},
+"ah": -0.5,
+"div": "PIN:Poland - 1st Liga",
+"home": "Polonia Warsaw",
+"away": "Miedz Legnica",
+"start": "2026-10-23T16:00:00Z"
+},
+"1638189928": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.16,
+"D": 3.78,
+"A": 3.1
+},
+"ah": -0.25,
+"div": "PIN:Poland - 1st Liga",
+"home": "Lechia Gdansk",
+"away": "Arka Gdynia",
+"start": "2026-10-18T18:30:00Z"
+},
+"1638183228": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.44,
+"D": 3.46,
+"A": 2.85
+},
+"ah": 0.0,
+"div": "PIN:Poland - 1st Liga",
+"home": "Pogon Siedlce",
+"away": "Stal Rzeszow",
+"start": "2026-10-18T15:00:00Z"
+},
+"1638694286": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.452,
+"D": 4.36,
+"A": 6.24
+},
+"ah": -1.25,
+"div": "PIN:Peru - Liga 1",
+"home": "Deportivo Garcilaso",
+"away": "Los Chankas",
+"start": "2026-10-25T23:00:00Z"
+},
+"1638595626": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.775,
+"D": 3.62,
+"A": 4.18
+},
+"ah": -0.75,
+"div": "PIN:Peru - Liga 1",
+"home": "Atletico Grau",
+"away": "Asociacion Deportiva Tarma",
+"start": "2026-10-23T20:15:00Z"
+},
+"1638164880": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.243,
+"D": 5.52,
+"A": 11.34
+},
+"ah": -1.5,
+"div": "PIN:Peru - Liga 1",
+"home": "Sporting Cristal",
+"away": "Comerciantes Unidos",
+"start": "2026-10-18T16:00:00Z"
+},
+"1638235401": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.83,
+"D": 2.97,
+"A": 2.57
+},
+"ah": 0.0,
+"div": "PIN:Peru - Liga 1",
+"home": "Alianza Atletico",
+"away": "Universitario de Deportes",
+"start": "2026-10-18T20:30:00Z"
+},
+"1638235364": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.746,
+"D": 3.66,
+"A": 4.3
+},
+"ah": -0.75,
+"div": "PIN:Peru - Liga 1",
+"home": "FC Cajamarca",
+"away": "Deportivo Moquegua",
+"start": "2026-10-18T18:15:00Z"
+},
+"1638241168": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.206,
+"D": 6.21,
+"A": 11.09
+},
+"ah": -1.75,
+"div": "PIN:Peru - Liga 1",
+"home": "Cienciano",
+"away": "UTC de Cajamarca",
+"start": "2026-10-18T23:30:00Z"
+},
+"1638224485": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.11,
+"D": 3.47,
+"A": 3.16
+},
+"ah": -0.25,
+"div": "PIN:Sweden - Division 1 Norra",
+"home": "Hammarby Talang",
+"away": "IF Karlstad",
+"start": "2026-10-18T14:00:00Z"
+},
+"1638224538": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.03,
+"D": 3.12,
+"A": 3.78
+},
+"ah": -0.5,
+"div": "PIN:Italy - Serie C Group C",
+"home": "Barletta",
+"away": "Picerno",
+"start": "2026-10-18T15:30:00Z"
+},
+"1638424145": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.08,
+"D": 3.08,
+"A": 2.33
+},
+"ah": 0.25,
+"div": "PIN:Italy - Serie C Group C",
+"home": "Giugliano",
+"away": "Foggia",
+"start": "2026-10-19T18:30:00Z"
+},
+"1638220411": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.65,
+"D": 3.25,
+"A": 2.54
+},
+"ah": 0.0,
+"div": "PIN:Italy - Serie C Group C",
+"home": "Sorrento",
+"away": "Casertana",
+"start": "2026-10-18T15:30:00Z"
+},
+"1638230127": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.102,
+"D": 9.6,
+"A": 16.56
+},
+"ah": -2.25,
+"div": "PIN:Serbia - Super Liga",
+"home": "Crvena Zvezda",
+"away": "Mladost Lucani",
+"start": "2026-10-18T14:00:00Z"
+},
+"1638180897": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.25,
+"D": 3.41,
+"A": 2.82
+},
+"ah": -0.25,
+"div": "PIN:Serbia - Super Liga",
+"home": "Zeleznicar Pancevo",
+"away": "Partizan Belgrade",
+"start": "2026-10-18T16:30:00Z"
+},
+"1638440054": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.89,
+"D": 3.62,
+"A": 2.04
+},
+"ah": 0.25,
+"div": "PIN:Czech Republic - 4. Liga",
+"home": "FC Milevsko",
+"away": "Senco Doubravka",
+"start": "2026-10-18T13:30:00Z"
+},
+"1638424166": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.322,
+"D": 4.86,
+"A": 6.67
+},
+"ah": -1.5,
+"div": "PIN:Czech Republic - 4. Liga",
+"home": "FK Pencin Turnov",
+"away": "Slavia Hradec Kralove",
+"start": "2026-10-18T13:30:00Z"
+},
+"1638595714": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.694,
+"D": 4.21,
+"A": 3.51
+},
+"ah": -0.75,
+"div": "PIN:Czech Republic - 4. Liga",
+"home": "Sokol Lanzhot",
+"away": "Spartak Hluk",
+"start": "2026-10-18T12:30:00Z"
+},
+"1638440055": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.952,
+"D": 3.4,
+"A": 3.26
+},
+"ah": -0.5,
+"div": "PIN:Czech Republic - 4. Liga",
+"home": "Sokol Hostoun",
+"away": "Chomutov",
+"start": "2026-10-18T13:30:00Z"
+},
+"1638712709": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.855,
+"D": 3.58,
+"A": 3.4
+},
+"ah": -0.5,
+"div": "PIN:Czech Republic - 4. Liga",
+"home": "Zdas Zdar nad Sazavou",
+"away": "Tatran Zdirec Nad Doubravou",
+"start": "2026-10-18T12:30:00Z"
+},
+"1638230726": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.268,
+"D": 4.83,
+"A": 10.77
+},
+"ah": -1.5,
+"div": "PIN:Bahrain - Premier League",
+"home": "Al-Muharraq",
+"away": "Malkiya Club",
+"start": "2026-10-18T16:00:00Z"
+},
+"1638230627": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 6.75,
+"D": 4.47,
+"A": 1.389
+},
+"ah": 1.25,
+"div": "PIN:Bahrain - Premier League",
+"home": "Al-Ahli Manama",
+"away": "Al-Khaldiya",
+"start": "2026-10-18T16:00:00Z"
+},
+"1638546875": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.735,
+"D": 4.25,
+"A": 3.85
+},
+"ah": -0.75,
+"div": "PIN:Qatar - Stars League",
+"home": "Al-Shamal",
+"away": "Qatar SC",
+"start": "2026-10-23T14:30:00Z"
+},
+"1638712692": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 6.71,
+"D": 5.22,
+"A": 1.36
+},
+"ah": 1.25,
+"div": "PIN:Qatar - Stars League",
+"home": "Al Sailiya",
+"away": "Al-Rayyan",
+"start": "2026-10-23T16:45:00Z"
+},
+"1638235320": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.01,
+"D": 4.0,
+"A": 3.3
+},
+"ah": -0.5,
+"div": "PIN:Qatar - Stars League",
+"home": "Al Sadd",
+"away": "Al Duhail",
+"start": "2026-10-18T14:30:00Z"
+},
+"1638715532": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.57,
+"D": 4.25,
+"A": 1.862
+},
+"ah": 0.5,
+"div": "PIN:Qatar - Stars League",
+"home": "Al Gharafa",
+"away": "Al-Rayyan",
+"start": "2026-10-18T16:45:00Z"
+},
+"1638666881": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.88,
+"D": 3.77,
+"A": 2.2
+},
+"ah": 0.25,
+"div": "PIN:Qatar - Stars League",
+"home": "Al Wakrah",
+"away": "Al Arabi Doha",
+"start": "2026-10-24T14:30:00Z"
+},
+"1638204464": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.16,
+"D": 3.39,
+"A": 2.83
+},
+"ah": -0.25,
+"div": "PIN:AFC - Challenge League",
+"home": "One Taguig",
+"away": "Tainan City",
+"start": "2026-10-18T08:00:00Z"
+},
+"1638230126": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.376,
+"D": 5.08,
+"A": 7.15
+},
+"ah": -1.25,
+"div": "PIN:Lithuania - A Lyga",
+"home": "Vilnius Zalgiris",
+"away": "Hegelmann",
+"start": "2026-10-18T14:00:00Z"
+},
+"1638258958": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.86,
+"D": 3.26,
+"A": 1.952
+},
+"ah": 0.5,
+"div": "PIN:Lithuania - A Lyga",
+"home": "Suduva",
+"away": "Kauno Zalgiris",
+"start": "2026-10-19T15:45:00Z"
+},
+"1638278467": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 17.91,
+"D": 9.62,
+"A": 1.067
+},
+"ah": 2.5,
+"div": "PIN:Bulgaria - Cup",
+"home": "Spartak Pleven",
+"away": "Levski Sofia",
+"start": "2026-10-18T15:00:00Z"
+},
+"1638290689": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.78,
+"D": 3.01,
+"A": 2.28
+},
+"ah": 0.25,
+"div": "PIN:Bulgaria - Cup",
+"home": "Etar Veliko Tarnovo",
+"away": "Spartak Varna",
+"start": "2026-10-19T16:00:00Z"
+},
+"1638290694": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.08,
+"D": 2.96,
+"A": 3.27
+},
+"ah": -0.25,
+"div": "PIN:Bulgaria - Cup",
+"home": "Dobrudzha Dobrich",
+"away": "Montana",
+"start": "2026-10-19T15:00:00Z"
+},
+"1638235435": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.8,
+"D": 3.48,
+"A": 3.81
+},
+"ah": -0.5,
+"div": "PIN:Kuwait - Premier League",
+"home": "Al-Nasr Kuwait",
+"away": "Al Tadamon",
+"start": "2026-10-18T16:55:00Z"
+},
+"1638230655": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.595,
+"D": 3.84,
+"A": 4.87
+},
+"ah": -0.75,
+"div": "PIN:Kuwait - Premier League",
+"home": "Al-Fahaheel",
+"away": "Al Shabab Kuwait",
+"start": "2026-10-18T14:40:00Z"
+},
+"1638664165": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.25,
+"D": 3.99,
+"A": 2.69
+},
+"ah": -0.25,
+"div": "PIN:Belgium - Challenger Pro League",
+"home": "Genk II",
+"away": "Club NXT",
+"start": "2026-10-24T14:00:00Z"
+},
+"1638664164": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.4,
+"D": 3.51,
+"A": 2.75
+},
+"ah": 0.0,
+"div": "PIN:Belgium - Challenger Pro League",
+"home": "RFC Seraing",
+"away": "Royal Excelsior Virton",
+"start": "2026-10-24T14:00:00Z"
+},
+"1638693725": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.493,
+"D": 4.42,
+"A": 5.61
+},
+"ah": -1.0,
+"div": "PIN:Belgium - Challenger Pro League",
+"home": "Lokeren-Temse",
+"away": "Gent II",
+"start": "2026-10-24T18:00:00Z"
+},
+"1638582084": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.31,
+"D": 3.44,
+"A": 2.11
+},
+"ah": 0.25,
+"div": "PIN:Belgium - Challenger Pro League",
+"home": "Francs Borains",
+"away": "Dender",
+"start": "2026-10-23T18:00:00Z"
+},
+"1638686137": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.08,
+"D": 2.71,
+"A": 3.83
+},
+"ah": -0.25,
+"div": "PIN:Zambia - Super League",
+"home": "Green Buffaloes",
+"away": "Nkwazi",
+"start": "2026-10-18T13:00:00Z"
+},
+"1638686138": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.613,
+"D": 3.13,
+"A": 5.8
+},
+"ah": -0.75,
+"div": "PIN:Zambia - Super League",
+"home": "Zesco United",
+"away": "Mufulira Wanderers",
+"start": "2026-10-18T13:00:00Z"
+},
+"1638230590": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.625,
+"D": 4.17,
+"A": 4.79
+},
+"ah": -1.0,
+"div": "PIN:Ukraine - Premier League",
+"home": "Karpaty Lviv",
+"away": "Epitsentr Kamianets-Podilskyi",
+"start": "2026-10-18T15:00:00Z"
+},
+"1638249148": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.526,
+"D": 4.03,
+"A": 5.7
+},
+"ah": -1.0,
+"div": "PIN:Ukraine - Premier League",
+"home": "FC Kharkiv",
+"away": "Livyi Bereg",
+"start": "2026-10-19T10:00:00Z"
+},
+"1638241029": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.03,
+"D": 3.12,
+"A": 3.21
+},
+"ah": -0.25,
+"div": "PIN:Honduras - Liga Nacional",
+"home": "Genesis",
+"away": "Estrella Roja",
+"start": "2026-10-18T21:00:00Z"
+},
+"1638621885": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.06,
+"D": 2.9,
+"A": 4.04
+},
+"ah": -0.5,
+"div": "PIN:Algeria - Ligue 1",
+"home": "MB Rouisset",
+"away": "JS Saoura",
+"start": "2026-10-18T17:00:00Z"
+},
+"1638516066": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.327,
+"D": 4.39,
+"A": 10.7
+},
+"ah": -1.25,
+"div": "PIN:Algeria - Ligue 1",
+"home": "JS Kabylie",
+"away": "US Biskra",
+"start": "2026-10-18T16:45:00Z"
+},
+"1638273666": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.18,
+"D": 2.96,
+"A": 3.54
+},
+"ah": -0.25,
+"div": "PIN:Algeria - Ligue 1",
+"home": "CR Temouchent",
+"away": "ASO Chlef",
+"start": "2026-10-18T16:45:00Z"
+},
+"1638220422": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.662,
+"D": 4.12,
+"A": 4.04
+},
+"ah": -0.75,
+"div": "PIN:Malta - Premier League",
+"home": "Hibernians",
+"away": "Birzebbuga",
+"start": "2026-10-18T13:30:00Z"
+},
+"1638230212": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.467,
+"D": 4.4,
+"A": 5.07
+},
+"ah": -1.0,
+"div": "PIN:Malta - Premier League",
+"home": "Floriana",
+"away": "Mosta",
+"start": "2026-10-18T16:00:00Z"
+},
+"1638230562": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 4.38,
+"D": 3.46,
+"A": 1.781
+},
+"ah": 0.75,
+"div": "PIN:Azerbaijan - Premier League",
+"home": "Kapaz",
+"away": "Zira",
+"start": "2026-10-18T14:30:00Z"
+},
+"1638235407": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.66,
+"D": 3.55,
+"A": 1.99
+},
+"ah": 0.5,
+"div": "PIN:Chile - Primera Division",
+"home": "Union La Calera",
+"away": "Universidad Catolica",
+"start": "2026-10-25T18:00:00Z"
+},
+"1638263250": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.88,
+"D": 3.25,
+"A": 2.5
+},
+"ah": 0.0,
+"div": "PIN:Chile - Primera Division",
+"home": "Nublense",
+"away": "Coquimbo Unido",
+"start": "2026-10-25T15:30:00Z"
+},
+"1638235287": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.3,
+"D": 3.49,
+"A": 2.99
+},
+"ah": -0.25,
+"div": "PIN:Chile - Primera Division",
+"home": "Deportes La Serena",
+"away": "Deportes Concepcion",
+"start": "2026-10-24T15:30:00Z"
+},
+"1638241296": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.32,
+"D": 3.65,
+"A": 2.08
+},
+"ah": 0.25,
+"div": "PIN:Chile - Primera Division",
+"home": "Palestino",
+"away": "Colo Colo",
+"start": "2026-10-25T20:30:00Z"
+},
+"1638258879": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.641,
+"D": 4.1,
+"A": 4.82
+},
+"ah": -0.75,
+"div": "PIN:Chile - Primera Division",
+"home": "Universidad de Chile",
+"away": "Everton Vina del Mar",
+"start": "2026-10-26T23:00:00Z"
+},
+"1638241151": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.1,
+"D": 3.52,
+"A": 3.39
+},
+"ah": -0.25,
+"div": "PIN:Chile - Primera Division",
+"home": "Audax Italiano",
+"away": "Huachipato",
+"start": "2026-10-23T23:00:00Z"
+},
+"1638235286": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.625,
+"D": 4.21,
+"A": 4.79
+},
+"ah": -0.75,
+"div": "PIN:Chile - Primera Division",
+"home": "O'Higgins",
+"away": "Cobresal",
+"start": "2026-10-24T23:00:00Z"
+},
+"1638241185": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.79,
+"D": 3.57,
+"A": 2.4
+},
+"ah": 0.0,
+"div": "PIN:Chile - Primera Division",
+"home": "Universidad de Concepcion",
+"away": "Deportes Limache",
+"start": "2026-10-25T23:00:00Z"
+},
+"1638224440": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.189,
+"D": 6.38,
+"A": 8.46
+},
+"ah": -2.0,
+"div": "PIN:Norway - 3rd Division",
+"home": "Floya",
+"away": "Tromso II",
+"start": "2026-10-18T13:00:00Z"
+},
+"1638220447": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.11,
+"D": 4.25,
+"A": 2.44
+},
+"ah": -0.25,
+"div": "PIN:Norway - 3rd Division",
+"home": "Lokomotiv Oslo",
+"away": "Ready Fotball",
+"start": "2026-10-18T14:00:00Z"
+},
+"1638230563": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.348,
+"D": 4.69,
+"A": 5.36
+},
+"ah": -1.5,
+"div": "PIN:Norway - 3rd Division",
+"home": "Skjetten",
+"away": "Finnsnes",
+"start": "2026-10-18T14:30:00Z"
+},
+"1638224534": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.943,
+"D": 5.31,
+"A": 2.45
+},
+"ah": -0.25,
+"div": "PIN:Norway - 3rd Division",
+"home": "Aalesund II",
+"away": "Byasen",
+"start": "2026-10-18T13:00:00Z"
+},
+"1638595660": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.855,
+"D": 4.39,
+"A": 3.29
+},
+"ah": -0.5,
+"div": "PIN:Iceland - Premier League",
+"home": "Stjarnan",
+"away": "Valur Reykjavik",
+"start": "2026-10-24T14:00:00Z"
+},
+"1638596154": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.599,
+"D": 4.41,
+"A": 4.51
+},
+"ah": -1.0,
+"div": "PIN:Iceland - Premier League",
+"home": "KA Akureyri",
+"away": "IBV",
+"start": "2026-10-24T14:00:00Z"
+},
+"1638595732": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.926,
+"D": 4.07,
+"A": 3.3
+},
+"ah": -0.5,
+"div": "PIN:Iceland - Premier League",
+"home": "FH Hafnarfjordur",
+"away": "Thor Akureyri",
+"start": "2026-10-24T14:00:00Z"
+},
+"1638595657": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.575,
+"D": 5.14,
+"A": 4.1
+},
+"ah": -1.0,
+"div": "PIN:Iceland - Premier League",
+"home": "KR Reykjavik",
+"away": "Breidablik",
+"start": "2026-10-24T14:00:00Z"
+},
+"1638305736": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.826,
+"D": 4.19,
+"A": 3.51
+},
+"ah": -0.5,
+"div": "PIN:Iceland - Premier League",
+"home": "Fram Reykjavik",
+"away": "IA Akranes",
+"start": "2026-10-19T19:15:00Z"
+},
+"1638323732": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.439,
+"D": 4.6,
+"A": 6.15
+},
+"ah": -1.25,
+"div": "PIN:Saudi Arabia - Pro League",
+"home": "Al Diriyah",
+"away": "Al-Riyadh",
+"start": "2026-10-20T15:00:00Z"
+},
+"1638336713": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.388,
+"D": 5.18,
+"A": 6.16
+},
+"ah": -1.25,
+"div": "PIN:Saudi Arabia - Pro League",
+"home": "Al-Nassr",
+"away": "Neom",
+"start": "2026-10-20T18:00:00Z"
+},
+"1638241180": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.044,
+"D": 16.9,
+"A": 21.3
+},
+"ah": -2.75,
+"div": "PIN:Saudi Arabia - Pro League",
+"home": "Al-Hilal",
+"away": "Al-Hazem",
+"start": "2026-10-19T18:00:00Z"
+},
+"1638241182": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.84,
+"D": 3.41,
+"A": 2.38
+},
+"ah": 0.25,
+"div": "PIN:Saudi Arabia - Pro League",
+"home": "Abha Club",
+"away": "Al-Kholood",
+"start": "2026-10-19T15:20:00Z"
+},
+"1638241181": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 7.19,
+"D": 5.35,
+"A": 1.333
+},
+"ah": 1.5,
+"div": "PIN:Saudi Arabia - Pro League",
+"home": "Al-Fayha",
+"away": "Al-Ahli",
+"start": "2026-10-19T15:05:00Z"
+},
+"1638336817": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.02,
+"D": 3.96,
+"A": 2.06
+},
+"ah": 0.25,
+"div": "PIN:Saudi Arabia - Pro League",
+"home": "Al-Ettifaq",
+"away": "Al-Ittihad",
+"start": "2026-10-20T18:00:00Z"
+},
+"1638339267": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 5.42,
+"D": 4.89,
+"A": 1.457
+},
+"ah": 1.25,
+"div": "PIN:Saudi Arabia - Pro League",
+"home": "Al-Taawoun",
+"away": "Al-Qadisiyah",
+"start": "2026-10-20T15:10:00Z"
+},
+"1638235257": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.32,
+"D": 3.49,
+"A": 3.02
+},
+"ah": -0.25,
+"div": "PIN:Saudi Arabia - Pro League",
+"home": "Al-Fateh",
+"away": "Al-Khaleej",
+"start": "2026-10-18T18:00:00Z"
+},
+"1638273190": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.549,
+"D": 4.4,
+"A": 4.97
+},
+"ah": -1.0,
+"div": "PIN:Saudi Arabia - Pro League",
+"home": "Al-Shabab",
+"away": "Al-Faisaly",
+"start": "2026-10-19T18:00:00Z"
+},
+"1638694260": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.625,
+"D": 3.33,
+"A": 4.76
+},
+"ah": -0.75,
+"div": "PIN:Argentina - Primera C Metropolitana",
+"home": "Argentino de Rosario",
+"away": "Deportivo Muniz",
+"start": "2026-10-18T18:00:00Z"
+},
+"1638235394": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 6.37,
+"D": 3.91,
+"A": 1.402
+},
+"ah": 1.25,
+"div": "PIN:CONMEBOL - Copa Libertadores Femenina",
+"home": "Belgrano",
+"away": "Palmeiras",
+"start": "2026-10-18T20:00:00Z"
+},
+"1638293035": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.752,
+"D": 3.51,
+"A": 3.7
+},
+"ah": -0.5,
+"div": "PIN:CONMEBOL - Copa Libertadores Femenina",
+"home": "Colo Colo",
+"away": "Independiente Santa Fe",
+"start": "2026-10-18T20:00:00Z"
+},
+"1638241053": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.444,
+"D": 3.87,
+"A": 5.67
+},
+"ah": -1.25,
+"div": "PIN:CONMEBOL - Copa Libertadores Femenina",
+"home": "Independiente del Valle",
+"away": "Universitario de Deportes",
+"start": "2026-10-19T00:00:00Z"
+},
+"1638595659": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.518,
+"D": 4.69,
+"A": 4.93
+},
+"ah": -1.0,
+"div": "PIN:Northern Ireland - Premiership",
+"home": "Carrick Rangers",
+"away": "Limavady United",
+"start": "2026-10-24T14:00:00Z"
+},
+"1638596187": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.962,
+"D": 3.8,
+"A": 3.38
+},
+"ah": -0.5,
+"div": "PIN:Northern Ireland - Premiership",
+"home": "Dungannon Swifts",
+"away": "Cliftonville",
+"start": "2026-10-24T14:00:00Z"
+},
+"1638595775": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.606,
+"D": 4.29,
+"A": 4.59
+},
+"ah": -0.75,
+"div": "PIN:Northern Ireland - Premiership",
+"home": "Glentoran",
+"away": "Ballymena United",
+"start": "2026-10-24T14:00:00Z"
+},
+"1638596180": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 7.87,
+"D": 5.85,
+"A": 1.285
+},
+"ah": 1.5,
+"div": "PIN:Northern Ireland - Premiership",
+"home": "Crusaders",
+"away": "Coleraine",
+"start": "2026-10-24T14:00:00Z"
+},
+"1638273310": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.99,
+"D": 3.4,
+"A": 3.68
+},
+"ah": -0.5,
+"div": "PIN:Northern Ireland - Premiership",
+"home": "Larne",
+"away": "Linfield",
+"start": "2026-10-20T18:45:00Z"
+},
+"1638470511": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.15,
+"D": 3.9,
+"A": 2.89
+},
+"ah": -0.25,
+"div": "PIN:Switzerland - Challenge League",
+"home": "FC Wil",
+"away": "Rapperswil-Jona",
+"start": "2026-10-23T17:30:00Z"
+},
+"1638481844": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.201,
+"D": 6.73,
+"A": 10.11
+},
+"ah": -2.0,
+"div": "PIN:Switzerland - Challenge League",
+"home": "Winterthur",
+"away": "Stade Nyonnais",
+"start": "2026-10-23T18:15:00Z"
+},
+"1638466670": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.578,
+"D": 4.28,
+"A": 4.84
+},
+"ah": -1.0,
+"div": "PIN:Switzerland - Challenge League",
+"home": "Stade Lausanne Ouchy",
+"away": "Neuchatel Xamax",
+"start": "2026-10-23T17:30:00Z"
+},
+"1638595737": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.704,
+"D": 4.07,
+"A": 4.19
+},
+"ah": -0.75,
+"div": "PIN:Switzerland - Challenge League",
+"home": "Aarau",
+"away": "Etoile Carouge",
+"start": "2026-10-24T16:00:00Z"
+},
+"1638420808": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.68,
+"D": 3.51,
+"A": 2.52
+},
+"ah": 0.0,
+"div": "PIN:UEFA - Conference League",
+"home": "Thun",
+"away": "Hajduk Split",
+"start": "2026-10-22T19:00:00Z"
+},
+"1638415408": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.826,
+"D": 3.48,
+"A": 4.47
+},
+"ah": -0.5,
+"div": "PIN:UEFA - Conference League",
+"home": "Getafe",
+"away": "FC Lugano",
+"start": "2026-10-22T16:45:00Z"
+},
+"1638405881": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.04,
+"D": 3.33,
+"A": 3.75
+},
+"ah": -0.5,
+"div": "PIN:UEFA - Conference League",
+"home": "Borac Banja Luka",
+"away": "KuPS",
+"start": "2026-10-22T19:00:00Z"
+},
+"1638420802": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.543,
+"D": 4.56,
+"A": 5.13
+},
+"ah": -1.0,
+"div": "PIN:UEFA - Conference League",
+"home": "Trabzonspor",
+"away": "Hearts",
+"start": "2026-10-22T16:45:00Z"
+},
+"1638420846": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.68,
+"D": 3.62,
+"A": 5.3
+},
+"ah": -0.75,
+"div": "PIN:UEFA - Conference League",
+"home": "Braga",
+"away": "Gent",
+"start": "2026-10-22T19:00:00Z"
+},
+"1638424103": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 9.92,
+"D": 5.35,
+"A": 1.279
+},
+"ah": 1.75,
+"div": "PIN:UEFA - Conference League",
+"home": "Lincoln Red Imps",
+"away": "FC Twente",
+"start": "2026-10-22T19:00:00Z"
+},
+"1638405878": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.27,
+"D": 3.4,
+"A": 3.11
+},
+"ah": -0.25,
+"div": "PIN:UEFA - Conference League",
+"home": "Crvena Zvezda",
+"away": "FC Copenhagen",
+"start": "2026-10-22T16:45:00Z"
+},
+"1638407417": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 4.0,
+"D": 4.1,
+"A": 1.769
+},
+"ah": 0.75,
+"div": "PIN:UEFA - Conference League",
+"home": "Kauno Zalgiris",
+"away": "Brann",
+"start": "2026-10-22T16:45:00Z"
+},
+"1638405879": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.94,
+"D": 3.47,
+"A": 1.943
+},
+"ah": 0.5,
+"div": "PIN:UEFA - Conference League",
+"home": "Iberia 1999",
+"away": "Mjallby",
+"start": "2026-10-22T16:45:00Z"
+},
+"1638415404": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.26,
+"D": 3.55,
+"A": 3.02
+},
+"ah": -0.25,
+"div": "PIN:UEFA - Conference League",
+"home": "Monaco",
+"away": "Freiburg",
+"start": "2026-10-22T19:00:00Z"
+},
+"1638405882": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.526,
+"D": 4.15,
+"A": 6.03
+},
+"ah": -1.0,
+"div": "PIN:UEFA - Conference League",
+"home": "AGF",
+"away": "Egnatia Rrogozhine",
+"start": "2026-10-22T19:00:00Z"
+},
+"1638424142": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.53,
+"D": 3.7,
+"A": 2.56
+},
+"ah": 0.0,
+"div": "PIN:UEFA - Conference League",
+"home": "Ajax",
+"away": "Atalanta",
+"start": "2026-10-22T19:00:00Z"
+},
+"1638407390": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 4.72,
+"D": 3.76,
+"A": 1.719
+},
+"ah": 0.75,
+"div": "PIN:UEFA - Conference League",
+"home": "Kairat Almaty",
+"away": "Panathinaikos",
+"start": "2026-10-22T14:30:00Z"
+},
+"1638407388": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.585,
+"D": 4.19,
+"A": 5.21
+},
+"ah": -1.0,
+"div": "PIN:UEFA - Conference League",
+"home": "Midtjylland",
+"away": "Sint Truidense",
+"start": "2026-10-22T19:00:00Z"
+},
+"1638352491": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 7.14,
+"D": 5.01,
+"A": 1.382
+},
+"ah": 1.25,
+"div": "PIN:UEFA - Conference League",
+"home": "Jablonec",
+"away": "Brighton",
+"start": "2026-10-22T16:45:00Z"
+},
+"1638406844": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.578,
+"D": 4.24,
+"A": 5.2
+},
+"ah": -1.0,
+"div": "PIN:UEFA - Conference League",
+"home": "FC Nordsjaelland",
+"away": "CSKA Sofia",
+"start": "2026-10-22T16:45:00Z"
+},
+"1638357217": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 4.94,
+"D": 4.0,
+"A": 1.645
+},
+"ah": 0.75,
+"div": "PIN:UEFA - Conference League",
+"home": "Inter Club d'Escaldes",
+"away": "Universitatea Craiova",
+"start": "2026-10-22T16:45:00Z"
+},
+"1638407387": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.649,
+"D": 3.97,
+"A": 4.92
+},
+"ah": -0.75,
+"div": "PIN:UEFA - Conference League",
+"home": "Pafos",
+"away": "Riga FC",
+"start": "2026-10-22T16:45:00Z"
+},
+"1638654810": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.26,
+"D": 3.9,
+"A": 2.72
+},
+"ah": -0.25,
+"div": "PIN:Austria - 2. Liga",
+"home": "Admira Wacker",
+"away": "Wacker Innsbruck",
+"start": "2026-10-24T13:30:00Z"
+},
+"1638073356": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.35,
+"D": 3.69,
+"A": 2.01
+},
+"ah": 0.5,
+"div": "PIN:Austria - 2. Liga",
+"home": "Austria Salzburg",
+"away": "BW Linz",
+"start": "2026-10-23T18:30:00Z"
+},
+"1638546937": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.483,
+"D": 4.69,
+"A": 5.35
+},
+"ah": -1.0,
+"div": "PIN:Austria - 2. Liga",
+"home": "SKU Amstetten",
+"away": "Rapid Vienna II",
+"start": "2026-10-23T16:30:00Z"
+},
+"1638536565": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.82,
+"D": 3.64,
+"A": 4.09
+},
+"ah": -0.5,
+"div": "PIN:Austria - 2. Liga",
+"home": "First Vienna",
+"away": "Floridsdorfer AC",
+"start": "2026-10-23T16:30:00Z"
+},
+"1638664124": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.39,
+"D": 3.62,
+"A": 2.69
+},
+"ah": 0.0,
+"div": "PIN:Austria - 2. Liga",
+"home": "FC Liefering",
+"away": "SW Bregenz",
+"start": "2026-10-24T13:30:00Z"
+},
+"1638536366": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.8,
+"D": 3.72,
+"A": 2.27
+},
+"ah": 0.25,
+"div": "PIN:Austria - 2. Liga",
+"home": "Hertha Wels",
+"away": "Voitsberg",
+"start": "2026-10-23T16:30:00Z"
+},
+"1638536362": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.28,
+"D": 3.65,
+"A": 2.83
+},
+"ah": -0.25,
+"div": "PIN:Austria - 2. Liga",
+"home": "Austria Vienna II",
+"away": "Sturm Graz II",
+"start": "2026-10-23T16:30:00Z"
+},
+"1638247911": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.826,
+"D": 3.43,
+"A": 3.94
+},
+"ah": -0.5,
+"div": "PIN:Armenia - Premier League",
+"home": "Noah",
+"away": "Pyunik",
+"start": "2026-10-18T16:00:00Z"
+},
+"1638676311": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 4.99,
+"D": 4.37,
+"A": 1.549
+},
+"ah": 1.0,
+"div": "PIN:Israel - Premier League",
+"home": "Ironi Tiberias",
+"away": "Maccabi Netanya",
+"start": "2026-10-24T16:00:00Z"
+},
+"1638235243": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.304,
+"D": 5.51,
+"A": 9.18
+},
+"ah": -1.5,
+"div": "PIN:Israel - Premier League",
+"home": "Hapoel Beer Sheva",
+"away": "Hapoel Jerusalem",
+"start": "2026-10-18T17:15:00Z"
+},
+"1638686105": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.89,
+"D": 3.53,
+"A": 2.29
+},
+"ah": 0.25,
+"div": "PIN:Israel - Premier League",
+"home": "Hapoel Ramat Gan",
+"away": "Maccabi Petah Tikva",
+"start": "2026-10-24T16:00:00Z"
+},
+"1638292991": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.98,
+"D": 3.84,
+"A": 2.12
+},
+"ah": 0.25,
+"div": "PIN:Israel - Premier League",
+"home": "Beitar Jerusalem",
+"away": "Maccabi Tel Aviv",
+"start": "2026-10-19T17:30:00Z"
+},
+"1638666927": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.05,
+"D": 3.27,
+"A": 3.63
+},
+"ah": -0.25,
+"div": "PIN:Israel - Premier League",
+"home": "Hapoel Kiryat Shmona",
+"away": "Bnei Sakhnin",
+"start": "2026-10-24T15:45:00Z"
+},
+"1638224491": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.45,
+"D": 3.44,
+"A": 1.877
+},
+"ah": 0.5,
+"div": "PIN:Moldova - Divizia Nationala",
+"home": "Milsami",
+"away": "Zimbru Chisinau",
+"start": "2026-10-18T14:00:00Z"
+},
+"1638336858": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.35,
+"D": 2.84,
+"A": 3.18
+},
+"ah": -0.25,
+"div": "PIN:Uruguay - Segunda Division",
+"home": "Rentistas",
+"away": "Atenas",
+"start": "2026-10-18T20:00:00Z"
+},
+"1638323776": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.59,
+"D": 2.98,
+"A": 2.71
+},
+"ah": 0.0,
+"div": "PIN:Uruguay - Segunda Division",
+"home": "Plaza Colonia",
+"away": "River Plate Montevideo",
+"start": "2026-10-18T17:00:00Z"
+},
+"1638339057": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.676,
+"D": 3.4,
+"A": 4.8
+},
+"ah": -0.75,
+"div": "PIN:Uruguay - Segunda Division",
+"home": "Club Oriental de La Paz",
+"away": "Uruguay Montevideo",
+"start": "2026-10-18T23:00:00Z"
+},
+"1638726697": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.714,
+"D": 3.18,
+"A": 4.65
+},
+"ah": -0.75,
+"div": "PIN:Mozambique - Mocambola",
+"home": "Vilankulo",
+"away": "Maxaquene",
+"start": "2026-10-18T13:00:00Z"
+},
+"1638235349": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.763,
+"D": 3.63,
+"A": 4.0
+},
+"ah": -0.75,
+"div": "PIN:Poland - 2nd Liga",
+"home": "Sandecja Nowy Sacz",
+"away": "Zawisza Bydgoszcz",
+"start": "2026-10-18T17:30:00Z"
+},
+"1638230163": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.769,
+"D": 3.9,
+"A": 3.89
+},
+"ah": -0.75,
+"div": "PIN:Poland - 2nd Liga",
+"home": "Znicz Pruszkow",
+"away": "Rekord Bielsko Biala",
+"start": "2026-10-18T15:00:00Z"
+},
+"1638407419": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 5.99,
+"D": 4.65,
+"A": 1.437
+},
+"ah": 1.25,
+"div": "PIN:Faroe Islands - Premier League",
+"home": "Eb/Streymur",
+"away": "HB Torshavn",
+"start": "2026-10-18T14:00:00Z"
+},
+"1638406849": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.098,
+"D": 9.87,
+"A": 16.89
+},
+"ah": -2.5,
+"div": "PIN:Faroe Islands - Premier League",
+"home": "KI Klaksvik",
+"away": "B68 Toftir",
+"start": "2026-10-18T14:00:00Z"
+},
+"1638407420": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.427,
+"D": 4.59,
+"A": 5.76
+},
+"ah": -1.25,
+"div": "PIN:Faroe Islands - Premier League",
+"home": "Vikingur Gota",
+"away": "AB Argir",
+"start": "2026-10-18T16:15:00Z"
+},
+"1638350128": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.595,
+"D": 4.18,
+"A": 4.71
+},
+"ah": -1.0,
+"div": "PIN:Faroe Islands - Premier League",
+"home": "B36 Torshavn",
+"away": "Skala",
+"start": "2026-10-18T14:00:00Z"
+},
+"1638406848": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.246,
+"D": 6.25,
+"A": 8.31
+},
+"ah": -1.75,
+"div": "PIN:Faroe Islands - Premier League",
+"home": "NSI Runavik",
+"away": "07 Vestur",
+"start": "2026-10-18T14:00:00Z"
+},
+"1638388720": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.356,
+"D": 4.93,
+"A": 7.36
+},
+"ah": -1.5,
+"div": "PIN:Indonesia - Super League",
+"home": "Persija Jakarta",
+"away": "Arema FC",
+"start": "2026-10-21T12:00:00Z"
+},
+"1638415450": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.5,
+"D": 3.32,
+"A": 2.09
+},
+"ah": 0.25,
+"div": "PIN:Indonesia - Super League",
+"home": "PSM Makassar",
+"away": "Persebaya Surabaya",
+"start": "2026-10-22T08:30:00Z"
+},
+"1638293048": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.667,
+"D": 3.48,
+"A": 5.39
+},
+"ah": -0.75,
+"div": "PIN:Indonesia - Super League",
+"home": "Bhayangkara",
+"away": "PSIM Yogyakarta",
+"start": "2026-10-20T12:00:00Z"
+},
+"1638305747": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.247,
+"D": 5.67,
+"A": 9.69
+},
+"ah": -1.75,
+"div": "PIN:Indonesia - Super League",
+"home": "Dewa United",
+"away": "Persijap Jepara",
+"start": "2026-10-20T12:00:00Z"
+},
+"1638357228": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.398,
+"D": 5.07,
+"A": 6.11
+},
+"ah": -1.25,
+"div": "PIN:Indonesia - Super League",
+"home": "Bali United Pusam",
+"away": "Garudayaksa",
+"start": "2026-10-21T08:30:00Z"
+},
+"1638449768": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 4.35,
+"D": 3.38,
+"A": 1.84
+},
+"ah": 0.5,
+"div": "PIN:Indonesia - Super League",
+"home": "Madura United",
+"away": "Persib Bandung",
+"start": "2026-10-22T12:00:00Z"
+},
+"1638224572": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 4.19,
+"D": 4.17,
+"A": 1.629
+},
+"ah": 0.75,
+"div": "PIN:Switzerland - Cup",
+"home": "Schaffhausen",
+"away": "Thun",
+"start": "2026-10-18T14:00:00Z"
+},
+"1638224488": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 14.54,
+"D": 8.48,
+"A": 1.084
+},
+"ah": 2.5,
+"div": "PIN:Switzerland - Cup",
+"home": "Taverne",
+"away": "Young Boys",
+"start": "2026-10-18T14:00:00Z"
+},
+"1638215106": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.33,
+"D": 2.66,
+"A": 3.34
+},
+"ah": -0.25,
+"div": "PIN:Greece - Super League 2",
+"home": "Niki Volou",
+"away": "Panionios",
+"start": "2026-10-19T11:45:00Z"
+},
+"1638293042": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.99,
+"D": 3.12,
+"A": 3.52
+},
+"ah": -0.5,
+"div": "PIN:Greece - Super League 2",
+"home": "PAOK II",
+"away": "Apollon Kalamarias",
+"start": "2026-10-19T12:00:00Z"
+},
+"1638180898": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.581,
+"D": 3.66,
+"A": 5.38
+},
+"ah": -1.0,
+"div": "PIN:Greece - Super League 2",
+"home": "Panthrakikos",
+"away": "Olympiakos II",
+"start": "2026-10-18T12:00:00Z"
+},
+"1638220439": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.81,
+"D": 2.92,
+"A": 2.55
+},
+"ah": 0.0,
+"div": "PIN:Greece - Super League 2",
+"home": "Pyrgos",
+"away": "Anagennisi Karditsas 1904",
+"start": "2026-10-18T12:00:00Z"
+},
+"1638183262": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 4.89,
+"D": 3.07,
+"A": 1.781
+},
+"ah": 0.5,
+"div": "PIN:Greece - Super League 2",
+"home": "Nestos Chrysoupoli",
+"away": "Kallithea",
+"start": "2026-10-18T12:00:00Z"
+},
+"1638394711": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.26,
+"D": 3.2,
+"A": 2.81
+},
+"ah": -0.25,
+"div": "PIN:France - National 2",
+"home": "Montpellier II",
+"away": "Saint Etienne II",
+"start": "2026-10-18T14:00:00Z"
+},
+"1638664217": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.42,
+"D": 2.92,
+"A": 2.1
+},
+"ah": 0.25,
+"div": "PIN:Uganda - Premier League",
+"home": "UPDF",
+"away": "BUL FC",
+"start": "2026-10-18T14:00:00Z"
+},
+"1638235395": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.21,
+"D": 3.02,
+"A": 2.92
+},
+"ah": -0.25,
+"div": "PIN:Costa Rica - Ascenso",
+"home": "Aserri",
+"away": "Carmelita",
+"start": "2026-10-18T17:00:00Z"
+},
+"1638235497": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.08,
+"D": 3.15,
+"A": 3.06
+},
+"ah": -0.25,
+"div": "PIN:Costa Rica - Ascenso",
+"home": "AD Sarchi",
+"away": "Municipal Grecia",
+"start": "2026-10-18T17:00:00Z"
+},
+"1638397862": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.82,
+"D": 3.52,
+"A": 3.43
+},
+"ah": -0.5,
+"div": "PIN:Costa Rica - Ascenso",
+"home": "AD Santa Ana",
+"away": "Pitbulls",
+"start": "2026-10-18T19:00:00Z"
+},
+"1638350130": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.34,
+"D": 2.85,
+"A": 2.79
+},
+"ah": -0.25,
+"div": "PIN:Italy - Serie D",
+"home": "Martina",
+"away": "Nocerina",
+"start": "2026-10-18T15:00:00Z"
+},
+"1638352537": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.568,
+"D": 3.6,
+"A": 5.06
+},
+"ah": -0.75,
+"div": "PIN:Italy - Serie D",
+"home": "Brindisi",
+"away": "Nardo",
+"start": "2026-10-18T14:00:00Z"
+},
+"1638350105": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.526,
+"D": 3.73,
+"A": 5.29
+},
+"ah": -1.0,
+"div": "PIN:Italy - Serie D",
+"home": "Ligorna",
+"away": "AC Bra",
+"start": "2026-10-18T13:30:00Z"
+},
+"1638289822": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.87,
+"D": 3.49,
+"A": 2.1
+},
+"ah": 0.25,
+"div": "PIN:Italy - Serie D",
+"home": "Licata",
+"away": "Siracusa",
+"start": "2026-10-18T14:00:00Z"
+},
+"1638289889": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.606,
+"D": 3.62,
+"A": 4.38
+},
+"ah": -0.75,
+"div": "PIN:Italy - Serie D",
+"home": "Biellese",
+"away": "Valenzana",
+"start": "2026-10-18T18:00:00Z"
+},
+"1638278443": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.11,
+"D": 3.08,
+"A": 3.19
+},
+"ah": -0.25,
+"div": "PIN:Italy - Serie D",
+"home": "Correggese",
+"away": "Castellanzese",
+"start": "2026-10-18T13:00:00Z"
+},
+"1638273622": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 5.26,
+"D": 3.76,
+"A": 1.606
+},
+"ah": 0.75,
+"div": "PIN:Italy - Serie C Group A",
+"home": "Giana Erminio",
+"away": "Brescia",
+"start": "2026-10-19T18:30:00Z"
+},
+"1638273623": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.25,
+"D": 3.37,
+"A": 2.97
+},
+"ah": -0.25,
+"div": "PIN:Italy - Serie C Group A",
+"home": "Juventus Next Gen",
+"away": "Renate",
+"start": "2026-10-19T18:30:00Z"
+},
+"1638230708": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.41,
+"D": 3.08,
+"A": 2.95
+},
+"ah": -0.25,
+"div": "PIN:Italy - Serie C Group A",
+"home": "Alcione",
+"away": "Desenzano",
+"start": "2026-10-18T15:30:00Z"
+},
+"1638273295": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.606,
+"D": 3.89,
+"A": 5.05
+},
+"ah": -0.75,
+"div": "PIN:Italy - Serie C Group A",
+"home": "Cittadella",
+"away": "Arzignano Valchiampo",
+"start": "2026-10-19T18:30:00Z"
+},
+"1638273621": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 4.79,
+"D": 3.36,
+"A": 1.746
+},
+"ah": 0.75,
+"div": "PIN:Italy - Serie C Group A",
+"home": "Dolomiti Bellunesi",
+"away": "Trento",
+"start": "2026-10-19T18:30:00Z"
+},
+"1638230191": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.813,
+"D": 3.33,
+"A": 4.43
+},
+"ah": -0.5,
+"div": "PIN:Italy - Serie C Group A",
+"home": "Ospitaletto",
+"away": "Pergolettese",
+"start": "2026-10-18T15:30:00Z"
+},
+"1638230190": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.34,
+"D": 3.24,
+"A": 2.92
+},
+"ah": -0.25,
+"div": "PIN:Italy - Serie C Group A",
+"home": "Albinoleffe",
+"away": "Novara",
+"start": "2026-10-18T15:30:00Z"
+},
+"1638224508": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 3.58,
+"D": 4.09,
+"A": 1.8
+},
+"ah": 0.5,
+"div": "PIN:Norway - 2nd Division",
+"home": "Tromsdalen",
+"away": "Eidsvold",
+"start": "2026-10-18T12:30:00Z"
+},
+"1638220446": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.633,
+"D": 3.78,
+"A": 4.37
+},
+"ah": -0.75,
+"div": "PIN:Norway - 2nd Division",
+"home": "Jerv",
+"away": "Sotra",
+"start": "2026-10-18T14:00:00Z"
+},
+"1638230683": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 1.231,
+"D": 6.65,
+"A": 8.35
+},
+"ah": -2.0,
+"div": "PIN:Norway - 2nd Division",
+"home": "Honefoss",
+"away": "Junkeren",
+"start": "2026-10-18T15:00:00Z"
+},
+"1638224497": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.86,
+"D": 4.0,
+"A": 2.09
+},
+"ah": 0.25,
+"div": "PIN:Norway - 2nd Division",
+"home": "Lysekloster",
+"away": "Traeff",
+"start": "2026-10-18T14:00:00Z"
+},
+"1638220453": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 2.2,
+"D": 3.88,
+"A": 2.73
+},
+"ah": -0.25,
+"div": "PIN:Norway - 2nd Division",
+"home": "Brattvag",
+"away": "Bjarg",
+"start": "2026-10-18T14:00:00Z"
+},
+"1638420849": {
+"visto": "2026-10-18T13:30+00:00",
+"q": {
+"H": 7.71,
+"D": 3.88,
+"A": 1.382
+},
+"ah": 1.25,
+"div": "PIN:CAF - Confederation Cup Qualifiers",
+"home": "El Kanemi Warriors",
+"away": "Raja Casablanca",
+"start": "2026-10-18T15:00:00Z"
+},
+"1638224477": {
+"visto": "2026-10-18T13:31+00:00",
+"q": {
+"H": 2.75,
+"D": 4.41,
+"A": 2.05
+},
+"ah": 0.25,
+"div": "PIN:Sweden - Division 1 Sodra",
+"home": "Kristianstad",
+"away": "Trollhattan",
+"start": "2026-10-18T14:00:00Z"
 }
 }
