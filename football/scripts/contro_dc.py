@@ -43,7 +43,7 @@ def fair(h, d, a):
     return [x / s for x in inv]
 
 
-def moves(day):
+def moves(day, tutte=False):
     out = []
     for div in espn.LEAGUES:
         try:
@@ -51,7 +51,7 @@ def moves(day):
         except Exception:  # noqa: BLE001
             continue
         for ev in evs:
-            if ev["stato"] != "STATUS_SCHEDULED":
+            if ev["stato"] != "STATUS_SCHEDULED" and not tutte:
                 continue
             try:
                 d = espn._get(f"{espn.BASE}/{espn.LEAGUES[div]}/summary?event={ev['id']}", 1800)
@@ -69,19 +69,29 @@ def moves(day):
             if up < AVVISO:
                 continue
             p_now = pc[dog] + pc[1]
+            esito = ""
+            if ev["stato"] in ("STATUS_FULL_TIME", "STATUS_FINAL", "STATUS_FINAL_AET", "STATUS_FINAL_PEN"):
+                c = (d.get("header") or {}).get("competitions", [{}])[0].get("competitors", [])
+                sc = {x["homeAway"]: int(x.get("score") or 0) for x in c}
+                ok = sc["home"] >= sc["away"] if dog == 0 else sc["away"] >= sc["home"]
+                esito = f"{sc['home']}-{sc['away']} {'VINTA' if ok else 'PERSA'}"
             out.append(dict(day=day, div=div, home=ev["home"], away=ev["away"], dog=dog, up=up, p=p_now,
                             p_open=po[dog] + po[1], minq=(1 + VALORE) / p_now,
-                            dk=1 / (1 / q["close"]["H" if dog == 0 else "A"] + 1 / q["close"]["D"])))
+                            dk=1 / (1 / q["close"]["H" if dog == 0 else "A"] + 1 / q["close"]["D"]),
+                            dk_open=1 / (1 / q["open"]["H" if dog == 0 else "A"] + 1 / q["open"]["D"]), esito=esito))
     return out
 
 
 def main(argv):
-    n = int(argv[0]) if argv else 3
+    if argv and "-" in argv[0]:                      # una data precisa (anche passata, con i risultati)
+        days, tutte = [argv[0]], True
+    else:
+        days, tutte = [str(date.today() + timedelta(days=k)) for k in range(int(argv[0]) if argv else 3)], False
     rows = []
-    for k in range(n):
-        rows += moves(str(date.today() + timedelta(days=k)))
+    for day in days:
+        rows += moves(day, tutte)
     rows.sort(key=lambda r: -r["up"])
-    lines = [f"# Contropronostici doppia chance sul movimento quote ({date.today()})", "",
+    lines = [f"# Contropronostici doppia chance sul movimento quote ({days[0]})", "",
              "Regola: la sfavorita prende soldi (probabilità della sua doppia chance salita di almeno 7 punti). "
              "Gioca SOLO se la quota Bet365 della doppia chance è almeno la quota minima: il valore c'è solo sulla "
              "quota vecchia. Storico: vince ~6 volte su 10 a quota ~2, ROI +10% alla quota di apertura, in perdita "
@@ -98,10 +108,11 @@ def main(argv):
             dc, who = ("1X", r["home"]) if r["dog"] == 0 else ("X2", r["away"])
             lines.append(f"- {r['day']} {r['div']} {r['home']} - {r['away']}: **{dc}** ({who} o pareggio) · "
                          f"probabilità {r['p_open']:.0%} -> {r['p']:.0%} (+{r['up'] * 100:.0f} punti) · "
-                         f"gioca se Bet365 paga almeno **{r['minq']:.2f}** (DraftKings ora {r['dk']:.2f})")
+                         f"gioca se Bet365 paga almeno **{r['minq']:.2f}** (DraftKings {r['dk_open']:.2f} -> {r['dk']:.2f})"
+                         + (f" · **{r['esito']}**" if r["esito"] else ""))
         lines.append("")
     txt = "\n".join(lines)
-    fn = ROOT / "output" / f"contro_dc_{date.today()}.md"
+    fn = ROOT / "output" / f"contro_dc_{days[0]}.md"
     fn.write_text(txt)
     print(txt)
     print(f"\nScritto {fn}")
