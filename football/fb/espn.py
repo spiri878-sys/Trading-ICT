@@ -49,7 +49,7 @@ def scoreboard(div, day, max_age=600):
         comp = {c["homeAway"]: c for c in e["competitions"][0]["competitors"]}
         out.append({"id": e["id"], "div": div, "stato": e["status"]["type"]["name"],
                     "minuto": e["status"].get("displayClock"), "home": comp["home"]["team"]["displayName"],
-                    "away": comp["away"]["team"]["displayName"]})
+                    "away": comp["away"]["team"]["displayName"], "inizio": e.get("date")})
     return out
 
 
