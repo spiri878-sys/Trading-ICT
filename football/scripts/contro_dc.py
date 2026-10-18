@@ -21,8 +21,9 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from fb import espn  # noqa: E402
+from fb import espn, pinnacle  # noqa: E402
 from fb.data import ROOT  # noqa: E402
+from fb.teams import norm, similar  # noqa: E402
 
 SALITA = 0.07        # punti di probabilità DC guadagnati dalla sfavorita (regola verificata: >= 7)
 AVVISO = 0.05        # 5-7 punti: in osservazione (ROI storico +6%, 6/7 stagioni)
@@ -98,6 +99,31 @@ def _moves_div(div, day, tutte, max_age):
     return out
 
 
+def pin_moves(day=None):
+    """Movimento Pinnacle (prima volta che abbiamo visto la partita -> adesso). Registra le aperture nuove."""
+    out = []
+    for g in pinnacle.snapshot():
+        start = datetime.fromisoformat(g["start"].replace("Z", "+00:00")).astimezone(ZoneInfo("Europe/Rome"))
+        if day and str(start.date()) != day:
+            continue
+        po, pc = fair(*(g["q_open"][k] for k in "HDA")), fair(*(g["q"][k] for k in "HDA"))
+        dog = 0 if g["q_open"]["H"] > g["q_open"]["A"] else 2
+        up = (pc[dog] + pc[1]) - (po[dog] + po[1])
+        if up < AVVISO:
+            continue
+        k = "H" if dog == 0 else "A"
+        out.append(dict(day=str(start.date()), ora=start.strftime("%H:%M"), div=g["div"], home=g["home"],
+                        away=g["away"], dog=dog, up=up, p=pc[dog] + pc[1], p_open=po[dog] + po[1],
+                        minq=(1 + VALORE) / (pc[dog] + pc[1]), dk=1 / (1 / g["q"][k] + 1 / g["q"]["D"]),
+                        dk_open=1 / (1 / g["q_open"][k] + 1 / g["q_open"]["D"]), esito="", fonte="Pinnacle",
+                        linea=f"{g['ah_open']:+g} -> {g['ah']:+g}" if g.get("ah") is not None and g.get("ah_open") is not None else ""))
+    return out
+
+
+def same_match(a, b):
+    return similar(norm(a["home"]), norm(b["home"])) >= 0.7 and similar(norm(a["away"]), norm(b["away"])) >= 0.7
+
+
 def allerta():
     """Solo le giocate NUOVE di oggi (regola verificata, partita non iniziata), in un messaggio corto per il telefono.
     Le giocate già segnalate sono in output/allerta_<giorno>.json (nel repository: ogni esecuzione lo aggiorna)."""
@@ -105,9 +131,16 @@ def allerta():
     fn = ROOT / "output" / f"allerta_{day}.json"
     seen = json.loads(fn.read_text()) if fn.exists() else []
     new = []
-    for r in sorted(moves(day, max_age=120), key=lambda r: r["ora"]):
+    rows = [dict(r, fonte="DraftKings") for r in moves(day, max_age=120)]
+    try:
+        rows = pin_moves(day) + rows                     # Pinnacle per primo: è il riferimento del backtest
+    except Exception as e:  # noqa: BLE001
+        print(f"(Pinnacle non disponibile: {e})")
+    for r in sorted(rows, key=lambda r: r["ora"]):
         key = f"{r['home']} - {r['away']}"
-        if r["up"] >= SALITA and r["div"] in VERIFICATI and key not in seen:
+        done = [dict(zip(("home", "away"), k.split(" - ", 1))) for k in seen]
+        if (r["up"] >= SALITA and r["div"] in VERIFICATI and key not in seen
+                and not any(same_match(r, d) for d in done if "away" in d)):
             seen.append(key)
             new.append(r)
     fn.write_text(json.dumps(seen, ensure_ascii=False, indent=1))
@@ -117,12 +150,19 @@ def allerta():
     for r in new:
         dc, who = ("1X", r["home"]) if r["dog"] == 0 else ("X2", r["away"])
         print(f"{r['ora']} {r['home']}-{r['away']}: {dc} ({who} o pareggio). Gioca su Bet365 SOLO se la doppia chance "
-              f"paga almeno {r['minq']:.2f} (DraftKings {r['dk_open']:.2f} -> {r['dk']:.2f}). Singola, importo fisso.")
+              f"paga almeno {r['minq']:.2f} ({r['fonte']} {r['dk_open']:.2f} -> {r['dk']:.2f}"
+              + (f", linea asiatica {r['linea']}" if r.get("linea") else "") + "). Singola, importo fisso.")
 
 
 def main(argv):
     if argv and argv[0] == "--allerta":
         allerta()
+        return
+    if argv and argv[0] == "--pinnacle":             # tutti i movimenti Pinnacle registrati finora
+        for r in sorted(pin_moves(), key=lambda r: -r["up"]):
+            dc = "1X" if r["dog"] == 0 else "X2"
+            print(f"{r['day']} {r['ora']} {r['div']} {r['home']}-{r['away']}: {dc} +{r['up'] * 100:.0f} punti "
+                  f"(DC {r['dk_open']:.2f} -> {r['dk']:.2f}, linea {r['linea']}) quota minima {r['minq']:.2f}")
         return
     if argv and "-" in argv[0]:                      # una data precisa (anche passata, con i risultati)
         days, tutte = [argv[0]], True
