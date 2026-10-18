@@ -27,7 +27,14 @@ def _get(url, max_age):
     if fn.exists() and time.time() - fn.stat().st_mtime < max_age:
         return json.loads(fn.read_text())
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-    data = json.loads(urllib.request.urlopen(req, timeout=30).read())
+    for attempt in range(4):                        # rete instabile: riprova con attese crescenti
+        try:
+            data = json.loads(urllib.request.urlopen(req, timeout=30).read())
+            break
+        except OSError:
+            if attempt == 3:
+                raise
+            time.sleep(2 ** attempt)
     fn.write_text(json.dumps(data))
     return data
 
