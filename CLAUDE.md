@@ -52,6 +52,9 @@ Branch di lavoro: `claude/gifted-cannon-3ud35m` (commit e push lì, niente PR se
 - `python football/scripts/ricontrollo.py` ~60' prima: formazioni ufficiali, turnover, valore ricalcolato.
 - `python football/scripts/live.py` partite del registro in corso (live NON verificato sul passato).
 - `python football/scripts/esiti.py` esiti, CLV, bilancio -> output/bilancio.md.
+- `python football/scripts/contro_dc.py [giorni]` CONTRO DC: doppia chance della sfavorita quando le quote si muovono su
+  di lei (DraftKings apertura->ora da ESPN, gratis). Gioca solo se Bet365 paga almeno la quota minima. Backtest in
+  output/contro_dc.md (+10.6% SOLO alla quota di apertura, -6% alla chiusura).
 - Mai collaudati con l'API attiva: oggi.py completo, ricontrollo.py, live.py, esiti.py.
 
 ## Risultati chiave (onesti, verifica 2022-2026)
