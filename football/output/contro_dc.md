@@ -34,3 +34,20 @@ Regola >= 7 punti per stagione: 19/20 +18.7%, 20/21 +16.8%, 21/22 +9.6%, 22/23 +
   quella quota non si gioca.
 - Il riferimento attuale gratis è DraftKings (ESPN), non Pinnacle: muove meno e più tardi -> segnale più debole del
   backtest. È un limite superiore: va giudicato sul registro reale.
+
+## C. Prova machine learning (LightGBM, walk-forward: allenato sulle stagioni prima, verifica 2021-26)
+
+Feature: probabilità Pinnacle apertura e chiusura, movimento sfavorita/pareggio, differenza Pinnacle-Bet365, modello AI,
+linea asiatica e movimento, casa/ospite, quota, campionato.
+
+| strategia | giocate | vinte | ROI apertura | ROI chiusura | stagioni + |
+|---|---|---|---|---|---|
+| REGOLA >= 7 punti | 878 | 58% | +7.0% | -8.8% | 5/5 (apertura) |
+| ML da solo, valore >= 5% | 3.494 | 54% | +0.5% | | 3/5 |
+| ML da solo, valore >= 10% | 1.547 | 53% | +0.3% | | 2/5 |
+| ML valore >= 5% sulla quota di chiusura | 1.951 | 50% | | -5.0% | 2/5 |
+| REGOLA + ML d'accordo | 572 | 60% | +10.9% | -6.1% | 4/5 |
+
+Log-loss ML 0.6595 contro Pinnacle chiusura 0.6571: il modello NON batte la quota di chiusura Pinnacle.
+Conclusione: il ML da solo non trova niente in più; il valore viene solo dal prendere la quota prima del movimento.
+REGOLA + ML: un po' meglio (+10.9% contro +7.0%) ma meno giocate e 4/5 stagioni: non ancora adottato.
