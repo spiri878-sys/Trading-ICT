@@ -26,6 +26,9 @@
 //| 10 su simboli a 3/5 decimali, 1 sugli altri, oro Axi = 0,01 $).  |
 //| "Pips" del TP/trailing = stessa unita' dei punti.                |
 //| MaxTrades = 0 -> nessun limite di livelli.                       |
+//| Entrata intelligente (InpSmartEntry): il primo ordine del cesto  |
+//| solo dal lato della EMA200 H1 e mai dopo uno strappo M1; i cesti |
+//| aperti si gestiscono e rinforzano sempre (fase 25).              |
 //| NON compilato dall'autore: compilare in MetaEditor, provare in   |
 //| demo/tester "Ogni tick basato su tick reali". Serve un conto     |
 //| HEDGING.                                                         |
@@ -73,6 +76,13 @@ input int    InpStochSlow   = 3;    // S4 rallentamento
 input double InpStochLow    = 20;   // S4 zona bassa
 input double InpStochHigh   = 80;   // S4 zona alta
 input int    InpS5Lookback  = 20;   // S5 barre per il nuovo minimo/massimo
+
+input group "===== Entrata intelligente (solo il PRIMO ordine del cesto) ====="
+input bool   InpSmartEntry  = true;      // BUY solo sopra la tendenza, SELL solo sotto, mai dopo uno strappo
+input ENUM_TIMEFRAMES InpTrendTF = PERIOD_H1; // timeframe della tendenza
+input int    InpTrendEMA    = 200;       // EMA della tendenza
+input int    InpCalmBars    = 15;        // barre M1 controllate per lo strappo
+input double InpCalmATR     = 4.0;       // strappo = escursione di quelle barre >= ATR M1(14) x questo
 
 input group "===== Strategy 1 ====="
 input ENUM_TIMEFRAMES InpS1_Timeframe        = PERIOD_M1; // S1 timeframe dei segnali
@@ -230,6 +240,7 @@ double        trBest[6][2];         // miglior prezzo dal trailing attivo [strat
 bool          trOn[6][2];
 double        unit;                 // 1 "punto" del set in prezzo
 datetime      lastWarn = 0;
+int           hTrend = INVALID_HANDLE, hCalm = INVALID_HANDLE;
 
 void ParseList(string s, double &arr[])
 {
@@ -312,6 +323,12 @@ int OnInit()
       int i = (int)StringToInteger(p[j]);
       if(i >= 1 && i <= 5) cfg[i].active = true;
    }
+   if(InpSmartEntry)
+   {
+      hTrend = iMA(_Symbol, InpTrendTF, InpTrendEMA, 0, MODE_EMA, PRICE_CLOSE);
+      hCalm = iATR(_Symbol, PERIOD_M1, 14);
+      if(hTrend == INVALID_HANDLE || hCalm == INVALID_HANDLE) return INIT_FAILED;
+   }
    for(int i = 1; i <= 5; i++)
    {
       trOn[i][0] = trOn[i][1] = false;
@@ -331,6 +348,8 @@ int OnInit()
 
 void OnDeinit(const int reason)
 {
+   if(hTrend != INVALID_HANDLE) IndicatorRelease(hTrend);
+   if(hCalm != INVALID_HANDLE) IndicatorRelease(hCalm);
    for(int i = 1; i <= 5; i++)
    {
       if(cfg[i].hSig != INVALID_HANDLE) IndicatorRelease(cfg[i].hSig);
@@ -392,6 +411,19 @@ int Signal(int i)
       return 0;
    }
    return 0;
+}
+
+//--- entrata intelligente: 1 = solo BUY, -1 = solo SELL, 0 = niente cesti nuovi adesso (strappo in corso)
+//    Fase 25 (barre M1 2026, mese per mese, 500.000): mesi saltati 5 su 10 -> 1 su 10, ma guadagno ~1/3.
+int SmartSide()
+{
+   if(!InpSmartEntry) return 2;                      // 2 = entrambi i lati
+   double e[], a[];
+   if(CopyBuffer(hTrend, 0, 1, 1, e) < 1 || CopyBuffer(hCalm, 0, 1, 1, a) < 1) return 0;
+   int hi = iHighest(_Symbol, PERIOD_M1, MODE_HIGH, InpCalmBars, 1), lo = iLowest(_Symbol, PERIOD_M1, MODE_LOW, InpCalmBars, 1);
+   if(hi < 0 || lo < 0) return 0;
+   if(iHigh(_Symbol, PERIOD_M1, hi) - iLow(_Symbol, PERIOD_M1, lo) >= InpCalmATR * a[0]) return 0;
+   return SymbolInfoDouble(_Symbol, SYMBOL_BID) > e[0] ? 1 : -1;
 }
 
 void Scan(long magic, SBasket &b)
@@ -537,6 +569,7 @@ void OnTick()
    bool newOk = spreadOk && (timeOk || !InpTimeBlockNewEntries);
    bool addOk = spreadOk && (timeOk || !InpTimeBlockReinforcement);
    string dash = "CestoTopBottom\n";
+   int smart = SmartSide();
 
    for(int i = 1; i <= 5; i++)
    {
@@ -554,7 +587,7 @@ void OnTick()
          if(b.n == 0)
          {
             trOn[i][side] = false;
-            if(sig == dir && newOk) Open(i, side, LotFor(i, 0), "L1");
+            if(sig == dir && newOk && (smart == 2 || smart == dir)) Open(i, side, LotFor(i, 0), "L1");
             continue;
          }
          if(ManageExit(i, side, b)) { trOn[i][side] = false; continue; }

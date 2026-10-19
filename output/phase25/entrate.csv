@@ -1,0 +1,37 @@
+entrata,filtro,saldo_finale,profitto_pct,calo_max_pct,livello_max,cesti,saltato
+sempre,nessun filtro,-269,-100.3,100.0,20,2702,True
+sempre,con la tendenza EMA50 H1,6775,-93.2,100.0,20,1652,True
+sempre,con la tendenza EMA200 H1,-116058,-216.1,100.0,21,3960,True
+sempre,dopo calma,8344,-91.7,100.0,20,2091,True
+sempre,prezzo tirato >= 3 ATR,-113946,-213.9,100.0,21,2060,True
+sempre,tendenza EMA200 + calma,-10408,-110.4,100.0,20,2919,True
+S1 frattale,nessun filtro,8939,-91.1,100.0,19,1706,True
+S1 frattale,con la tendenza EMA50 H1,-7743,-107.7,100.0,19,995,True
+S1 frattale,con la tendenza EMA200 H1,-20826,-120.8,100.0,20,2107,True
+S1 frattale,dopo calma,8443,-91.6,100.0,20,1657,True
+S1 frattale,prezzo tirato >= 3 ATR,-877,-100.9,100.0,20,911,True
+S1 frattale,tendenza EMA200 + calma,4310,-95.7,100.0,20,4366,True
+S2 RSI,nessun filtro,-30399,-130.4,100.0,20,479,True
+S2 RSI,con la tendenza EMA50 H1,-197953,-298.0,100.0,21,207,True
+S2 RSI,con la tendenza EMA200 H1,-197778,-297.8,100.0,21,239,True
+S2 RSI,dopo calma,-42067,-142.1,100.0,20,62,True
+S2 RSI,prezzo tirato >= 3 ATR,-36866,-136.9,100.0,20,324,True
+S2 RSI,tendenza EMA200 + calma,102294,2.3,0.7,9,252,False
+S3 Bollinger,nessun filtro,-81050,-181.0,100.0,21,1739,True
+S3 Bollinger,con la tendenza EMA50 H1,-120811,-220.8,100.0,21,835,True
+S3 Bollinger,con la tendenza EMA200 H1,-116344,-216.3,100.0,21,891,True
+S3 Bollinger,dopo calma,-119694,-219.7,100.0,21,618,True
+S3 Bollinger,prezzo tirato >= 3 ATR,13920,-86.1,100.0,20,1652,True
+S3 Bollinger,tendenza EMA200 + calma,-132674,-232.7,100.0,21,322,True
+S4 stocastico,nessun filtro,9551,-90.4,100.0,19,690,True
+S4 stocastico,con la tendenza EMA50 H1,3399,-96.6,100.0,19,324,True
+S4 stocastico,con la tendenza EMA200 H1,-17741,-117.7,100.0,20,1098,True
+S4 stocastico,dopo calma,5317,-94.7,100.0,19,315,True
+S4 stocastico,prezzo tirato >= 3 ATR,3707,-96.3,100.0,19,312,True
+S4 stocastico,tendenza EMA200 + calma,164272,64.3,63.3,19,2860,False
+S5 inversione,nessun filtro,-180596,-280.6,100.0,21,1033,True
+S5 inversione,con la tendenza EMA50 H1,-195908,-295.9,100.0,21,453,True
+S5 inversione,con la tendenza EMA200 H1,-195887,-295.9,100.0,21,481,True
+S5 inversione,dopo calma,11150,-88.8,100.0,20,2831,True
+S5 inversione,prezzo tirato >= 3 ATR,-189797,-289.8,100.0,21,492,True
+S5 inversione,tendenza EMA200 + calma,9636,-90.4,100.0,20,1337,True

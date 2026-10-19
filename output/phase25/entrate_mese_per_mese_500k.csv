@@ -1,0 +1,37 @@
+entrata,filtro,mesi_saltati,guadagno_medio_mesi_ok,calo_medio
+S2 RSI,tendenza EMA200 + calma,0,0.0,0
+S2 RSI,dopo calma,0,0.5,3
+S4 stocastico,tendenza EMA200 + calma,0,1.3,4
+S3 Bollinger,prezzo tirato >= 3 ATR,0,3.0,8
+S4 stocastico,prezzo tirato >= 3 ATR,0,3.9,8
+S4 stocastico,dopo calma,0,3.4,13
+S2 RSI,con la tendenza EMA50 H1,1,0.8,2
+S5 inversione,tendenza EMA200 + calma,1,1.3,2
+S2 RSI,con la tendenza EMA200 H1,1,1.1,3
+S5 inversione,con la tendenza EMA50 H1,1,2.2,4
+S5 inversione,dopo calma,1,2.7,5
+S2 RSI,prezzo tirato >= 3 ATR,1,2.3,9
+S4 stocastico,con la tendenza EMA200 H1,1,3.6,9
+S2 RSI,nessun filtro,1,3.1,11
+S5 inversione,prezzo tirato >= 3 ATR,1,3.3,11
+S1 frattale,tendenza EMA200 + calma,1,6.7,14
+S1 frattale,prezzo tirato >= 3 ATR,1,8.0,15
+sempre,tendenza EMA200 + calma,1,14.0,18
+S1 frattale,con la tendenza EMA200 H1,1,11.9,28
+S3 Bollinger,tendenza EMA200 + calma,2,0.9,2
+S3 Bollinger,dopo calma,2,2.0,3
+S5 inversione,con la tendenza EMA200 H1,2,2.6,5
+S3 Bollinger,con la tendenza EMA50 H1,2,2.1,6
+S4 stocastico,con la tendenza EMA50 H1,2,3.5,13
+sempre,dopo calma,2,28.4,20
+S1 frattale,con la tendenza EMA50 H1,2,10.7,23
+S4 stocastico,nessun filtro,2,8.5,23
+S1 frattale,dopo calma,2,14.9,25
+S3 Bollinger,con la tendenza EMA200 H1,3,2.0,4
+S3 Bollinger,nessun filtro,3,4.5,6
+S5 inversione,nessun filtro,3,6.4,15
+sempre,prezzo tirato >= 3 ATR,3,15.2,25
+sempre,con la tendenza EMA200 H1,3,21.5,26
+sempre,con la tendenza EMA50 H1,4,20.8,27
+S1 frattale,nessun filtro,4,26.0,42
+sempre,nessun filtro,5,44.2,28
