@@ -18,3 +18,8 @@ Set: `mql5/Presets/CestoTopBottom_HFT_tick_5000USC.set` (anche predefinito nell'
 - TP 0,3 $: +391 +289 +425 +4 X(mag) +94 +94 +72 +100 +43; ~19.300 / ~8.500 ordini al mese (più trade).
 - Senza hedging il migliore brucia 2 mesi (gen, ago). Lotto x2,5 o distanza 12 $: 2-3 mesi bruciati.
 Set "più trade": `mql5/Presets/CestoTopBottom_HFT_tick_5000USC_piuTrade.set`.
+
+## Fase 35 — rifinitura (810 set intorno al set scelto), ogni mese da 5.000 USC
+`python/scripts/phase35_basket_ticks_fine.py`, tabelle `cesto_tick_fine_*.csv`. Solo 3 set bruciano 1 mese (maggio), tutti
+8 $ x1,3, lotto x2, copertura 4, via a 8 $ con TP 0,4 / 0,5 / 0,7 $. Migliore TP 0,7 $ (EUR, partenza 50 ogni mese):
++234 +170 +256 +19 -50(mag) +61 +52 +52 +52 +32 = ~+878 EUR (TP 0,5: ~+778). Ordini ~11.800 / ~4.700 al mese.
