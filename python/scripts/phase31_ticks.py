@@ -92,7 +92,7 @@ def tick_zone(bid, ask, go, startbuy, bal0, Z, T, NMAX):
 
 
 @numba.njit(cache=True)
-def tick_basket(bid, ask, calm, trend, bal0, D, G, M, T, KH, R):
+def tick_basket(bid, ask, calm, trend, bal0, D, G, M, T, KH, R, both=False):
     bal = bal0; peak = bal0; mdd = 0.0; nord = 0; nb = 0
     lots = np.zeros((2, 80)); px = np.zeros((2, 80)); n = np.zeros(2, np.int64)
     ref = np.zeros(2); hl = np.zeros(2); hp = np.zeros(2); hx = np.zeros(2)
@@ -105,7 +105,7 @@ def tick_basket(bid, ask, calm, trend, bal0, D, G, M, T, KH, R):
             pin = a if d > 0 else b                      # prezzo di entrata del lato
             pout = b if d > 0 else a                     # prezzo di uscita del lato
             if n[s] == 0:
-                if calm[i] and ((d > 0 and trend[i]) or (d < 0 and not trend[i])):
+                if calm[i] and (both or (d > 0 and trend[i]) or (d < 0 and not trend[i])):
                     lots[s, 0] = 1.0; px[s, 0] = pin; n[s] = 1; ref[s] = pin; nord += 1
                 continue
             L = 0.0; W = 0.0
