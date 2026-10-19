@@ -1,0 +1,21 @@
+# Fase 23 — AI Golden Life MT5 (EA commerciale, .ex5 chiuso): analisi del report del tester inviato dall'utente
+
+Report: Axi, XAUUSD.p H1, 01-30/09/2026, "100% ticks reali", deposito 100, leva 1:1000, lotto 0,01.
+Parametri: OrdersMax=1, TakeProfit=50, StopLoss=50 (= 5 $ di prezzo), OrdersStep=70 / OrdersProfit=50 (funzione
+griglia presente ma spenta con OrdersMax=1), orari 08-22 (venerdì 20), filtro notizie 90'/90', AIFilter=true.
+
+## Come opera (dal report)
+- Entra SEMPRE a mercato al secondo 10 dell'apertura di una barra H1 (69/69 ingressi alle hh:00:10), una posizione alla volta.
+- Stop e target simmetrici: +5 $ / -5 $ (1:1). Durata media 12 minuti, massima 56.
+- Settembre 2026: 69 trade, 62 vinti (89,9%), buy 90% e sell 90%; TUTTI i 21 giorni di trading positivi; +281 $ su 100.
+
+## Valutazione
+- Con TP = SL = 5 $ la percentuale di vincita "normale" è ~50%: sull'oro 2025 (nostre barre M1, stesso schema: ingresso
+  all'apertura H1 08-22 con TP/SL 5 $) segui-candela 48,2%, contro-candela 50,5%, sempre buy 50,6% (3.480 trade).
+- 90% su 1:1 vorrebbe dire indovinare la direzione dei prossimi minuti 9 volte su 10: nessuna strategia nota ci arriva.
+  Spiegazione più probabile: parametri/regole adattati proprio al periodo mostrato (settembre 2026, appena prima del
+  lancio della v1.0), o un elenco di operazioni "imparato" sul passato. Va verificato su periodi diversi.
+- Test richiesti all'utente (stesse impostazioni, tick reali): 01-17/10/2026 (dopo settembre), tutto il 2025, gen-ago 2026.
+  Se la vincita crolla verso il 50% fuori da settembre: bot adattato al passato, da non comprare.
+- Ricostruirlo: lo schema di ingresso/uscita è chiaro, ma la regola della direzione non si può ricavare da un solo mese
+  (e se è adattata al passato non esiste una regola vera da copiare).
