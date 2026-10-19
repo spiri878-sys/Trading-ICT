@@ -26,6 +26,10 @@
 //| 10 su simboli a 3/5 decimali, 1 sugli altri, oro Axi = 0,01 $).  |
 //| "Pips" del TP/trailing = stessa unita' dei punti.                |
 //| MaxTrades = 0 -> nessun limite di livelli.                       |
+//| Hedging (InpHedgeLevel): al livello N apre una posizione opposta |
+//| grande quanto il cesto (magic +5); il cesto resta fermo finche' |
+//| il prezzo rimbalza di InpHedgeReleasePoints dall'estremo, poi la |
+//| copertura si chiude e la griglia riparte da quel prezzo.         |
 //| InpLotPerBalance: lotto base x(saldo / X) per i cesti nuovi      |
 //| (fase 26: 0,01 ogni 500.000 cent).                               |
 //| InpEntryMode 1 (continuo HFT): ogni cesto chiuso si riapre       |
@@ -55,6 +59,8 @@ input double InpMaxBasketDrawdownPercent = 500.0;  // Chiudi il cesto se la perd
 input bool   InpHideSLTP_FromBroker      = true;   // TP nascosto al broker (false = TP del cesto sulle posizioni)
 input bool   InpShowDashboard            = true;   // Pannello sul grafico
 input double InpLotPerBalance           = 0;      // Lotto che cresce: lotto base ogni X di saldo (0 = fisso)
+input int    InpHedgeLevel              = 0;      // Hedging: al livello N copre tutto il cesto (0 = spento)
+input double InpHedgeReleasePoints      = 500;    // Toglie la copertura quando il prezzo rimbalza di tanti punti
 
 input group "===== Broker Digit Detection ====="
 input int    InpDigitDetectMode          = 0;      // 0 = auto, altrimenti fattore fisso (punti x fattore)
@@ -247,6 +253,8 @@ double        trBest[6][2];         // miglior prezzo dal trailing attivo [strat
 bool          trOn[6][2];
 double        unit;                 // 1 "punto" del set in prezzo
 datetime      lastWarn = 0;
+double        hedgeExt[6][2];      // estremo del prezzo mentre la copertura e' attiva
+double        gridRef[6][2];       // dopo la copertura la griglia riparte da qui
 int           hTrend = INVALID_HANDLE, hCalm = INVALID_HANDLE;
 
 void ParseList(string s, double &arr[])
@@ -339,6 +347,7 @@ int OnInit()
    for(int i = 1; i <= 5; i++)
    {
       trOn[i][0] = trOn[i][1] = false;
+      hedgeExt[i][0] = hedgeExt[i][1] = gridRef[i][0] = gridRef[i][1] = 0;
       if(!cfg[i].active) continue;
       if(i == 2) cfg[i].hSig = iRSI(_Symbol, cfg[i].tf, InpRsiPeriod, PRICE_CLOSE);
       if(i == 3) cfg[i].hSig = iBands(_Symbol, cfg[i].tf, InpBandsPeriod, 0, InpBandsDev, PRICE_CLOSE);
@@ -450,11 +459,26 @@ void Scan(long magic, SBasket &b)
    }
 }
 
-void CloseBasket(long magic, string why)
+void CloseMagic(long magic)
 {
    for(int k = PositionsTotal() - 1; k >= 0; k--)
       if(pos.SelectByIndex(k) && pos.Symbol() == _Symbol && pos.Magic() == magic)
          trade.PositionClose(pos.Ticket());
+}
+
+//--- lotti della copertura (magic del cesto + 5)
+double HedgeLots(long magic)
+{
+   double v = 0;
+   for(int k = PositionsTotal() - 1; k >= 0; k--)
+      if(pos.SelectByIndex(k) && pos.Symbol() == _Symbol && pos.Magic() == magic) v += pos.Volume();
+   return v;
+}
+
+void CloseBasket(long magic, string why)
+{
+   CloseMagic(magic);
+   CloseMagic(magic + 5);                             // anche l'eventuale copertura
    PrintFormat("CestoTopBottom: cesto %I64d chiuso (%s)", magic, why);
 }
 
@@ -518,7 +542,7 @@ bool InTime()
    return s <= e ? (now >= s && now < e) : (now >= s || now < e);
 }
 
-bool Open(int i, int side, double lot, string tag)
+bool Open(int i, int side, double lot, string tag, long magic = -1)
 {
    double ask = SymbolInfoDouble(_Symbol, SYMBOL_ASK), bid = SymbolInfoDouble(_Symbol, SYMBOL_BID);
    double margin;
@@ -528,7 +552,7 @@ bool Open(int i, int side, double lot, string tag)
       if(TimeCurrent() - lastWarn > 600) { Print("CestoTopBottom: margine insufficiente per ", lot, " lotti"); lastWarn = TimeCurrent(); }
       return false;
    }
-   trade.SetExpertMagicNumber(MagicOf(i, side));
+   trade.SetExpertMagicNumber(magic >= 0 ? magic : MagicOf(i, side));
    string c = StringFormat("CTB S%d %s", i, tag);
    return side == 0 ? trade.Buy(lot, _Symbol, ask, 0, 0, c) : trade.Sell(lot, _Symbol, bid, 0, 0, c);
 }
@@ -603,21 +627,46 @@ void OnTick()
          int dir = side == 0 ? 1 : -1;
          SBasket b;
          Scan(MagicOf(i, side), b);
+         long hm = MagicOf(i, side) + 5;
+         double hl = InpHedgeLevel > 0 ? HedgeLots(hm) : 0;
          if(b.n == 0)
          {
+            if(hl > 0) CloseMagic(hm);
+            gridRef[i][side] = 0; hedgeExt[i][side] = 0;
             trOn[i][side] = false;
             if((want == dir || want == 2) && newOk && (smart == 2 || smart == dir)) Open(i, side, LotFor(i, 0, NewScale()), "L1");
             continue;
          }
-         if(ManageExit(i, side, b)) { trOn[i][side] = false; continue; }
+         if(hl > 0)                                     // cesto coperto: fermo finche' il prezzo non rimbalza
+         {
+            double hp = side == 0 ? bid : ask;
+            if(hedgeExt[i][side] == 0 || (hp - hedgeExt[i][side]) * dir < 0) hedgeExt[i][side] = hp;
+            if((hp - hedgeExt[i][side]) * dir >= InpHedgeReleasePoints * unit)
+            {
+               CloseMagic(hm);
+               gridRef[i][side] = hp; hedgeExt[i][side] = 0;
+               PrintFormat("CestoTopBottom: copertura S%d %s tolta", i, side == 0 ? "BUY" : "SELL");
+            }
+            if(InpShowDashboard)
+               dash += StringFormat("S%d %s: %d livelli COPERTO (%.2f lotti), %+.2f\n", i, side == 0 ? "BUY" : "SELL", b.n, hl, b.profit);
+            continue;
+         }
+         if(ManageExit(i, side, b)) { trOn[i][side] = false; gridRef[i][side] = 0; continue; }
 
          bool room = cfg[i].maxTrades == 0 || b.n < cfg[i].maxTrades;
          if(room && addOk && (InpSilentReinforcement || sig == dir))
          {
             double dist = DistFor(i, b.n);
             double px = side == 0 ? ask : bid;
-            if(dist > 0 && (b.lastPx - px) * dir >= dist)
-               Open(i, side, LotFor(i, b.n, MathMax(1.0, MathRound(b.firstLot / LotFor(i, 0, 1.0)))), StringFormat("L%d", b.n + 1));
+            double ref = gridRef[i][side] > 0 ? gridRef[i][side] : b.lastPx;
+            double lot = LotFor(i, b.n, MathMax(1.0, MathRound(b.firstLot / LotFor(i, 0, 1.0))));
+            if(dist > 0 && (ref - px) * dir >= dist && Open(i, side, lot, StringFormat("L%d", b.n + 1)))
+            {
+               gridRef[i][side] = 0;
+               if(InpHedgeLevel > 0 && b.n + 1 >= InpHedgeLevel)     // hedging: copre tutto il cesto
+                  if(Open(i, 1 - side, NormLot(b.lots + lot), "COPERTURA", hm))
+                     hedgeExt[i][side] = side == 0 ? bid : ask;
+            }
          }
          if(InpShowDashboard)
             dash += StringFormat("S%d %s: %d livelli, %.2f lotti, medio %s, %+.2f\n", i, side == 0 ? "BUY" : "SELL",
