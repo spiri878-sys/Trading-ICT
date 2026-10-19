@@ -23,3 +23,10 @@ Set "più trade": `mql5/Presets/CestoTopBottom_HFT_tick_5000USC_piuTrade.set`.
 `python/scripts/phase35_basket_ticks_fine.py`, tabelle `cesto_tick_fine_*.csv`. Solo 3 set bruciano 1 mese (maggio), tutti
 8 $ x1,3, lotto x2, copertura 4, via a 8 $ con TP 0,4 / 0,5 / 0,7 $. Migliore TP 0,7 $ (EUR, partenza 50 ogni mese):
 +234 +170 +256 +19 -50(mag) +61 +52 +52 +52 +32 = ~+878 EUR (TP 0,5: ~+778). Ordini ~11.800 / ~4.700 al mese.
+
+## Fasi 38-39 — tetto mese per mese e zona aggressiva
+- Su 3.228 set tick per tick (ogni mese da 5.000 USC) il massimo col senno di poi è: gen +1.370, feb +474, mar +758,
+  apr +308, mag +107, giu +314, lug +168, ago +405, set +310, ott +177 EUR (somma ~4.400), ogni mese con un set diverso.
+- Zona aggressiva (fase 39, 432 set: distanza 2-4 $, copertura al 5°-7° livello, TP 1-2 $): tutti bruciano da 5 a 10
+  mesi su 10; il migliore per totale (4 $ x1,2, lotto x2, TP 1 $, copertura 6, via 8 $) fa +2.074 EUR ma brucia 5 mesi.
+- Il set più regolare resta quello dell'EA 1.60 (+949 EUR, solo maggio bruciato).
