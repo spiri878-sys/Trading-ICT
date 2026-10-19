@@ -14,3 +14,10 @@ max N livelli, chiusura a T $ oltre il prezzo medio, stop cesto S% del saldo. Ba
 Set dell'utente: x1,5 e 20 livelli = ultimo livello ~22 lotti, cesto ~66 lotti; 300 punti tra i livelli; stop cesto 500%
 (nessuno); SL/TP nascosti al broker; 5 strategie attive. Set consegnato (scelta utente: strategie aggressive invariate): output/phase24/set_basket_utente_migliorato.set
 (richiesta finale utente: nessuno stop cesto, SL/TP nascosti come l originale; solo H24 e filtro notizie spento).
+
+## Versione nostra: `mql5/Experts/CestoTopBottom/CestoTopBottom.mq5`
+Scritta da zero con gli stessi nomi di input dell'originale (il .set dell'utente si carica direttamente; notizie e
+licenza assenti). Cesti, livelli, lotti, distanze, TP del cesto, trailing e perdita massima seguono le impostazioni;
+le ENTRATE delle 5 strategie sono nostre (codice originale chiuso): frattale, RSI 30/70, Bollinger, stocastico 20/80,
+nuovo minimo/massimo di 20 barre con candela opposta. MaxTrades=0 = nessun limite. Non compilato qui: compilare in
+MetaEditor e provare nel tester con tick reali, conto hedging.
