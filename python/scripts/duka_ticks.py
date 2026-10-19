@@ -18,7 +18,10 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parents[2]
 
 
-def hour(dt):
+def hour(dt, cache):
+    fn = cache / f"{dt:%Y%m%d_%H}.parquet"
+    if fn.exists():
+        return pd.read_parquet(fn) if fn.stat().st_size > 0 else None
     url = (f"https://datafeed.dukascopy.com/datafeed/XAUUSD/{dt.year}/{dt.month - 1:02d}/{dt.day:02d}/"
            f"{dt.hour:02d}h_ticks.bi5")
     for att in range(8):
@@ -28,6 +31,7 @@ def hour(dt):
             break
         except urllib.error.HTTPError as e:
             if e.code == 404:
+                fn.touch()
                 return None
             time.sleep(10 * (att + 1))
         except OSError:
@@ -35,6 +39,7 @@ def hour(dt):
     else:
         raise RuntimeError(f"non scaricato: {url}")
     if not data:
+        fn.touch()
         return None
     raw = lzma.decompress(data)
     n = len(raw) // 20
@@ -43,7 +48,9 @@ def hour(dt):
     ask = rec[:, 1] / 1000.0
     bid = rec[:, 2] / 1000.0
     t = np.datetime64(dt.replace(tzinfo=None), "ms") + ms.astype("timedelta64[ms]")
-    return pd.DataFrame({"time": t, "bid": bid, "ask": ask})
+    df = pd.DataFrame({"time": t, "bid": bid, "ask": ask})
+    df.to_parquet(fn)
+    return df
 
 
 def main(y, m, out):
@@ -51,14 +58,18 @@ def main(y, m, out):
     end = datetime(y + (m == 12), m % 12 + 1, 1, tzinfo=timezone.utc)
     end = min(end, datetime.now(timezone.utc) - timedelta(hours=2))
     parts = []
+    cache = out / "ore"
+    cache.mkdir(parents=True, exist_ok=True)
     dt = start
     while dt < end:
         if dt.weekday() != 5:                                  # sabato: mercato chiuso
-            df = hour(dt)
+            df = hour(dt, cache)
             if df is not None and len(df):
                 parts.append(df)
             time.sleep(0.4)
         dt += timedelta(hours=1)
+        if dt.hour == 0:
+            print(f"scaricato fino al {dt - timedelta(days=1):%d/%m/%Y}", flush=True)
     ticks = pd.concat(parts, ignore_index=True)
     out.mkdir(parents=True, exist_ok=True)
     fn = out / f"XAUUSD_ticks_{y}_{m:02d}.parquet"
