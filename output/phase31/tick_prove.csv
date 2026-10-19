@@ -1,0 +1,1217 @@
+mese,bot,impostazioni,saltato,resa,calo,ordini
+1,zona,Z0.5 T2.0 max4 BUY,True,-100,100,12451
+1,zona,Z0.5 T2.0 max4 tendenza,True,-100,100,12292
+1,zona,Z0.5 T2.0 max6 BUY,True,-99,100,7576
+1,zona,Z0.5 T2.0 max6 tendenza,True,-99,100,7138
+1,zona,Z0.5 T2.0 max8 BUY,True,-98,100,6424
+1,zona,Z0.5 T2.0 max8 tendenza,True,-99,100,6215
+1,zona,Z0.5 T2.0 max12 BUY,True,-94,100,4019
+1,zona,Z0.5 T2.0 max12 tendenza,True,-93,100,3974
+1,zona,Z0.5 T5.0 max4 BUY,True,-100,100,9608
+1,zona,Z0.5 T5.0 max4 tendenza,True,-100,100,9751
+1,zona,Z0.5 T5.0 max6 BUY,True,-99,100,8334
+1,zona,Z0.5 T5.0 max6 tendenza,True,-99,100,8466
+1,zona,Z0.5 T5.0 max8 BUY,True,-99,100,8451
+1,zona,Z0.5 T5.0 max8 tendenza,True,-99,100,8514
+1,zona,Z0.5 T5.0 max12 BUY,True,-98,100,5737
+1,zona,Z0.5 T5.0 max12 tendenza,True,-98,100,5893
+1,zona,Z0.5 T8.0 max4 BUY,False,-90,93,11320
+1,zona,Z0.5 T8.0 max4 tendenza,False,-95,96,11323
+1,zona,Z0.5 T8.0 max6 BUY,True,-100,100,14402
+1,zona,Z0.5 T8.0 max6 tendenza,True,-99,100,13301
+1,zona,Z0.5 T8.0 max8 BUY,True,-99,100,7225
+1,zona,Z0.5 T8.0 max8 tendenza,True,-99,100,7425
+1,zona,Z0.5 T8.0 max12 BUY,True,-98,100,7516
+1,zona,Z0.5 T8.0 max12 tendenza,True,-98,100,7909
+1,zona,Z0.5 T12.0 max4 BUY,False,-39,56,5497
+1,zona,Z0.5 T12.0 max4 tendenza,False,-46,53,5495
+1,zona,Z0.5 T12.0 max6 BUY,False,-75,77,7647
+1,zona,Z0.5 T12.0 max6 tendenza,False,-68,70,7632
+1,zona,Z0.5 T12.0 max8 BUY,False,-98,99,9459
+1,zona,Z0.5 T12.0 max8 tendenza,True,-99,100,9181
+1,zona,Z0.5 T12.0 max12 BUY,True,-98,100,4849
+1,zona,Z0.5 T12.0 max12 tendenza,True,-99,100,10524
+1,zona,Z1.0 T2.0 max4 BUY,True,-100,100,10895
+1,zona,Z1.0 T2.0 max4 tendenza,True,-100,100,10881
+1,zona,Z1.0 T2.0 max6 BUY,True,-98,100,6572
+1,zona,Z1.0 T2.0 max6 tendenza,True,-99,100,6225
+1,zona,Z1.0 T2.0 max8 BUY,True,-97,100,5696
+1,zona,Z1.0 T2.0 max8 tendenza,True,-97,100,5875
+1,zona,Z1.0 T2.0 max12 BUY,True,-54,100,1149
+1,zona,Z1.0 T2.0 max12 tendenza,True,-74,100,5442
+1,zona,Z1.0 T5.0 max4 BUY,True,-100,100,14382
+1,zona,Z1.0 T5.0 max4 tendenza,True,-100,100,16811
+1,zona,Z1.0 T5.0 max6 BUY,True,-99,100,8569
+1,zona,Z1.0 T5.0 max6 tendenza,True,-99,100,8801
+1,zona,Z1.0 T5.0 max8 BUY,True,-98,100,7439
+1,zona,Z1.0 T5.0 max8 tendenza,True,-99,100,8112
+1,zona,Z1.0 T5.0 max12 BUY,True,-98,100,3745
+1,zona,Z1.0 T5.0 max12 tendenza,True,-97,100,3817
+1,zona,Z1.0 T8.0 max4 BUY,False,-62,63,9836
+1,zona,Z1.0 T8.0 max4 tendenza,False,-75,81,9861
+1,zona,Z1.0 T8.0 max6 BUY,True,-99,100,11713
+1,zona,Z1.0 T8.0 max6 tendenza,True,-99,100,10832
+1,zona,Z1.0 T8.0 max8 BUY,True,-99,100,5721
+1,zona,Z1.0 T8.0 max8 tendenza,True,-99,100,5768
+1,zona,Z1.0 T8.0 max12 BUY,True,-98,100,4767
+1,zona,Z1.0 T8.0 max12 tendenza,True,-97,100,5202
+1,zona,Z1.0 T12.0 max4 BUY,False,-32,53,5058
+1,zona,Z1.0 T12.0 max4 tendenza,False,-43,52,5159
+1,zona,Z1.0 T12.0 max6 BUY,False,-46,64,6804
+1,zona,Z1.0 T12.0 max6 tendenza,False,-48,64,6905
+1,zona,Z1.0 T12.0 max8 BUY,False,-48,66,8151
+1,zona,Z1.0 T12.0 max8 tendenza,False,-57,66,8236
+1,zona,Z1.0 T12.0 max12 BUY,True,-98,100,4033
+1,zona,Z1.0 T12.0 max12 tendenza,True,-99,100,7682
+1,zona,Z2.0 T2.0 max4 BUY,True,-99,100,8330
+1,zona,Z2.0 T2.0 max4 tendenza,True,-99,100,7776
+1,zona,Z2.0 T2.0 max6 BUY,True,-103,100,3687
+1,zona,Z2.0 T2.0 max6 tendenza,True,-98,100,3740
+1,zona,Z2.0 T2.0 max8 BUY,True,-84,100,2138
+1,zona,Z2.0 T2.0 max8 tendenza,True,-86,100,2009
+1,zona,Z2.0 T2.0 max12 BUY,True,-39,100,1509
+1,zona,Z2.0 T2.0 max12 tendenza,True,-39,100,1498
+1,zona,Z2.0 T5.0 max4 BUY,True,-99,100,5558
+1,zona,Z2.0 T5.0 max4 tendenza,True,-99,100,5571
+1,zona,Z2.0 T5.0 max6 BUY,True,-99,100,3732
+1,zona,Z2.0 T5.0 max6 tendenza,True,-99,100,3851
+1,zona,Z2.0 T5.0 max8 BUY,True,-98,100,4221
+1,zona,Z2.0 T5.0 max8 tendenza,True,-98,100,4589
+1,zona,Z2.0 T5.0 max12 BUY,True,-89,100,2637
+1,zona,Z2.0 T5.0 max12 tendenza,True,-93,100,2960
+1,zona,Z2.0 T8.0 max4 BUY,False,-36,74,7900
+1,zona,Z2.0 T8.0 max4 tendenza,False,-38,73,7884
+1,zona,Z2.0 T8.0 max6 BUY,False,-57,80,9548
+1,zona,Z2.0 T8.0 max6 tendenza,False,-57,76,9560
+1,zona,Z2.0 T8.0 max8 BUY,False,-87,93,10514
+1,zona,Z2.0 T8.0 max8 tendenza,False,-79,85,10542
+1,zona,Z2.0 T8.0 max12 BUY,True,-95,100,4282
+1,zona,Z2.0 T8.0 max12 tendenza,True,-95,100,4295
+1,zona,Z2.0 T12.0 max4 BUY,False,-19,30,4251
+1,zona,Z2.0 T12.0 max4 tendenza,False,17,30,4245
+1,zona,Z2.0 T12.0 max6 BUY,False,-34,48,5402
+1,zona,Z2.0 T12.0 max6 tendenza,False,-5,48,5376
+1,zona,Z2.0 T12.0 max8 BUY,False,-40,53,6175
+1,zona,Z2.0 T12.0 max8 tendenza,False,-13,54,6166
+1,zona,Z2.0 T12.0 max12 BUY,True,-96,100,2402
+1,zona,Z2.0 T12.0 max12 tendenza,True,-96,100,2410
+1,zona,Z3.0 T2.0 max4 BUY,True,-99,100,7046
+1,zona,Z3.0 T2.0 max4 tendenza,True,-99,100,7035
+1,zona,Z3.0 T2.0 max6 BUY,True,-91,100,6301
+1,zona,Z3.0 T2.0 max6 tendenza,True,-91,100,6240
+1,zona,Z3.0 T2.0 max8 BUY,True,-39,100,1024
+1,zona,Z3.0 T2.0 max8 tendenza,True,-38,100,1011
+1,zona,Z3.0 T2.0 max12 BUY,True,-39,100,1024
+1,zona,Z3.0 T2.0 max12 tendenza,True,-38,100,1011
+1,zona,Z3.0 T5.0 max4 BUY,False,-37,68,11436
+1,zona,Z3.0 T5.0 max4 tendenza,False,-14,64,11425
+1,zona,Z3.0 T5.0 max6 BUY,False,-95,96,12422
+1,zona,Z3.0 T5.0 max6 tendenza,False,-17,81,12416
+1,zona,Z3.0 T5.0 max8 BUY,False,3,60,12753
+1,zona,Z3.0 T5.0 max8 tendenza,False,50,59,12753
+1,zona,Z3.0 T5.0 max12 BUY,True,-42,100,5369
+1,zona,Z3.0 T5.0 max12 tendenza,True,-42,100,5375
+1,zona,Z3.0 T8.0 max4 BUY,False,-10,63,6519
+1,zona,Z3.0 T8.0 max4 tendenza,False,-5,62,6532
+1,zona,Z3.0 T8.0 max6 BUY,False,-33,75,7509
+1,zona,Z3.0 T8.0 max6 tendenza,False,-34,73,7543
+1,zona,Z3.0 T8.0 max8 BUY,False,-6,44,7966
+1,zona,Z3.0 T8.0 max8 tendenza,False,31,42,8005
+1,zona,Z3.0 T8.0 max12 BUY,False,120,32,8253
+1,zona,Z3.0 T8.0 max12 tendenza,False,192,32,8289
+1,zona,Z3.0 T12.0 max4 BUY,False,-58,59,3706
+1,zona,Z3.0 T12.0 max4 tendenza,False,-43,58,3686
+1,zona,Z3.0 T12.0 max6 BUY,False,-54,66,4547
+1,zona,Z3.0 T12.0 max6 tendenza,False,-30,62,4531
+1,zona,Z3.0 T12.0 max8 BUY,False,-44,82,5044
+1,zona,Z3.0 T12.0 max8 tendenza,False,-15,76,5040
+1,zona,Z3.0 T12.0 max12 BUY,True,-95,100,1972
+1,zona,Z3.0 T12.0 max12 tendenza,True,-96,100,2103
+1,cesto,D3.0 G1.2 M1.3 TP0.5 copri0 R3.0,True,-96,100,1082
+1,cesto,D3.0 G1.2 M1.3 TP0.5 copri0 R5.0,True,-96,100,1082
+1,cesto,D3.0 G1.2 M1.3 TP0.5 copri4 R3.0,True,-96,100,1299
+1,cesto,D3.0 G1.2 M1.3 TP0.5 copri4 R5.0,True,-96,100,1465
+1,cesto,D3.0 G1.2 M1.3 TP0.5 copri5 R3.0,True,-96,100,1133
+1,cesto,D3.0 G1.2 M1.3 TP0.5 copri5 R5.0,True,-96,100,1314
+1,cesto,D3.0 G1.2 M1.3 TP0.5 copri6 R3.0,True,-96,100,1110
+1,cesto,D3.0 G1.2 M1.3 TP0.5 copri6 R5.0,True,-97,100,1097
+1,cesto,D3.0 G1.2 M1.3 TP1.0 copri0 R3.0,True,-96,100,680
+1,cesto,D3.0 G1.2 M1.3 TP1.0 copri0 R5.0,True,-96,100,680
+1,cesto,D3.0 G1.2 M1.3 TP1.0 copri4 R3.0,True,-96,100,738
+1,cesto,D3.0 G1.2 M1.3 TP1.0 copri4 R5.0,True,-96,100,950
+1,cesto,D3.0 G1.2 M1.3 TP1.0 copri5 R3.0,True,-96,100,728
+1,cesto,D3.0 G1.2 M1.3 TP1.0 copri5 R5.0,True,-96,100,843
+1,cesto,D3.0 G1.2 M1.3 TP1.0 copri6 R3.0,True,-96,100,706
+1,cesto,D3.0 G1.2 M1.3 TP1.0 copri6 R5.0,True,-96,100,698
+1,cesto,D3.0 G1.2 M1.3 TP2.0 copri0 R3.0,True,-96,100,413
+1,cesto,D3.0 G1.2 M1.3 TP2.0 copri0 R5.0,True,-96,100,413
+1,cesto,D3.0 G1.2 M1.3 TP2.0 copri4 R3.0,True,-97,100,455
+1,cesto,D3.0 G1.2 M1.3 TP2.0 copri4 R5.0,True,-96,100,464
+1,cesto,D3.0 G1.2 M1.3 TP2.0 copri5 R3.0,True,-96,100,457
+1,cesto,D3.0 G1.2 M1.3 TP2.0 copri5 R5.0,True,-97,100,560
+1,cesto,D3.0 G1.2 M1.3 TP2.0 copri6 R3.0,True,-96,100,441
+1,cesto,D3.0 G1.2 M1.3 TP2.0 copri6 R5.0,True,-96,100,433
+1,cesto,D3.0 G1.2 M1.5 TP0.5 copri0 R3.0,True,-93,100,341
+1,cesto,D3.0 G1.2 M1.5 TP0.5 copri0 R5.0,True,-93,100,341
+1,cesto,D3.0 G1.2 M1.5 TP0.5 copri4 R3.0,True,-93,100,337
+1,cesto,D3.0 G1.2 M1.5 TP0.5 copri4 R5.0,True,-104,100,17912
+1,cesto,D3.0 G1.2 M1.5 TP0.5 copri5 R3.0,True,-96,100,334
+1,cesto,D3.0 G1.2 M1.5 TP0.5 copri5 R5.0,True,-93,100,951
+1,cesto,D3.0 G1.2 M1.5 TP0.5 copri6 R3.0,True,-96,100,333
+1,cesto,D3.0 G1.2 M1.5 TP0.5 copri6 R5.0,True,-94,100,320
+1,cesto,D3.0 G1.2 M1.5 TP1.0 copri0 R3.0,True,-93,100,219
+1,cesto,D3.0 G1.2 M1.5 TP1.0 copri0 R5.0,True,-93,100,219
+1,cesto,D3.0 G1.2 M1.5 TP1.0 copri4 R3.0,True,-96,100,222
+1,cesto,D3.0 G1.2 M1.5 TP1.0 copri4 R5.0,True,-123,100,11168
+1,cesto,D3.0 G1.2 M1.5 TP1.0 copri5 R3.0,True,-96,100,219
+1,cesto,D3.0 G1.2 M1.5 TP1.0 copri5 R5.0,True,-93,100,587
+1,cesto,D3.0 G1.2 M1.5 TP1.0 copri6 R3.0,True,-95,100,218
+1,cesto,D3.0 G1.2 M1.5 TP1.0 copri6 R5.0,True,-94,100,210
+1,cesto,D3.0 G1.2 M1.5 TP2.0 copri0 R3.0,True,-94,100,149
+1,cesto,D3.0 G1.2 M1.5 TP2.0 copri0 R5.0,True,-94,100,149
+1,cesto,D3.0 G1.2 M1.5 TP2.0 copri4 R3.0,True,-95,100,129
+1,cesto,D3.0 G1.2 M1.5 TP2.0 copri4 R5.0,True,-94,100,126
+1,cesto,D3.0 G1.2 M1.5 TP2.0 copri5 R3.0,True,-95,100,126
+1,cesto,D3.0 G1.2 M1.5 TP2.0 copri5 R5.0,True,-94,100,124
+1,cesto,D3.0 G1.2 M1.5 TP2.0 copri6 R3.0,True,-95,100,125
+1,cesto,D3.0 G1.2 M1.5 TP2.0 copri6 R5.0,True,-93,100,122
+1,cesto,D3.0 G1.3 M1.3 TP0.5 copri0 R3.0,True,-97,100,2451
+1,cesto,D3.0 G1.3 M1.3 TP0.5 copri0 R5.0,True,-97,100,2451
+1,cesto,D3.0 G1.3 M1.3 TP0.5 copri4 R3.0,True,-97,100,2548
+1,cesto,D3.0 G1.3 M1.3 TP0.5 copri4 R5.0,True,-97,100,13375
+1,cesto,D3.0 G1.3 M1.3 TP0.5 copri5 R3.0,True,-98,100,2474
+1,cesto,D3.0 G1.3 M1.3 TP0.5 copri5 R5.0,True,-97,100,13079
+1,cesto,D3.0 G1.3 M1.3 TP0.5 copri6 R3.0,True,-97,100,2473
+1,cesto,D3.0 G1.3 M1.3 TP0.5 copri6 R5.0,True,-96,100,13939
+1,cesto,D3.0 G1.3 M1.3 TP1.0 copri0 R3.0,True,-97,100,1501
+1,cesto,D3.0 G1.3 M1.3 TP1.0 copri0 R5.0,True,-97,100,1501
+1,cesto,D3.0 G1.3 M1.3 TP1.0 copri4 R3.0,True,-97,100,1565
+1,cesto,D3.0 G1.3 M1.3 TP1.0 copri4 R5.0,True,-98,100,8173
+1,cesto,D3.0 G1.3 M1.3 TP1.0 copri5 R3.0,True,-97,100,1531
+1,cesto,D3.0 G1.3 M1.3 TP1.0 copri5 R5.0,True,-96,100,8131
+1,cesto,D3.0 G1.3 M1.3 TP1.0 copri6 R3.0,True,-97,100,1498
+1,cesto,D3.0 G1.3 M1.3 TP1.0 copri6 R5.0,True,-96,100,8689
+1,cesto,D3.0 G1.3 M1.3 TP2.0 copri0 R3.0,True,-97,100,845
+1,cesto,D3.0 G1.3 M1.3 TP2.0 copri0 R5.0,True,-97,100,845
+1,cesto,D3.0 G1.3 M1.3 TP2.0 copri4 R3.0,True,-97,100,889
+1,cesto,D3.0 G1.3 M1.3 TP2.0 copri4 R5.0,True,-97,100,909
+1,cesto,D3.0 G1.3 M1.3 TP2.0 copri5 R3.0,True,-97,100,790
+1,cesto,D3.0 G1.3 M1.3 TP2.0 copri5 R5.0,True,-110,100,4694
+1,cesto,D3.0 G1.3 M1.3 TP2.0 copri6 R3.0,True,-97,100,807
+1,cesto,D3.0 G1.3 M1.3 TP2.0 copri6 R5.0,True,-97,100,868
+1,cesto,D3.0 G1.3 M1.5 TP0.5 copri0 R3.0,True,-89,100,17556
+1,cesto,D3.0 G1.3 M1.5 TP0.5 copri0 R5.0,True,-89,100,17556
+1,cesto,D3.0 G1.3 M1.5 TP0.5 copri4 R3.0,True,-92,100,17229
+1,cesto,D3.0 G1.3 M1.5 TP0.5 copri4 R5.0,True,-106,100,17006
+1,cesto,D3.0 G1.3 M1.5 TP0.5 copri5 R3.0,True,-92,100,17411
+1,cesto,D3.0 G1.3 M1.5 TP0.5 copri5 R5.0,True,-95,100,1431
+1,cesto,D3.0 G1.3 M1.5 TP0.5 copri6 R3.0,True,-90,100,17435
+1,cesto,D3.0 G1.3 M1.5 TP0.5 copri6 R5.0,True,-95,100,1464
+1,cesto,D3.0 G1.3 M1.5 TP1.0 copri0 R3.0,True,-111,100,10786
+1,cesto,D3.0 G1.3 M1.5 TP1.0 copri0 R5.0,True,-111,100,10786
+1,cesto,D3.0 G1.3 M1.5 TP1.0 copri4 R3.0,True,-91,100,10617
+1,cesto,D3.0 G1.3 M1.5 TP1.0 copri4 R5.0,False,543,91,17748
+1,cesto,D3.0 G1.3 M1.5 TP1.0 copri5 R3.0,True,-91,100,10501
+1,cesto,D3.0 G1.3 M1.5 TP1.0 copri5 R5.0,True,-95,100,880
+1,cesto,D3.0 G1.3 M1.5 TP1.0 copri6 R3.0,True,-89,100,10606
+1,cesto,D3.0 G1.3 M1.5 TP1.0 copri6 R5.0,True,-95,100,899
+1,cesto,D3.0 G1.3 M1.5 TP2.0 copri0 R3.0,True,-96,100,321
+1,cesto,D3.0 G1.3 M1.5 TP2.0 copri0 R5.0,True,-96,100,321
+1,cesto,D3.0 G1.3 M1.5 TP2.0 copri4 R3.0,True,-95,100,412
+1,cesto,D3.0 G1.3 M1.5 TP2.0 copri4 R5.0,True,-96,100,471
+1,cesto,D3.0 G1.3 M1.5 TP2.0 copri5 R3.0,True,-95,100,414
+1,cesto,D3.0 G1.3 M1.5 TP2.0 copri5 R5.0,True,-95,100,501
+1,cesto,D3.0 G1.3 M1.5 TP2.0 copri6 R3.0,True,-95,100,331
+1,cesto,D3.0 G1.3 M1.5 TP2.0 copri6 R5.0,True,-95,100,422
+1,cesto,D5.0 G1.2 M1.3 TP0.5 copri0 R3.0,False,270,89,17351
+1,cesto,D5.0 G1.2 M1.3 TP0.5 copri0 R5.0,False,270,89,17351
+1,cesto,D5.0 G1.2 M1.3 TP0.5 copri4 R3.0,False,300,67,17280
+1,cesto,D5.0 G1.2 M1.3 TP0.5 copri4 R5.0,True,-100,100,10128
+1,cesto,D5.0 G1.2 M1.3 TP0.5 copri5 R3.0,True,-107,100,10462
+1,cesto,D5.0 G1.2 M1.3 TP0.5 copri5 R5.0,False,317,73,16813
+1,cesto,D5.0 G1.2 M1.3 TP0.5 copri6 R3.0,True,-106,100,10370
+1,cesto,D5.0 G1.2 M1.3 TP0.5 copri6 R5.0,False,303,72,17128
+1,cesto,D5.0 G1.2 M1.3 TP1.0 copri0 R3.0,True,-96,100,6376
+1,cesto,D5.0 G1.2 M1.3 TP1.0 copri0 R5.0,True,-96,100,6376
+1,cesto,D5.0 G1.2 M1.3 TP1.0 copri4 R3.0,False,335,65,11212
+1,cesto,D5.0 G1.2 M1.3 TP1.0 copri4 R5.0,True,-96,100,6286
+1,cesto,D5.0 G1.2 M1.3 TP1.0 copri5 R3.0,True,-101,100,6541
+1,cesto,D5.0 G1.2 M1.3 TP1.0 copri5 R5.0,False,361,71,11037
+1,cesto,D5.0 G1.2 M1.3 TP1.0 copri6 R3.0,True,-102,100,6472
+1,cesto,D5.0 G1.2 M1.3 TP1.0 copri6 R5.0,False,354,70,11095
+1,cesto,D5.0 G1.2 M1.3 TP2.0 copri0 R3.0,True,-102,100,3748
+1,cesto,D5.0 G1.2 M1.3 TP2.0 copri0 R5.0,True,-102,100,3748
+1,cesto,D5.0 G1.2 M1.3 TP2.0 copri4 R3.0,False,375,65,6560
+1,cesto,D5.0 G1.2 M1.3 TP2.0 copri4 R5.0,True,-94,100,3613
+1,cesto,D5.0 G1.2 M1.3 TP2.0 copri5 R3.0,True,-102,100,3726
+1,cesto,D5.0 G1.2 M1.3 TP2.0 copri5 R5.0,False,409,70,6495
+1,cesto,D5.0 G1.2 M1.3 TP2.0 copri6 R3.0,True,-100,100,3789
+1,cesto,D5.0 G1.2 M1.3 TP2.0 copri6 R5.0,False,431,66,6750
+1,cesto,D5.0 G1.2 M1.5 TP0.5 copri0 R3.0,True,-94,100,12378
+1,cesto,D5.0 G1.2 M1.5 TP0.5 copri0 R5.0,True,-94,100,12378
+1,cesto,D5.0 G1.2 M1.5 TP0.5 copri4 R3.0,True,-95,100,939
+1,cesto,D5.0 G1.2 M1.5 TP0.5 copri4 R5.0,False,461,92,20720
+1,cesto,D5.0 G1.2 M1.5 TP0.5 copri5 R3.0,True,-95,100,979
+1,cesto,D5.0 G1.2 M1.5 TP0.5 copri5 R5.0,True,-95,100,922
+1,cesto,D5.0 G1.2 M1.5 TP0.5 copri6 R3.0,True,-95,100,923
+1,cesto,D5.0 G1.2 M1.5 TP0.5 copri6 R5.0,True,-95,100,920
+1,cesto,D5.0 G1.2 M1.5 TP1.0 copri0 R3.0,True,-141,100,7626
+1,cesto,D5.0 G1.2 M1.5 TP1.0 copri0 R5.0,True,-141,100,7626
+1,cesto,D5.0 G1.2 M1.5 TP1.0 copri4 R3.0,True,-95,100,578
+1,cesto,D5.0 G1.2 M1.5 TP1.0 copri4 R5.0,False,609,79,13580
+1,cesto,D5.0 G1.2 M1.5 TP1.0 copri5 R3.0,True,-95,100,592
+1,cesto,D5.0 G1.2 M1.5 TP1.0 copri5 R5.0,True,-95,100,581
+1,cesto,D5.0 G1.2 M1.5 TP1.0 copri6 R3.0,True,-96,100,579
+1,cesto,D5.0 G1.2 M1.5 TP1.0 copri6 R5.0,True,-95,100,578
+1,cesto,D5.0 G1.2 M1.5 TP2.0 copri0 R3.0,True,-93,100,4464
+1,cesto,D5.0 G1.2 M1.5 TP2.0 copri0 R5.0,True,-93,100,4464
+1,cesto,D5.0 G1.2 M1.5 TP2.0 copri4 R3.0,True,-132,100,4606
+1,cesto,D5.0 G1.2 M1.5 TP2.0 copri4 R5.0,False,670,72,8369
+1,cesto,D5.0 G1.2 M1.5 TP2.0 copri5 R3.0,True,-89,100,4347
+1,cesto,D5.0 G1.2 M1.5 TP2.0 copri5 R5.0,False,723,66,8293
+1,cesto,D5.0 G1.2 M1.5 TP2.0 copri6 R3.0,True,-93,100,4445
+1,cesto,D5.0 G1.2 M1.5 TP2.0 copri6 R5.0,False,698,68,8291
+1,cesto,D5.0 G1.3 M1.3 TP0.5 copri0 R3.0,True,-102,100,9101
+1,cesto,D5.0 G1.3 M1.3 TP0.5 copri0 R5.0,True,-102,100,9101
+1,cesto,D5.0 G1.3 M1.3 TP0.5 copri4 R3.0,True,-100,100,9039
+1,cesto,D5.0 G1.3 M1.3 TP0.5 copri4 R5.0,True,-97,100,9043
+1,cesto,D5.0 G1.3 M1.3 TP0.5 copri5 R3.0,True,-103,100,8988
+1,cesto,D5.0 G1.3 M1.3 TP0.5 copri5 R5.0,True,-103,100,8975
+1,cesto,D5.0 G1.3 M1.3 TP0.5 copri6 R3.0,True,-98,100,8866
+1,cesto,D5.0 G1.3 M1.3 TP0.5 copri6 R5.0,True,-97,100,8843
+1,cesto,D5.0 G1.3 M1.3 TP1.0 copri0 R3.0,True,-98,100,5488
+1,cesto,D5.0 G1.3 M1.3 TP1.0 copri0 R5.0,True,-98,100,5488
+1,cesto,D5.0 G1.3 M1.3 TP1.0 copri4 R3.0,True,-97,100,5472
+1,cesto,D5.0 G1.3 M1.3 TP1.0 copri4 R5.0,True,-99,100,5517
+1,cesto,D5.0 G1.3 M1.3 TP1.0 copri5 R3.0,True,-98,100,5424
+1,cesto,D5.0 G1.3 M1.3 TP1.0 copri5 R5.0,True,-104,100,5428
+1,cesto,D5.0 G1.3 M1.3 TP1.0 copri6 R3.0,True,-99,100,5421
+1,cesto,D5.0 G1.3 M1.3 TP1.0 copri6 R5.0,True,-101,100,5393
+1,cesto,D5.0 G1.3 M1.3 TP2.0 copri0 R3.0,True,-114,100,3108
+1,cesto,D5.0 G1.3 M1.3 TP2.0 copri0 R5.0,True,-114,100,3108
+1,cesto,D5.0 G1.3 M1.3 TP2.0 copri4 R3.0,True,-97,100,3198
+1,cesto,D5.0 G1.3 M1.3 TP2.0 copri4 R5.0,True,-97,100,3215
+1,cesto,D5.0 G1.3 M1.3 TP2.0 copri5 R3.0,True,-97,100,3144
+1,cesto,D5.0 G1.3 M1.3 TP2.0 copri5 R5.0,True,-97,100,3150
+1,cesto,D5.0 G1.3 M1.3 TP2.0 copri6 R3.0,True,-99,100,3049
+1,cesto,D5.0 G1.3 M1.3 TP2.0 copri6 R5.0,False,348,95,4977
+1,cesto,D5.0 G1.3 M1.5 TP0.5 copri0 R3.0,True,-105,100,11182
+1,cesto,D5.0 G1.3 M1.5 TP0.5 copri0 R5.0,True,-105,100,11182
+1,cesto,D5.0 G1.3 M1.5 TP0.5 copri4 R3.0,True,-101,100,11103
+1,cesto,D5.0 G1.3 M1.5 TP0.5 copri4 R5.0,True,-92,100,11169
+1,cesto,D5.0 G1.3 M1.5 TP0.5 copri5 R3.0,False,335,83,18677
+1,cesto,D5.0 G1.3 M1.5 TP0.5 copri5 R5.0,False,376,88,19067
+1,cesto,D5.0 G1.3 M1.5 TP0.5 copri6 R3.0,False,347,95,18726
+1,cesto,D5.0 G1.3 M1.5 TP0.5 copri6 R5.0,False,349,88,18907
+1,cesto,D5.0 G1.3 M1.5 TP1.0 copri0 R3.0,True,-95,100,608
+1,cesto,D5.0 G1.3 M1.5 TP1.0 copri0 R5.0,True,-95,100,608
+1,cesto,D5.0 G1.3 M1.5 TP1.0 copri4 R3.0,True,-96,100,6749
+1,cesto,D5.0 G1.3 M1.5 TP1.0 copri4 R5.0,True,-93,100,6760
+1,cesto,D5.0 G1.3 M1.5 TP1.0 copri5 R3.0,False,351,80,11813
+1,cesto,D5.0 G1.3 M1.5 TP1.0 copri5 R5.0,True,-97,100,582
+1,cesto,D5.0 G1.3 M1.5 TP1.0 copri6 R3.0,True,-95,100,602
+1,cesto,D5.0 G1.3 M1.5 TP1.0 copri6 R5.0,True,-97,100,574
+1,cesto,D5.0 G1.3 M1.5 TP2.0 copri0 R3.0,True,-95,100,348
+1,cesto,D5.0 G1.3 M1.5 TP2.0 copri0 R5.0,True,-95,100,348
+1,cesto,D5.0 G1.3 M1.5 TP2.0 copri4 R3.0,True,-103,100,3976
+1,cesto,D5.0 G1.3 M1.5 TP2.0 copri4 R5.0,True,-106,100,3960
+1,cesto,D5.0 G1.3 M1.5 TP2.0 copri5 R3.0,False,457,81,7167
+1,cesto,D5.0 G1.3 M1.5 TP2.0 copri5 R5.0,True,-97,100,337
+1,cesto,D5.0 G1.3 M1.5 TP2.0 copri6 R3.0,True,-95,100,348
+1,cesto,D5.0 G1.3 M1.5 TP2.0 copri6 R5.0,True,-95,100,330
+1,cesto,D8.0 G1.2 M1.3 TP0.5 copri0 R3.0,True,-96,100,7145
+1,cesto,D8.0 G1.2 M1.3 TP0.5 copri0 R5.0,True,-96,100,7145
+1,cesto,D8.0 G1.2 M1.3 TP0.5 copri4 R3.0,True,-100,100,7000
+1,cesto,D8.0 G1.2 M1.3 TP0.5 copri4 R5.0,True,-100,100,7055
+1,cesto,D8.0 G1.2 M1.3 TP0.5 copri5 R3.0,True,-99,100,7191
+1,cesto,D8.0 G1.2 M1.3 TP0.5 copri5 R5.0,True,-98,100,7245
+1,cesto,D8.0 G1.2 M1.3 TP0.5 copri6 R3.0,True,-97,100,7229
+1,cesto,D8.0 G1.2 M1.3 TP0.5 copri6 R5.0,True,-97,100,7203
+1,cesto,D8.0 G1.2 M1.3 TP1.0 copri0 R3.0,True,-98,100,4209
+1,cesto,D8.0 G1.2 M1.3 TP1.0 copri0 R5.0,True,-98,100,4209
+1,cesto,D8.0 G1.2 M1.3 TP1.0 copri4 R3.0,True,-97,100,4212
+1,cesto,D8.0 G1.2 M1.3 TP1.0 copri4 R5.0,True,-97,100,4317
+1,cesto,D8.0 G1.2 M1.3 TP1.0 copri5 R3.0,True,-97,100,4296
+1,cesto,D8.0 G1.2 M1.3 TP1.0 copri5 R5.0,True,-97,100,4323
+1,cesto,D8.0 G1.2 M1.3 TP1.0 copri6 R3.0,True,-99,100,4277
+1,cesto,D8.0 G1.2 M1.3 TP1.0 copri6 R5.0,True,-97,100,4268
+1,cesto,D8.0 G1.2 M1.3 TP2.0 copri0 R3.0,True,-97,100,2466
+1,cesto,D8.0 G1.2 M1.3 TP2.0 copri0 R5.0,True,-97,100,2466
+1,cesto,D8.0 G1.2 M1.3 TP2.0 copri4 R3.0,True,-96,100,2467
+1,cesto,D8.0 G1.2 M1.3 TP2.0 copri4 R5.0,True,-97,100,2542
+1,cesto,D8.0 G1.2 M1.3 TP2.0 copri5 R3.0,True,-98,100,2544
+1,cesto,D8.0 G1.2 M1.3 TP2.0 copri5 R5.0,True,-97,100,2586
+1,cesto,D8.0 G1.2 M1.3 TP2.0 copri6 R3.0,True,-97,100,2495
+1,cesto,D8.0 G1.2 M1.3 TP2.0 copri6 R5.0,True,-99,100,2485
+1,cesto,D8.0 G1.2 M1.5 TP0.5 copri0 R3.0,True,-92,100,8366
+1,cesto,D8.0 G1.2 M1.5 TP0.5 copri0 R5.0,True,-92,100,8366
+1,cesto,D8.0 G1.2 M1.5 TP0.5 copri4 R3.0,True,-109,100,8345
+1,cesto,D8.0 G1.2 M1.5 TP0.5 copri4 R5.0,True,-109,100,8372
+1,cesto,D8.0 G1.2 M1.5 TP0.5 copri5 R3.0,False,320,76,14361
+1,cesto,D8.0 G1.2 M1.5 TP0.5 copri5 R5.0,False,324,92,14828
+1,cesto,D8.0 G1.2 M1.5 TP0.5 copri6 R3.0,True,-97,100,8383
+1,cesto,D8.0 G1.2 M1.5 TP0.5 copri6 R5.0,True,-96,100,800
+1,cesto,D8.0 G1.2 M1.5 TP1.0 copri0 R3.0,True,-92,100,5104
+1,cesto,D8.0 G1.2 M1.5 TP1.0 copri0 R5.0,True,-92,100,5104
+1,cesto,D8.0 G1.2 M1.5 TP1.0 copri4 R3.0,True,-99,100,5033
+1,cesto,D8.0 G1.2 M1.5 TP1.0 copri4 R5.0,True,-94,100,5088
+1,cesto,D8.0 G1.2 M1.5 TP1.0 copri5 R3.0,False,351,71,9110
+1,cesto,D8.0 G1.2 M1.5 TP1.0 copri5 R5.0,False,347,90,9426
+1,cesto,D8.0 G1.2 M1.5 TP1.0 copri6 R3.0,True,-94,100,5123
+1,cesto,D8.0 G1.2 M1.5 TP1.0 copri6 R5.0,True,-95,100,482
+1,cesto,D8.0 G1.2 M1.5 TP2.0 copri0 R3.0,True,-94,100,2905
+1,cesto,D8.0 G1.2 M1.5 TP2.0 copri0 R5.0,True,-94,100,2905
+1,cesto,D8.0 G1.2 M1.5 TP2.0 copri4 R3.0,True,-100,100,3013
+1,cesto,D8.0 G1.2 M1.5 TP2.0 copri4 R5.0,True,-94,100,2927
+1,cesto,D8.0 G1.2 M1.5 TP2.0 copri5 R3.0,False,388,66,5523
+1,cesto,D8.0 G1.2 M1.5 TP2.0 copri5 R5.0,False,387,89,5704
+1,cesto,D8.0 G1.2 M1.5 TP2.0 copri6 R3.0,True,-95,100,2927
+1,cesto,D8.0 G1.2 M1.5 TP2.0 copri6 R5.0,True,-95,100,289
+1,cesto,D8.0 G1.3 M1.3 TP0.5 copri0 R3.0,True,-103,100,6279
+1,cesto,D8.0 G1.3 M1.3 TP0.5 copri0 R5.0,True,-103,100,6279
+1,cesto,D8.0 G1.3 M1.3 TP0.5 copri4 R3.0,True,-98,100,1291
+1,cesto,D8.0 G1.3 M1.3 TP0.5 copri4 R5.0,True,-106,100,6400
+1,cesto,D8.0 G1.3 M1.3 TP0.5 copri5 R3.0,True,-98,100,1289
+1,cesto,D8.0 G1.3 M1.3 TP0.5 copri5 R5.0,True,-97,100,6372
+1,cesto,D8.0 G1.3 M1.3 TP0.5 copri6 R3.0,True,-100,100,6300
+1,cesto,D8.0 G1.3 M1.3 TP0.5 copri6 R5.0,True,-100,100,6299
+1,cesto,D8.0 G1.3 M1.3 TP1.0 copri0 R3.0,True,-103,100,3871
+1,cesto,D8.0 G1.3 M1.3 TP1.0 copri0 R5.0,True,-103,100,3871
+1,cesto,D8.0 G1.3 M1.3 TP1.0 copri4 R3.0,True,-98,100,892
+1,cesto,D8.0 G1.3 M1.3 TP1.0 copri4 R5.0,True,-99,100,3963
+1,cesto,D8.0 G1.3 M1.3 TP1.0 copri5 R3.0,True,-98,100,886
+1,cesto,D8.0 G1.3 M1.3 TP1.0 copri5 R5.0,True,-101,100,3952
+1,cesto,D8.0 G1.3 M1.3 TP1.0 copri6 R3.0,True,-103,100,3891
+1,cesto,D8.0 G1.3 M1.3 TP1.0 copri6 R5.0,True,-105,100,3891
+1,cesto,D8.0 G1.3 M1.3 TP2.0 copri0 R3.0,True,-98,100,551
+1,cesto,D8.0 G1.3 M1.3 TP2.0 copri0 R5.0,True,-98,100,551
+1,cesto,D8.0 G1.3 M1.3 TP2.0 copri4 R3.0,True,-98,100,503
+1,cesto,D8.0 G1.3 M1.3 TP2.0 copri4 R5.0,True,-107,100,2378
+1,cesto,D8.0 G1.3 M1.3 TP2.0 copri5 R3.0,True,-98,100,492
+1,cesto,D8.0 G1.3 M1.3 TP2.0 copri5 R5.0,True,-98,100,2307
+1,cesto,D8.0 G1.3 M1.3 TP2.0 copri6 R3.0,True,-102,100,2289
+1,cesto,D8.0 G1.3 M1.3 TP2.0 copri6 R5.0,True,-100,100,2289
+1,cesto,D8.0 G1.3 M1.5 TP0.5 copri0 R3.0,True,-99,100,7534
+1,cesto,D8.0 G1.3 M1.5 TP0.5 copri0 R5.0,True,-99,100,7534
+1,cesto,D8.0 G1.3 M1.5 TP0.5 copri4 R3.0,False,260,74,12925
+1,cesto,D8.0 G1.3 M1.5 TP0.5 copri4 R5.0,False,218,87,12838
+1,cesto,D8.0 G1.3 M1.5 TP0.5 copri5 R3.0,False,254,71,12522
+1,cesto,D8.0 G1.3 M1.5 TP0.5 copri5 R5.0,False,202,68,12556
+1,cesto,D8.0 G1.3 M1.5 TP0.5 copri6 R3.0,True,-100,100,7548
+1,cesto,D8.0 G1.3 M1.5 TP0.5 copri6 R5.0,True,-95,100,7548
+1,cesto,D8.0 G1.3 M1.5 TP1.0 copri0 R3.0,True,-99,100,4621
+1,cesto,D8.0 G1.3 M1.5 TP1.0 copri0 R5.0,True,-99,100,4621
+1,cesto,D8.0 G1.3 M1.5 TP1.0 copri4 R3.0,False,287,72,8286
+1,cesto,D8.0 G1.3 M1.5 TP1.0 copri4 R5.0,False,242,86,8140
+1,cesto,D8.0 G1.3 M1.5 TP1.0 copri5 R3.0,False,278,70,7995
+1,cesto,D8.0 G1.3 M1.5 TP1.0 copri5 R5.0,False,225,65,8030
+1,cesto,D8.0 G1.3 M1.5 TP1.0 copri6 R3.0,True,-95,100,4635
+1,cesto,D8.0 G1.3 M1.5 TP1.0 copri6 R5.0,True,-98,100,4635
+1,cesto,D8.0 G1.3 M1.5 TP2.0 copri0 R3.0,True,-98,100,2649
+1,cesto,D8.0 G1.3 M1.5 TP2.0 copri0 R5.0,True,-98,100,2649
+1,cesto,D8.0 G1.3 M1.5 TP2.0 copri4 R3.0,False,316,72,4912
+1,cesto,D8.0 G1.3 M1.5 TP2.0 copri4 R5.0,False,277,85,4871
+1,cesto,D8.0 G1.3 M1.5 TP2.0 copri5 R3.0,False,316,69,4822
+1,cesto,D8.0 G1.3 M1.5 TP2.0 copri5 R5.0,False,289,49,4813
+1,cesto,D8.0 G1.3 M1.5 TP2.0 copri6 R3.0,True,-94,100,2665
+1,cesto,D8.0 G1.3 M1.5 TP2.0 copri6 R5.0,True,-95,100,2665
+1,piramide,D0.5 M1.0 R1.0 max5 tendenza,True,-100,100,40817
+1,piramide,D0.5 M1.0 R1.0 max5 BUY+SELL,True,-100,100,34223
+1,piramide,D0.5 M1.0 R1.0 max10 tendenza,True,-100,100,42274
+1,piramide,D0.5 M1.0 R1.0 max10 BUY+SELL,True,-100,100,34818
+1,piramide,D0.5 M1.0 R1.0 max20 tendenza,True,-100,100,42507
+1,piramide,D0.5 M1.0 R1.0 max20 BUY+SELL,True,-100,100,34299
+1,piramide,D0.5 M1.0 R2.0 max5 tendenza,True,-100,100,43113
+1,piramide,D0.5 M1.0 R2.0 max5 BUY+SELL,True,-100,100,29390
+1,piramide,D0.5 M1.0 R2.0 max10 tendenza,True,-100,100,29903
+1,piramide,D0.5 M1.0 R2.0 max10 BUY+SELL,True,-99,100,27676
+1,piramide,D0.5 M1.0 R2.0 max20 tendenza,True,-100,100,30256
+1,piramide,D0.5 M1.0 R2.0 max20 BUY+SELL,True,-100,100,27035
+1,piramide,D0.5 M1.0 R3.0 max5 tendenza,False,-76,78,58267
+1,piramide,D0.5 M1.0 R3.0 max5 BUY+SELL,True,-100,100,23369
+1,piramide,D0.5 M1.0 R3.0 max10 tendenza,False,-56,73,78621
+1,piramide,D0.5 M1.0 R3.0 max10 BUY+SELL,True,-100,100,20010
+1,piramide,D0.5 M1.0 R3.0 max20 tendenza,False,-41,99,88998
+1,piramide,D0.5 M1.0 R3.0 max20 BUY+SELL,True,-100,100,16133
+1,piramide,D0.5 M1.0 R5.0 max5 tendenza,False,32,26,27198
+1,piramide,D0.5 M1.0 R5.0 max5 BUY+SELL,False,-20,80,55051
+1,piramide,D0.5 M1.0 R5.0 max10 tendenza,False,88,30,41118
+1,piramide,D0.5 M1.0 R5.0 max10 BUY+SELL,True,-99,100,15660
+1,piramide,D0.5 M1.0 R5.0 max20 tendenza,False,136,49,52396
+1,piramide,D0.5 M1.0 R5.0 max20 BUY+SELL,True,-99,100,14735
+1,piramide,D0.5 M1.5 R1.0 max5 tendenza,True,-100,100,21467
+1,piramide,D0.5 M1.5 R1.0 max5 BUY+SELL,True,-99,100,18264
+1,piramide,D0.5 M1.5 R1.0 max10 tendenza,True,-95,100,17258
+1,piramide,D0.5 M1.5 R1.0 max10 BUY+SELL,True,-95,100,12229
+1,piramide,D0.5 M1.5 R1.0 max20 tendenza,True,-75,100,6359
+1,piramide,D0.5 M1.5 R1.0 max20 BUY+SELL,True,-16,100,2540
+1,piramide,D0.5 M1.5 R2.0 max5 tendenza,True,-99,100,14449
+1,piramide,D0.5 M1.5 R2.0 max5 BUY+SELL,True,-99,100,12297
+1,piramide,D0.5 M1.5 R2.0 max10 tendenza,True,-99,100,3729
+1,piramide,D0.5 M1.5 R2.0 max10 BUY+SELL,True,-97,100,3219
+1,piramide,D0.5 M1.5 R2.0 max20 tendenza,True,-46,100,259
+1,piramide,D0.5 M1.5 R2.0 max20 BUY+SELL,True,-62,100,517
+1,piramide,D0.5 M1.5 R3.0 max5 tendenza,True,-100,100,10263
+1,piramide,D0.5 M1.5 R3.0 max5 BUY+SELL,True,-99,100,9578
+1,piramide,D0.5 M1.5 R3.0 max10 tendenza,True,-95,100,2222
+1,piramide,D0.5 M1.5 R3.0 max10 BUY+SELL,True,-97,100,1456
+1,piramide,D0.5 M1.5 R3.0 max20 tendenza,True,-24,100,17
+1,piramide,D0.5 M1.5 R3.0 max20 BUY+SELL,True,-25,100,35
+1,piramide,D0.5 M1.5 R5.0 max5 tendenza,False,130,36,27198
+1,piramide,D0.5 M1.5 R5.0 max5 BUY+SELL,True,-99,100,8200
+1,piramide,D0.5 M1.5 R5.0 max10 tendenza,True,-95,100,5704
+1,piramide,D0.5 M1.5 R5.0 max10 BUY+SELL,True,-94,100,1023
+1,piramide,D0.5 M1.5 R5.0 max20 tendenza,True,-24,100,17
+1,piramide,D0.5 M1.5 R5.0 max20 BUY+SELL,True,-25,100,28
+1,piramide,D1.0 M1.0 R1.0 max5 tendenza,True,-100,100,44945
+1,piramide,D1.0 M1.0 R1.0 max5 BUY+SELL,True,-100,100,36552
+1,piramide,D1.0 M1.0 R1.0 max10 tendenza,True,-100,100,45318
+1,piramide,D1.0 M1.0 R1.0 max10 BUY+SELL,True,-100,100,36511
+1,piramide,D1.0 M1.0 R1.0 max20 tendenza,True,-100,100,45334
+1,piramide,D1.0 M1.0 R1.0 max20 BUY+SELL,True,-100,100,36514
+1,piramide,D1.0 M1.0 R2.0 max5 tendenza,True,-100,100,41912
+1,piramide,D1.0 M1.0 R2.0 max5 BUY+SELL,True,-100,100,26599
+1,piramide,D1.0 M1.0 R2.0 max10 tendenza,True,-100,100,37806
+1,piramide,D1.0 M1.0 R2.0 max10 BUY+SELL,True,-100,100,26554
+1,piramide,D1.0 M1.0 R2.0 max20 tendenza,True,-100,100,37688
+1,piramide,D1.0 M1.0 R2.0 max20 BUY+SELL,True,-100,100,26459
+1,piramide,D1.0 M1.0 R3.0 max5 tendenza,False,-55,57,47380
+1,piramide,D1.0 M1.0 R3.0 max5 BUY+SELL,True,-100,100,20109
+1,piramide,D1.0 M1.0 R3.0 max10 tendenza,False,-41,55,55680
+1,piramide,D1.0 M1.0 R3.0 max10 BUY+SELL,True,-100,100,18110
+1,piramide,D1.0 M1.0 R3.0 max20 tendenza,False,-32,59,57473
+1,piramide,D1.0 M1.0 R3.0 max20 BUY+SELL,True,-100,100,18244
+1,piramide,D1.0 M1.0 R5.0 max5 tendenza,False,31,21,23546
+1,piramide,D1.0 M1.0 R5.0 max5 BUY+SELL,False,-7,78,47484
+1,piramide,D1.0 M1.0 R5.0 max10 tendenza,False,64,25,31330
+1,piramide,D1.0 M1.0 R5.0 max10 BUY+SELL,True,-100,100,12283
+1,piramide,D1.0 M1.0 R5.0 max20 tendenza,False,84,33,34877
+1,piramide,D1.0 M1.0 R5.0 max20 BUY+SELL,True,-99,100,12002
+1,piramide,D1.0 M1.5 R1.0 max5 tendenza,True,-100,100,33105
+1,piramide,D1.0 M1.5 R1.0 max5 BUY+SELL,True,-100,100,30048
+1,piramide,D1.0 M1.5 R1.0 max10 tendenza,True,-100,100,31564
+1,piramide,D1.0 M1.5 R1.0 max10 BUY+SELL,True,-99,100,28365
+1,piramide,D1.0 M1.5 R1.0 max20 tendenza,True,-99,100,30973
+1,piramide,D1.0 M1.5 R1.0 max20 BUY+SELL,True,-99,100,28028
+1,piramide,D1.0 M1.5 R2.0 max5 tendenza,True,-100,100,14181
+1,piramide,D1.0 M1.5 R2.0 max5 BUY+SELL,True,-100,100,15343
+1,piramide,D1.0 M1.5 R2.0 max10 tendenza,True,-99,100,12551
+1,piramide,D1.0 M1.5 R2.0 max10 BUY+SELL,True,-99,100,5427
+1,piramide,D1.0 M1.5 R2.0 max20 tendenza,True,-89,100,4420
+1,piramide,D1.0 M1.5 R2.0 max20 BUY+SELL,True,-90,100,4532
+1,piramide,D1.0 M1.5 R3.0 max5 tendenza,False,-41,90,47380
+1,piramide,D1.0 M1.5 R3.0 max5 BUY+SELL,True,-99,100,8739
+1,piramide,D1.0 M1.5 R3.0 max10 tendenza,True,-97,100,3061
+1,piramide,D1.0 M1.5 R3.0 max10 BUY+SELL,True,-98,100,2283
+1,piramide,D1.0 M1.5 R3.0 max20 tendenza,True,180,100,149
+1,piramide,D1.0 M1.5 R3.0 max20 BUY+SELL,True,-17,100,283
+1,piramide,D1.0 M1.5 R5.0 max5 tendenza,False,122,35,23546
+1,piramide,D1.0 M1.5 R5.0 max5 BUY+SELL,True,-99,100,7262
+1,piramide,D1.0 M1.5 R5.0 max10 tendenza,True,-99,100,4379
+1,piramide,D1.0 M1.5 R5.0 max10 BUY+SELL,True,-98,100,883
+1,piramide,D1.0 M1.5 R5.0 max20 tendenza,True,27,100,97
+1,piramide,D1.0 M1.5 R5.0 max20 BUY+SELL,True,23,100,161
+1,piramide,D2.0 M1.0 R1.0 max5 tendenza,True,-100,100,46190
+1,piramide,D2.0 M1.0 R1.0 max5 BUY+SELL,True,-100,100,38229
+1,piramide,D2.0 M1.0 R1.0 max10 tendenza,True,-100,100,46212
+1,piramide,D2.0 M1.0 R1.0 max10 BUY+SELL,True,-100,100,38232
+1,piramide,D2.0 M1.0 R1.0 max20 tendenza,True,-100,100,46212
+1,piramide,D2.0 M1.0 R1.0 max20 BUY+SELL,True,-100,100,38232
+1,piramide,D2.0 M1.0 R2.0 max5 tendenza,True,-100,100,42230
+1,piramide,D2.0 M1.0 R2.0 max5 BUY+SELL,True,-100,100,33306
+1,piramide,D2.0 M1.0 R2.0 max10 tendenza,True,-100,100,43105
+1,piramide,D2.0 M1.0 R2.0 max10 BUY+SELL,True,-100,100,33382
+1,piramide,D2.0 M1.0 R2.0 max20 tendenza,True,-100,100,43111
+1,piramide,D2.0 M1.0 R2.0 max20 BUY+SELL,True,-100,100,33382
+1,piramide,D2.0 M1.0 R3.0 max5 tendenza,False,-41,44,34906
+1,piramide,D2.0 M1.0 R3.0 max5 BUY+SELL,True,-100,100,28205
+1,piramide,D2.0 M1.0 R3.0 max10 tendenza,False,-35,39,36474
+1,piramide,D2.0 M1.0 R3.0 max10 BUY+SELL,True,-100,100,27785
+1,piramide,D2.0 M1.0 R3.0 max20 tendenza,False,-34,38,36560
+1,piramide,D2.0 M1.0 R3.0 max20 BUY+SELL,True,-100,100,27818
+1,piramide,D2.0 M1.0 R5.0 max5 tendenza,False,24,17,18468
+1,piramide,D2.0 M1.0 R5.0 max5 BUY+SELL,False,-7,68,37167
+1,piramide,D2.0 M1.0 R5.0 max10 tendenza,False,35,18,21069
+1,piramide,D2.0 M1.0 R5.0 max10 BUY+SELL,False,15,88,42047
+1,piramide,D2.0 M1.0 R5.0 max20 tendenza,False,40,18,21500
+1,piramide,D2.0 M1.0 R5.0 max20 BUY+SELL,False,26,88,42802
+1,piramide,D2.0 M1.5 R1.0 max5 tendenza,True,-100,100,45686
+1,piramide,D2.0 M1.5 R1.0 max5 BUY+SELL,True,-100,100,36834
+1,piramide,D2.0 M1.5 R1.0 max10 tendenza,True,-100,100,45775
+1,piramide,D2.0 M1.5 R1.0 max10 BUY+SELL,True,-100,100,36214
+1,piramide,D2.0 M1.5 R1.0 max20 tendenza,True,-100,100,45775
+1,piramide,D2.0 M1.5 R1.0 max20 BUY+SELL,True,-100,100,36214
+1,piramide,D2.0 M1.5 R2.0 max5 tendenza,True,-100,100,31857
+1,piramide,D2.0 M1.5 R2.0 max5 BUY+SELL,True,-99,100,22245
+1,piramide,D2.0 M1.5 R2.0 max10 tendenza,True,-100,100,25056
+1,piramide,D2.0 M1.5 R2.0 max10 BUY+SELL,True,-99,100,20110
+1,piramide,D2.0 M1.5 R2.0 max20 tendenza,True,-100,100,25056
+1,piramide,D2.0 M1.5 R2.0 max20 BUY+SELL,True,-99,100,20110
+1,piramide,D2.0 M1.5 R3.0 max5 tendenza,False,-28,59,34906
+1,piramide,D2.0 M1.5 R3.0 max5 BUY+SELL,True,-100,100,11303
+1,piramide,D2.0 M1.5 R3.0 max10 tendenza,False,59,85,36474
+1,piramide,D2.0 M1.5 R3.0 max10 BUY+SELL,True,-100,100,10156
+1,piramide,D2.0 M1.5 R3.0 max20 tendenza,True,-100,100,13302
+1,piramide,D2.0 M1.5 R3.0 max20 BUY+SELL,True,-99,100,9111
+1,piramide,D2.0 M1.5 R5.0 max5 tendenza,False,81,30,18468
+1,piramide,D2.0 M1.5 R5.0 max5 BUY+SELL,True,-100,100,6550
+1,piramide,D2.0 M1.5 R5.0 max10 tendenza,True,-99,100,3777
+1,piramide,D2.0 M1.5 R5.0 max10 BUY+SELL,True,-95,100,2278
+1,piramide,D2.0 M1.5 R5.0 max20 tendenza,True,-93,100,929
+1,piramide,D2.0 M1.5 R5.0 max20 BUY+SELL,True,-78,100,950
+1,piramide,D3.0 M1.0 R1.0 max5 tendenza,True,-100,100,44676
+1,piramide,D3.0 M1.0 R1.0 max5 BUY+SELL,True,-100,100,38180
+1,piramide,D3.0 M1.0 R1.0 max10 tendenza,True,-100,100,44676
+1,piramide,D3.0 M1.0 R1.0 max10 BUY+SELL,True,-100,100,38180
+1,piramide,D3.0 M1.0 R1.0 max20 tendenza,True,-100,100,44676
+1,piramide,D3.0 M1.0 R1.0 max20 BUY+SELL,True,-100,100,38180
+1,piramide,D3.0 M1.0 R2.0 max5 tendenza,True,-100,100,43364
+1,piramide,D3.0 M1.0 R2.0 max5 BUY+SELL,True,-100,100,34396
+1,piramide,D3.0 M1.0 R2.0 max10 tendenza,True,-100,100,43497
+1,piramide,D3.0 M1.0 R2.0 max10 BUY+SELL,True,-100,100,34266
+1,piramide,D3.0 M1.0 R2.0 max20 tendenza,True,-100,100,43497
+1,piramide,D3.0 M1.0 R2.0 max20 BUY+SELL,True,-100,100,34266
+1,piramide,D3.0 M1.0 R3.0 max5 tendenza,False,-35,38,28353
+1,piramide,D3.0 M1.0 R3.0 max5 BUY+SELL,False,-80,90,56813
+1,piramide,D3.0 M1.0 R3.0 max10 tendenza,False,-33,36,28703
+1,piramide,D3.0 M1.0 R3.0 max10 BUY+SELL,False,-73,91,57501
+1,piramide,D3.0 M1.0 R3.0 max20 tendenza,False,-33,36,28708
+1,piramide,D3.0 M1.0 R3.0 max20 BUY+SELL,False,-72,91,57514
+1,piramide,D3.0 M1.0 R5.0 max5 tendenza,False,11,17,15305
+1,piramide,D3.0 M1.0 R5.0 max5 BUY+SELL,False,-9,67,30686
+1,piramide,D3.0 M1.0 R5.0 max10 tendenza,False,18,16,16208
+1,piramide,D3.0 M1.0 R5.0 max10 BUY+SELL,False,8,71,32373
+1,piramide,D3.0 M1.0 R5.0 max20 tendenza,False,18,16,16282
+1,piramide,D3.0 M1.0 R5.0 max20 BUY+SELL,False,7,71,32498
+1,piramide,D3.0 M1.5 R1.0 max5 tendenza,True,-100,100,44672
+1,piramide,D3.0 M1.5 R1.0 max5 BUY+SELL,True,-100,100,37834
+1,piramide,D3.0 M1.5 R1.0 max10 tendenza,True,-100,100,44672
+1,piramide,D3.0 M1.5 R1.0 max10 BUY+SELL,True,-100,100,37834
+1,piramide,D3.0 M1.5 R1.0 max20 tendenza,True,-100,100,44672
+1,piramide,D3.0 M1.5 R1.0 max20 BUY+SELL,True,-100,100,37834
+1,piramide,D3.0 M1.5 R2.0 max5 tendenza,True,-100,100,43364
+1,piramide,D3.0 M1.5 R2.0 max5 BUY+SELL,True,-100,100,31511
+1,piramide,D3.0 M1.5 R2.0 max10 tendenza,True,-100,100,43728
+1,piramide,D3.0 M1.5 R2.0 max10 BUY+SELL,True,-100,100,29691
+1,piramide,D3.0 M1.5 R2.0 max20 tendenza,True,-100,100,43728
+1,piramide,D3.0 M1.5 R2.0 max20 BUY+SELL,True,-100,100,29691
+1,piramide,D3.0 M1.5 R3.0 max5 tendenza,False,-21,37,28353
+1,piramide,D3.0 M1.5 R3.0 max5 BUY+SELL,True,-100,100,23036
+1,piramide,D3.0 M1.5 R3.0 max10 tendenza,False,-5,42,28703
+1,piramide,D3.0 M1.5 R3.0 max10 BUY+SELL,True,-100,100,20923
+1,piramide,D3.0 M1.5 R3.0 max20 tendenza,False,1,42,28708
+1,piramide,D3.0 M1.5 R3.0 max20 BUY+SELL,True,-100,100,20923
+1,piramide,D3.0 M1.5 R5.0 max5 tendenza,False,43,26,15305
+1,piramide,D3.0 M1.5 R5.0 max5 BUY+SELL,True,-100,100,9204
+1,piramide,D3.0 M1.5 R5.0 max10 tendenza,False,176,45,16208
+1,piramide,D3.0 M1.5 R5.0 max10 BUY+SELL,True,-100,100,4025
+1,piramide,D3.0 M1.5 R5.0 max20 tendenza,True,-63,100,4522
+1,piramide,D3.0 M1.5 R5.0 max20 BUY+SELL,True,-99,100,3591
+6,zona,Z0.5 T2.0 max4 BUY,True,-100,100,11849
+6,zona,Z0.5 T2.0 max4 tendenza,True,-100,100,11286
+6,zona,Z0.5 T2.0 max6 BUY,True,-99,100,9137
+6,zona,Z0.5 T2.0 max6 tendenza,True,-99,100,7949
+6,zona,Z0.5 T2.0 max8 BUY,True,-98,100,7416
+6,zona,Z0.5 T2.0 max8 tendenza,True,-98,100,5945
+6,zona,Z0.5 T2.0 max12 BUY,True,-95,100,3417
+6,zona,Z0.5 T2.0 max12 tendenza,True,-93,100,2582
+6,zona,Z0.5 T5.0 max4 BUY,False,-70,71,11098
+6,zona,Z0.5 T5.0 max4 tendenza,True,-100,100,10702
+6,zona,Z0.5 T5.0 max6 BUY,True,-100,100,11081
+6,zona,Z0.5 T5.0 max6 tendenza,True,-100,100,9753
+6,zona,Z0.5 T5.0 max8 BUY,True,-99,100,9222
+6,zona,Z0.5 T5.0 max8 tendenza,True,-99,100,9336
+6,zona,Z0.5 T5.0 max12 BUY,True,-99,100,6440
+6,zona,Z0.5 T5.0 max12 tendenza,True,-99,100,6913
+6,zona,Z0.5 T8.0 max4 BUY,False,-17,23,4846
+6,zona,Z0.5 T8.0 max4 tendenza,False,-60,61,4665
+6,zona,Z0.5 T8.0 max6 BUY,False,-40,43,6756
+6,zona,Z0.5 T8.0 max6 tendenza,False,-80,81,6518
+6,zona,Z0.5 T8.0 max8 BUY,False,-58,60,8397
+6,zona,Z0.5 T8.0 max8 tendenza,True,-99,100,7048
+6,zona,Z0.5 T8.0 max12 BUY,True,-99,100,8205
+6,zona,Z0.5 T8.0 max12 tendenza,True,-99,100,6873
+6,zona,Z0.5 T12.0 max4 BUY,False,1,17,2315
+6,zona,Z0.5 T12.0 max4 tendenza,False,-39,40,2289
+6,zona,Z0.5 T12.0 max6 BUY,False,-12,20,3311
+6,zona,Z0.5 T12.0 max6 tendenza,False,-48,49,3275
+6,zona,Z0.5 T12.0 max8 BUY,False,-16,22,4209
+6,zona,Z0.5 T12.0 max8 tendenza,False,-67,68,4190
+6,zona,Z0.5 T12.0 max12 BUY,False,-28,37,5754
+6,zona,Z0.5 T12.0 max12 tendenza,False,-93,94,5777
+6,zona,Z1.0 T2.0 max4 BUY,True,-100,100,14125
+6,zona,Z1.0 T2.0 max4 tendenza,True,-99,100,13377
+6,zona,Z1.0 T2.0 max6 BUY,True,-99,100,8281
+6,zona,Z1.0 T2.0 max6 tendenza,True,-99,100,7457
+6,zona,Z1.0 T2.0 max8 BUY,True,-95,100,6282
+6,zona,Z1.0 T2.0 max8 tendenza,True,-96,100,4491
+6,zona,Z1.0 T2.0 max12 BUY,True,-74,100,2799
+6,zona,Z1.0 T2.0 max12 tendenza,True,-80,100,1168
+6,zona,Z1.0 T5.0 max4 BUY,False,-54,56,9049
+6,zona,Z1.0 T5.0 max4 tendenza,True,-100,100,8810
+6,zona,Z1.0 T5.0 max6 BUY,True,-100,100,9696
+6,zona,Z1.0 T5.0 max6 tendenza,True,-100,100,8266
+6,zona,Z1.0 T5.0 max8 BUY,True,-99,100,5527
+6,zona,Z1.0 T5.0 max8 tendenza,True,-99,100,6092
+6,zona,Z1.0 T5.0 max12 BUY,True,-97,100,3647
+6,zona,Z1.0 T5.0 max12 tendenza,True,-97,100,3564
+6,zona,Z1.0 T8.0 max4 BUY,False,-20,23,4260
+6,zona,Z1.0 T8.0 max4 tendenza,False,-47,50,4149
+6,zona,Z1.0 T8.0 max6 BUY,False,-34,40,5672
+6,zona,Z1.0 T8.0 max6 tendenza,False,-66,70,5537
+6,zona,Z1.0 T8.0 max8 BUY,False,-49,56,6765
+6,zona,Z1.0 T8.0 max8 tendenza,False,-84,87,6620
+6,zona,Z1.0 T8.0 max12 BUY,False,-88,98,8325
+6,zona,Z1.0 T8.0 max12 tendenza,True,-98,100,4323
+6,zona,Z1.0 T12.0 max4 BUY,False,2,16,2161
+6,zona,Z1.0 T12.0 max4 tendenza,False,-46,47,2181
+6,zona,Z1.0 T12.0 max6 BUY,False,-10,20,2985
+6,zona,Z1.0 T12.0 max6 tendenza,False,-45,48,3006
+6,zona,Z1.0 T12.0 max8 BUY,False,-25,31,3688
+6,zona,Z1.0 T12.0 max8 tendenza,False,-48,54,3674
+6,zona,Z1.0 T12.0 max12 BUY,False,-61,65,4813
+6,zona,Z1.0 T12.0 max12 tendenza,False,-89,92,4715
+6,zona,Z2.0 T2.0 max4 BUY,True,-99,100,11895
+6,zona,Z2.0 T2.0 max4 tendenza,True,-99,100,8721
+6,zona,Z2.0 T2.0 max6 BUY,True,-97,100,9672
+6,zona,Z2.0 T2.0 max6 tendenza,True,-97,100,8164
+6,zona,Z2.0 T2.0 max8 BUY,True,-86,100,10542
+6,zona,Z2.0 T2.0 max8 tendenza,True,-87,100,9094
+6,zona,Z2.0 T2.0 max12 BUY,True,-43,100,372
+6,zona,Z2.0 T2.0 max12 tendenza,True,-41,100,375
+6,zona,Z2.0 T5.0 max4 BUY,False,-29,36,6632
+6,zona,Z2.0 T5.0 max4 tendenza,False,-74,76,6627
+6,zona,Z2.0 T5.0 max6 BUY,True,-99,100,6891
+6,zona,Z2.0 T5.0 max6 tendenza,True,-99,100,5288
+6,zona,Z2.0 T5.0 max8 BUY,True,-98,100,3593
+6,zona,Z2.0 T5.0 max8 tendenza,True,-97,100,2994
+6,zona,Z2.0 T5.0 max12 BUY,True,-89,100,1421
+6,zona,Z2.0 T5.0 max12 tendenza,True,-90,100,1274
+6,zona,Z2.0 T8.0 max4 BUY,False,-8,22,3296
+6,zona,Z2.0 T8.0 max4 tendenza,False,-55,56,3412
+6,zona,Z2.0 T8.0 max6 BUY,False,-17,31,4156
+6,zona,Z2.0 T8.0 max6 tendenza,True,-99,100,4052
+6,zona,Z2.0 T8.0 max8 BUY,False,-28,44,4701
+6,zona,Z2.0 T8.0 max8 tendenza,True,-99,100,2862
+6,zona,Z2.0 T8.0 max12 BUY,True,-96,100,3739
+6,zona,Z2.0 T8.0 max12 tendenza,True,-96,100,1506
+6,zona,Z2.0 T12.0 max4 BUY,False,-12,20,1755
+6,zona,Z2.0 T12.0 max4 tendenza,False,-18,21,1828
+6,zona,Z2.0 T12.0 max6 BUY,False,-21,28,2326
+6,zona,Z2.0 T12.0 max6 tendenza,False,-36,41,2369
+6,zona,Z2.0 T12.0 max8 BUY,False,-31,44,2740
+6,zona,Z2.0 T12.0 max8 tendenza,False,-68,76,2768
+6,zona,Z2.0 T12.0 max12 BUY,False,-36,50,3245
+6,zona,Z2.0 T12.0 max12 tendenza,False,-77,90,3283
+6,zona,Z3.0 T2.0 max4 BUY,True,-99,100,7927
+6,zona,Z3.0 T2.0 max4 tendenza,True,-99,100,8344
+6,zona,Z3.0 T2.0 max6 BUY,True,-91,100,3255
+6,zona,Z3.0 T2.0 max6 tendenza,True,-94,100,1791
+6,zona,Z3.0 T2.0 max8 BUY,True,-36,100,234
+6,zona,Z3.0 T2.0 max8 tendenza,True,-41,100,280
+6,zona,Z3.0 T2.0 max12 BUY,True,-36,100,234
+6,zona,Z3.0 T2.0 max12 tendenza,True,-41,100,280
+6,zona,Z3.0 T5.0 max4 BUY,False,-51,56,5058
+6,zona,Z3.0 T5.0 max4 tendenza,False,-79,84,5015
+6,zona,Z3.0 T5.0 max6 BUY,True,-99,100,3930
+6,zona,Z3.0 T5.0 max6 tendenza,True,-99,100,1861
+6,zona,Z3.0 T5.0 max8 BUY,True,-97,100,1957
+6,zona,Z3.0 T5.0 max8 tendenza,True,-96,100,1455
+6,zona,Z3.0 T5.0 max12 BUY,True,-76,100,812
+6,zona,Z3.0 T5.0 max12 tendenza,True,-72,100,1502
+6,zona,Z3.0 T8.0 max4 BUY,False,-2,27,2700
+6,zona,Z3.0 T8.0 max4 tendenza,False,-87,89,2773
+6,zona,Z3.0 T8.0 max6 BUY,False,-15,34,3208
+6,zona,Z3.0 T8.0 max6 tendenza,False,-92,97,3329
+6,zona,Z3.0 T8.0 max8 BUY,False,-43,65,3488
+6,zona,Z3.0 T8.0 max8 tendenza,True,-98,100,1430
+6,zona,Z3.0 T8.0 max12 BUY,True,-92,100,1748
+6,zona,Z3.0 T8.0 max12 tendenza,True,-92,100,1231
+6,zona,Z3.0 T12.0 max4 BUY,False,13,13,1513
+6,zona,Z3.0 T12.0 max4 tendenza,False,-14,21,1521
+6,zona,Z3.0 T12.0 max6 BUY,False,0,25,1877
+6,zona,Z3.0 T12.0 max6 tendenza,False,-28,36,1895
+6,zona,Z3.0 T12.0 max8 BUY,False,-15,53,2112
+6,zona,Z3.0 T12.0 max8 tendenza,False,-44,53,2125
+6,zona,Z3.0 T12.0 max12 BUY,True,-96,100,1152
+6,zona,Z3.0 T12.0 max12 tendenza,False,-44,60,2373
+6,cesto,D3.0 G1.2 M1.3 TP0.5 copri0 R3.0,True,-95,100,6135
+6,cesto,D3.0 G1.2 M1.3 TP0.5 copri0 R5.0,True,-95,100,6135
+6,cesto,D3.0 G1.2 M1.3 TP0.5 copri4 R3.0,False,130,54,13480
+6,cesto,D3.0 G1.2 M1.3 TP0.5 copri4 R5.0,True,-95,100,9027
+6,cesto,D3.0 G1.2 M1.3 TP0.5 copri5 R3.0,True,-95,100,9179
+6,cesto,D3.0 G1.2 M1.3 TP0.5 copri5 R5.0,True,-96,100,9163
+6,cesto,D3.0 G1.2 M1.3 TP0.5 copri6 R3.0,False,149,95,13396
+6,cesto,D3.0 G1.2 M1.3 TP0.5 copri6 R5.0,True,-95,100,9218
+6,cesto,D3.0 G1.2 M1.3 TP1.0 copri0 R3.0,True,-95,100,3766
+6,cesto,D3.0 G1.2 M1.3 TP1.0 copri0 R5.0,True,-95,100,3766
+6,cesto,D3.0 G1.2 M1.3 TP1.0 copri4 R3.0,False,163,50,8535
+6,cesto,D3.0 G1.2 M1.3 TP1.0 copri4 R5.0,True,-95,100,5884
+6,cesto,D3.0 G1.2 M1.3 TP1.0 copri5 R3.0,True,-95,100,5756
+6,cesto,D3.0 G1.2 M1.3 TP1.0 copri5 R5.0,True,-96,100,5857
+6,cesto,D3.0 G1.2 M1.3 TP1.0 copri6 R3.0,True,-94,100,5829
+6,cesto,D3.0 G1.2 M1.3 TP1.0 copri6 R5.0,True,-95,100,5886
+6,cesto,D3.0 G1.2 M1.3 TP2.0 copri0 R3.0,True,-144,100,2196
+6,cesto,D3.0 G1.2 M1.3 TP2.0 copri0 R5.0,True,-144,100,2196
+6,cesto,D3.0 G1.2 M1.3 TP2.0 copri4 R3.0,True,-93,100,3612
+6,cesto,D3.0 G1.2 M1.3 TP2.0 copri4 R5.0,False,225,93,4727
+6,cesto,D3.0 G1.2 M1.3 TP2.0 copri5 R3.0,True,-93,100,3558
+6,cesto,D3.0 G1.2 M1.3 TP2.0 copri5 R5.0,True,-93,100,3808
+6,cesto,D3.0 G1.2 M1.3 TP2.0 copri6 R3.0,False,222,84,4886
+6,cesto,D3.0 G1.2 M1.3 TP2.0 copri6 R5.0,True,-93,100,3570
+6,cesto,D3.0 G1.2 M1.5 TP0.5 copri0 R3.0,True,-90,100,7506
+6,cesto,D3.0 G1.2 M1.5 TP0.5 copri0 R5.0,True,-90,100,7506
+6,cesto,D3.0 G1.2 M1.5 TP0.5 copri4 R3.0,False,186,90,17174
+6,cesto,D3.0 G1.2 M1.5 TP0.5 copri4 R5.0,True,-90,100,8488
+6,cesto,D3.0 G1.2 M1.5 TP0.5 copri5 R3.0,False,210,78,16896
+6,cesto,D3.0 G1.2 M1.5 TP0.5 copri5 R5.0,True,-90,100,7373
+6,cesto,D3.0 G1.2 M1.5 TP0.5 copri6 R3.0,False,225,81,16948
+6,cesto,D3.0 G1.2 M1.5 TP0.5 copri6 R5.0,False,250,68,16274
+6,cesto,D3.0 G1.2 M1.5 TP1.0 copri0 R3.0,False,333,87,10280
+6,cesto,D3.0 G1.2 M1.5 TP1.0 copri0 R5.0,False,333,87,10280
+6,cesto,D3.0 G1.2 M1.5 TP1.0 copri4 R3.0,False,251,75,10713
+6,cesto,D3.0 G1.2 M1.5 TP1.0 copri4 R5.0,True,-89,100,5459
+6,cesto,D3.0 G1.2 M1.5 TP1.0 copri5 R3.0,False,269,86,10370
+6,cesto,D3.0 G1.2 M1.5 TP1.0 copri5 R5.0,True,-90,100,5498
+6,cesto,D3.0 G1.2 M1.5 TP1.0 copri6 R3.0,False,298,87,10284
+6,cesto,D3.0 G1.2 M1.5 TP1.0 copri6 R5.0,False,298,62,10061
+6,cesto,D3.0 G1.2 M1.5 TP2.0 copri0 R3.0,True,-85,100,2690
+6,cesto,D3.0 G1.2 M1.5 TP2.0 copri0 R5.0,True,-85,100,2690
+6,cesto,D3.0 G1.2 M1.5 TP2.0 copri4 R3.0,False,356,67,6453
+6,cesto,D3.0 G1.2 M1.5 TP2.0 copri4 R5.0,True,-84,100,4282
+6,cesto,D3.0 G1.2 M1.5 TP2.0 copri5 R3.0,False,360,73,6194
+6,cesto,D3.0 G1.2 M1.5 TP2.0 copri5 R5.0,True,-85,100,4111
+6,cesto,D3.0 G1.2 M1.5 TP2.0 copri6 R3.0,False,437,62,6126
+6,cesto,D3.0 G1.2 M1.5 TP2.0 copri6 R5.0,True,-84,100,4177
+6,cesto,D3.0 G1.3 M1.3 TP0.5 copri0 R3.0,True,-97,100,9511
+6,cesto,D3.0 G1.3 M1.3 TP0.5 copri0 R5.0,True,-97,100,9511
+6,cesto,D3.0 G1.3 M1.3 TP0.5 copri4 R3.0,False,126,36,11475
+6,cesto,D3.0 G1.3 M1.3 TP0.5 copri4 R5.0,True,-97,100,5216
+6,cesto,D3.0 G1.3 M1.3 TP0.5 copri5 R3.0,True,-97,100,2005
+6,cesto,D3.0 G1.3 M1.3 TP0.5 copri5 R5.0,True,-97,100,5119
+6,cesto,D3.0 G1.3 M1.3 TP0.5 copri6 R3.0,True,-97,100,5479
+6,cesto,D3.0 G1.3 M1.3 TP0.5 copri6 R5.0,True,-97,100,5468
+6,cesto,D3.0 G1.3 M1.3 TP1.0 copri0 R3.0,True,-96,100,6038
+6,cesto,D3.0 G1.3 M1.3 TP1.0 copri0 R5.0,True,-96,100,6038
+6,cesto,D3.0 G1.3 M1.3 TP1.0 copri4 R3.0,False,144,64,7377
+6,cesto,D3.0 G1.3 M1.3 TP1.0 copri4 R5.0,True,-97,100,3384
+6,cesto,D3.0 G1.3 M1.3 TP1.0 copri5 R3.0,True,-97,100,1287
+6,cesto,D3.0 G1.3 M1.3 TP1.0 copri5 R5.0,True,-97,100,3302
+6,cesto,D3.0 G1.3 M1.3 TP1.0 copri6 R3.0,True,-97,100,3491
+6,cesto,D3.0 G1.3 M1.3 TP1.0 copri6 R5.0,True,-97,100,3433
+6,cesto,D3.0 G1.3 M1.3 TP2.0 copri0 R3.0,True,-97,100,3605
+6,cesto,D3.0 G1.3 M1.3 TP2.0 copri0 R5.0,True,-97,100,3605
+6,cesto,D3.0 G1.3 M1.3 TP2.0 copri4 R3.0,True,-96,100,2149
+6,cesto,D3.0 G1.3 M1.3 TP2.0 copri4 R5.0,True,-97,100,2082
+6,cesto,D3.0 G1.3 M1.3 TP2.0 copri5 R3.0,True,-97,100,793
+6,cesto,D3.0 G1.3 M1.3 TP2.0 copri5 R5.0,True,-97,100,1933
+6,cesto,D3.0 G1.3 M1.3 TP2.0 copri6 R3.0,True,-96,100,2119
+6,cesto,D3.0 G1.3 M1.3 TP2.0 copri6 R5.0,True,-97,100,2120
+6,cesto,D3.0 G1.3 M1.5 TP0.5 copri0 R3.0,True,-95,100,6994
+6,cesto,D3.0 G1.3 M1.5 TP0.5 copri0 R5.0,True,-95,100,6994
+6,cesto,D3.0 G1.3 M1.5 TP0.5 copri4 R3.0,False,200,44,15221
+6,cesto,D3.0 G1.3 M1.5 TP0.5 copri4 R5.0,True,-95,100,10149
+6,cesto,D3.0 G1.3 M1.5 TP0.5 copri5 R3.0,True,-93,100,7026
+6,cesto,D3.0 G1.3 M1.5 TP0.5 copri5 R5.0,True,-93,100,6832
+6,cesto,D3.0 G1.3 M1.5 TP0.5 copri6 R3.0,True,-93,100,6924
+6,cesto,D3.0 G1.3 M1.5 TP0.5 copri6 R5.0,True,-94,100,6938
+6,cesto,D3.0 G1.3 M1.5 TP1.0 copri0 R3.0,True,-93,100,4184
+6,cesto,D3.0 G1.3 M1.5 TP1.0 copri0 R5.0,True,-93,100,4184
+6,cesto,D3.0 G1.3 M1.5 TP1.0 copri4 R3.0,False,235,40,9470
+6,cesto,D3.0 G1.3 M1.5 TP1.0 copri4 R5.0,True,-93,100,4001
+6,cesto,D3.0 G1.3 M1.5 TP1.0 copri5 R3.0,True,-93,100,4154
+6,cesto,D3.0 G1.3 M1.5 TP1.0 copri5 R5.0,True,-95,100,4118
+6,cesto,D3.0 G1.3 M1.5 TP1.0 copri6 R3.0,True,-94,100,4166
+6,cesto,D3.0 G1.3 M1.5 TP1.0 copri6 R5.0,True,-94,100,4156
+6,cesto,D3.0 G1.3 M1.5 TP2.0 copri0 R3.0,True,-93,100,2408
+6,cesto,D3.0 G1.3 M1.5 TP2.0 copri0 R5.0,True,-93,100,2408
+6,cesto,D3.0 G1.3 M1.5 TP2.0 copri4 R3.0,False,290,36,5473
+6,cesto,D3.0 G1.3 M1.5 TP2.0 copri4 R5.0,True,-94,100,2451
+6,cesto,D3.0 G1.3 M1.5 TP2.0 copri5 R3.0,True,-93,100,2422
+6,cesto,D3.0 G1.3 M1.5 TP2.0 copri5 R5.0,True,-93,100,2370
+6,cesto,D3.0 G1.3 M1.5 TP2.0 copri6 R3.0,True,-93,100,2430
+6,cesto,D3.0 G1.3 M1.5 TP2.0 copri6 R5.0,True,-93,100,2438
+6,cesto,D5.0 G1.2 M1.3 TP0.5 copri0 R3.0,False,114,62,8835
+6,cesto,D5.0 G1.2 M1.3 TP0.5 copri0 R5.0,False,114,62,8835
+6,cesto,D5.0 G1.2 M1.3 TP0.5 copri4 R3.0,False,112,28,8828
+6,cesto,D5.0 G1.2 M1.3 TP0.5 copri4 R5.0,False,92,58,8309
+6,cesto,D5.0 G1.2 M1.3 TP0.5 copri5 R3.0,False,107,28,8844
+6,cesto,D5.0 G1.2 M1.3 TP0.5 copri5 R5.0,False,89,55,8563
+6,cesto,D5.0 G1.2 M1.3 TP0.5 copri6 R3.0,True,-100,100,4122
+6,cesto,D5.0 G1.2 M1.3 TP0.5 copri6 R5.0,False,122,60,8580
+6,cesto,D5.0 G1.2 M1.3 TP1.0 copri0 R3.0,False,136,58,5528
+6,cesto,D5.0 G1.2 M1.3 TP1.0 copri0 R5.0,False,136,58,5528
+6,cesto,D5.0 G1.2 M1.3 TP1.0 copri4 R3.0,False,129,27,5456
+6,cesto,D5.0 G1.2 M1.3 TP1.0 copri4 R5.0,False,95,80,5193
+6,cesto,D5.0 G1.2 M1.3 TP1.0 copri5 R3.0,False,125,27,5495
+6,cesto,D5.0 G1.2 M1.3 TP1.0 copri5 R5.0,False,88,80,5277
+6,cesto,D5.0 G1.2 M1.3 TP1.0 copri6 R3.0,True,-99,100,2650
+6,cesto,D5.0 G1.2 M1.3 TP1.0 copri6 R5.0,False,120,69,5410
+6,cesto,D5.0 G1.2 M1.3 TP2.0 copri0 R3.0,False,157,56,3166
+6,cesto,D5.0 G1.2 M1.3 TP2.0 copri0 R5.0,False,157,56,3166
+6,cesto,D5.0 G1.2 M1.3 TP2.0 copri4 R3.0,False,145,26,3297
+6,cesto,D5.0 G1.2 M1.3 TP2.0 copri4 R5.0,False,116,72,3120
+6,cesto,D5.0 G1.2 M1.3 TP2.0 copri5 R3.0,False,145,52,3242
+6,cesto,D5.0 G1.2 M1.3 TP2.0 copri5 R5.0,False,122,69,3146
+6,cesto,D5.0 G1.2 M1.3 TP2.0 copri6 R3.0,True,-96,100,1546
+6,cesto,D5.0 G1.2 M1.3 TP2.0 copri6 R5.0,False,153,63,3113
+6,cesto,D5.0 G1.2 M1.5 TP0.5 copri0 R3.0,False,156,40,11189
+6,cesto,D5.0 G1.2 M1.5 TP0.5 copri0 R5.0,False,156,40,11189
+6,cesto,D5.0 G1.2 M1.5 TP0.5 copri4 R3.0,False,148,43,11145
+6,cesto,D5.0 G1.2 M1.5 TP0.5 copri4 R5.0,False,99,55,10563
+6,cesto,D5.0 G1.2 M1.5 TP0.5 copri5 R3.0,False,151,43,11155
+6,cesto,D5.0 G1.2 M1.5 TP0.5 copri5 R5.0,False,109,56,10656
+6,cesto,D5.0 G1.2 M1.5 TP0.5 copri6 R3.0,True,-93,100,5004
+6,cesto,D5.0 G1.2 M1.5 TP0.5 copri6 R5.0,False,131,47,10913
+6,cesto,D5.0 G1.2 M1.5 TP1.0 copri0 R3.0,False,188,49,6737
+6,cesto,D5.0 G1.2 M1.5 TP1.0 copri0 R5.0,False,188,49,6737
+6,cesto,D5.0 G1.2 M1.5 TP1.0 copri4 R3.0,False,181,39,6820
+6,cesto,D5.0 G1.2 M1.5 TP1.0 copri4 R5.0,False,137,50,6553
+6,cesto,D5.0 G1.2 M1.5 TP1.0 copri5 R3.0,False,182,40,6766
+6,cesto,D5.0 G1.2 M1.5 TP1.0 copri5 R5.0,False,119,66,6641
+6,cesto,D5.0 G1.2 M1.5 TP1.0 copri6 R3.0,True,-93,100,3069
+6,cesto,D5.0 G1.2 M1.5 TP1.0 copri6 R5.0,False,156,41,6691
+6,cesto,D5.0 G1.2 M1.5 TP2.0 copri0 R3.0,True,-93,100,1798
+6,cesto,D5.0 G1.2 M1.5 TP2.0 copri0 R5.0,True,-93,100,1798
+6,cesto,D5.0 G1.2 M1.5 TP2.0 copri4 R3.0,False,225,36,4056
+6,cesto,D5.0 G1.2 M1.5 TP2.0 copri4 R5.0,False,162,47,3734
+6,cesto,D5.0 G1.2 M1.5 TP2.0 copri5 R3.0,False,230,35,3995
+6,cesto,D5.0 G1.2 M1.5 TP2.0 copri5 R5.0,True,-94,100,2728
+6,cesto,D5.0 G1.2 M1.5 TP2.0 copri6 R3.0,True,-94,100,1827
+6,cesto,D5.0 G1.2 M1.5 TP2.0 copri6 R5.0,True,-94,100,2727
+6,cesto,D5.0 G1.3 M1.3 TP0.5 copri0 R3.0,True,-98,100,1780
+6,cesto,D5.0 G1.3 M1.3 TP0.5 copri0 R5.0,True,-98,100,1780
+6,cesto,D5.0 G1.3 M1.3 TP0.5 copri4 R3.0,True,-97,100,6581
+6,cesto,D5.0 G1.3 M1.3 TP0.5 copri4 R5.0,False,77,59,7559
+6,cesto,D5.0 G1.3 M1.3 TP0.5 copri5 R3.0,True,-98,100,1779
+6,cesto,D5.0 G1.3 M1.3 TP0.5 copri5 R5.0,False,84,47,7732
+6,cesto,D5.0 G1.3 M1.3 TP0.5 copri6 R3.0,True,-98,100,1792
+6,cesto,D5.0 G1.3 M1.3 TP0.5 copri6 R5.0,True,-98,100,3910
+6,cesto,D5.0 G1.3 M1.3 TP1.0 copri0 R3.0,True,-98,100,1345
+6,cesto,D5.0 G1.3 M1.3 TP1.0 copri0 R5.0,True,-98,100,1345
+6,cesto,D5.0 G1.3 M1.3 TP1.0 copri4 R3.0,True,-97,100,4050
+6,cesto,D5.0 G1.3 M1.3 TP1.0 copri4 R5.0,True,-98,100,2390
+6,cesto,D5.0 G1.3 M1.3 TP1.0 copri5 R3.0,True,-98,100,1154
+6,cesto,D5.0 G1.3 M1.3 TP1.0 copri5 R5.0,False,101,43,4718
+6,cesto,D5.0 G1.3 M1.3 TP1.0 copri6 R3.0,True,-99,100,1160
+6,cesto,D5.0 G1.3 M1.3 TP1.0 copri6 R5.0,True,-98,100,2400
+6,cesto,D5.0 G1.3 M1.3 TP2.0 copri0 R3.0,True,-98,100,756
+6,cesto,D5.0 G1.3 M1.3 TP2.0 copri0 R5.0,True,-98,100,756
+6,cesto,D5.0 G1.3 M1.3 TP2.0 copri4 R3.0,True,-98,100,1447
+6,cesto,D5.0 G1.3 M1.3 TP2.0 copri4 R5.0,True,-98,100,1425
+6,cesto,D5.0 G1.3 M1.3 TP2.0 copri5 R3.0,True,-98,100,666
+6,cesto,D5.0 G1.3 M1.3 TP2.0 copri5 R5.0,True,-98,100,1405
+6,cesto,D5.0 G1.3 M1.3 TP2.0 copri6 R3.0,True,-98,100,654
+6,cesto,D5.0 G1.3 M1.3 TP2.0 copri6 R5.0,True,-98,100,1374
+6,cesto,D5.0 G1.3 M1.5 TP0.5 copri0 R3.0,True,-96,100,7060
+6,cesto,D5.0 G1.3 M1.5 TP0.5 copri0 R5.0,True,-96,100,7060
+6,cesto,D5.0 G1.3 M1.5 TP0.5 copri4 R3.0,False,129,43,9900
+6,cesto,D5.0 G1.3 M1.5 TP0.5 copri4 R5.0,False,117,33,9703
+6,cesto,D5.0 G1.3 M1.5 TP0.5 copri5 R3.0,True,-97,100,7035
+6,cesto,D5.0 G1.3 M1.5 TP0.5 copri5 R5.0,True,-95,100,7059
+6,cesto,D5.0 G1.3 M1.5 TP0.5 copri6 R3.0,False,148,36,9987
+6,cesto,D5.0 G1.3 M1.5 TP0.5 copri6 R5.0,True,-95,100,7088
+6,cesto,D5.0 G1.3 M1.5 TP1.0 copri0 R3.0,False,162,98,5939
+6,cesto,D5.0 G1.3 M1.5 TP1.0 copri0 R5.0,False,162,98,5939
+6,cesto,D5.0 G1.3 M1.5 TP1.0 copri4 R3.0,False,146,40,5942
+6,cesto,D5.0 G1.3 M1.5 TP1.0 copri4 R5.0,False,137,31,5806
+6,cesto,D5.0 G1.3 M1.5 TP1.0 copri5 R3.0,False,157,34,5930
+6,cesto,D5.0 G1.3 M1.5 TP1.0 copri5 R5.0,False,143,29,5920
+6,cesto,D5.0 G1.3 M1.5 TP1.0 copri6 R3.0,False,157,35,5976
+6,cesto,D5.0 G1.3 M1.5 TP1.0 copri6 R5.0,True,-96,100,4225
+6,cesto,D5.0 G1.3 M1.5 TP2.0 copri0 R3.0,False,192,89,3331
+6,cesto,D5.0 G1.3 M1.5 TP2.0 copri0 R5.0,False,192,89,3331
+6,cesto,D5.0 G1.3 M1.5 TP2.0 copri4 R3.0,False,189,33,3492
+6,cesto,D5.0 G1.3 M1.5 TP2.0 copri4 R5.0,False,173,27,3379
+6,cesto,D5.0 G1.3 M1.5 TP2.0 copri5 R3.0,False,205,81,3432
+6,cesto,D5.0 G1.3 M1.5 TP2.0 copri5 R5.0,False,167,86,3478
+6,cesto,D5.0 G1.3 M1.5 TP2.0 copri6 R3.0,False,179,92,3374
+6,cesto,D5.0 G1.3 M1.5 TP2.0 copri6 R5.0,False,166,88,3401
+6,cesto,D8.0 G1.2 M1.3 TP0.5 copri0 R3.0,False,79,37,5997
+6,cesto,D8.0 G1.2 M1.3 TP0.5 copri0 R5.0,False,79,37,5997
+6,cesto,D8.0 G1.2 M1.3 TP0.5 copri4 R3.0,True,-98,100,2905
+6,cesto,D8.0 G1.2 M1.3 TP0.5 copri4 R5.0,True,-98,100,3056
+6,cesto,D8.0 G1.2 M1.3 TP0.5 copri5 R3.0,False,81,25,5978
+6,cesto,D8.0 G1.2 M1.3 TP0.5 copri5 R5.0,False,66,45,5813
+6,cesto,D8.0 G1.2 M1.3 TP0.5 copri6 R3.0,True,-98,100,3026
+6,cesto,D8.0 G1.2 M1.3 TP0.5 copri6 R5.0,False,85,42,5964
+6,cesto,D8.0 G1.2 M1.3 TP1.0 copri0 R3.0,False,90,43,3664
+6,cesto,D8.0 G1.2 M1.3 TP1.0 copri0 R5.0,False,90,43,3664
+6,cesto,D8.0 G1.2 M1.3 TP1.0 copri4 R3.0,True,-97,100,1780
+6,cesto,D8.0 G1.2 M1.3 TP1.0 copri4 R5.0,True,-98,100,1868
+6,cesto,D8.0 G1.2 M1.3 TP1.0 copri5 R3.0,False,96,40,3671
+6,cesto,D8.0 G1.2 M1.3 TP1.0 copri5 R5.0,False,75,44,3583
+6,cesto,D8.0 G1.2 M1.3 TP1.0 copri6 R3.0,True,-98,100,1817
+6,cesto,D8.0 G1.2 M1.3 TP1.0 copri6 R5.0,False,95,40,3657
+6,cesto,D8.0 G1.2 M1.3 TP2.0 copri0 R3.0,False,101,40,2102
+6,cesto,D8.0 G1.2 M1.3 TP2.0 copri0 R5.0,False,101,40,2102
+6,cesto,D8.0 G1.2 M1.3 TP2.0 copri4 R3.0,True,-98,100,1059
+6,cesto,D8.0 G1.2 M1.3 TP2.0 copri4 R5.0,True,-97,100,1129
+6,cesto,D8.0 G1.2 M1.3 TP2.0 copri5 R3.0,False,110,37,2200
+6,cesto,D8.0 G1.2 M1.3 TP2.0 copri5 R5.0,False,88,41,2130
+6,cesto,D8.0 G1.2 M1.3 TP2.0 copri6 R3.0,True,-97,100,1086
+6,cesto,D8.0 G1.2 M1.3 TP2.0 copri6 R5.0,False,99,40,2111
+6,cesto,D8.0 G1.2 M1.5 TP0.5 copri0 R3.0,False,97,84,7171
+6,cesto,D8.0 G1.2 M1.5 TP0.5 copri0 R5.0,False,97,84,7171
+6,cesto,D8.0 G1.2 M1.5 TP0.5 copri4 R3.0,False,105,23,7132
+6,cesto,D8.0 G1.2 M1.5 TP0.5 copri4 R5.0,False,78,29,6886
+6,cesto,D8.0 G1.2 M1.5 TP0.5 copri5 R3.0,False,105,25,7131
+6,cesto,D8.0 G1.2 M1.5 TP0.5 copri5 R5.0,True,-96,100,4971
+6,cesto,D8.0 G1.2 M1.5 TP0.5 copri6 R3.0,True,-105,100,3250
+6,cesto,D8.0 G1.2 M1.5 TP0.5 copri6 R5.0,False,99,86,7152
+6,cesto,D8.0 G1.2 M1.5 TP1.0 copri0 R3.0,False,114,81,4341
+6,cesto,D8.0 G1.2 M1.5 TP1.0 copri0 R5.0,False,114,81,4341
+6,cesto,D8.0 G1.2 M1.5 TP1.0 copri4 R3.0,False,117,22,4387
+6,cesto,D8.0 G1.2 M1.5 TP1.0 copri4 R5.0,False,88,28,4217
+6,cesto,D8.0 G1.2 M1.5 TP1.0 copri5 R3.0,False,118,24,4367
+6,cesto,D8.0 G1.2 M1.5 TP1.0 copri5 R5.0,True,-96,100,3009
+6,cesto,D8.0 G1.2 M1.5 TP1.0 copri6 R3.0,True,-100,100,1907
+6,cesto,D8.0 G1.2 M1.5 TP1.0 copri6 R5.0,False,116,82,4341
+6,cesto,D8.0 G1.2 M1.5 TP2.0 copri0 R3.0,False,138,77,2488
+6,cesto,D8.0 G1.2 M1.5 TP2.0 copri0 R5.0,False,138,77,2488
+6,cesto,D8.0 G1.2 M1.5 TP2.0 copri4 R3.0,False,145,29,2562
+6,cesto,D8.0 G1.2 M1.5 TP2.0 copri4 R5.0,False,105,26,2480
+6,cesto,D8.0 G1.2 M1.5 TP2.0 copri5 R3.0,False,147,29,2564
+6,cesto,D8.0 G1.2 M1.5 TP2.0 copri5 R5.0,True,-96,100,1778
+6,cesto,D8.0 G1.2 M1.5 TP2.0 copri6 R3.0,True,-101,100,1103
+6,cesto,D8.0 G1.2 M1.5 TP2.0 copri6 R5.0,False,132,83,2499
+6,cesto,D8.0 G1.3 M1.3 TP0.5 copri0 R3.0,False,66,84,5117
+6,cesto,D8.0 G1.3 M1.3 TP0.5 copri0 R5.0,False,66,84,5117
+6,cesto,D8.0 G1.3 M1.3 TP0.5 copri4 R3.0,False,56,89,5147
+6,cesto,D8.0 G1.3 M1.3 TP0.5 copri4 R5.0,False,76,73,5005
+6,cesto,D8.0 G1.3 M1.3 TP0.5 copri5 R3.0,False,54,91,5137
+6,cesto,D8.0 G1.3 M1.3 TP0.5 copri5 R5.0,False,58,92,4964
+6,cesto,D8.0 G1.3 M1.3 TP0.5 copri6 R3.0,False,55,91,5146
+6,cesto,D8.0 G1.3 M1.3 TP0.5 copri6 R5.0,False,80,70,5158
+6,cesto,D8.0 G1.3 M1.3 TP1.0 copri0 R3.0,False,75,81,3161
+6,cesto,D8.0 G1.3 M1.3 TP1.0 copri0 R5.0,False,75,81,3161
+6,cesto,D8.0 G1.3 M1.3 TP1.0 copri4 R3.0,True,-98,100,1039
+6,cesto,D8.0 G1.3 M1.3 TP1.0 copri4 R5.0,False,84,70,3123
+6,cesto,D8.0 G1.3 M1.3 TP1.0 copri5 R3.0,False,62,89,3182
+6,cesto,D8.0 G1.3 M1.3 TP1.0 copri5 R5.0,False,65,90,3079
+6,cesto,D8.0 G1.3 M1.3 TP1.0 copri6 R3.0,False,64,88,3181
+6,cesto,D8.0 G1.3 M1.3 TP1.0 copri6 R5.0,False,90,68,3198
+6,cesto,D8.0 G1.3 M1.3 TP2.0 copri0 R3.0,False,86,79,1859
+6,cesto,D8.0 G1.3 M1.3 TP2.0 copri0 R5.0,False,86,79,1859
+6,cesto,D8.0 G1.3 M1.3 TP2.0 copri4 R3.0,True,-98,100,611
+6,cesto,D8.0 G1.3 M1.3 TP2.0 copri4 R5.0,False,91,68,1856
+6,cesto,D8.0 G1.3 M1.3 TP2.0 copri5 R3.0,False,75,86,1908
+6,cesto,D8.0 G1.3 M1.3 TP2.0 copri5 R5.0,False,84,86,1832
+6,cesto,D8.0 G1.3 M1.3 TP2.0 copri6 R3.0,False,77,84,1889
+6,cesto,D8.0 G1.3 M1.3 TP2.0 copri6 R5.0,False,101,65,1890
+6,cesto,D8.0 G1.3 M1.5 TP0.5 copri0 R3.0,True,-97,100,3068
+6,cesto,D8.0 G1.3 M1.5 TP0.5 copri0 R5.0,True,-97,100,3068
+6,cesto,D8.0 G1.3 M1.5 TP0.5 copri4 R3.0,False,86,48,6623
+6,cesto,D8.0 G1.3 M1.5 TP0.5 copri4 R5.0,False,97,44,6222
+6,cesto,D8.0 G1.3 M1.5 TP0.5 copri5 R3.0,True,-97,100,3079
+6,cesto,D8.0 G1.3 M1.5 TP0.5 copri5 R5.0,False,73,26,6402
+6,cesto,D8.0 G1.3 M1.5 TP0.5 copri6 R3.0,True,-97,100,3072
+6,cesto,D8.0 G1.3 M1.5 TP0.5 copri6 R5.0,True,-97,100,3172
+6,cesto,D8.0 G1.3 M1.5 TP1.0 copri0 R3.0,True,-97,100,1795
+6,cesto,D8.0 G1.3 M1.5 TP1.0 copri0 R5.0,True,-97,100,1795
+6,cesto,D8.0 G1.3 M1.5 TP1.0 copri4 R3.0,False,95,47,4076
+6,cesto,D8.0 G1.3 M1.5 TP1.0 copri4 R5.0,False,108,43,3827
+6,cesto,D8.0 G1.3 M1.5 TP1.0 copri5 R3.0,True,-97,100,1805
+6,cesto,D8.0 G1.3 M1.5 TP1.0 copri5 R5.0,False,87,25,3921
+6,cesto,D8.0 G1.3 M1.5 TP1.0 copri6 R3.0,True,-97,100,1799
+6,cesto,D8.0 G1.3 M1.5 TP1.0 copri6 R5.0,True,-97,100,1864
+6,cesto,D8.0 G1.3 M1.5 TP2.0 copri0 R3.0,True,-97,100,1028
+6,cesto,D8.0 G1.3 M1.5 TP2.0 copri0 R5.0,True,-97,100,1028
+6,cesto,D8.0 G1.3 M1.5 TP2.0 copri4 R3.0,False,110,46,2410
+6,cesto,D8.0 G1.3 M1.5 TP2.0 copri4 R5.0,True,-97,100,1109
+6,cesto,D8.0 G1.3 M1.5 TP2.0 copri5 R3.0,True,-98,100,1045
+6,cesto,D8.0 G1.3 M1.5 TP2.0 copri5 R5.0,False,123,22,2326
+6,cesto,D8.0 G1.3 M1.5 TP2.0 copri6 R3.0,True,-97,100,1035
+6,cesto,D8.0 G1.3 M1.5 TP2.0 copri6 R5.0,True,-97,100,1078
+6,piramide,D0.5 M1.0 R1.0 max5 tendenza,True,-100,100,45178
+6,piramide,D0.5 M1.0 R1.0 max5 BUY+SELL,True,-100,100,41564
+6,piramide,D0.5 M1.0 R1.0 max10 tendenza,True,-100,100,46891
+6,piramide,D0.5 M1.0 R1.0 max10 BUY+SELL,True,-100,100,41539
+6,piramide,D0.5 M1.0 R1.0 max20 tendenza,True,-100,100,46443
+6,piramide,D0.5 M1.0 R1.0 max20 BUY+SELL,True,-100,100,41232
+6,piramide,D0.5 M1.0 R2.0 max5 tendenza,True,-100,100,51565
+6,piramide,D0.5 M1.0 R2.0 max5 BUY+SELL,True,-100,100,44164
+6,piramide,D0.5 M1.0 R2.0 max10 tendenza,True,-100,100,48241
+6,piramide,D0.5 M1.0 R2.0 max10 BUY+SELL,True,-100,100,31941
+6,piramide,D0.5 M1.0 R2.0 max20 tendenza,True,-100,100,41503
+6,piramide,D0.5 M1.0 R2.0 max20 BUY+SELL,True,-100,100,30174
+6,piramide,D0.5 M1.0 R3.0 max5 tendenza,False,-51,58,31644
+6,piramide,D0.5 M1.0 R3.0 max5 BUY+SELL,True,-100,100,33779
+6,piramide,D0.5 M1.0 R3.0 max10 tendenza,False,-85,95,44007
+6,piramide,D0.5 M1.0 R3.0 max10 BUY+SELL,True,-100,100,20096
+6,piramide,D0.5 M1.0 R3.0 max20 tendenza,True,-100,100,26856
+6,piramide,D0.5 M1.0 R3.0 max20 BUY+SELL,True,-100,100,18579
+6,piramide,D0.5 M1.0 R5.0 max5 tendenza,False,-6,32,14009
+6,piramide,D0.5 M1.0 R5.0 max5 BUY+SELL,True,-100,100,20568
+6,piramide,D0.5 M1.0 R5.0 max10 tendenza,False,-35,74,22020
+6,piramide,D0.5 M1.0 R5.0 max10 BUY+SELL,True,-99,100,10821
+6,piramide,D0.5 M1.0 R5.0 max20 tendenza,True,-100,100,14341
+6,piramide,D0.5 M1.0 R5.0 max20 BUY+SELL,True,-100,100,9830
+6,piramide,D0.5 M1.5 R1.0 max5 tendenza,True,-99,100,28935
+6,piramide,D0.5 M1.5 R1.0 max5 BUY+SELL,True,-99,100,31370
+6,piramide,D0.5 M1.5 R1.0 max10 tendenza,True,-96,100,18852
+6,piramide,D0.5 M1.5 R1.0 max10 BUY+SELL,True,-96,100,13232
+6,piramide,D0.5 M1.5 R1.0 max20 tendenza,True,-43,100,5862
+6,piramide,D0.5 M1.5 R1.0 max20 BUY+SELL,True,-62,100,7212
+6,piramide,D0.5 M1.5 R2.0 max5 tendenza,True,-100,100,30380
+6,piramide,D0.5 M1.5 R2.0 max5 BUY+SELL,True,-99,100,19579
+6,piramide,D0.5 M1.5 R2.0 max10 tendenza,True,-95,100,9317
+6,piramide,D0.5 M1.5 R2.0 max10 BUY+SELL,True,-97,100,7195
+6,piramide,D0.5 M1.5 R2.0 max20 tendenza,True,-12,100,372
+6,piramide,D0.5 M1.5 R2.0 max20 BUY+SELL,True,-12,100,157
+6,piramide,D0.5 M1.5 R3.0 max5 tendenza,True,-99,100,17722
+6,piramide,D0.5 M1.5 R3.0 max5 BUY+SELL,True,-99,100,11287
+6,piramide,D0.5 M1.5 R3.0 max10 tendenza,True,-97,100,2529
+6,piramide,D0.5 M1.5 R3.0 max10 BUY+SELL,True,-95,100,2139
+6,piramide,D0.5 M1.5 R3.0 max20 tendenza,True,-21,100,135
+6,piramide,D0.5 M1.5 R3.0 max20 BUY+SELL,True,27,100,69
+6,piramide,D0.5 M1.5 R5.0 max5 tendenza,False,-22,83,14009
+6,piramide,D0.5 M1.5 R5.0 max5 BUY+SELL,True,-99,100,5908
+6,piramide,D0.5 M1.5 R5.0 max10 tendenza,True,-98,100,1046
+6,piramide,D0.5 M1.5 R5.0 max10 BUY+SELL,True,-95,100,782
+6,piramide,D0.5 M1.5 R5.0 max20 tendenza,True,-20,100,83
+6,piramide,D0.5 M1.5 R5.0 max20 BUY+SELL,True,-43,100,40
+6,piramide,D1.0 M1.0 R1.0 max5 tendenza,True,-100,100,46203
+6,piramide,D1.0 M1.0 R1.0 max5 BUY+SELL,True,-100,100,39037
+6,piramide,D1.0 M1.0 R1.0 max10 tendenza,True,-100,100,45753
+6,piramide,D1.0 M1.0 R1.0 max10 BUY+SELL,True,-100,100,38684
+6,piramide,D1.0 M1.0 R1.0 max20 tendenza,True,-100,100,45737
+6,piramide,D1.0 M1.0 R1.0 max20 BUY+SELL,True,-100,100,38677
+6,piramide,D1.0 M1.0 R2.0 max5 tendenza,False,-90,92,42966
+6,piramide,D1.0 M1.0 R2.0 max5 BUY+SELL,True,-100,100,39390
+6,piramide,D1.0 M1.0 R2.0 max10 tendenza,True,-100,100,41699
+6,piramide,D1.0 M1.0 R2.0 max10 BUY+SELL,True,-100,100,37260
+6,piramide,D1.0 M1.0 R2.0 max20 tendenza,True,-100,100,41603
+6,piramide,D1.0 M1.0 R2.0 max20 BUY+SELL,True,-100,100,36460
+6,piramide,D1.0 M1.0 R3.0 max5 tendenza,False,-45,51,25250
+6,piramide,D1.0 M1.0 R3.0 max5 BUY+SELL,True,-100,100,27607
+6,piramide,D1.0 M1.0 R3.0 max10 tendenza,False,-77,81,29909
+6,piramide,D1.0 M1.0 R3.0 max10 BUY+SELL,True,-100,100,23593
+6,piramide,D1.0 M1.0 R3.0 max20 tendenza,False,-88,92,30682
+6,piramide,D1.0 M1.0 R3.0 max20 BUY+SELL,True,-100,100,22919
+6,piramide,D1.0 M1.0 R5.0 max5 tendenza,False,-11,34,12024
+6,piramide,D1.0 M1.0 R5.0 max5 BUY+SELL,True,-100,100,15567
+6,piramide,D1.0 M1.0 R5.0 max10 tendenza,False,-42,62,16306
+6,piramide,D1.0 M1.0 R5.0 max10 BUY+SELL,True,-100,100,9142
+6,piramide,D1.0 M1.0 R5.0 max20 tendenza,False,-77,86,18136
+6,piramide,D1.0 M1.0 R5.0 max20 BUY+SELL,True,-100,100,8327
+6,piramide,D1.0 M1.5 R1.0 max5 tendenza,True,-100,100,37726
+6,piramide,D1.0 M1.5 R1.0 max5 BUY+SELL,True,-100,100,32833
+6,piramide,D1.0 M1.5 R1.0 max10 tendenza,True,-100,100,32092
+6,piramide,D1.0 M1.5 R1.0 max10 BUY+SELL,True,-100,100,27768
+6,piramide,D1.0 M1.5 R1.0 max20 tendenza,True,-100,100,31702
+6,piramide,D1.0 M1.5 R1.0 max20 BUY+SELL,True,-99,100,27387
+6,piramide,D1.0 M1.5 R2.0 max5 tendenza,True,-100,100,23654
+6,piramide,D1.0 M1.5 R2.0 max5 BUY+SELL,True,-100,100,16462
+6,piramide,D1.0 M1.5 R2.0 max10 tendenza,True,-97,100,7887
+6,piramide,D1.0 M1.5 R2.0 max10 BUY+SELL,True,-98,100,10868
+6,piramide,D1.0 M1.5 R2.0 max20 tendenza,True,-85,100,4522
+6,piramide,D1.0 M1.5 R2.0 max20 BUY+SELL,True,-14,100,3320
+6,piramide,D1.0 M1.5 R3.0 max5 tendenza,True,-99,100,15704
+6,piramide,D1.0 M1.5 R3.0 max5 BUY+SELL,True,-99,100,10407
+6,piramide,D1.0 M1.5 R3.0 max10 tendenza,True,-99,100,3166
+6,piramide,D1.0 M1.5 R3.0 max10 BUY+SELL,True,-98,100,2764
+6,piramide,D1.0 M1.5 R3.0 max20 tendenza,True,-83,100,933
+6,piramide,D1.0 M1.5 R3.0 max20 BUY+SELL,True,-85,100,710
+6,piramide,D1.0 M1.5 R5.0 max5 tendenza,False,-44,90,12024
+6,piramide,D1.0 M1.5 R5.0 max5 BUY+SELL,True,-99,100,5071
+6,piramide,D1.0 M1.5 R5.0 max10 tendenza,True,-97,100,1225
+6,piramide,D1.0 M1.5 R5.0 max10 BUY+SELL,True,-97,100,1344
+6,piramide,D1.0 M1.5 R5.0 max20 tendenza,True,-77,100,222
+6,piramide,D1.0 M1.5 R5.0 max20 BUY+SELL,True,-13,100,91
+6,piramide,D2.0 M1.0 R1.0 max5 tendenza,True,-100,100,43452
+6,piramide,D2.0 M1.0 R1.0 max5 BUY+SELL,True,-100,100,38867
+6,piramide,D2.0 M1.0 R1.0 max10 tendenza,True,-100,100,42902
+6,piramide,D2.0 M1.0 R1.0 max10 BUY+SELL,True,-100,100,38862
+6,piramide,D2.0 M1.0 R1.0 max20 tendenza,True,-100,100,42902
+6,piramide,D2.0 M1.0 R1.0 max20 BUY+SELL,True,-100,100,38862
+6,piramide,D2.0 M1.0 R2.0 max5 tendenza,False,-71,72,29924
+6,piramide,D2.0 M1.0 R2.0 max5 BUY+SELL,True,-100,100,33990
+6,piramide,D2.0 M1.0 R2.0 max10 tendenza,False,-73,75,30136
+6,piramide,D2.0 M1.0 R2.0 max10 BUY+SELL,True,-100,100,33904
+6,piramide,D2.0 M1.0 R2.0 max20 tendenza,False,-73,75,30136
+6,piramide,D2.0 M1.0 R2.0 max20 BUY+SELL,True,-100,100,33902
+6,piramide,D2.0 M1.0 R3.0 max5 tendenza,False,-42,45,18080
+6,piramide,D2.0 M1.0 R3.0 max5 BUY+SELL,True,-100,100,25221
+6,piramide,D2.0 M1.0 R3.0 max10 tendenza,False,-50,53,18709
+6,piramide,D2.0 M1.0 R3.0 max10 BUY+SELL,True,-100,100,24646
+6,piramide,D2.0 M1.0 R3.0 max20 tendenza,False,-50,53,18718
+6,piramide,D2.0 M1.0 R3.0 max20 BUY+SELL,True,-100,100,24683
+6,piramide,D2.0 M1.0 R5.0 max5 tendenza,False,-20,33,9281
+6,piramide,D2.0 M1.0 R5.0 max5 BUY+SELL,False,-91,95,18552
+6,piramide,D2.0 M1.0 R5.0 max10 tendenza,False,-39,46,10499
+6,piramide,D2.0 M1.0 R5.0 max10 BUY+SELL,True,-100,100,11713
+6,piramide,D2.0 M1.0 R5.0 max20 tendenza,False,-43,50,10607
+6,piramide,D2.0 M1.0 R5.0 max20 BUY+SELL,True,-100,100,10373
+6,piramide,D2.0 M1.5 R1.0 max5 tendenza,True,-100,100,40154
+6,piramide,D2.0 M1.5 R1.0 max5 BUY+SELL,True,-100,100,36464
+6,piramide,D2.0 M1.5 R1.0 max10 tendenza,True,-100,100,39891
+6,piramide,D2.0 M1.5 R1.0 max10 BUY+SELL,True,-100,100,36446
+6,piramide,D2.0 M1.5 R1.0 max20 tendenza,True,-100,100,39891
+6,piramide,D2.0 M1.5 R1.0 max20 BUY+SELL,True,-100,100,36446
+6,piramide,D2.0 M1.5 R2.0 max5 tendenza,True,-100,100,27652
+6,piramide,D2.0 M1.5 R2.0 max5 BUY+SELL,True,-100,100,26839
+6,piramide,D2.0 M1.5 R2.0 max10 tendenza,True,-100,100,22646
+6,piramide,D2.0 M1.5 R2.0 max10 BUY+SELL,True,-99,100,23366
+6,piramide,D2.0 M1.5 R2.0 max20 tendenza,True,-100,100,22646
+6,piramide,D2.0 M1.5 R2.0 max20 BUY+SELL,True,-100,100,23242
+6,piramide,D2.0 M1.5 R3.0 max5 tendenza,False,-91,94,18080
+6,piramide,D2.0 M1.5 R3.0 max5 BUY+SELL,True,-99,100,14199
+6,piramide,D2.0 M1.5 R3.0 max10 tendenza,True,-100,100,9326
+6,piramide,D2.0 M1.5 R3.0 max10 BUY+SELL,True,-99,100,6433
+6,piramide,D2.0 M1.5 R3.0 max20 tendenza,True,-100,100,8604
+6,piramide,D2.0 M1.5 R3.0 max20 BUY+SELL,True,-99,100,6270
+6,piramide,D2.0 M1.5 R5.0 max5 tendenza,False,-74,84,9281
+6,piramide,D2.0 M1.5 R5.0 max5 BUY+SELL,True,-100,100,4369
+6,piramide,D2.0 M1.5 R5.0 max10 tendenza,True,-100,100,1843
+6,piramide,D2.0 M1.5 R5.0 max10 BUY+SELL,True,-97,100,1490
+6,piramide,D2.0 M1.5 R5.0 max20 tendenza,True,-97,100,1164
+6,piramide,D2.0 M1.5 R5.0 max20 BUY+SELL,True,-98,100,1064
+6,piramide,D3.0 M1.0 R1.0 max5 tendenza,True,-100,100,43379
+6,piramide,D3.0 M1.0 R1.0 max5 BUY+SELL,True,-100,100,38938
+6,piramide,D3.0 M1.0 R1.0 max10 tendenza,True,-100,100,43379
+6,piramide,D3.0 M1.0 R1.0 max10 BUY+SELL,True,-100,100,38938
+6,piramide,D3.0 M1.0 R1.0 max20 tendenza,True,-100,100,43379
+6,piramide,D3.0 M1.0 R1.0 max20 BUY+SELL,True,-100,100,38938
+6,piramide,D3.0 M1.0 R2.0 max5 tendenza,False,-57,58,24437
+6,piramide,D3.0 M1.0 R2.0 max5 BUY+SELL,True,-100,100,34351
+6,piramide,D3.0 M1.0 R2.0 max10 tendenza,False,-57,58,24448
+6,piramide,D3.0 M1.0 R2.0 max10 BUY+SELL,True,-100,100,34309
+6,piramide,D3.0 M1.0 R2.0 max20 tendenza,False,-57,58,24448
+6,piramide,D3.0 M1.0 R2.0 max20 BUY+SELL,True,-100,100,34309
+6,piramide,D3.0 M1.0 R3.0 max5 tendenza,False,-33,35,14401
+6,piramide,D3.0 M1.0 R3.0 max5 BUY+SELL,False,-93,93,28725
+6,piramide,D3.0 M1.0 R3.0 max10 tendenza,False,-35,37,14497
+6,piramide,D3.0 M1.0 R3.0 max10 BUY+SELL,False,-95,95,28923
+6,piramide,D3.0 M1.0 R3.0 max20 tendenza,False,-35,37,14497
+6,piramide,D3.0 M1.0 R3.0 max20 BUY+SELL,False,-95,95,28925
+6,piramide,D3.0 M1.0 R5.0 max5 tendenza,False,-19,26,7517
+6,piramide,D3.0 M1.0 R5.0 max5 BUY+SELL,False,-68,71,14941
+6,piramide,D3.0 M1.0 R5.0 max10 tendenza,False,-28,33,7861
+6,piramide,D3.0 M1.0 R5.0 max10 BUY+SELL,False,-82,85,15624
+6,piramide,D3.0 M1.0 R5.0 max20 tendenza,False,-28,33,7866
+6,piramide,D3.0 M1.0 R5.0 max20 BUY+SELL,False,-82,85,15638
+6,piramide,D3.0 M1.5 R1.0 max5 tendenza,True,-100,100,42728
+6,piramide,D3.0 M1.5 R1.0 max5 BUY+SELL,True,-100,100,38106
+6,piramide,D3.0 M1.5 R1.0 max10 tendenza,True,-100,100,42728
+6,piramide,D3.0 M1.5 R1.0 max10 BUY+SELL,True,-100,100,38106
+6,piramide,D3.0 M1.5 R1.0 max20 tendenza,True,-100,100,42728
+6,piramide,D3.0 M1.5 R1.0 max20 BUY+SELL,True,-100,100,38106
+6,piramide,D3.0 M1.5 R2.0 max5 tendenza,False,-73,74,24437
+6,piramide,D3.0 M1.5 R2.0 max5 BUY+SELL,True,-100,100,30070
+6,piramide,D3.0 M1.5 R2.0 max10 tendenza,False,-75,75,24448
+6,piramide,D3.0 M1.5 R2.0 max10 BUY+SELL,True,-100,100,27812
+6,piramide,D3.0 M1.5 R2.0 max20 tendenza,False,-75,75,24448
+6,piramide,D3.0 M1.5 R2.0 max20 BUY+SELL,True,-100,100,27812
+6,piramide,D3.0 M1.5 R3.0 max5 tendenza,False,-58,60,14401
+6,piramide,D3.0 M1.5 R3.0 max5 BUY+SELL,True,-100,100,19255
+6,piramide,D3.0 M1.5 R3.0 max10 tendenza,False,-79,79,14497
+6,piramide,D3.0 M1.5 R3.0 max10 BUY+SELL,True,-100,100,18120
+6,piramide,D3.0 M1.5 R3.0 max20 tendenza,False,-79,79,14497
+6,piramide,D3.0 M1.5 R3.0 max20 BUY+SELL,True,-100,100,18138
+6,piramide,D3.0 M1.5 R5.0 max5 tendenza,False,-56,61,7517
+6,piramide,D3.0 M1.5 R5.0 max5 BUY+SELL,True,-100,100,7478
+6,piramide,D3.0 M1.5 R5.0 max10 tendenza,True,-99,100,4228
+6,piramide,D3.0 M1.5 R5.0 max10 BUY+SELL,True,-100,100,3590
+6,piramide,D3.0 M1.5 R5.0 max20 tendenza,True,-99,100,4070
+6,piramide,D3.0 M1.5 R5.0 max20 BUY+SELL,True,-99,100,3481
