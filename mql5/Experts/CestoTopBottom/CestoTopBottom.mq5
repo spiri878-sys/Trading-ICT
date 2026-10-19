@@ -43,7 +43,7 @@
 //| HEDGING.                                                         |
 //+------------------------------------------------------------------+
 #property copyright "Progetto Trading-ICT - uso personale"
-#property version   "1.30"
+#property version   "1.40"
 
 #include <Trade\Trade.mqh>
 #include <Trade\PositionInfo.mqh>
@@ -96,7 +96,7 @@ input bool   InpUseTrend    = true;      // true = lato della tendenza; false = 
 input ENUM_TIMEFRAMES InpTrendTF = PERIOD_H1; // timeframe della tendenza
 input int    InpTrendEMA    = 200;       // EMA della tendenza
 input int    InpCalmBars    = 15;        // barre M1 controllate per lo strappo
-input double InpCalmATR     = 6.0;       // strappo = escursione di quelle barre >= ATR M1(14) x questo
+input double InpCalmATR     = 0.0;       // strappo = escursione >= ATR M1(14) x questo (0 = filtro spento)
 
 input group "===== Strategy 1 ====="
 input ENUM_TIMEFRAMES InpS1_Timeframe        = PERIOD_M1; // S1 timeframe dei segnali
@@ -115,7 +115,7 @@ input string InpS1_CustomDistList            = "";    // S1 lista distanze (punt
 input ENUM_TIMEFRAMES InpS1_ATRTimeframe     = PERIOD_M1; // S1 timeframe ATR
 input int    InpS1_ATRPeriod                 = 14;    // S1 periodo ATR
 input double InpS1_ATRMultiplier             = 1.0;   // S1 distanza = ATR x
-input double InpS1_BasketTPPips              = 50.0; // S1 TP del cesto oltre il prezzo medio
+input double InpS1_BasketTPPips              = 70.0; // S1 TP del cesto oltre il prezzo medio
 input bool   InpS1_UseTrailing               = false;  // S1 trailing del cesto
 input int    InpS1_TrailMethod               = 1;     // S1 0 classico, 1 a gradini, 2 % del profitto, 3 ATR
 input double InpS1_TrailStartPips            = 100.0; // S1 trailing da (oltre il medio)
@@ -139,7 +139,7 @@ input string InpS2_CustomDistList            = "";    // S2 lista distanze (punt
 input ENUM_TIMEFRAMES InpS2_ATRTimeframe     = PERIOD_M1; // S2 timeframe ATR
 input int    InpS2_ATRPeriod                 = 14;    // S2 periodo ATR
 input double InpS2_ATRMultiplier             = 1.0;   // S2 distanza = ATR x
-input double InpS2_BasketTPPips              = 50.0; // S2 TP del cesto oltre il prezzo medio
+input double InpS2_BasketTPPips              = 70.0; // S2 TP del cesto oltre il prezzo medio
 input bool   InpS2_UseTrailing               = false;  // S2 trailing del cesto
 input int    InpS2_TrailMethod               = 1;     // S2 0 classico, 1 a gradini, 2 % del profitto, 3 ATR
 input double InpS2_TrailStartPips            = 100.0; // S2 trailing da (oltre il medio)
@@ -163,7 +163,7 @@ input string InpS3_CustomDistList            = "";    // S3 lista distanze (punt
 input ENUM_TIMEFRAMES InpS3_ATRTimeframe     = PERIOD_M1; // S3 timeframe ATR
 input int    InpS3_ATRPeriod                 = 14;    // S3 periodo ATR
 input double InpS3_ATRMultiplier             = 1.0;   // S3 distanza = ATR x
-input double InpS3_BasketTPPips              = 50.0; // S3 TP del cesto oltre il prezzo medio
+input double InpS3_BasketTPPips              = 70.0; // S3 TP del cesto oltre il prezzo medio
 input bool   InpS3_UseTrailing               = false;  // S3 trailing del cesto
 input int    InpS3_TrailMethod               = 1;     // S3 0 classico, 1 a gradini, 2 % del profitto, 3 ATR
 input double InpS3_TrailStartPips            = 100.0; // S3 trailing da (oltre il medio)
@@ -187,7 +187,7 @@ input string InpS4_CustomDistList            = "";    // S4 lista distanze (punt
 input ENUM_TIMEFRAMES InpS4_ATRTimeframe     = PERIOD_M1; // S4 timeframe ATR
 input int    InpS4_ATRPeriod                 = 14;    // S4 periodo ATR
 input double InpS4_ATRMultiplier             = 1.0;   // S4 distanza = ATR x
-input double InpS4_BasketTPPips              = 50.0; // S4 TP del cesto oltre il prezzo medio
+input double InpS4_BasketTPPips              = 70.0; // S4 TP del cesto oltre il prezzo medio
 input bool   InpS4_UseTrailing               = false;  // S4 trailing del cesto
 input int    InpS4_TrailMethod               = 1;     // S4 0 classico, 1 a gradini, 2 % del profitto, 3 ATR
 input double InpS4_TrailStartPips            = 100.0; // S4 trailing da (oltre il medio)
@@ -211,7 +211,7 @@ input string InpS5_CustomDistList            = "";    // S5 lista distanze (punt
 input ENUM_TIMEFRAMES InpS5_ATRTimeframe     = PERIOD_M1; // S5 timeframe ATR
 input int    InpS5_ATRPeriod                 = 14;    // S5 periodo ATR
 input double InpS5_ATRMultiplier             = 1.0;   // S5 distanza = ATR x
-input double InpS5_BasketTPPips              = 50.0; // S5 TP del cesto oltre il prezzo medio
+input double InpS5_BasketTPPips              = 70.0; // S5 TP del cesto oltre il prezzo medio
 input bool   InpS5_UseTrailing               = false;  // S5 trailing del cesto
 input int    InpS5_TrailMethod               = 1;     // S5 0 classico, 1 a gradini, 2 % del profitto, 3 ATR
 input double InpS5_TrailStartPips            = 100.0; // S5 trailing da (oltre il medio)
@@ -439,7 +439,7 @@ int SmartSide()
    if(CopyBuffer(hTrend, 0, 1, 1, e) < 1 || CopyBuffer(hCalm, 0, 1, 1, a) < 1) return 0;
    int hi = iHighest(_Symbol, PERIOD_M1, MODE_HIGH, InpCalmBars, 1), lo = iLowest(_Symbol, PERIOD_M1, MODE_LOW, InpCalmBars, 1);
    if(hi < 0 || lo < 0) return 0;
-   if(iHigh(_Symbol, PERIOD_M1, hi) - iLow(_Symbol, PERIOD_M1, lo) >= InpCalmATR * a[0]) return 0;
+   if(InpCalmATR > 0 && iHigh(_Symbol, PERIOD_M1, hi) - iLow(_Symbol, PERIOD_M1, lo) >= InpCalmATR * a[0]) return 0;
    if(!InpUseTrend) return 2;
    return SymbolInfoDouble(_Symbol, SYMBOL_BID) > e[0] ? 1 : -1;
 }
