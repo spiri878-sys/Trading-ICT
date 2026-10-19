@@ -1,0 +1,250 @@
+{
+ "configurazioni": 2817,
+ "positive_entrambi_periodi_A": 799,
+ "catena": {
+  "trade": 330,
+  "R_medio_A": 0.3254,
+  "R_medio_B": 0.2777,
+  "anni_pos_A": "7/14"
+ },
+ "per_anno": [
+  {
+   "anno": 2013,
+   "scelta": {
+    "tf": "M15",
+    "swing": 20,
+    "impulso": 2.5,
+    "zona": 1.0,
+    "filtro": "NESSUNO",
+    "lati": "SOLO_BUY",
+    "sl": 1.0,
+    "tp": 8.0
+   },
+   "R_passato": 0.621,
+   "n": 30,
+   "somma_R_A": 29.27,
+   "somma_R_B": 27.35
+  },
+  {
+   "anno": 2014,
+   "scelta": {
+    "tf": "M15",
+    "swing": 20,
+    "impulso": 2.5,
+    "zona": 1.0,
+    "filtro": "NESSUNO",
+    "lati": "SOLO_BUY",
+    "sl": 1.0,
+    "tp": 8.0
+   },
+   "R_passato": 0.936,
+   "n": 41,
+   "somma_R_A": -6.57,
+   "somma_R_B": -9.84
+  },
+  {
+   "anno": 2015,
+   "scelta": {
+    "tf": "H1",
+    "swing": 20,
+    "impulso": 1.5,
+    "zona": 0.5,
+    "filtro": "REGIME",
+    "lati": "ENTRAMBI",
+    "sl": 1.0,
+    "tp": 8.0
+   },
+   "R_passato": 0.667,
+   "n": 30,
+   "somma_R_A": -18.7,
+   "somma_R_B": -20.05
+  },
+  {
+   "anno": 2016,
+   "scelta": {
+    "tf": "H1",
+    "swing": 5,
+    "impulso": 2.5,
+    "zona": 1.0,
+    "filtro": "REGIME",
+    "lati": "ENTRAMBI",
+    "sl": 1.0,
+    "tp": 8.0
+   },
+   "R_passato": 0.696,
+   "n": 18,
+   "somma_R_A": 25.69,
+   "somma_R_B": 25.07
+  },
+  {
+   "anno": 2017,
+   "scelta": {
+    "tf": "H1",
+    "swing": 5,
+    "impulso": 1.5,
+    "zona": 0.5,
+    "filtro": "REGIME",
+    "lati": "SOLO_BUY",
+    "sl": 1.0,
+    "tp": 4.0
+   },
+   "R_passato": 0.87,
+   "n": 25,
+   "somma_R_A": 18.52,
+   "somma_R_B": 17.34
+  },
+  {
+   "anno": 2018,
+   "scelta": {
+    "tf": "H1",
+    "swing": 5,
+    "impulso": 1.5,
+    "zona": 0.5,
+    "filtro": "REGIME",
+    "lati": "SOLO_BUY",
+    "sl": 1.0,
+    "tp": 8.0
+   },
+   "R_passato": 1.152,
+   "n": 20,
+   "somma_R_A": -10.34,
+   "somma_R_B": -11.35
+  },
+  {
+   "anno": 2019,
+   "scelta": {
+    "tf": "M15",
+    "swing": 20,
+    "impulso": 2.5,
+    "zona": 0.5,
+    "filtro": "REGIME",
+    "lati": "ENTRAMBI",
+    "sl": 1.0,
+    "tp": 8.0
+   },
+   "R_passato": 0.826,
+   "n": 28,
+   "somma_R_A": 31.38,
+   "somma_R_B": 28.48
+  },
+  {
+   "anno": 2020,
+   "scelta": {
+    "tf": "M15",
+    "swing": 20,
+    "impulso": 2.5,
+    "zona": 0.5,
+    "filtro": "REGIME",
+    "lati": "ENTRAMBI",
+    "sl": 1.5,
+    "tp": 8.0
+   },
+   "R_passato": 0.909,
+   "n": 24,
+   "somma_R_A": -5.93,
+   "somma_R_B": -6.67
+  },
+  {
+   "anno": 2021,
+   "scelta": {
+    "tf": "H1",
+    "swing": 10,
+    "impulso": 1.5,
+    "zona": 1.0,
+    "filtro": "REGIME",
+    "lati": "SOLO_BUY",
+    "sl": 1.0,
+    "tp": 8.0
+   },
+   "R_passato": 0.826,
+   "n": 13,
+   "somma_R_A": -4.54,
+   "somma_R_B": -4.98
+  },
+  {
+   "anno": 2022,
+   "scelta": {
+    "tf": "H1",
+    "swing": 5,
+    "impulso": 1.5,
+    "zona": 1.0,
+    "filtro": "REGIME",
+    "lati": "SOLO_BUY",
+    "sl": 1.0,
+    "tp": 8.0
+   },
+   "R_passato": 0.925,
+   "n": 16,
+   "somma_R_A": 7.28,
+   "somma_R_B": 6.88
+  },
+  {
+   "anno": 2023,
+   "scelta": {
+    "tf": "H1",
+    "swing": 5,
+    "impulso": 1.5,
+    "zona": 1.0,
+    "filtro": "REGIME",
+    "lati": "SOLO_BUY",
+    "sl": 1.0,
+    "tp": 8.0
+   },
+   "R_passato": 0.719,
+   "n": 28,
+   "somma_R_A": 7.07,
+   "somma_R_B": 6.32
+  },
+  {
+   "anno": 2024,
+   "scelta": {
+    "tf": "M15",
+    "swing": 10,
+    "impulso": 2.5,
+    "zona": 0.5,
+    "filtro": "SMA50",
+    "lati": "SOLO_BUY",
+    "sl": 1.5,
+    "tp": 8.0
+   },
+   "R_passato": 0.33,
+   "n": 27,
+   "somma_R_A": -5.01,
+   "somma_R_B": -5.76
+  },
+  {
+   "anno": 2025,
+   "scelta": {
+    "tf": "H1",
+    "swing": 20,
+    "impulso": 1.0,
+    "zona": 1.0,
+    "filtro": "REGIME",
+    "lati": "SOLO_BUY",
+    "sl": 1.0,
+    "tp": 8.0
+   },
+   "R_passato": 1.17,
+   "n": 30,
+   "somma_R_A": 39.26,
+   "somma_R_B": 38.85
+  },
+  {
+   "anno": 2026,
+   "scelta": {
+    "tf": "H1",
+    "swing": 20,
+    "impulso": 1.5,
+    "zona": 0.5,
+    "filtro": "SMA50",
+    "lati": "SOLO_BUY",
+    "sl": 1.0,
+    "tp": 8.0
+   },
+   "R_passato": 1.225,
+   "n": 0,
+   "somma_R_A": 0.0,
+   "somma_R_B": 0.0
+  }
+ ]
+}

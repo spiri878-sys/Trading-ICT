@@ -1,0 +1,104 @@
+[
+ {
+  "config": [
+   "H1",
+   5,
+   1.5,
+   0.5,
+   "REGIME",
+   "SOLO_BUY",
+   1.0,
+   8.0
+  ],
+  "trade": 335,
+  "R_bot": 0.414,
+  "R_casuale_media": 0.214,
+  "R_casuale_p95": 0.459,
+  "p_valore": 0.075
+ },
+ {
+  "config": [
+   "H1",
+   5,
+   1.5,
+   1.0,
+   "REGIME",
+   "SOLO_BUY",
+   1.0,
+   8.0
+  ],
+  "trade": 385,
+  "R_bot": 0.547,
+  "R_casuale_media": 0.192,
+  "R_casuale_p95": 0.401,
+  "p_valore": 0.0
+ },
+ {
+  "config": [
+   "M15",
+   20,
+   2.5,
+   0.5,
+   "REGIME",
+   "ENTRAMBI",
+   1.0,
+   8.0
+  ],
+  "trade": 438,
+  "R_bot": 0.187,
+  "R_casuale_media": 0.012,
+  "R_casuale_p95": 0.266,
+  "p_valore": 0.095
+ },
+ {
+  "config": [
+   "H1",
+   20,
+   1.0,
+   1.0,
+   "REGIME",
+   "SOLO_BUY",
+   1.0,
+   8.0
+  ],
+  "trade": 284,
+  "R_bot": 0.592,
+  "R_casuale_media": 0.218,
+  "R_casuale_p95": 0.486,
+  "p_valore": 0.015
+ },
+ {
+  "config": [
+   "M15",
+   20,
+   2.5,
+   1.0,
+   "NESSUNO",
+   "SOLO_BUY",
+   1.0,
+   8.0
+  ],
+  "trade": 472,
+  "R_bot": 0.151,
+  "R_casuale_media": -0.025,
+  "R_casuale_p95": 0.22,
+  "p_valore": 0.095
+ },
+ {
+  "config": [
+   "H1",
+   10,
+   1.5,
+   0.5,
+   "SMA50",
+   "ENTRAMBI",
+   1.5,
+   8.0
+  ],
+  "trade": 920,
+  "R_bot": 0.043,
+  "R_casuale_media": 0.055,
+  "R_casuale_p95": 0.168,
+  "p_valore": 0.59
+ }
+]
