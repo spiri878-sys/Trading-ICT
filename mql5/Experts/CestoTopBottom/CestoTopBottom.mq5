@@ -1,5 +1,6 @@
 //+------------------------------------------------------------------+
 //|                                               CestoTopBottom.mq5 |
+//| Valori predefiniti = set per conto 5.000 USC con hedging (fase 28)|
 //| Cesto martingala a 5 strategie, scritto da zero per il progetto. |
 //| Stessi NOMI di input di "TopBottom Martingale Basket" (stesse    |
 //| impostazioni di cesto/griglia/lotti/trailing): il file .set      |
@@ -42,7 +43,7 @@
 //| HEDGING.                                                         |
 //+------------------------------------------------------------------+
 #property copyright "Progetto Trading-ICT - uso personale"
-#property version   "1.00"
+#property version   "1.10"
 
 #include <Trade\Trade.mqh>
 #include <Trade\PositionInfo.mqh>
@@ -59,7 +60,7 @@ input double InpMaxBasketDrawdownPercent = 500.0;  // Chiudi il cesto se la perd
 input bool   InpHideSLTP_FromBroker      = true;   // TP nascosto al broker (false = TP del cesto sulle posizioni)
 input bool   InpShowDashboard            = true;   // Pannello sul grafico
 input double InpLotPerBalance           = 0;      // Lotto che cresce: lotto base ogni X di saldo (0 = fisso)
-input int    InpHedgeLevel              = 0;      // Hedging: al livello N copre tutto il cesto (0 = spento)
+input int    InpHedgeLevel              = 5;      // Hedging: al livello N copre tutto il cesto (0 = spento)
 input double InpHedgeReleasePoints      = 500;    // Toglie la copertura quando il prezzo rimbalza di tanti punti
 
 input group "===== Broker Digit Detection ====="
@@ -73,7 +74,7 @@ input bool   InpTimeBlockNewEntries      = true;   // Fuori orario: niente cesti
 input bool   InpTimeBlockReinforcement   = false;  // Fuori orario: niente rinforzi
 
 input group "===== Strategy Selection ====="
-input string InpActiveStrategies         = "1,2,3,4,5";
+input string InpActiveStrategies         = "2";
 
 input group "===== Segnali (parametri delle mie entrate) ====="
 input int    InpRsiPeriod   = 14;   // S2 periodo RSI
@@ -100,22 +101,22 @@ input double InpCalmATR     = 6.0;       // strappo = escursione di quelle barre
 input group "===== Strategy 1 ====="
 input ENUM_TIMEFRAMES InpS1_Timeframe        = PERIOD_M1; // S1 timeframe dei segnali
 input double InpS1_Lot                       = 0.01;  // S1 lotto iniziale
-input double InpS1_Multiplier                = 0.01;  // S1 moltiplicatore (LotMode 0: x, LotMode 1: +)
-input int    InpS1_LotMode                   = 1;     // S1 0 = moltiplica, 1 = somma
+input double InpS1_Multiplier                = 1.3;  // S1 moltiplicatore (LotMode 0: x, LotMode 1: +)
+input int    InpS1_LotMode                   = 0;     // S1 0 = moltiplica, 1 = somma
 input string InpS1_CustomLotList             = "";    // S1 lista lotti (es. 0.01,0.02,0.03)
 input bool   InpS1_CustomListMultiplyLast    = false; // S1 finita la lista: moltiplica l'ultimo
 input double InpS1_CustomListMultiplier      = 1.5;   // S1 moltiplicatore dopo la lista
 input double InpS1_MaxLot                    = 0.0;   // S1 lotto massimo (0 = nessuno)
-input int    InpS1_MaxTrades                 = 10;    // S1 livelli massimi (0 = nessun limite)
+input int    InpS1_MaxTrades                 = 50;    // S1 livelli massimi (0 = nessun limite)
 input int    InpS1_GridMethod                = 0;     // S1 distanza: 0 fissa, 1 ATR, 2 lista
-input double InpS1_FixedDistPoints           = 300.0; // S1 distanza fissa (punti)
-input double InpS1_FixedDistMultiplier       = 1.1;   // S1 crescita della distanza a ogni livello
+input double InpS1_FixedDistPoints           = 800.0; // S1 distanza fissa (punti)
+input double InpS1_FixedDistMultiplier       = 1.2;   // S1 crescita della distanza a ogni livello
 input string InpS1_CustomDistList            = "";    // S1 lista distanze (punti)
 input ENUM_TIMEFRAMES InpS1_ATRTimeframe     = PERIOD_M1; // S1 timeframe ATR
 input int    InpS1_ATRPeriod                 = 14;    // S1 periodo ATR
 input double InpS1_ATRMultiplier             = 1.0;   // S1 distanza = ATR x
-input double InpS1_BasketTPPips              = 200.0; // S1 TP del cesto oltre il prezzo medio
-input bool   InpS1_UseTrailing               = true;  // S1 trailing del cesto
+input double InpS1_BasketTPPips              = 100.0; // S1 TP del cesto oltre il prezzo medio
+input bool   InpS1_UseTrailing               = false;  // S1 trailing del cesto
 input int    InpS1_TrailMethod               = 1;     // S1 0 classico, 1 a gradini, 2 % del profitto, 3 ATR
 input double InpS1_TrailStartPips            = 100.0; // S1 trailing da (oltre il medio)
 input double InpS1_TrailStepPips             = 50.0;  // S1 passo/distanza del trailing
@@ -124,22 +125,22 @@ input double InpS1_TrailATRMultiplier        = 1.0;   // S1 distanza = ATR x (me
 input group "===== Strategy 2 ====="
 input ENUM_TIMEFRAMES InpS2_Timeframe        = PERIOD_M1; // S2 timeframe dei segnali
 input double InpS2_Lot                       = 0.01;  // S2 lotto iniziale
-input double InpS2_Multiplier                = 1.5;   // S2 moltiplicatore (LotMode 0: x, LotMode 1: +)
+input double InpS2_Multiplier                = 1.3;   // S2 moltiplicatore (LotMode 0: x, LotMode 1: +)
 input int    InpS2_LotMode                   = 0;     // S2 0 = moltiplica, 1 = somma
 input string InpS2_CustomLotList             = "";    // S2 lista lotti (es. 0.01,0.02,0.03)
 input bool   InpS2_CustomListMultiplyLast    = false; // S2 finita la lista: moltiplica l'ultimo
 input double InpS2_CustomListMultiplier      = 1.5;   // S2 moltiplicatore dopo la lista
 input double InpS2_MaxLot                    = 0.0;   // S2 lotto massimo (0 = nessuno)
-input int    InpS2_MaxTrades                 = 20;    // S2 livelli massimi (0 = nessun limite)
+input int    InpS2_MaxTrades                 = 50;    // S2 livelli massimi (0 = nessun limite)
 input int    InpS2_GridMethod                = 0;     // S2 distanza: 0 fissa, 1 ATR, 2 lista
-input double InpS2_FixedDistPoints           = 300.0; // S2 distanza fissa (punti)
-input double InpS2_FixedDistMultiplier       = 1.1;   // S2 crescita della distanza a ogni livello
+input double InpS2_FixedDistPoints           = 800.0; // S2 distanza fissa (punti)
+input double InpS2_FixedDistMultiplier       = 1.2;   // S2 crescita della distanza a ogni livello
 input string InpS2_CustomDistList            = "";    // S2 lista distanze (punti)
 input ENUM_TIMEFRAMES InpS2_ATRTimeframe     = PERIOD_M1; // S2 timeframe ATR
 input int    InpS2_ATRPeriod                 = 14;    // S2 periodo ATR
 input double InpS2_ATRMultiplier             = 1.0;   // S2 distanza = ATR x
-input double InpS2_BasketTPPips              = 200.0; // S2 TP del cesto oltre il prezzo medio
-input bool   InpS2_UseTrailing               = true;  // S2 trailing del cesto
+input double InpS2_BasketTPPips              = 100.0; // S2 TP del cesto oltre il prezzo medio
+input bool   InpS2_UseTrailing               = false;  // S2 trailing del cesto
 input int    InpS2_TrailMethod               = 1;     // S2 0 classico, 1 a gradini, 2 % del profitto, 3 ATR
 input double InpS2_TrailStartPips            = 100.0; // S2 trailing da (oltre il medio)
 input double InpS2_TrailStepPips             = 50.0;  // S2 passo/distanza del trailing
@@ -148,22 +149,22 @@ input double InpS2_TrailATRMultiplier        = 1.0;   // S2 distanza = ATR x (me
 input group "===== Strategy 3 ====="
 input ENUM_TIMEFRAMES InpS3_Timeframe        = PERIOD_M1; // S3 timeframe dei segnali
 input double InpS3_Lot                       = 0.01;  // S3 lotto iniziale
-input double InpS3_Multiplier                = 1.5;   // S3 moltiplicatore (LotMode 0: x, LotMode 1: +)
+input double InpS3_Multiplier                = 1.3;   // S3 moltiplicatore (LotMode 0: x, LotMode 1: +)
 input int    InpS3_LotMode                   = 0;     // S3 0 = moltiplica, 1 = somma
 input string InpS3_CustomLotList             = "";    // S3 lista lotti (es. 0.01,0.02,0.03)
 input bool   InpS3_CustomListMultiplyLast    = false; // S3 finita la lista: moltiplica l'ultimo
 input double InpS3_CustomListMultiplier      = 1.5;   // S3 moltiplicatore dopo la lista
 input double InpS3_MaxLot                    = 0.0;   // S3 lotto massimo (0 = nessuno)
-input int    InpS3_MaxTrades                 = 20;    // S3 livelli massimi (0 = nessun limite)
+input int    InpS3_MaxTrades                 = 50;    // S3 livelli massimi (0 = nessun limite)
 input int    InpS3_GridMethod                = 0;     // S3 distanza: 0 fissa, 1 ATR, 2 lista
-input double InpS3_FixedDistPoints           = 300.0; // S3 distanza fissa (punti)
-input double InpS3_FixedDistMultiplier       = 1.1;   // S3 crescita della distanza a ogni livello
+input double InpS3_FixedDistPoints           = 800.0; // S3 distanza fissa (punti)
+input double InpS3_FixedDistMultiplier       = 1.2;   // S3 crescita della distanza a ogni livello
 input string InpS3_CustomDistList            = "";    // S3 lista distanze (punti)
 input ENUM_TIMEFRAMES InpS3_ATRTimeframe     = PERIOD_M1; // S3 timeframe ATR
 input int    InpS3_ATRPeriod                 = 14;    // S3 periodo ATR
 input double InpS3_ATRMultiplier             = 1.0;   // S3 distanza = ATR x
-input double InpS3_BasketTPPips              = 200.0; // S3 TP del cesto oltre il prezzo medio
-input bool   InpS3_UseTrailing               = true;  // S3 trailing del cesto
+input double InpS3_BasketTPPips              = 100.0; // S3 TP del cesto oltre il prezzo medio
+input bool   InpS3_UseTrailing               = false;  // S3 trailing del cesto
 input int    InpS3_TrailMethod               = 1;     // S3 0 classico, 1 a gradini, 2 % del profitto, 3 ATR
 input double InpS3_TrailStartPips            = 100.0; // S3 trailing da (oltre il medio)
 input double InpS3_TrailStepPips             = 50.0;  // S3 passo/distanza del trailing
@@ -172,22 +173,22 @@ input double InpS3_TrailATRMultiplier        = 1.0;   // S3 distanza = ATR x (me
 input group "===== Strategy 4 ====="
 input ENUM_TIMEFRAMES InpS4_Timeframe        = PERIOD_M1; // S4 timeframe dei segnali
 input double InpS4_Lot                       = 0.01;  // S4 lotto iniziale
-input double InpS4_Multiplier                = 1.5;   // S4 moltiplicatore (LotMode 0: x, LotMode 1: +)
+input double InpS4_Multiplier                = 1.3;   // S4 moltiplicatore (LotMode 0: x, LotMode 1: +)
 input int    InpS4_LotMode                   = 0;     // S4 0 = moltiplica, 1 = somma
 input string InpS4_CustomLotList             = "";    // S4 lista lotti (es. 0.01,0.02,0.03)
 input bool   InpS4_CustomListMultiplyLast    = false; // S4 finita la lista: moltiplica l'ultimo
 input double InpS4_CustomListMultiplier      = 1.5;   // S4 moltiplicatore dopo la lista
 input double InpS4_MaxLot                    = 0.0;   // S4 lotto massimo (0 = nessuno)
-input int    InpS4_MaxTrades                 = 0;     // S4 livelli massimi (0 = nessun limite)
+input int    InpS4_MaxTrades                 = 50;     // S4 livelli massimi (0 = nessun limite)
 input int    InpS4_GridMethod                = 0;     // S4 distanza: 0 fissa, 1 ATR, 2 lista
-input double InpS4_FixedDistPoints           = 300.0; // S4 distanza fissa (punti)
-input double InpS4_FixedDistMultiplier       = 1.1;   // S4 crescita della distanza a ogni livello
+input double InpS4_FixedDistPoints           = 800.0; // S4 distanza fissa (punti)
+input double InpS4_FixedDistMultiplier       = 1.2;   // S4 crescita della distanza a ogni livello
 input string InpS4_CustomDistList            = "";    // S4 lista distanze (punti)
 input ENUM_TIMEFRAMES InpS4_ATRTimeframe     = PERIOD_M1; // S4 timeframe ATR
 input int    InpS4_ATRPeriod                 = 14;    // S4 periodo ATR
 input double InpS4_ATRMultiplier             = 1.0;   // S4 distanza = ATR x
-input double InpS4_BasketTPPips              = 200.0; // S4 TP del cesto oltre il prezzo medio
-input bool   InpS4_UseTrailing               = true;  // S4 trailing del cesto
+input double InpS4_BasketTPPips              = 100.0; // S4 TP del cesto oltre il prezzo medio
+input bool   InpS4_UseTrailing               = false;  // S4 trailing del cesto
 input int    InpS4_TrailMethod               = 1;     // S4 0 classico, 1 a gradini, 2 % del profitto, 3 ATR
 input double InpS4_TrailStartPips            = 100.0; // S4 trailing da (oltre il medio)
 input double InpS4_TrailStepPips             = 50.0;  // S4 passo/distanza del trailing
@@ -196,22 +197,22 @@ input double InpS4_TrailATRMultiplier        = 1.0;   // S4 distanza = ATR x (me
 input group "===== Strategy 5 ====="
 input ENUM_TIMEFRAMES InpS5_Timeframe        = PERIOD_M1; // S5 timeframe dei segnali
 input double InpS5_Lot                       = 0.01;  // S5 lotto iniziale
-input double InpS5_Multiplier                = 1.5;   // S5 moltiplicatore (LotMode 0: x, LotMode 1: +)
+input double InpS5_Multiplier                = 1.3;   // S5 moltiplicatore (LotMode 0: x, LotMode 1: +)
 input int    InpS5_LotMode                   = 0;     // S5 0 = moltiplica, 1 = somma
 input string InpS5_CustomLotList             = "";    // S5 lista lotti (es. 0.01,0.02,0.03)
 input bool   InpS5_CustomListMultiplyLast    = false; // S5 finita la lista: moltiplica l'ultimo
 input double InpS5_CustomListMultiplier      = 1.5;   // S5 moltiplicatore dopo la lista
 input double InpS5_MaxLot                    = 0.0;   // S5 lotto massimo (0 = nessuno)
-input int    InpS5_MaxTrades                 = 20;    // S5 livelli massimi (0 = nessun limite)
+input int    InpS5_MaxTrades                 = 50;    // S5 livelli massimi (0 = nessun limite)
 input int    InpS5_GridMethod                = 0;     // S5 distanza: 0 fissa, 1 ATR, 2 lista
-input double InpS5_FixedDistPoints           = 300.0; // S5 distanza fissa (punti)
-input double InpS5_FixedDistMultiplier       = 1.1;   // S5 crescita della distanza a ogni livello
+input double InpS5_FixedDistPoints           = 800.0; // S5 distanza fissa (punti)
+input double InpS5_FixedDistMultiplier       = 1.2;   // S5 crescita della distanza a ogni livello
 input string InpS5_CustomDistList            = "";    // S5 lista distanze (punti)
 input ENUM_TIMEFRAMES InpS5_ATRTimeframe     = PERIOD_M1; // S5 timeframe ATR
 input int    InpS5_ATRPeriod                 = 14;    // S5 periodo ATR
 input double InpS5_ATRMultiplier             = 1.0;   // S5 distanza = ATR x
-input double InpS5_BasketTPPips              = 200.0; // S5 TP del cesto oltre il prezzo medio
-input bool   InpS5_UseTrailing               = true;  // S5 trailing del cesto
+input double InpS5_BasketTPPips              = 100.0; // S5 TP del cesto oltre il prezzo medio
+input bool   InpS5_UseTrailing               = false;  // S5 trailing del cesto
 input int    InpS5_TrailMethod               = 1;     // S5 0 classico, 1 a gradini, 2 % del profitto, 3 ATR
 input double InpS5_TrailStartPips            = 100.0; // S5 trailing da (oltre il medio)
 input double InpS5_TrailStepPips             = 50.0;  // S5 passo/distanza del trailing
