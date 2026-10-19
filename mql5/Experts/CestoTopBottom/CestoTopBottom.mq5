@@ -26,6 +26,8 @@
 //| 10 su simboli a 3/5 decimali, 1 sugli altri, oro Axi = 0,01 $).  |
 //| "Pips" del TP/trailing = stessa unita' dei punti.                |
 //| MaxTrades = 0 -> nessun limite di livelli.                       |
+//| InpEntryMode 1 (continuo HFT): ogni cesto chiuso si riapre       |
+//| subito, sul lato scelto dall'entrata intelligente.               |
 //| Entrata intelligente (InpSmartEntry): il primo ordine del cesto  |
 //| solo dal lato della EMA200 H1 e mai dopo uno strappo M1; i cesti |
 //| aperti si gestiscono e rinforzano sempre (fase 25).              |
@@ -78,6 +80,7 @@ input double InpStochHigh   = 80;   // S4 zona alta
 input int    InpS5Lookback  = 20;   // S5 barre per il nuovo minimo/massimo
 
 input group "===== Entrata intelligente (solo il PRIMO ordine del cesto) ====="
+input int    InpEntryMode   = 1;         // 0 = segnali delle 5 strategie, 1 = continuo HFT (rientra subito)
 input bool   InpSmartEntry  = true;      // BUY solo sopra la tendenza, SELL solo sotto, mai dopo uno strappo
 input ENUM_TIMEFRAMES InpTrendTF = PERIOD_H1; // timeframe della tendenza
 input int    InpTrendEMA    = 200;       // EMA della tendenza
@@ -577,6 +580,7 @@ void OnTick()
       int sig = 0;
       datetime t = iTime(_Symbol, cfg[i].tf, 0);
       if(t != cfg[i].lastBar && t > 0) { cfg[i].lastBar = t; sig = Signal(i); }
+      int want = InpEntryMode == 1 ? 2 : sig;          // continuo: un cesto chiuso si riapre subito
 
       for(int side = 0; side < 2; side++)
       {
@@ -587,7 +591,7 @@ void OnTick()
          if(b.n == 0)
          {
             trOn[i][side] = false;
-            if(sig == dir && newOk && (smart == 2 || smart == dir)) Open(i, side, LotFor(i, 0), "L1");
+            if((want == dir || want == 2) && newOk && (smart == 2 || smart == dir)) Open(i, side, LotFor(i, 0), "L1");
             continue;
          }
          if(ManageExit(i, side, b)) { trOn[i][side] = false; continue; }

@@ -17,7 +17,7 @@ D, GROW, MULT, NMAX, TP, BAL0 = 2.0, 1.1, 1.5, 50, 2.0, 100000.0
 
 
 @numba.njit(cache=True)
-def sim(op, hi, lo, cl, sp, buy, sell, bal0):
+def sim(op, hi, lo, cl, sp, buy, sell, bal0, D=D, GROW=GROW, TP=TP):
     bal = bal0
     peak = bal0
     mdd = 0.0
