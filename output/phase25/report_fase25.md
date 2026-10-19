@@ -24,3 +24,14 @@ distanza 1,5/2/3 $, crescita della distanza x1,1/1,2/1,3, TP 1/2/3 $, lotto x1,5
 - Scelto sugli stessi dati: va confermato nel tester con tick reali. Trailing non simulato (nel set è spento).
 Set: `mql5/Presets/CestoTopBottom_HFT_consigliato.set` (solo strategia 2: 5 strategie insieme = 5 cesti uguali = 5x
 il rischio).
+
+## Tante entrate senza saltare — `griglia_tante_entrate_500k.csv`
+Ordini al mese (ogni livello conta), mese per mese da capo a 500.000; "calo max" = peggior mese.
+| set | ordini/mese | cesti/mese | mesi saltati | guadagno medio | calo max |
+|---|---|---|---|---|---|
+| set utente a caso (2 $ x1,1 TP 2) | ~12.600 (si ferma quando salta) | ~4.900 | 5/10 | +44% | 100% |
+| HFT a manetta: BUY+SELL dopo calma, 1 $ x1,25, TP 1 $ | ~21.400 | ~8.000 | 0/10 | +14,5% | 96% |
+| HFT equilibrato: lato tendenza, 1 $ x1,25, TP 2 $ | ~8.100 | ~2.500 | 0/10 | +14,8% | 60% |
+| precedente consigliato (1,5 $ x1,2 TP 3 $) | ~5.300 | ~1.650 | 0/10 | +16,5% | 87% |
+Il "calo medio 25%" scritto sopra era la media: il peggior mese del set precedente è arrivato all'87%.
+Set: `mql5/Presets/CestoTopBottom_HFT_manetta.set`, `mql5/Presets/CestoTopBottom_HFT_equilibrato.set`.

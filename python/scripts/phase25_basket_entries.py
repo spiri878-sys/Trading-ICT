@@ -23,6 +23,7 @@ def sim(op, hi, lo, cl, sp, buy, sell, bal0, D=D, GROW=GROW, TP=TP):
     mdd = 0.0
     maxlev = 0
     nb = 0
+    nord = 0
     dead = 0
     lots = np.zeros((2, 64)); px = np.zeros((2, 64)); n = np.zeros(2, np.int64)
     nxt = np.zeros(2); dist = np.zeros(2)
@@ -37,11 +38,11 @@ def sim(op, hi, lo, cl, sp, buy, sell, bal0, D=D, GROW=GROW, TP=TP):
                 if not sig:
                     continue
                 p0 = op[i] + (sp[i] if d > 0 else 0.0)
-                lots[s, 0] = 1.0; px[s, 0] = p0; n[s] = 1; dist[s] = D; nxt[s] = p0 - d * D
+                lots[s, 0] = 1.0; px[s, 0] = p0; n[s] = 1; nord += 1; dist[s] = D; nxt[s] = p0 - d * D
             added = False
             while n[s] < NMAX and ((d > 0 and lo[i] <= nxt[s]) or (d < 0 and hi[i] + sp[i] >= nxt[s])):
                 k = n[s]
-                lots[s, k] = lots[s, k - 1] * MULT; px[s, k] = nxt[s]; n[s] += 1; added = True
+                lots[s, k] = lots[s, k - 1] * MULT; px[s, k] = nxt[s]; n[s] += 1; added = True; nord += 1
                 dist[s] *= GROW; nxt[s] = nxt[s] - d * dist[s]
             L = 0.0; W = 0.0
             for k in range(n[s]):
@@ -66,8 +67,8 @@ def sim(op, hi, lo, cl, sp, buy, sell, bal0, D=D, GROW=GROW, TP=TP):
         if (peak - eq) / peak > mdd:
             mdd = (peak - eq) / peak
         if marg > 0 and eq < 0.5 * marg:                          # stop out
-            return eq, 1.0, maxlev, nb, 1, eqs
-    return bal, mdd, maxlev, nb, 0, eqs
+            return eq, 1.0, maxlev, nb, 1, eqs, nord
+    return bal, mdd, maxlev, nb, 0, eqs, nord
 
 
 def ema(x, span):
@@ -114,7 +115,7 @@ def main():
         for fn, (fb, fs) in filt.items():
             bb = (b.fillna(False).values & fb).astype(np.bool_)
             ss = (se.fillna(False).values & fs).astype(np.bool_)
-            bal, mdd, lev, nb, dead, eqs = sim(op, hi, lo, cl, sp, bb, ss, BAL0)
+            bal, mdd, lev, nb, dead, eqs, _ = sim(op, hi, lo, cl, sp, bb, ss, BAL0)
             rows.append(dict(entrata=sn, filtro=fn, saldo_finale=round(bal), profitto_pct=round((bal / BAL0 - 1) * 100, 1),
                              calo_max_pct=round(mdd * 100, 1), livello_max=lev, cesti=nb, saltato=bool(dead)))
             curves[(sn, fn)] = eqs

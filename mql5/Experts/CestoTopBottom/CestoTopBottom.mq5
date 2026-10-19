@@ -82,6 +82,7 @@ input int    InpS5Lookback  = 20;   // S5 barre per il nuovo minimo/massimo
 input group "===== Entrata intelligente (solo il PRIMO ordine del cesto) ====="
 input int    InpEntryMode   = 1;         // 0 = segnali delle 5 strategie, 1 = continuo HFT (rientra subito)
 input bool   InpSmartEntry  = true;      // BUY solo sopra la tendenza, SELL solo sotto, mai dopo uno strappo
+input bool   InpUseTrend    = true;      // true = lato della tendenza; false = BUY e SELL insieme (solo niente strappi)
 input ENUM_TIMEFRAMES InpTrendTF = PERIOD_H1; // timeframe della tendenza
 input int    InpTrendEMA    = 200;       // EMA della tendenza
 input int    InpCalmBars    = 15;        // barre M1 controllate per lo strappo
@@ -426,6 +427,7 @@ int SmartSide()
    int hi = iHighest(_Symbol, PERIOD_M1, MODE_HIGH, InpCalmBars, 1), lo = iLowest(_Symbol, PERIOD_M1, MODE_LOW, InpCalmBars, 1);
    if(hi < 0 || lo < 0) return 0;
    if(iHigh(_Symbol, PERIOD_M1, hi) - iLow(_Symbol, PERIOD_M1, lo) >= InpCalmATR * a[0]) return 0;
+   if(!InpUseTrend) return 2;
    return SymbolInfoDouble(_Symbol, SYMBOL_BID) > e[0] ? 1 : -1;
 }
 
