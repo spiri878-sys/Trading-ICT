@@ -9,3 +9,9 @@ Netto = ritirato + saldo finale - versato. File: `gestione_soldi.csv`, `gestione
   sensibile (150 e 200 con prelievi bruciano); ogni 300 EUR 0 ricariche in tutte e tre le varianti: senza prelievi
   +1.463 (saldo 1.513), con prelievi +881...+1.154.
 - Scelta: 0,01 ogni 300 EUR (InpLotPerBalance = 30000 USC), EA 1.30 e set aggiornati.
+
+## Ogni mese da 5.000 USC, set TP 0,7 $ (tick per tick)
+- Lotto di partenza 0,01: +234 +170 +257 +34 X(mag) +61 +52 +51 +52 +34 = +895 EUR; 0,02: 9 mesi bruciati (-291);
+  0,03: 10 bruciati (-500).
+- Lotto che cresce dentro il mese: 0,01 ogni 50 EUR +89 (5 bruciati), ogni 75 +84, ogni 100 +561 (3), ogni 150 +888 (1):
+  peggio o uguale al lotto fisso. Partendo da 50 EUR ogni mese il limite è ~90 EUR di media al mese.
