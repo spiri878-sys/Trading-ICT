@@ -1,0 +1,27 @@
+; XauOcoBreakout preset: conto 100 EUR (~116 $), lotto fisso 0.01, leva 1:1000, broker spread 0.09 + 0.04 $/0.01 lotti
+; = configurazione simulata in output/phase17 (nessun limite di perdita giornaliera/DD nella simulazione).
+; RISCHIO ALTO: rischio medio per trade 12-14% del conto nel 2022-26, calo massimo simulato 50-65%.
+; InpAllowRealAccount=false: PRIMA 2-3 mesi in DEMO con lo stesso broker; poi, se coerente, metterlo a true.
+InpMagic=7703001
+InpAllowRealAccount=false
+InpLogPrefix=XOB_100
+LotMode=0
+FixedLot=0.01
+RiskPercent=1.0
+RiskBase=1
+CommissionLotSide=2.0
+SlipPrice=0.02
+MaxRiskPctTrade=0
+DailyLossPct=0
+MaxDrawdownPct=0
+MaxSpreadPrice=0.3
+FridayCloseMin=1380
+Sides=0
+RangeBars=24
+Compression=1.0
+BufferAtr=0.1
+TpR=2.0
+TrailAtr=2.0
+MaxHoldM1Bars=1440
+RegimeEmaD1=50
+H4SwingK=2

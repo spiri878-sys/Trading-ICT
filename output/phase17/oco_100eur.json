@@ -1,0 +1,262 @@
+{
+ "costiA_stopmaxnessuno": {
+  "sviluppo_2018_2021": {
+   "trade": 297,
+   "finale": 540.7,
+   "dd_max_pct": 29.0,
+   "pf": 1.61,
+   "vinti_pct": 43.1,
+   "mesi_pos_pct": 51.0,
+   "rischio_medio_pct": 5.5,
+   "rischio_max_pct": 30.6,
+   "R_medio": 0.1,
+   "conto_morto": false
+  },
+  "verifica_2022_2026": {
+   "trade": 297,
+   "finale": 1222.0,
+   "dd_max_pct": 50.4,
+   "pf": 2.1,
+   "vinti_pct": 43.4,
+   "mesi_pos_pct": 66.7,
+   "rischio_medio_pct": 12.2,
+   "rischio_max_pct": 40.2,
+   "R_medio": 0.089,
+   "conto_morto": false
+  }
+ },
+ "costiA_stopmax30.0": {
+  "sviluppo_2018_2021": {
+   "trade": 286,
+   "finale": 513.6,
+   "dd_max_pct": 29.0,
+   "pf": 1.62,
+   "vinti_pct": 42.3,
+   "mesi_pos_pct": 51.0,
+   "rischio_medio_pct": 5.1,
+   "rischio_max_pct": 12.1,
+   "R_medio": 0.102,
+   "conto_morto": false
+  },
+  "verifica_2022_2026": {
+   "trade": 243,
+   "finale": 554.1,
+   "dd_max_pct": 52.6,
+   "pf": 1.63,
+   "vinti_pct": 42.0,
+   "mesi_pos_pct": 62.8,
+   "rischio_medio_pct": 13.9,
+   "rischio_max_pct": 41.7,
+   "R_medio": 0.061,
+   "conto_morto": false
+  }
+ },
+ "costiA_stopmax20.0": {
+  "sviluppo_2018_2021": {
+   "trade": 245,
+   "finale": 435.6,
+   "dd_max_pct": 29.0,
+   "pf": 1.63,
+   "vinti_pct": 41.2,
+   "mesi_pos_pct": 55.1,
+   "rischio_medio_pct": 5.2,
+   "rischio_max_pct": 10.8,
+   "R_medio": 0.107,
+   "conto_morto": false
+  },
+  "verifica_2022_2026": {
+   "trade": 91,
+   "finale": 0.7,
+   "dd_max_pct": 99.5,
+   "pf": 0.61,
+   "vinti_pct": 29.7,
+   "mesi_pos_pct": 27.8,
+   "rischio_medio_pct": 26.6,
+   "rischio_max_pct": 166.1,
+   "R_medio": -0.095,
+   "conto_morto": false
+  }
+ },
+ "costiA_stopmax15.0": {
+  "sviluppo_2018_2021": {
+   "trade": 193,
+   "finale": 260.6,
+   "dd_max_pct": 29.0,
+   "pf": 1.4,
+   "vinti_pct": 39.9,
+   "mesi_pos_pct": 50.0,
+   "rischio_medio_pct": 5.9,
+   "rischio_max_pct": 10.8,
+   "R_medio": 0.082,
+   "conto_morto": false
+  },
+  "verifica_2022_2026": {
+   "trade": 81,
+   "finale": 27.7,
+   "dd_max_pct": 98.5,
+   "pf": 0.59,
+   "vinti_pct": 28.4,
+   "mesi_pos_pct": 16.7,
+   "rischio_medio_pct": 34.4,
+   "rischio_max_pct": 315.0,
+   "R_medio": -0.093,
+   "conto_morto": false
+  }
+ },
+ "costiA_stopmax10.0": {
+  "sviluppo_2018_2021": {
+   "trade": 108,
+   "finale": 179.3,
+   "dd_max_pct": 21.9,
+   "pf": 1.4,
+   "vinti_pct": 40.7,
+   "mesi_pos_pct": 60.0,
+   "rischio_medio_pct": 4.8,
+   "rischio_max_pct": 7.9,
+   "R_medio": 0.082,
+   "conto_morto": false
+  },
+  "verifica_2022_2026": {
+   "trade": 7,
+   "finale": 97.9,
+   "dd_max_pct": 21.1,
+   "pf": 0.3,
+   "vinti_pct": 28.6,
+   "mesi_pos_pct": 0.0,
+   "rischio_medio_pct": 8.5,
+   "rischio_max_pct": 9.5,
+   "R_medio": -0.298,
+   "conto_morto": false
+  }
+ },
+ "costiB_stopmaxnessuno": {
+  "sviluppo_2018_2021": {
+   "trade": 297,
+   "finale": 489.1,
+   "dd_max_pct": 34.5,
+   "pf": 1.51,
+   "vinti_pct": 42.1,
+   "mesi_pos_pct": 51.0,
+   "rischio_medio_pct": 6.0,
+   "rischio_max_pct": 35.3,
+   "R_medio": 0.085,
+   "conto_morto": false
+  },
+  "verifica_2022_2026": {
+   "trade": 297,
+   "finale": 1166.8,
+   "dd_max_pct": 61.6,
+   "pf": 2.01,
+   "vinti_pct": 43.1,
+   "mesi_pos_pct": 64.6,
+   "rischio_medio_pct": 14.0,
+   "rischio_max_pct": 45.1,
+   "R_medio": 0.079,
+   "conto_morto": false
+  }
+ },
+ "costiB_stopmax30.0": {
+  "sviluppo_2018_2021": {
+   "trade": 286,
+   "finale": 464.0,
+   "dd_max_pct": 34.5,
+   "pf": 1.51,
+   "vinti_pct": 41.3,
+   "mesi_pos_pct": 51.0,
+   "rischio_medio_pct": 5.6,
+   "rischio_max_pct": 13.9,
+   "R_medio": 0.085,
+   "conto_morto": false
+  },
+  "verifica_2022_2026": {
+   "trade": 243,
+   "finale": 509.0,
+   "dd_max_pct": 64.6,
+   "pf": 1.54,
+   "vinti_pct": 41.6,
+   "mesi_pos_pct": 60.5,
+   "rischio_medio_pct": 16.3,
+   "rischio_max_pct": 50.7,
+   "R_medio": 0.05,
+   "conto_morto": false
+  }
+ },
+ "costiB_stopmax20.0": {
+  "sviluppo_2018_2021": {
+   "trade": 245,
+   "finale": 393.2,
+   "dd_max_pct": 34.5,
+   "pf": 1.52,
+   "vinti_pct": 40.4,
+   "mesi_pos_pct": 55.1,
+   "rischio_medio_pct": 5.7,
+   "rischio_max_pct": 10.9,
+   "R_medio": 0.089,
+   "conto_morto": false
+  },
+  "verifica_2022_2026": {
+   "trade": 89,
+   "finale": -3.3,
+   "dd_max_pct": 102.7,
+   "pf": 0.6,
+   "vinti_pct": 29.2,
+   "mesi_pos_pct": 27.8,
+   "rischio_medio_pct": 40.0,
+   "rischio_max_pct": 423.2,
+   "R_medio": -0.099,
+   "conto_morto": true
+  }
+ },
+ "costiB_stopmax15.0": {
+  "sviluppo_2018_2021": {
+   "trade": 193,
+   "finale": 226.8,
+   "dd_max_pct": 36.5,
+   "pf": 1.28,
+   "vinti_pct": 38.9,
+   "mesi_pos_pct": 50.0,
+   "rischio_medio_pct": 6.6,
+   "rischio_max_pct": 12.1,
+   "R_medio": 0.062,
+   "conto_morto": false
+  },
+  "verifica_2022_2026": {
+   "trade": 65,
+   "finale": -1.1,
+   "dd_max_pct": 103.9,
+   "pf": 0.37,
+   "vinti_pct": 27.7,
+   "mesi_pos_pct": 11.1,
+   "rischio_medio_pct": 40.5,
+   "rischio_max_pct": 371.0,
+   "R_medio": -0.149,
+   "conto_morto": true
+  }
+ },
+ "costiB_stopmax10.0": {
+  "sviluppo_2018_2021": {
+   "trade": 108,
+   "finale": 160.0,
+   "dd_max_pct": 25.2,
+   "pf": 1.26,
+   "vinti_pct": 39.8,
+   "mesi_pos_pct": 56.0,
+   "rischio_medio_pct": 5.2,
+   "rischio_max_pct": 8.0,
+   "R_medio": 0.058,
+   "conto_morto": false
+  },
+  "verifica_2022_2026": {
+   "trade": 7,
+   "finale": 96.5,
+   "dd_max_pct": 22.2,
+   "pf": 0.27,
+   "vinti_pct": 28.6,
+   "mesi_pos_pct": 0.0,
+   "rischio_medio_pct": 8.6,
+   "rischio_max_pct": 9.7,
+   "R_medio": -0.318,
+   "conto_morto": false
+  }
+ }
+}
