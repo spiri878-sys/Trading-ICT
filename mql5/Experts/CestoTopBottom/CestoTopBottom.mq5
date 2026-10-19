@@ -26,6 +26,8 @@
 //| 10 su simboli a 3/5 decimali, 1 sugli altri, oro Axi = 0,01 $).  |
 //| "Pips" del TP/trailing = stessa unita' dei punti.                |
 //| MaxTrades = 0 -> nessun limite di livelli.                       |
+//| InpLotPerBalance: lotto base x(saldo / X) per i cesti nuovi      |
+//| (fase 26: 0,01 ogni 500.000 cent).                               |
 //| InpEntryMode 1 (continuo HFT): ogni cesto chiuso si riapre       |
 //| subito, sul lato scelto dall'entrata intelligente.               |
 //| Entrata intelligente (InpSmartEntry): il primo ordine del cesto  |
@@ -52,6 +54,7 @@ input bool   InpSilentReinforcement      = true;   // Rinforzo senza nuovo segna
 input double InpMaxBasketDrawdownPercent = 500.0;  // Chiudi il cesto se la perdita aperta supera % del saldo
 input bool   InpHideSLTP_FromBroker      = true;   // TP nascosto al broker (false = TP del cesto sulle posizioni)
 input bool   InpShowDashboard            = true;   // Pannello sul grafico
+input double InpLotPerBalance           = 0;      // Lotto che cresce: lotto base ogni X di saldo (0 = fisso)
 
 input group "===== Broker Digit Detection ====="
 input int    InpDigitDetectMode          = 0;      // 0 = auto, altrimenti fattore fisso (punti x fattore)
@@ -86,7 +89,7 @@ input bool   InpUseTrend    = true;      // true = lato della tendenza; false = 
 input ENUM_TIMEFRAMES InpTrendTF = PERIOD_H1; // timeframe della tendenza
 input int    InpTrendEMA    = 200;       // EMA della tendenza
 input int    InpCalmBars    = 15;        // barre M1 controllate per lo strappo
-input double InpCalmATR     = 4.0;       // strappo = escursione di quelle barre >= ATR M1(14) x questo
+input double InpCalmATR     = 6.0;       // strappo = escursione di quelle barre >= ATR M1(14) x questo
 
 input group "===== Strategy 1 ====="
 input ENUM_TIMEFRAMES InpS1_Timeframe        = PERIOD_M1; // S1 timeframe dei segnali
@@ -234,7 +237,7 @@ struct SCfg
 struct SBasket
 {
    int    n;
-   double lots, wsum, lastPx, lastLot, profit;
+   double lots, wsum, lastPx, lastLot, firstLot, profit;
 };
 
 CTrade        trade;
@@ -433,8 +436,8 @@ int SmartSide()
 
 void Scan(long magic, SBasket &b)
 {
-   b.n = 0; b.lots = 0; b.wsum = 0; b.lastPx = 0; b.lastLot = 0; b.profit = 0;
-   datetime last = 0;
+   b.n = 0; b.lots = 0; b.wsum = 0; b.lastPx = 0; b.lastLot = 0; b.firstLot = 0; b.profit = 0;
+   datetime last = 0, first = D'3000.01.01';
    for(int k = PositionsTotal() - 1; k >= 0; k--)
    {
       if(!pos.SelectByIndex(k) || pos.Symbol() != _Symbol || pos.Magic() != magic) continue;
@@ -443,6 +446,7 @@ void Scan(long magic, SBasket &b)
       b.wsum += pos.Volume() * pos.PriceOpen();
       b.profit += pos.Profit() + pos.Swap();
       if(pos.Time() >= last) { last = pos.Time(); b.lastPx = pos.PriceOpen(); b.lastLot = pos.Volume(); }
+      if(pos.Time() < first) { first = pos.Time(); b.firstLot = pos.Volume(); }
    }
 }
 
@@ -463,7 +467,8 @@ double NormLot(double v)
 }
 
 //--- lotto del livello n (0 = primo ordine)
-double LotFor(int i, int n)
+//--- scale = quante volte il lotto base (lotto che cresce con il conto)
+double LotFor(int i, int n, double scale)
 {
    double v;
    int m = ArraySize(cfg[i].lotList);
@@ -473,8 +478,16 @@ double LotFor(int i, int n)
       v = cfg[i].lot + cfg[i].mult * n;
    else
       v = cfg[i].lot * MathPow(cfg[i].mult, n);
+   v *= scale;
    if(cfg[i].maxLot > 0) v = MathMin(v, cfg[i].maxLot);
    return NormLot(v);
+}
+
+//--- lotto base dei cesti nuovi: x1 fino a InpLotPerBalance di saldo, x2 al doppio, ... (0 = sempre x1)
+double NewScale()
+{
+   if(InpLotPerBalance <= 0) return 1.0;
+   return MathMax(1.0, MathFloor(AccountInfoDouble(ACCOUNT_BALANCE) / InpLotPerBalance));
 }
 
 double AtrNow(int i)
@@ -593,7 +606,7 @@ void OnTick()
          if(b.n == 0)
          {
             trOn[i][side] = false;
-            if((want == dir || want == 2) && newOk && (smart == 2 || smart == dir)) Open(i, side, LotFor(i, 0), "L1");
+            if((want == dir || want == 2) && newOk && (smart == 2 || smart == dir)) Open(i, side, LotFor(i, 0, NewScale()), "L1");
             continue;
          }
          if(ManageExit(i, side, b)) { trOn[i][side] = false; continue; }
@@ -604,7 +617,7 @@ void OnTick()
             double dist = DistFor(i, b.n);
             double px = side == 0 ? ask : bid;
             if(dist > 0 && (b.lastPx - px) * dir >= dist)
-               Open(i, side, LotFor(i, b.n), StringFormat("L%d", b.n + 1));
+               Open(i, side, LotFor(i, b.n, MathMax(1.0, MathRound(b.firstLot / LotFor(i, 0, 1.0)))), StringFormat("L%d", b.n + 1));
          }
          if(InpShowDashboard)
             dash += StringFormat("S%d %s: %d livelli, %.2f lotti, medio %s, %+.2f\n", i, side == 0 ? "BUY" : "SELL",
