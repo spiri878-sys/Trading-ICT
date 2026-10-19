@@ -12,4 +12,5 @@ max N livelli, chiusura a T $ oltre il prezzo medio, stop cesto S% del saldo. Ba
   con "Ogni tick basato su tick reali". Il set del file è "meno pericoloso", non "sicuro".
 
 Set dell'utente: x1,5 e 20 livelli = ultimo livello ~22 lotti, cesto ~66 lotti; 300 punti tra i livelli; stop cesto 500%
-(nessuno); SL/TP nascosti al broker; 5 strategie attive. Set proposto: output/phase24/set_basket_prudente.set.
+(nessuno); SL/TP nascosti al broker; 5 strategie attive. Set consegnato (scelta utente: strategie aggressive invariate): output/phase24/set_basket_utente_migliorato.set
+(stop cesto 30%, SL/TP visibili al broker, H24, filtro notizie spento).
