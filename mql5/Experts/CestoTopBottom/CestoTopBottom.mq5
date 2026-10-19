@@ -1,6 +1,6 @@
 //+------------------------------------------------------------------+
 //|                                               CestoTopBottom.mq5 |
-//| Valori predefiniti = set fase 32 (scelto TICK PER TICK, 5.000 USC)|
+//| Valori predefiniti = fase 37: lotto fisso 0,01, conto 20.000 USC |
 //| Cesto martingala a 5 strategie, scritto da zero per il progetto. |
 //| Stessi NOMI di input di "TopBottom Martingale Basket" (stesse    |
 //| impostazioni di cesto/griglia/lotti/trailing): il file .set      |
@@ -43,7 +43,7 @@
 //| HEDGING.                                                         |
 //+------------------------------------------------------------------+
 #property copyright "Progetto Trading-ICT - uso personale"
-#property version   "1.40"
+#property version   "1.50"
 
 #include <Trade\Trade.mqh>
 #include <Trade\PositionInfo.mqh>
@@ -59,7 +59,7 @@ input bool   InpSilentReinforcement      = true;   // Rinforzo senza nuovo segna
 input double InpMaxBasketDrawdownPercent = 500.0;  // Chiudi il cesto se la perdita aperta supera % del saldo
 input bool   InpHideSLTP_FromBroker      = true;   // TP nascosto al broker (false = TP del cesto sulle posizioni)
 input bool   InpShowDashboard            = true;   // Pannello sul grafico
-input double InpLotPerBalance           = 30000;      // Lotto che cresce: lotto base ogni X di saldo (0 = fisso)
+input double InpLotPerBalance           = 0;      // Lotto che cresce: lotto base ogni X di saldo (0 = fisso)
 input int    InpHedgeLevel              = 4;      // Hedging: al livello N copre tutto il cesto (0 = spento)
 input double InpHedgeReleasePoints      = 800;    // Toglie la copertura quando il prezzo rimbalza di tanti punti
 
