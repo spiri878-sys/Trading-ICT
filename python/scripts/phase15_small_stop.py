@@ -8,6 +8,7 @@ Ingressi (decisi sulla chiusura della barra, ingresso all'apertura della success
   R  ingresso casuale nella direzione del trend D1 (riferimento)
 Uscita: stop fisso S $, target k*S, oppure chiusura dopo 24 ore. Se stop e target nella stessa barra M1: conta lo stop.
 Costi: spread 0,30 + slippage 0,05 + commissione 0,035 = 0,385 $ a trade (scenario C1 del progetto).
+CORREZIONE 19/10: la prima versione leggeva la rottura H4 all'apertura della barra (vedeva il futuro fino a 3 ore).
 Periodi: sviluppo 2010-2015, verifica 2016-2026/01. Una configurazione vale solo se positiva in ENTRAMBI.
 
 usage: python python/scripts/phase15_small_stop.py
@@ -51,8 +52,11 @@ def signals(h1, h4, d1, rng):
     s1 = np.where((t > 0) & (h1.close > hi20), 1, np.where((t < 0) & (h1.close < lo20), -1, 0))
     out.append(("T1", s1))
     dh, dl = h4.high.rolling(20).max().shift(1), h4.low.rolling(20).min().shift(1)
-    brk = pd.Series(np.where(h4.close > dh, 1, np.where(h4.close < dl, -1, 0)), index=h4.index)
-    brk = brk.replace(0, np.nan).ffill(limit=6).reindex(h1.index, method="ffill").fillna(0).values   # rottura recente
+    # la barra H4 è etichettata con l'apertura: la rottura si conosce solo alla CHIUSURA (+4 ore). Le barre H1 sono
+    # decise alla loro chiusura (+1 ora): una H1 che chiude alle t+1 vede le H4 chiuse entro t+1.
+    brk = pd.Series(np.where(h4.close > dh, 1, np.where(h4.close < dl, -1, 0)), index=h4.index + pd.Timedelta(hours=4))
+    brk = brk.replace(0, np.nan).ffill(limit=6)
+    brk = brk.reindex(h1.index + pd.Timedelta(hours=1), method="ffill").fillna(0).values   # rottura recente
     up_bar = np.sign(h1.close - h1.open).values
     s2 = np.where((brk == t) & (t != 0) & (up_bar == -t), t, 0)
     out.append(("T2", s2))
