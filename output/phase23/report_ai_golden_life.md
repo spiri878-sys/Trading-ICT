@@ -19,3 +19,12 @@ griglia presente ma spenta con OrdersMax=1), orari 08-22 (venerdì 20), filtro n
   Se la vincita crolla verso il 50% fuori da settembre: bot adattato al passato, da non comprare.
 - Ricostruirlo: lo schema di ingresso/uscita è chiaro, ma la regola della direzione non si può ricavare da un solo mese
   (e se è adattata al passato non esiste una regola vera da copiare).
+
+## Aggiornamento 19/10: barre M1 del broker dell'utente (Axi, 02/01 -> 19/10/2026)
+- Le 69 operazioni di settembre simulate sulle barre dell'utente: 92,8% vinte (reale 89,9%): dati allineati.
+- Direzione: SEMPRE contro la media. Compra se l'ultima H1 chiusa è sotto EMA10/EMA20/SMA20, vende se sopra: 69/69.
+- Ma la stessa regola su TUTTE le ore in cui il bot poteva entrare (settembre, 08-22, 300 ore) vince solo il 45%
+  (gen-ott 2026, mese per mese: 44-57%). Il 90% viene interamente da QUALI ore sceglie.
+- Nessuna variabile visibile (distanza dalla media in ATR o z-score, RSI, corpo e ampiezza della candela, ATR)
+  separa le ore scelte da quelle scartate: le distribuzioni si sovrappongono quasi del tutto.
+- Ipotesi principale: scelte adattate ai dati di settembre (o elenco di orari memorizzato). Decisivo il report gen-ott.
