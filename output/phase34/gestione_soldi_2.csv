@@ -1,0 +1,13 @@
+lotto,prelievo,bruciato,versati,ritirati,saldo_finale,netto
+"0,01 ogni 100 EUR",mai,5,300,0,338,38
+"0,01 ogni 100 EUR",a 1000 torna a 500,5,300,0,338,38
+"0,01 ogni 100 EUR",a 500 torna a 250,5,300,250,338,288
+"0,01 ogni 150 EUR",mai,1,100,0,264,164
+"0,01 ogni 150 EUR",a 1000 torna a 500,1,100,1007,264,1171
+"0,01 ogni 150 EUR",a 500 torna a 250,0,50,1007,382,1339
+"0,01 ogni 200 EUR",mai,0,50,0,3723,3673
+"0,01 ogni 200 EUR",a 1000 torna a 500,1,100,504,264,668
+"0,01 ogni 200 EUR",a 500 torna a 250,0,50,760,296,1006
+"0,01 ogni 300 EUR",mai,0,50,0,1513,1463
+"0,01 ogni 300 EUR",a 1000 torna a 500,0,50,549,655,1154
+"0,01 ogni 300 EUR",a 500 torna a 250,0,50,501,430,881
