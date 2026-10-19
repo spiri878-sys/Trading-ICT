@@ -20,3 +20,4 @@ football/data/cache/
 football/models/
 output/phase32/largo.log
 output/phase32/fine.log
+output/phase32/_bak_*
