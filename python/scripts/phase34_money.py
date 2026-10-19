@@ -45,7 +45,7 @@ def run(bid, ask, calm, trend, month, D, G, M, T, KH, R, COMP, SOGLIA, RESTA):
     bal = DEP; deposited = DEP; withdrawn = 0.0; blown = 0; nord = 0
     lots = np.zeros((2, 80)); px = np.zeros((2, 80)); n = np.zeros(2, np.int64)
     ref = np.zeros(2); hl = np.zeros(2); hp = np.zeros(2); hx = np.zeros(2); base = np.ones(2)
-    mon_w = np.zeros(13); mon_dep = np.zeros(13)
+    mon_w = np.zeros(13); mon_dep = np.zeros(13); mon_eq = np.zeros(13)
     for i in range(bid.size):
         b = bid[i]; a = ask[i]
         flo = 0.0; marg = 0.0
@@ -86,6 +86,7 @@ def run(bid, ask, calm, trend, month, D, G, M, T, KH, R, COMP, SOGLIA, RESTA):
             flo += (pout - avg) * d * L
             marg += L * b / 1000.0
         eq = bal + flo
+        mon_eq[month[i]] = eq
         if marg > 0 and eq < 0.5 * marg:                 # bruciato: si chiude tutto e si rimettono 5.000
             blown += 1
             n[:] = 0; hl[:] = 0.0
@@ -94,7 +95,7 @@ def run(bid, ask, calm, trend, month, D, G, M, T, KH, R, COMP, SOGLIA, RESTA):
         if n[0] == 0 and n[1] == 0 and SOGLIA > 0 and bal >= SOGLIA:
             w = bal - RESTA
             withdrawn += w; mon_w[month[i]] += w; bal = RESTA
-    return bal, deposited, withdrawn, blown, nord, mon_w, mon_dep
+    return bal, deposited, withdrawn, blown, nord, mon_w, mon_dep, mon_eq
 
 
 def main():
@@ -107,7 +108,7 @@ def main():
             ((10000.0, 5000.0), (20000.0, 10000.0), (40000.0, 20000.0), (100000.0, 50000.0), (0.0, 0.0))):
         if COMP == 0 and SOGLIA in (40000.0, 100000.0):
             continue
-        bal, dep, wd, bl, no, mw, md = run(bid, ask, calm, trend, month, *p, COMP, SOGLIA, RESTA)
+        bal, dep, wd, bl, no, mw, md, me = run(bid, ask, calm, trend, month, *p, COMP, SOGLIA, RESTA)
         net = wd + bal - dep
         rows.append(dict(set=sn, lotto=("fisso 0,01" if COMP == 0 else f"0,01 ogni {COMP / 100:.0f} EUR"),
                          prelievo=("mai" if SOGLIA == 0 else f"a {SOGLIA / 100:.0f} EUR torna a {RESTA / 100:.0f}"),
