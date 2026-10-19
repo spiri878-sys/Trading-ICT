@@ -1,0 +1,158 @@
+{
+ "ea_oro_invariato_costiA": {
+  "trade": 270,
+  "vinti": 0.163,
+  "R_medio": 0.141,
+  "R_per_anno": {
+   "2018": -4.4,
+   "2019": 26.1,
+   "2020": -1.1,
+   "2021": 1.4,
+   "2022": -16.0,
+   "2023": 13.8,
+   "2024": 24.4,
+   "2025": 2.5,
+   "2026": -8.6
+  },
+  "casuale_media": 0.138,
+  "casuale_p95": 0.376,
+  "p_valore": 0.46,
+  "serie_perse_max": 17,
+  "stop_mediano_2025_usd": 539.0
+ },
+ "ea_oro_invariato_costiB": {
+  "trade": 270,
+  "vinti": 0.163,
+  "R_medio": 0.037,
+  "R_per_anno": {
+   "2018": -5.1,
+   "2019": 22.6,
+   "2020": -6.1,
+   "2021": -0.9,
+   "2022": -17.4,
+   "2023": 9.6,
+   "2024": 19.7,
+   "2025": -1.3,
+   "2026": -10.9
+  },
+  "casuale_media": 0.041,
+  "casuale_p95": 0.282,
+  "p_valore": 0.51,
+  "serie_perse_max": 17,
+  "stop_mediano_2025_usd": 539.0
+ },
+ "ricerca": {
+  "configurazioni": 2871,
+  "positive_2018_21_e_2022_26_A": 400,
+  "catena": {
+   "trade": 131,
+   "R_medio_A": 0.1019,
+   "R_medio_B": -0.0065,
+   "anni_pos_A": "3/6"
+  },
+  "per_anno": [
+   {
+    "anno": 2021,
+    "scelta": {
+     "tf": "H1",
+     "swing": 5,
+     "impulso": 2.5,
+     "zona": 0.3,
+     "filtro": "SMA50",
+     "lati": "SOLO_BUY",
+     "sl": 1.5,
+     "tp": 8.0
+    },
+    "R_passato": 1.119,
+    "n": 15,
+    "somma_R_A": 13.15,
+    "somma_R_B": 12.55
+   },
+   {
+    "anno": 2022,
+    "scelta": {
+     "tf": "H1",
+     "swing": 5,
+     "impulso": 2.5,
+     "zona": 0.3,
+     "filtro": "NESSUNO",
+     "lati": "SOLO_BUY",
+     "sl": 1.5,
+     "tp": 8.0
+    },
+    "R_passato": 1.148,
+    "n": 17,
+    "somma_R_A": -1.63,
+    "somma_R_B": -2.59
+   },
+   {
+    "anno": 2023,
+    "scelta": {
+     "tf": "H1",
+     "swing": 20,
+     "impulso": 1.0,
+     "zona": 0.5,
+     "filtro": "REGIME",
+     "lati": "SOLO_BUY",
+     "sl": 1.0,
+     "tp": 8.0
+    },
+    "R_passato": 0.497,
+    "n": 27,
+    "somma_R_A": -6.62,
+    "somma_R_B": -9.76
+   },
+   {
+    "anno": 2024,
+    "scelta": {
+     "tf": "M15",
+     "swing": 10,
+     "impulso": 2.5,
+     "zona": 0.3,
+     "filtro": "REGIME",
+     "lati": "SOLO_BUY",
+     "sl": 1.5,
+     "tp": 8.0
+    },
+    "R_passato": 0.38,
+    "n": 25,
+    "somma_R_A": 3.75,
+    "somma_R_B": -0.32
+   },
+   {
+    "anno": 2025,
+    "scelta": {
+     "tf": "H1",
+     "swing": 20,
+     "impulso": 1.0,
+     "zona": 1.0,
+     "filtro": "REGIME",
+     "lati": "SOLO_BUY",
+     "sl": 2.5,
+     "tp": 8.0
+    },
+    "R_passato": 0.469,
+    "n": 19,
+    "somma_R_A": 8.8,
+    "somma_R_B": 7.72
+   },
+   {
+    "anno": 2026,
+    "scelta": {
+     "tf": "H1",
+     "swing": 5,
+     "impulso": 1.0,
+     "zona": 1.0,
+     "filtro": "REGIME",
+     "lati": "SOLO_BUY",
+     "sl": 1.0,
+     "tp": 8.0
+    },
+    "R_passato": 0.677,
+    "n": 28,
+    "somma_R_A": -4.1,
+    "somma_R_B": -8.45
+   }
+  ]
+ }
+}
