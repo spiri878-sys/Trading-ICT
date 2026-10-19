@@ -1,0 +1,250 @@
+{
+ "configurazioni": 1296,
+ "positive_entrambi_periodi_A": 13,
+ "catena_walkforward": {
+  "trade": 2050,
+  "R_medio_A": -0.0086,
+  "R_medio_B": -0.0521,
+  "anni_positivi_A": "8/14"
+ },
+ "per_anno": [
+  {
+   "anno": 2013,
+   "scelta": {
+    "tf": "M15",
+    "k": 2,
+    "valid": 4,
+    "R": 3.0,
+    "mtf": "NESSUNO",
+    "sess": "LON_NY",
+    "atr": "NO"
+   },
+   "R_passato": 0.132,
+   "n": 427,
+   "R_medio_A": 0.0489,
+   "somma_R_A": 20.88,
+   "somma_R_B": 1.95
+  },
+  {
+   "anno": 2014,
+   "scelta": {
+    "tf": "M15",
+    "k": 5,
+    "valid": 2,
+    "R": 3.0,
+    "mtf": "TREND",
+    "sess": "NY",
+    "atr": "NO"
+   },
+   "R_passato": 0.239,
+   "n": 84,
+   "R_medio_A": 0.5514,
+   "somma_R_A": 46.32,
+   "somma_R_B": 42.03
+  },
+  {
+   "anno": 2015,
+   "scelta": {
+    "tf": "M15",
+    "k": 5,
+    "valid": 2,
+    "R": 3.0,
+    "mtf": "TREND",
+    "sess": "NY",
+    "atr": "NO"
+   },
+   "R_passato": 0.348,
+   "n": 64,
+   "R_medio_A": -0.0778,
+   "somma_R_A": -4.98,
+   "somma_R_B": -8.02
+  },
+  {
+   "anno": 2016,
+   "scelta": {
+    "tf": "M15",
+    "k": 5,
+    "valid": 2,
+    "R": 3.0,
+    "mtf": "TREND",
+    "sess": "NY",
+    "atr": "NO"
+   },
+   "R_passato": 0.279,
+   "n": 79,
+   "R_medio_A": 0.1302,
+   "somma_R_A": 10.29,
+   "somma_R_B": 6.61
+  },
+  {
+   "anno": 2017,
+   "scelta": {
+    "tf": "M15",
+    "k": 5,
+    "valid": 2,
+    "R": 3.0,
+    "mtf": "TREND",
+    "sess": "NY",
+    "atr": "ATR"
+   },
+   "R_passato": 0.231,
+   "n": 80,
+   "R_medio_A": 0.1402,
+   "somma_R_A": 11.22,
+   "somma_R_B": 6.5
+  },
+  {
+   "anno": 2018,
+   "scelta": {
+    "tf": "M15",
+    "k": 3,
+    "valid": 2,
+    "R": 3.0,
+    "mtf": "TREND",
+    "sess": "LON_NY",
+    "atr": "NO"
+   },
+   "R_passato": 0.12,
+   "n": 206,
+   "R_medio_A": -0.2554,
+   "somma_R_A": -52.61,
+   "somma_R_B": -68.89
+  },
+  {
+   "anno": 2019,
+   "scelta": {
+    "tf": "M15",
+    "k": 5,
+    "valid": 2,
+    "R": 3.0,
+    "mtf": "CONTRO",
+    "sess": "NY",
+    "atr": "NO"
+   },
+   "R_passato": 0.04,
+   "n": 109,
+   "R_medio_A": 0.025,
+   "somma_R_A": 2.72,
+   "somma_R_B": -3.18
+  },
+  {
+   "anno": 2020,
+   "scelta": {
+    "tf": "M15",
+    "k": 5,
+    "valid": 8,
+    "R": 3.0,
+    "mtf": "CONTRO",
+    "sess": "NY",
+    "atr": "NO"
+   },
+   "R_passato": 0.089,
+   "n": 91,
+   "R_medio_A": -0.2561,
+   "somma_R_A": -23.31,
+   "somma_R_B": -25.93
+  },
+  {
+   "anno": 2021,
+   "scelta": {
+    "tf": "M15",
+    "k": 3,
+    "valid": 2,
+    "R": 3.0,
+    "mtf": "NESSUNO",
+    "sess": "LON_NY",
+    "atr": "ATR"
+   },
+   "R_passato": 0.055,
+   "n": 387,
+   "R_medio_A": 0.0053,
+   "somma_R_A": 2.05,
+   "somma_R_B": -13.94
+  },
+  {
+   "anno": 2022,
+   "scelta": {
+    "tf": "M15",
+    "k": 3,
+    "valid": 8,
+    "R": 3.0,
+    "mtf": "CONTRO",
+    "sess": "NY",
+    "atr": "NO"
+   },
+   "R_passato": 0.102,
+   "n": 102,
+   "R_medio_A": -0.1977,
+   "somma_R_A": -20.16,
+   "somma_R_B": -23.46
+  },
+  {
+   "anno": 2023,
+   "scelta": {
+    "tf": "M15",
+    "k": 3,
+    "valid": 4,
+    "R": 2.0,
+    "mtf": "CONTRO",
+    "sess": "NY",
+    "atr": "ATR"
+   },
+   "R_passato": 0.058,
+   "n": 118,
+   "R_medio_A": -0.0977,
+   "somma_R_A": -11.53,
+   "somma_R_B": -15.36
+  },
+  {
+   "anno": 2024,
+   "scelta": {
+    "tf": "M15",
+    "k": 5,
+    "valid": 2,
+    "R": 3.0,
+    "mtf": "NESSUNO",
+    "sess": "NY",
+    "atr": "ATR"
+   },
+   "R_passato": 0.074,
+   "n": 194,
+   "R_medio_A": -0.1148,
+   "somma_R_A": -22.27,
+   "somma_R_B": -27.1
+  },
+  {
+   "anno": 2025,
+   "scelta": {
+    "tf": "M15",
+    "k": 3,
+    "valid": 2,
+    "R": 3.0,
+    "mtf": "TREND",
+    "sess": "NY",
+    "atr": "NO"
+   },
+   "R_passato": 0.232,
+   "n": 99,
+   "R_medio_A": 0.1398,
+   "somma_R_A": 13.84,
+   "somma_R_B": 12.18
+  },
+  {
+   "anno": 2026,
+   "scelta": {
+    "tf": "M15",
+    "k": 3,
+    "valid": 4,
+    "R": 3.0,
+    "mtf": "TREND",
+    "sess": "NY",
+    "atr": "NO"
+   },
+   "R_passato": 0.284,
+   "n": 10,
+   "R_medio_A": 0.9904,
+   "somma_R_A": 9.9,
+   "somma_R_B": 9.83
+  }
+ ]
+}
