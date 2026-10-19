@@ -28,3 +28,15 @@ griglia presente ma spenta con OrdersMax=1), orari 08-22 (venerdì 20), filtro n
 - Nessuna variabile visibile (distanza dalla media in ATR o z-score, RSI, corpo e ampiezza della candela, ATR)
   separa le ore scelte da quelle scartate: le distribuzioni si sovrappongono quasi del tutto.
 - Ipotesi principale: scelte adattate ai dati di settembre (o elenco di orari memorizzato). Decisivo il report gen-ott.
+
+## Aggiornamento: report del tester gen -> 19/10/2026 (1 minuto OHLC, OrdersMax=1, deposito 100, 0,01 lotti)
+- 729 operazioni, 83,1% vinte (tester); ricalcolate sulle barre M1 Axi in modo prudente: 86,1%.
+- Direzione contro EMA10 nel 98,6% dei casi. Stessa regola in tutte le ore: 44-57% al mese.
+- Vincite per mese (tester): gen 83%, feb 88%, mar 87%, apr 82%, mag 84%, giu 86%, lug 82%, ago 83%, set 86%, ott 64%.
+- Le ore scelte vincono il 74,6% anche entrando DOPO il primo minuto: la scelta "sa" più di quanto si possa sapere
+  a hh:00:20 (conoscere l'intero primo minuto dà solo il 67% entrando all'apertura e il 50% entrando dopo).
+- **Dal 13/10/2026 (uscita della v1.0 sul Market) in poi: 23 operazioni, 43,5% vinte (nostra simulazione 47,8%)**,
+  contro ~85% fino al 12/10. Prima del lancio quasi perfetto, dopo il lancio una moneta lanciata: firma di un
+  sistema costruito conoscendo già il passato (dati/segnali "imparati" fino alla data di costruzione).
+- Conclusione: non c'è una regola vera da copiare. La parte visibile (contro la media all'apertura di ogni ora,
+  TP = SL = 5 $) vince circa il 50% e con lo spread perde.
