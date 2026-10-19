@@ -43,7 +43,7 @@
 //| HEDGING.                                                         |
 //+------------------------------------------------------------------+
 #property copyright "Progetto Trading-ICT - uso personale"
-#property version   "1.50"
+#property version   "1.60"
 
 #include <Trade\Trade.mqh>
 #include <Trade\PositionInfo.mqh>
@@ -62,6 +62,7 @@ input bool   InpShowDashboard            = true;   // Pannello sul grafico
 input double InpLotPerBalance           = 0;      // Lotto che cresce: lotto base ogni X di saldo (0 = fisso)
 input int    InpHedgeLevel              = 4;      // Hedging: al livello N copre tutto il cesto (0 = spento)
 input double InpHedgeReleasePoints      = 800;    // Toglie la copertura quando il prezzo rimbalza di tanti punti
+input double InpHedgeRatio              = 0.7;    // Copertura = questa parte dei lotti del cesto (1 = piena)
 
 input group "===== Broker Digit Detection ====="
 input int    InpDigitDetectMode          = 0;      // 0 = auto, altrimenti fattore fisso (punti x fattore)
@@ -665,7 +666,7 @@ void OnTick()
             {
                gridRef[i][side] = 0;
                if(InpHedgeLevel > 0 && b.n + 1 >= InpHedgeLevel)     // hedging: copre tutto il cesto
-                  if(Open(i, 1 - side, NormLot(b.lots + lot), "COPERTURA", hm))
+                  if(Open(i, 1 - side, NormLot(MathMax(0.0, InpHedgeRatio) * (b.lots + lot)), "COPERTURA", hm))
                      hedgeExt[i][side] = side == 0 ? bid : ask;
             }
          }
