@@ -1,0 +1,481 @@
+mese,distanza,copertura,tetto,saltato,eur,calo,ordini
+1,6.0,no,nessuno,True,-50,100,10748
+1,6.0,no,0.16,True,-50,100,782
+1,6.0,no,0.32,True,-50,100,642
+1,6.0,no,0.64,True,-50,100,10748
+1,6.0,livello 4,nessuno,False,359,88,18725
+1,6.0,livello 4,0.16,False,219,55,17955
+1,6.0,livello 4,0.32,False,264,67,18214
+1,6.0,livello 4,0.64,False,322,66,18560
+1,6.0,livello 5,nessuno,False,426,83,19420
+1,6.0,livello 5,0.16,True,-50,100,885
+1,6.0,livello 5,0.32,False,352,50,19036
+1,6.0,livello 5,0.64,False,391,62,19236
+1,6.0,livello 6,nessuno,True,-50,100,10801
+1,6.0,livello 6,0.16,True,-50,100,648
+1,6.0,livello 6,0.32,True,-50,100,566
+1,6.0,livello 6,0.64,True,-50,100,10801
+1,6.0,livello 7,nessuno,True,-50,100,10752
+1,6.0,livello 7,0.16,True,-50,100,649
+1,6.0,livello 7,0.32,True,-50,100,566
+1,6.0,livello 7,0.64,True,-50,100,10754
+1,6.0,livello 8,nessuno,True,-50,100,10750
+1,6.0,livello 8,0.16,True,-50,100,793
+1,6.0,livello 8,0.32,True,-50,100,655
+1,6.0,livello 8,0.64,True,-50,100,10750
+1,8.0,no,nessuno,True,-50,100,8396
+1,8.0,no,0.16,True,-50,100,674
+1,8.0,no,0.32,True,-50,100,8397
+1,8.0,no,0.64,True,-50,100,8396
+1,8.0,livello 4,nessuno,False,233,80,15015
+1,8.0,livello 4,0.16,False,196,59,14527
+1,8.0,livello 4,0.32,False,236,74,14857
+1,8.0,livello 4,0.64,False,231,80,14982
+1,8.0,livello 5,nessuno,True,-50,100,452
+1,8.0,livello 5,0.16,True,-50,100,630
+1,8.0,livello 5,0.32,True,-50,100,595
+1,8.0,livello 5,0.64,True,-50,100,452
+1,8.0,livello 6,nessuno,True,-50,100,578
+1,8.0,livello 6,0.16,True,-50,100,676
+1,8.0,livello 6,0.32,True,-50,100,594
+1,8.0,livello 6,0.64,True,-50,100,578
+1,8.0,livello 7,nessuno,True,-50,100,8399
+1,8.0,livello 7,0.16,True,-50,100,628
+1,8.0,livello 7,0.32,True,-50,100,8401
+1,8.0,livello 7,0.64,True,-50,100,8399
+1,8.0,livello 8,nessuno,True,-50,100,8397
+1,8.0,livello 8,0.16,True,-50,100,627
+1,8.0,livello 8,0.32,True,-50,100,8399
+1,8.0,livello 8,0.64,True,-50,100,8397
+2,6.0,no,nessuno,True,-50,100,226
+2,6.0,no,0.16,True,-50,100,267
+2,6.0,no,0.32,True,-50,100,235
+2,6.0,no,0.64,True,-50,100,226
+2,6.0,livello 4,nessuno,True,-50,100,289
+2,6.0,livello 4,0.16,True,-50,100,2720
+2,6.0,livello 4,0.32,True,-50,100,301
+2,6.0,livello 4,0.64,True,-50,100,289
+2,6.0,livello 5,nessuno,True,-50,100,266
+2,6.0,livello 5,0.16,False,292,77,24496
+2,6.0,livello 5,0.32,True,-50,100,299
+2,6.0,livello 5,0.64,True,-50,100,266
+2,6.0,livello 6,nessuno,True,-50,100,260
+2,6.0,livello 6,0.16,False,300,78,24813
+2,6.0,livello 6,0.32,True,-50,100,306
+2,6.0,livello 6,0.64,True,-50,100,260
+2,6.0,livello 7,nessuno,True,-50,100,214
+2,6.0,livello 7,0.16,True,-50,100,253
+2,6.0,livello 7,0.32,True,-50,100,242
+2,6.0,livello 7,0.64,True,-50,100,214
+2,6.0,livello 8,nessuno,True,-50,100,226
+2,6.0,livello 8,0.16,True,-50,100,252
+2,6.0,livello 8,0.32,True,-50,100,241
+2,6.0,livello 8,0.64,True,-50,100,226
+2,8.0,no,nessuno,True,-50,100,217
+2,8.0,no,0.16,False,275,89,19786
+2,8.0,no,0.32,True,-50,100,222
+2,8.0,no,0.64,True,-50,100,217
+2,8.0,livello 4,nessuno,False,203,65,19622
+2,8.0,livello 4,0.16,True,-50,100,2380
+2,8.0,livello 4,0.32,True,-50,100,17424
+2,8.0,livello 4,0.64,False,218,65,19622
+2,8.0,livello 5,nessuno,True,-50,100,223
+2,8.0,livello 5,0.16,True,-50,100,2433
+2,8.0,livello 5,0.32,True,-50,100,228
+2,8.0,livello 5,0.64,True,-50,100,223
+2,8.0,livello 6,nessuno,True,-50,100,221
+2,8.0,livello 6,0.16,False,255,86,19795
+2,8.0,livello 6,0.32,True,-50,100,240
+2,8.0,livello 6,0.64,True,-50,100,221
+2,8.0,livello 7,nessuno,True,-50,100,220
+2,8.0,livello 7,0.16,False,255,86,19780
+2,8.0,livello 7,0.32,True,-50,100,239
+2,8.0,livello 7,0.64,True,-50,100,220
+2,8.0,livello 8,nessuno,True,-50,100,217
+2,8.0,livello 8,0.16,True,-50,100,270
+2,8.0,livello 8,0.32,True,-50,100,222
+2,8.0,livello 8,0.64,True,-50,100,217
+3,6.0,no,nessuno,True,-50,100,937
+3,6.0,no,0.16,True,-50,100,3013
+3,6.0,no,0.32,False,339,81,23641
+3,6.0,no,0.64,True,-50,100,937
+3,6.0,livello 4,nessuno,True,-50,100,3039
+3,6.0,livello 4,0.16,True,-50,100,2717
+3,6.0,livello 4,0.32,True,-50,100,1040
+3,6.0,livello 4,0.64,True,-50,100,3039
+3,6.0,livello 5,nessuno,True,-50,100,3236
+3,6.0,livello 5,0.16,True,-50,100,1019
+3,6.0,livello 5,0.32,True,-50,100,3232
+3,6.0,livello 5,0.64,True,-50,100,3236
+3,6.0,livello 6,nessuno,True,-50,100,3080
+3,6.0,livello 6,0.16,True,-50,100,2758
+3,6.0,livello 6,0.32,True,-50,100,1033
+3,6.0,livello 6,0.64,False,442,91,23305
+3,6.0,livello 7,nessuno,False,495,90,24282
+3,6.0,livello 7,0.16,True,-50,100,2764
+3,6.0,livello 7,0.32,True,-50,100,1032
+3,6.0,livello 7,0.64,False,453,82,24020
+3,6.0,livello 8,nessuno,True,-50,100,938
+3,6.0,livello 8,0.16,True,-50,100,3017
+3,6.0,livello 8,0.32,False,344,88,23652
+3,6.0,livello 8,0.64,True,-50,100,938
+3,8.0,no,nessuno,True,-50,100,12530
+3,8.0,no,0.16,True,-50,100,2352
+3,8.0,no,0.32,False,245,75,18508
+3,8.0,no,0.64,True,-50,100,12531
+3,8.0,livello 4,nessuno,False,262,80,18410
+3,8.0,livello 4,0.16,True,-50,100,2430
+3,8.0,livello 4,0.32,False,260,71,18334
+3,8.0,livello 4,0.64,False,267,80,18399
+3,8.0,livello 5,nessuno,False,292,68,18452
+3,8.0,livello 5,0.16,True,-50,100,2323
+3,8.0,livello 5,0.32,True,-50,100,2494
+3,8.0,livello 5,0.64,False,294,68,18068
+3,8.0,livello 6,nessuno,False,316,57,18682
+3,8.0,livello 6,0.16,True,-50,100,2335
+3,8.0,livello 6,0.32,False,297,51,18502
+3,8.0,livello 6,0.64,False,311,57,18633
+3,8.0,livello 7,nessuno,True,-50,100,12538
+3,8.0,livello 7,0.16,True,-50,100,2327
+3,8.0,livello 7,0.32,False,240,69,18520
+3,8.0,livello 7,0.64,False,247,93,18622
+3,8.0,livello 8,nessuno,True,-50,100,12533
+3,8.0,livello 8,0.16,True,-50,100,2354
+3,8.0,livello 8,0.32,False,252,73,18511
+3,8.0,livello 8,0.64,False,261,94,18614
+4,6.0,no,nessuno,False,100,53,10382
+4,6.0,no,0.16,True,-50,100,6184
+4,6.0,no,0.32,False,100,49,10286
+4,6.0,no,0.64,False,100,53,10382
+4,6.0,livello 4,nessuno,False,17,79,9925
+4,6.0,livello 4,0.16,False,39,51,9753
+4,6.0,livello 4,0.32,False,22,71,9876
+4,6.0,livello 4,0.64,False,17,79,9925
+4,6.0,livello 5,nessuno,False,26,81,10436
+4,6.0,livello 5,0.16,False,52,86,9961
+4,6.0,livello 5,0.32,False,36,59,10357
+4,6.0,livello 5,0.64,False,28,76,10405
+4,6.0,livello 6,nessuno,False,28,74,10460
+4,6.0,livello 6,0.16,True,-50,100,6017
+4,6.0,livello 6,0.32,False,39,54,10325
+4,6.0,livello 6,0.64,False,30,70,10429
+4,6.0,livello 7,nessuno,False,80,49,10387
+4,6.0,livello 7,0.16,True,-50,100,6065
+4,6.0,livello 7,0.32,False,85,45,10291
+4,6.0,livello 7,0.64,False,80,49,10387
+4,6.0,livello 8,nessuno,False,100,53,10382
+4,6.0,livello 8,0.16,True,-50,100,6109
+4,6.0,livello 8,0.32,False,100,49,10286
+4,6.0,livello 8,0.64,False,100,53,10382
+4,8.0,no,nessuno,True,-50,100,4566
+4,8.0,no,0.16,True,-50,100,4826
+4,8.0,no,0.32,True,-50,100,4755
+4,8.0,no,0.64,True,-50,100,4694
+4,8.0,livello 4,nessuno,False,21,71,7916
+4,8.0,livello 4,0.16,False,29,55,7759
+4,8.0,livello 4,0.32,False,23,67,7853
+4,8.0,livello 4,0.64,False,21,71,7916
+4,8.0,livello 5,nessuno,False,42,85,7755
+4,8.0,livello 5,0.16,True,-50,100,4784
+4,8.0,livello 5,0.32,False,41,77,7706
+4,8.0,livello 5,0.64,False,42,85,7755
+4,8.0,livello 6,nessuno,False,46,77,7779
+4,8.0,livello 6,0.16,False,56,54,7601
+4,8.0,livello 6,0.32,False,48,69,7719
+4,8.0,livello 6,0.64,False,46,77,7779
+4,8.0,livello 7,nessuno,True,-50,100,4693
+4,8.0,livello 7,0.16,True,-50,100,4824
+4,8.0,livello 7,0.32,True,-50,100,4718
+4,8.0,livello 7,0.64,True,-50,100,4695
+4,8.0,livello 8,nessuno,False,102,81,7820
+4,8.0,livello 8,0.16,True,-50,100,4825
+4,8.0,livello 8,0.32,True,-50,100,4758
+4,8.0,livello 8,0.64,True,-50,100,4695
+5,6.0,no,nessuno,True,-50,100,1156
+5,6.0,no,0.16,True,-50,100,1251
+5,6.0,no,0.32,True,-50,100,1182
+5,6.0,no,0.64,True,-50,100,1156
+5,6.0,livello 4,nessuno,True,-50,100,1241
+5,6.0,livello 4,0.16,True,-50,100,1334
+5,6.0,livello 4,0.32,True,-50,100,1251
+5,6.0,livello 4,0.64,True,-50,100,1241
+5,6.0,livello 5,nessuno,True,-50,100,1254
+5,6.0,livello 5,0.16,True,-50,100,1348
+5,6.0,livello 5,0.32,True,-50,100,1263
+5,6.0,livello 5,0.64,True,-50,100,1254
+5,6.0,livello 6,nessuno,True,-50,100,1202
+5,6.0,livello 6,0.16,True,-50,100,1273
+5,6.0,livello 6,0.32,True,-50,100,1250
+5,6.0,livello 6,0.64,True,-50,100,1202
+5,6.0,livello 7,nessuno,True,-50,100,1181
+5,6.0,livello 7,0.16,True,-50,100,1257
+5,6.0,livello 7,0.32,True,-50,100,1199
+5,6.0,livello 7,0.64,True,-50,100,1181
+5,6.0,livello 8,nessuno,True,-50,100,1157
+5,6.0,livello 8,0.16,True,-50,100,1236
+5,6.0,livello 8,0.32,True,-50,100,1179
+5,6.0,livello 8,0.64,True,-50,100,1157
+5,8.0,no,nessuno,True,-50,100,1009
+5,8.0,no,0.16,True,-50,100,1025
+5,8.0,no,0.32,True,-50,100,1016
+5,8.0,no,0.64,True,-50,100,1009
+5,8.0,livello 4,nessuno,True,-50,100,1004
+5,8.0,livello 4,0.16,True,-50,100,1093
+5,8.0,livello 4,0.32,True,-50,100,1026
+5,8.0,livello 4,0.64,True,-50,100,1004
+5,8.0,livello 5,nessuno,True,-50,100,1002
+5,8.0,livello 5,0.16,True,-50,100,1043
+5,8.0,livello 5,0.32,True,-50,100,1026
+5,8.0,livello 5,0.64,True,-50,100,1002
+5,8.0,livello 6,nessuno,True,-50,100,980
+5,8.0,livello 6,0.16,True,-50,100,1011
+5,8.0,livello 6,0.32,True,-50,100,1010
+5,8.0,livello 6,0.64,True,-50,100,980
+5,8.0,livello 7,nessuno,True,-50,100,980
+5,8.0,livello 7,0.16,True,-50,100,1011
+5,8.0,livello 7,0.32,True,-50,100,1009
+5,8.0,livello 7,0.64,True,-50,100,980
+5,8.0,livello 8,nessuno,True,-50,100,1009
+5,8.0,livello 8,0.16,True,-50,100,1044
+5,8.0,livello 8,0.32,True,-50,100,1016
+5,8.0,livello 8,0.64,True,-50,100,1009
+6,6.0,no,nessuno,False,106,50,9157
+6,6.0,no,0.16,True,-50,100,4155
+6,6.0,no,0.32,False,105,43,9111
+6,6.0,no,0.64,False,106,50,9157
+6,6.0,livello 4,nessuno,False,97,52,8726
+6,6.0,livello 4,0.16,False,101,41,8589
+6,6.0,livello 4,0.32,False,100,48,8666
+6,6.0,livello 4,0.64,False,97,52,8726
+6,6.0,livello 5,nessuno,False,94,62,8950
+6,6.0,livello 5,0.16,True,-50,100,4172
+6,6.0,livello 5,0.32,True,-50,100,4176
+6,6.0,livello 5,0.64,False,94,62,8950
+6,6.0,livello 6,nessuno,False,95,63,9153
+6,6.0,livello 6,0.16,True,-50,100,4161
+6,6.0,livello 6,0.32,True,-50,100,4166
+6,6.0,livello 6,0.64,False,95,63,9153
+6,6.0,livello 7,nessuno,False,103,45,9161
+6,6.0,livello 7,0.16,True,-50,100,4157
+6,6.0,livello 7,0.32,False,103,40,9115
+6,6.0,livello 7,0.64,False,103,45,9161
+6,6.0,livello 8,nessuno,False,106,50,9157
+6,6.0,livello 8,0.16,True,-50,100,4156
+6,6.0,livello 8,0.32,False,105,43,9111
+6,6.0,livello 8,0.64,False,106,50,9157
+6,8.0,no,nessuno,True,-50,100,2953
+6,8.0,no,0.16,True,-50,100,2942
+6,8.0,no,0.32,True,-50,100,2954
+6,8.0,no,0.64,True,-50,100,2953
+6,8.0,livello 4,nessuno,False,58,78,6762
+6,8.0,livello 4,0.16,True,-50,100,3037
+6,8.0,livello 4,0.32,False,61,70,6735
+6,8.0,livello 4,0.64,False,58,78,6762
+6,8.0,livello 5,nessuno,False,21,89,7133
+6,8.0,livello 5,0.16,True,-50,100,3098
+6,8.0,livello 5,0.32,False,27,79,7101
+6,8.0,livello 5,0.64,False,21,89,7133
+6,8.0,livello 6,nessuno,True,-50,100,2956
+6,8.0,livello 6,0.16,True,-50,100,2945
+6,8.0,livello 6,0.32,True,-50,100,2958
+6,8.0,livello 6,0.64,True,-50,100,2956
+6,8.0,livello 7,nessuno,True,-50,100,2954
+6,8.0,livello 7,0.16,True,-50,100,2943
+6,8.0,livello 7,0.32,True,-50,100,2956
+6,8.0,livello 7,0.64,True,-50,100,2954
+6,8.0,livello 8,nessuno,True,-50,100,2953
+6,8.0,livello 8,0.16,True,-50,100,2944
+6,8.0,livello 8,0.32,True,-50,100,2955
+6,8.0,livello 8,0.64,True,-50,100,2953
+7,6.0,no,nessuno,True,-50,100,263
+7,6.0,no,0.16,True,-50,100,290
+7,6.0,no,0.32,True,-50,100,270
+7,6.0,no,0.64,True,-50,100,263
+7,6.0,livello 4,nessuno,False,77,37,6557
+7,6.0,livello 4,0.16,False,68,29,6495
+7,6.0,livello 4,0.32,False,76,37,6550
+7,6.0,livello 4,0.64,False,77,37,6557
+7,6.0,livello 5,nessuno,False,105,87,6568
+7,6.0,livello 5,0.16,True,-50,100,879
+7,6.0,livello 5,0.32,False,103,71,6500
+7,6.0,livello 5,0.64,False,111,81,6562
+7,6.0,livello 6,nessuno,True,-50,100,261
+7,6.0,livello 6,0.16,False,87,94,6343
+7,6.0,livello 6,0.32,True,-50,100,270
+7,6.0,livello 6,0.64,True,-50,100,261
+7,6.0,livello 7,nessuno,True,-50,100,261
+7,6.0,livello 7,0.16,False,86,94,6356
+7,6.0,livello 7,0.32,True,-50,100,269
+7,6.0,livello 7,0.64,True,-50,100,261
+7,6.0,livello 8,nessuno,True,-50,100,263
+7,6.0,livello 8,0.16,False,98,94,6347
+7,6.0,livello 8,0.32,True,-50,100,271
+7,6.0,livello 8,0.64,True,-50,100,263
+7,8.0,no,nessuno,True,-50,100,214
+7,8.0,no,0.16,True,-50,100,285
+7,8.0,no,0.32,True,-50,100,220
+7,8.0,no,0.64,True,-50,100,214
+7,8.0,livello 4,nessuno,False,56,40,4987
+7,8.0,livello 4,0.16,False,54,35,4949
+7,8.0,livello 4,0.32,False,59,40,4987
+7,8.0,livello 4,0.64,False,56,40,4987
+7,8.0,livello 5,nessuno,True,-50,100,287
+7,8.0,livello 5,0.16,False,36,68,5004
+7,8.0,livello 5,0.32,False,41,87,5054
+7,8.0,livello 5,0.64,True,-50,100,287
+7,8.0,livello 6,nessuno,True,-50,100,286
+7,8.0,livello 6,0.16,False,61,67,4947
+7,8.0,livello 6,0.32,False,74,87,4973
+7,8.0,livello 6,0.64,True,-50,100,286
+7,8.0,livello 7,nessuno,True,-50,100,286
+7,8.0,livello 7,0.16,False,62,66,4969
+7,8.0,livello 7,0.32,False,70,86,4991
+7,8.0,livello 7,0.64,True,-50,100,286
+7,8.0,livello 8,nessuno,True,-50,100,214
+7,8.0,livello 8,0.16,True,-50,100,289
+7,8.0,livello 8,0.32,True,-50,100,220
+7,8.0,livello 8,0.64,True,-50,100,214
+8,6.0,no,nessuno,True,-50,100,666
+8,6.0,no,0.16,True,-50,100,751
+8,6.0,no,0.32,True,-50,100,694
+8,6.0,no,0.64,True,-50,100,666
+8,6.0,livello 4,nessuno,True,-50,100,841
+8,6.0,livello 4,0.16,True,-50,100,878
+8,6.0,livello 4,0.32,True,-50,100,852
+8,6.0,livello 4,0.64,True,-50,100,841
+8,6.0,livello 5,nessuno,True,-50,100,839
+8,6.0,livello 5,0.16,True,-50,100,876
+8,6.0,livello 5,0.32,True,-50,100,849
+8,6.0,livello 5,0.64,True,-50,100,839
+8,6.0,livello 6,nessuno,True,-50,100,743
+8,6.0,livello 6,0.16,True,-50,100,840
+8,6.0,livello 6,0.32,True,-50,100,819
+8,6.0,livello 6,0.64,True,-50,100,743
+8,6.0,livello 7,nessuno,True,-50,100,742
+8,6.0,livello 7,0.16,True,-50,100,839
+8,6.0,livello 7,0.32,True,-50,100,818
+8,6.0,livello 7,0.64,True,-50,100,742
+8,6.0,livello 8,nessuno,True,-50,100,666
+8,6.0,livello 8,0.16,True,-50,100,743
+8,6.0,livello 8,0.32,True,-50,100,680
+8,6.0,livello 8,0.64,True,-50,100,666
+8,8.0,no,nessuno,True,-50,100,5457
+8,8.0,no,0.16,False,21,64,5621
+8,8.0,no,0.32,False,12,91,5661
+8,8.0,no,0.64,True,-50,100,5460
+8,8.0,livello 4,nessuno,False,52,45,5602
+8,8.0,livello 4,0.16,False,25,52,5594
+8,8.0,livello 4,0.32,False,53,72,5604
+8,8.0,livello 4,0.64,False,52,45,5602
+8,8.0,livello 5,nessuno,False,45,49,5772
+8,8.0,livello 5,0.16,False,18,56,5736
+8,8.0,livello 5,0.32,False,47,78,5774
+8,8.0,livello 5,0.64,False,45,49,5772
+8,8.0,livello 6,nessuno,False,49,46,5665
+8,8.0,livello 6,0.16,False,22,53,5627
+8,8.0,livello 6,0.32,False,50,74,5667
+8,8.0,livello 6,0.64,False,49,46,5665
+8,8.0,livello 7,nessuno,True,-50,100,5452
+8,8.0,livello 7,0.16,False,16,68,5623
+8,8.0,livello 7,0.32,True,-50,100,5470
+8,8.0,livello 7,0.64,True,-50,100,5456
+8,8.0,livello 8,nessuno,True,-50,100,5443
+8,8.0,livello 8,0.16,False,15,69,5622
+8,8.0,livello 8,0.32,True,-50,100,5468
+8,8.0,livello 8,0.64,True,-50,100,5454
+9,6.0,no,nessuno,False,88,77,7387
+9,6.0,no,0.16,True,-50,100,417
+9,6.0,no,0.32,True,-50,100,6526
+9,6.0,no,0.64,True,-50,100,6486
+9,6.0,livello 4,nessuno,True,-50,100,5843
+9,6.0,livello 4,0.16,True,-50,100,6049
+9,6.0,livello 4,0.32,True,-50,100,6081
+9,6.0,livello 4,0.64,True,-50,100,5860
+9,6.0,livello 5,nessuno,True,-50,100,252
+9,6.0,livello 5,0.16,True,-50,100,423
+9,6.0,livello 5,0.32,True,-50,100,272
+9,6.0,livello 5,0.64,True,-50,100,252
+9,6.0,livello 6,nessuno,True,-50,100,6165
+9,6.0,livello 6,0.16,True,-50,100,392
+9,6.0,livello 6,0.32,True,-50,100,6385
+9,6.0,livello 6,0.64,True,-50,100,6379
+9,6.0,livello 7,nessuno,False,74,89,7310
+9,6.0,livello 7,0.16,True,-50,100,391
+9,6.0,livello 7,0.32,True,-50,100,6452
+9,6.0,livello 7,0.64,True,-50,100,6422
+9,6.0,livello 8,nessuno,False,68,91,7389
+9,6.0,livello 8,0.16,True,-50,100,390
+9,6.0,livello 8,0.32,True,-50,100,6499
+9,6.0,livello 8,0.64,True,-50,100,6485
+9,8.0,no,nessuno,False,58,45,5459
+9,8.0,no,0.16,False,68,92,5375
+9,8.0,no,0.32,False,58,44,5450
+9,8.0,no,0.64,False,58,45,5459
+9,8.0,livello 4,nessuno,False,49,73,5434
+9,8.0,livello 4,0.16,False,63,76,5414
+9,8.0,livello 4,0.32,False,46,68,5434
+9,8.0,livello 4,0.64,False,49,73,5434
+9,8.0,livello 5,nessuno,True,-50,100,674
+9,8.0,livello 5,0.16,True,-50,100,787
+9,8.0,livello 5,0.32,True,-50,100,690
+9,8.0,livello 5,0.64,True,-50,100,674
+9,8.0,livello 6,nessuno,False,74,28,5386
+9,8.0,livello 6,0.16,True,-50,100,781
+9,8.0,livello 6,0.32,False,74,28,5386
+9,8.0,livello 6,0.64,False,74,28,5386
+9,8.0,livello 7,nessuno,False,41,65,5461
+9,8.0,livello 7,0.16,True,-50,100,795
+9,8.0,livello 7,0.32,False,45,58,5452
+9,8.0,livello 7,0.64,False,41,65,5461
+9,8.0,livello 8,nessuno,False,58,45,5459
+9,8.0,livello 8,0.16,False,66,88,5376
+9,8.0,livello 8,0.32,False,58,44,5450
+9,8.0,livello 8,0.64,False,58,45,5459
+10,6.0,no,nessuno,True,-50,100,1230
+10,6.0,no,0.16,False,34,71,2881
+10,6.0,no,0.32,True,-50,100,1278
+10,6.0,no,0.64,True,-50,100,1230
+10,6.0,livello 4,nessuno,False,38,69,2935
+10,6.0,livello 4,0.16,False,30,46,2836
+10,6.0,livello 4,0.32,False,34,60,2935
+10,6.0,livello 4,0.64,False,38,69,2935
+10,6.0,livello 5,nessuno,True,-50,100,1245
+10,6.0,livello 5,0.16,False,42,70,2848
+10,6.0,livello 5,0.32,True,-50,100,1278
+10,6.0,livello 5,0.64,True,-50,100,1251
+10,6.0,livello 6,nessuno,True,-50,100,1220
+10,6.0,livello 6,0.16,False,25,83,2891
+10,6.0,livello 6,0.32,True,-50,100,1258
+10,6.0,livello 6,0.64,True,-50,100,1220
+10,6.0,livello 7,nessuno,False,67,66,2938
+10,6.0,livello 7,0.16,False,50,43,2882
+10,6.0,livello 7,0.32,False,58,57,2938
+10,6.0,livello 7,0.64,False,67,66,2938
+10,6.0,livello 8,nessuno,True,-50,100,1231
+10,6.0,livello 8,0.16,False,29,78,2882
+10,6.0,livello 8,0.32,True,-50,100,1256
+10,6.0,livello 8,0.64,True,-50,100,1231
+10,8.0,no,nessuno,False,24,92,2139
+10,8.0,no,0.16,False,7,62,2020
+10,8.0,no,0.32,False,23,82,2139
+10,8.0,no,0.64,False,24,92,2139
+10,8.0,livello 4,nessuno,False,39,69,2066
+10,8.0,livello 4,0.16,False,27,49,2041
+10,8.0,livello 4,0.32,False,37,61,2066
+10,8.0,livello 4,0.64,False,39,69,2066
+10,8.0,livello 5,nessuno,False,34,73,2149
+10,8.0,livello 5,0.16,False,29,52,2125
+10,8.0,livello 5,0.32,False,32,65,2149
+10,8.0,livello 5,0.64,False,34,73,2149
+10,8.0,livello 6,nessuno,False,36,76,2145
+10,8.0,livello 6,0.16,False,10,54,2027
+10,8.0,livello 6,0.32,False,34,68,2145
+10,8.0,livello 6,0.64,False,36,76,2145
+10,8.0,livello 7,nessuno,False,37,68,2141
+10,8.0,livello 7,0.16,False,9,52,2023
+10,8.0,livello 7,0.32,False,33,64,2141
+10,8.0,livello 7,0.64,False,37,68,2141
+10,8.0,livello 8,nessuno,False,24,92,2139
+10,8.0,livello 8,0.16,False,7,62,2020
+10,8.0,livello 8,0.32,False,23,82,2139
+10,8.0,livello 8,0.64,False,24,92,2139
