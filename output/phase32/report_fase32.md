@@ -30,3 +30,9 @@ Set "più trade": `mql5/Presets/CestoTopBottom_HFT_tick_5000USC_piuTrade.set`.
 - Zona aggressiva (fase 39, 432 set: distanza 2-4 $, copertura al 5°-7° livello, TP 1-2 $): tutti bruciano da 5 a 10
   mesi su 10; il migliore per totale (4 $ x1,2, lotto x2, TP 1 $, copertura 6, via 8 $) fa +2.074 EUR ma brucia 5 mesi.
 - Il set più regolare resta quello dell'EA 1.60 (+949 EUR, solo maggio bruciato).
+
+## Fase 41 — costanza (1.296 set: griglie 10-20 $, martingala x1,3-x2, copertura 0/2/3/4, TP 0,5-2 $)
+Un solo set senza mesi in perdita (ogni mese da 5.000 USC): distanza 10 $ x1,2, lotto x1,5, TP 0,5 $, copertura piena
+al 4° livello, via a 8 $, filtro strappi 6 ATR. USC: +11.000 +8.500 +14.150 +1.150 +1.150 +2.550 +2.350 +1.950 +2.750
++1.250 = +46.800 (468 EUR). È uno solo su 1.296 (i vicini bruciano 1-3 mesi): fragile.
+Set: `mql5/Presets/CestoTopBottom_Costante_5000USC.set`.
