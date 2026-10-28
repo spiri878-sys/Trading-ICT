@@ -1,7 +1,8 @@
 """FASE 46 — capitale minimo VERO per 0,01 di lotto: gen -> 16 ott 2026 DI FILA, conto enorme e lotto fisso, misura il
 calo più grande dal punto più alto dell'equity (più il 50% del margine, livello di stop out) = capitale che serve
 partendo in QUALUNQUE momento. Corregge la fase 44 (che misurava dall'inizio di ogni mese).
-Set provati: i 380 della fase 44 con tutti i mesi positivi + bot 1.61 + set costante.
+Set provati: i 58 migliori della fase 44 con tutti i mesi positivi + bot 1.61 + set costante (tutti i 380
+erano troppo lenti: oltre 2 ore).
 usage: python python/scripts/phase46_true_capital.py
 """
 from multiprocessing import Pool
@@ -82,7 +83,8 @@ def sim(bid, ask, calm, trend, month, D, G, M, T, KH, R, HR, LMAX, TRS, TRD, mon
 
 
 tab = pd.read_csv(ROOT / "output" / "phase44" / "capitale_tabella.csv")
-CAND = pd.concat([tab[tab.peggior_mese > 0], tab[tab.cfg.isin([0, 1])]]).drop_duplicates("cfg")
+CAND = pd.concat([tab[tab.cfg.isin([0, 1])],
+                  tab[tab.peggior_mese > 0].sort_values("resa_su_capitale", ascending=False).head(58)]).drop_duplicates("cfg")
 DATA = None
 
 
